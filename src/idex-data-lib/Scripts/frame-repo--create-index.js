@@ -1,0 +1,1 @@
+﻿db.getCollection('idex--socket-frame').createIndex({'RelayServerTimeStampUtc': 1 });

@@ -1,0 +1,28 @@
+﻿<div class="modal-header" style="background-color:greenyellow;">
+    <h3 class="modal-title">Transfer Funds</h3>
+</div>
+<div class="modal-body" style="font-size:24px;">
+
+    <table>
+        <tr>
+            <td style="font-weight:bold;">Asset:&nbsp;</td>
+            <td>{{data.symbol}}</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Quantity:&nbsp;</td>
+            <td>{{data.quantity}}</td>
+        </tr>
+    </table>
+
+    <div><strong>{{data.source}}</strong> to <strong>{{data.destination}}</strong></div>
+    <br />
+    <div>
+        Are you sure you want to transfer these funds?
+    </div>
+
+</div>
+<div class="modal-footer">
+
+    <button class="btn btn-lg btn-secondary pull-left" type="button" ng-click="cancel()">No, don't send them.</button>
+    <button class="btn btn-lg btn-success" type="button" ng-click="ok()">Yes, send the funds!</button>
+</div>

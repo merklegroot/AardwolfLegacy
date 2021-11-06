@@ -1,0 +1,62 @@
+﻿COSS 9  COSS
+MyWish 1  WISH
+Tigereum 5  TIG
+Ethereum 0.001  ETH
+Bitcoin 0.001  BTC
+Lampix 30  PIX
+Po.et 60  POE
+LAToken 0.5  LA
+Datum 50  DAT
+HelloGold 45  HGT
+Request Network 8  REQ
+SONM 5  SNM
+TenX 0.6  PAY
+Enjin Coin 16  ENJ
+LaLa World 10  LALA
+CanYa Coin 0.5  CAN
+Substratum 3.5  SUB
+Lisk 0.2  LSK
+Waltonchain 0.15  WTC
+ARK 0.2  ARK
+Eos 0.25  EOS
+BlueZelle 2.5  BLZ
+Credits 10  CS
+ZenCash 0.00006  ZEN
+FundYourselfNow 1  FYN
+ChainLink 4  LINK
+KyberNetwork 1  KNC
+Icon 0.5  ICX
+OmiseGo 0.15  OMG
+VeChain 1.5  VEN
+Dash 0.0002  DASH
+Aditus 10  ADI
+Bitcoin Cash 0.0002  BCH
+Bancor 0.5  BNT
+Blockpool 0.2  BPL
+Verify 10  CRED
+Civic 3.5  CVC
+fidentiaX 2  FDX
+FuzeX 10  FXT
+GATCOIN 10  GAT
+HydroMiner 2  H2O
+Indorse 20  IND
+Intelligent Trading Tech 5  ITT
+JetCoin 40  JET
+Kin 16000  KIN
+FreelancerCoin 10  LAN
+Litecoin 0.005  LTC
+Mark.Space 10  MRK
+Nitro 0.5  NOX
+PureGold Token 1  PGT
+Privatix 1.2  PRIX
+QTUM 0.1  QTUM
+Sentinel Chain 10  SENC
+SOMIDAX 5  SMDX
+Stox 4  STX
+TEU 1  TEU
+Trakinvest 2.5  TRAK
+Vezt 0.5  VZT
+WAVES 0.002  WAVES
+XinFin 100  XDCE
+Nem 0.1  XEM
+Ink Protocol 10.0 XNK

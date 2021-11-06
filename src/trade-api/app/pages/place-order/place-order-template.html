@@ -1,0 +1,42 @@
+﻿<div>
+    <form>
+        <div class="form-group">
+            <label>Exchange</label>
+            <input ng-model="model.exchange" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Type</label>
+
+            <label class="radio-inline">
+                <input ng-model="model.orderType" type="radio" name="orderTypeGroup" value="buy"> Buy
+            </label>
+            <label class="radio-inline">
+                <input ng-model="model.orderType" type="radio" name="orderTypeGroup" value="sell"> Sell
+            </label>
+        </div>
+
+
+        <div class="form-group">
+            <label>Symbol</label>
+            <input ng-model="model.symbol" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Base Symbol</label>
+            <input ng-model="model.baseSymbol" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Quantity</label>
+            <input ng-model="model.quantity" type="number" class="form-control" step="0.0000000001" />
+        </div>
+
+        <div class="form-group">
+            <label>Price</label>
+            <input ng-model="model.price" type="number" class="form-control"  step="0.0000000001" />
+        </div>
+
+        <button ng-click="onPlaceOrderClicked()" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,220 @@
+﻿<h2>Exchange Commodity Detail</h2>
+
+<a ui-sref="exchange-detail({id: model.commodity.data.exchange.toLowerCase()})">
+    <exchange-logo exchange="model.commodity.data.exchange"></exchange-logo>
+    {{model.commodity.data.exchange}}
+</a>
+<a ui-sref="commodity-detail({symbol: model.commodity.data.nativeSymbol.toUpperCase()})">
+    <commodity-logo symbol="model.commodity.data.symbol"></commodity-logo>
+    {{model.commodity.data.nativeSymbol}}
+</a>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h3>Native Commodity <button class="btn" ng-click="showCommodityDebug = !showCommodityDebug">Toggle Debug</button></h3>
+        <button class="btn btn-primary btn-md" ng-click="onRefreshCommodityClicked();">Refresh <i class="fa fa-refresh"></i></button>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    Exchange
+                </td>
+                <td>
+                    <exchange-logo exchange="model.commodity.data.exchange"></exchange-logo>
+                    {{model.commodity.data.exchange}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Canonical Id
+                </td>
+                <td>{{model.commodity.data.canonicalId}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Symbol
+                </td>
+                <td>
+                    <commodity-logo symbol="model.commodity.data.symbol"></commodity-logo>
+                    {{model.commodity.data.symbol}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Native Symbol
+                </td>
+                <td>
+                    {{model.commodity.data.nativeSymbol}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>{{model.commodity.data.name}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Native Name
+                </td>
+                <td>{{model.commodity.data.nativeName}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Withdrawal Fee
+                </td>
+                <td>{{model.commodity.data.withdrawalFee}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Deposit Address
+                </td>
+                <td>
+                    <div>
+                        {{model.commodity.data.depositAddress}}
+                    </div>
+                    <div>
+                        <a target="_blank" ng-href="{{'https://etherscan.io/address/' + model.commodity.data.depositAddress + '#tokentxns'}}">Etherscan</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Deposit Memo
+                </td>
+                <td>{{model.commodity.data.depositMemo}}</td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    Can Deposit
+                </td>
+                <td>
+                    <i ng-if="model.commodity.data.canDeposit === true" class="fa fa-check" style="color:green;"></i>
+                    <i ng-if="model.commodity.data.canDeposit === false" class="fa fa-close" style="color:red;"></i>
+                    <i ng-if="model.commodity.data.canDeposit === undefined || model.commodity.data.canDeposit === null" class="fa fa-question" style="color:blue;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Can Withdraw
+                </td>
+                <td>
+                    <i ng-if="model.commodity.data.canWithdraw === true" class="fa fa-check" style="color:green;"></i>
+                    <i ng-if="model.commodity.data.canWithdraw === false" class="fa fa-close" style="color:red;"></i>
+                    <i ng-if="model.commodity.data.canWithdraw === undefined || model.commodity.data.canWithdraw === null" class="fa fa-question" style="color:blue;"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Trading Against
+                </td>
+                <td>{{model.commodity.data.baseSymbols.join(', ')}}</td>
+                <td>
+            </tr>
+            <tr>
+                <td>
+                    Valuations
+                </td>
+                <td>{{model.valuations}}</td>
+                <td>
+            </tr>
+
+            <tr ng-if="showCommodityDebug">
+                <td>Debug</td>
+                <td>{{model.commodity.data}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-xs-4">
+        <h3>Canonical Commodity</h3>
+        <canonical-commodity commodity="model.canon"></canonical-commodity>
+        <button ng-if="model.canon && model.canon.id !== model.commodity.data.canonicalId" class="btn btn-primary" ng-click="onMapCanonClicked()">Map to this canon</button>
+        <button disabled ng-if="model.canon && model.canon.id === model.commodity.data.canonicalId" class="btn btn-secondary">Already mapped to this canon</button>
+    </div>
+    <div class="col-xs-4">
+        <h3>Select a canonical commodity</h3>
+        <div>
+            <input class="form-control" type="text" ng-model="filter" ng-keyup="onFilterChanged();" />
+        </div>
+        <div>
+            <table class="table table-striped">
+                <tr ng-style="getStyle(item)" class="clickable" ng-repeat="item in filtered | limitTo: 5" ng-click="onCanonListItemClicked(item)">
+                    <td><commodity-logo symbol="item.symbol"></commodity-logo></td>
+                    <td>{{item.symbol}}
+                </td>
+                    <td>{{item.name}}</td>
+                    <td ng-if="showCanonDebug">{{item}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <h3>Balance<button class="btn btn-md btn-primary pull-right" ng-click="onRefreshBalanceClicked()">Refresh <i class="fa fa-refresh"></i></button></h3>
+        <table class="table table-striped">
+            <thead>
+                <tr style="font-size:20px; font-weight:bold;">
+                    <td>Total</td>
+                    <td>Available</td>
+                    <td>Hold</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{model.balance.data.total}}</td>
+                    <td>{{model.balance.data.available}}</td>
+                    <td>{{model.balance.data.inOrders}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-xs-4">
+        <h3>Other Exchanges</h3>
+        <table class="table table-striped">
+            <tr>
+                <td ng-repeat="exchange in model.exchanges.data"
+                    style="font-size:20px;">
+                    <a class="clickable" ui-sref="exchange-commodity-detail({exchange: exchange, nativeSymbol: nativeSymbol})">
+                        <exchange-logo exchange="exchange"></exchange-logo>
+                        {{exchange}}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="row">
+    <h3>Order Books</h3>
+</div>
+
+<div class="row">
+    <div class="col-xs-4" ng-repeat="orderBook in model.orderBooks"
+         ng-style="getOrderBookStyle(orderBook)">
+        <div class="row">
+            <h2 style="background-color:aliceblue; height:40px; margin-top:5px;">
+                {{orderBook.symbol}} / {{orderBook.baseSymbol}}
+
+                <div class="pull-right">
+                    &nbsp;&nbsp;
+                </div>
+
+                <button class="pull-right btn btn-md btn-primary"
+                        ng-click="onRefreshOrderBookClicked(orderBook)"
+                        ng-disabled="orderBook.isLoading">
+                    Refresh
+                </button>
+            </h2>
+        </div>
+        <order-book ng-model="orderBook" base-symbol="orderBook.baseSymbol" valuations="model.valuations"></order-book>
+    </div>
+</div>
+
+
+<div>
+    {{model}}
+</div>

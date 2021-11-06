@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C40D186-73B7-4066-AFD8-A7D7FA8A645C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>coss_browser_service_test_con</RootNamespace>
+    <AssemblyName>coss-browser-service-test-con</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="cookie-lib, Version=1.0.6815.34487, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\cookie-lib.1.0\lib\net471\cookie-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="dump-lib, Version=1.0.6698.25291, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dump-lib.1.3\lib\net471\dump-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.1\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CossBrowserServiceTestConApp.cs" />
+    <Compile Include="CossBrowserServiceTestConRunner.cs" />
+    <Compile Include="CossBrowserServiceTestConRegistry.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99af3275-f4dd-4f7d-854e-e5f8f30532e6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\client-lib\client-lib.csproj">
+      <Project>{a81d1f4a-c0bb-4dd7-86fb-3a7fc2394215}</Project>
+      <Name>client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{a8b37940-6ca8-4dfd-a77c-72baa9e29ce3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-browser-client-lib\coss-browser-client-lib.csproj">
+      <Project>{7f70b0df-61a3-4c8e-af95-7c2c5c929d2f}</Project>
+      <Name>coss-browser-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-browser-workflow-lib\coss-browser-workflow-lib.csproj">
+      <Project>{503d2315-6a61-44f4-a5ea-c7c6d2b652f1}</Project>
+      <Name>coss-browser-workflow-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\env-config-lib\env-config-lib.csproj">
+      <Project>{cf1815b4-c16a-41c7-bec7-2ebbbfcf6126}</Project>
+      <Name>env-config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\exchange-client-lib\exchange-client-lib.csproj">
+      <Project>{13406752-8c38-47df-bfcd-c668052a11c2}</Project>
+      <Name>exchange-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{e2c1423b-c42e-4aa2-8a00-90db2585bb5e}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1a8ceb0a-58db-49cd-bba5-2ae1560ceeef}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{ddfdaf8d-9d44-4365-aa33-2415d9b36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042f92d-183c-426d-9753-ea5c07da342b}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

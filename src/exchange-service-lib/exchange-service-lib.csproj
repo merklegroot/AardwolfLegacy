@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DF490DE-EAE5-437E-92DE-4810F6E9A7C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>exchange_service_lib</RootNamespace>
+    <AssemblyName>exchange-service-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="res-util-lib, Version=1.1.6675.18561, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\res-util.1.1\lib\res-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\ExchangeServiceApp.cs" />
+    <Compile Include="Constants\ExchangeServiceConstants.cs" />
+    <Compile Include="Converters\ModelConverter.cs" />
+    <Compile Include="Handlers\ExchangeHandler.cs" />
+    <Compile Include="Handlers\GetOrderBookHandler.cs" />
+    <Compile Include="SlimWithData.cs" />
+    <Compile Include="Workflows\ExchangeWorkflow.cs" />
+    <Compile Include="Workflows\IExchangeWorkflow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\binance-lib\binance-lib.csproj">
+      <Project>{5fba1779-f8fc-4e63-818e-e8a28cc21845}</Project>
+      <Name>binance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bit-z-lib\bit-z-lib.csproj">
+      <Project>{9eaa6ea9-23b2-4110-85ac-bf99cdbceb02}</Project>
+      <Name>bit-z-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\blocktrade-lib\blocktrade-lib.csproj">
+      <Project>{adf89768-43ff-4355-86bd-6ff5f12084c6}</Project>
+      <Name>blocktrade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coinbase-lib\coinbase-lib.csproj">
+      <Project>{6d351d32-7199-468d-9ae0-2324cbd81d43}</Project>
+      <Name>coinbase-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{a8b37940-6ca8-4dfd-a77c-72baa9e29ce3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-lib\coss-lib.csproj">
+      <Project>{38c088b7-c128-49f2-93a7-9863b37a96ca}</Project>
+      <Name>coss-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptopia-lib\cryptopia-lib.csproj">
+      <Project>{00fd679b-47fa-45ed-a47e-41b0e0e02e0d}</Project>
+      <Name>cryptopia-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\date-time-lib\date-time-lib.csproj">
+      <Project>{b275fdcd-798d-4aa9-9a0e-5e7efd90bfb8}</Project>
+      <Name>date-time-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gemini-lib\gemini-lib.csproj">
+      <Project>{538ee86c-c750-4ce3-b5e5-aa97853e9a91}</Project>
+      <Name>gemini-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\hitbtc-lib\hitbtc-lib.csproj">
+      <Project>{b1862aa2-1851-4da2-93a9-8763b0f8572c}</Project>
+      <Name>hitbtc-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\idex-integration-lib\idex-integration-lib.csproj">
+      <Project>{d12ddab7-fe1f-4f1c-aedc-b2947cfea13f}</Project>
+      <Name>idex-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kraken-integration-lib\kraken-integration-lib.csproj">
+      <Project>{2c69895f-c01a-4b3c-a990-b7e6ad5d0ef3}</Project>
+      <Name>kraken-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kucoin-lib\kucoin-lib.csproj">
+      <Project>{869c2c59-03b5-44d7-9abc-4aaf9e49b120}</Project>
+      <Name>kucoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\livecoin-lib\livecoin-lib.csproj">
+      <Project>{6dc7f2c3-bd84-405e-9b6d-e802c04c2b03}</Project>
+      <Name>livecoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{e2c1423b-c42e-4aa2-8a00-90db2585bb5e}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mew-integration-lib\mew-integration-lib.csproj">
+      <Project>{59afe7c6-dcbf-4bf6-99f8-37b0650dea3d}</Project>
+      <Name>mew-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\oex-lib\oex-lib.csproj">
+      <Project>{40ba8356-af23-483d-8008-eaa9ae1f5b46}</Project>
+      <Name>oex-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\parse-lib\parse-lib.csproj">
+      <Project>{c80372e6-c4da-43d4-b13f-7cdfafd264df}</Project>
+      <Name>parse-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\qryptos-lib\qryptos-lib.csproj">
+      <Project>{67dd488e-23a8-47b8-89fe-38b0eac917c5}</Project>
+      <Name>qryptos-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1a8ceb0a-58db-49cd-bba5-2ae1560ceeef}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\reflection-lib\reflection-lib.csproj">
+      <Project>{308175c5-fda2-49b8-80ac-75af6691e150}</Project>
+      <Name>reflection-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\service-lib\service-lib.csproj">
+      <Project>{3c0615f1-6ce1-449d-8e49-2b36c76b75fd}</Project>
+      <Name>service-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task-lib\task-lib.csproj">
+      <Project>{9a5a7bb2-87ed-4b86-af36-9998a691ff9d}</Project>
+      <Name>task-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tidex-integration-library\tidex-integration-library.csproj">
+      <Project>{6480A045-3A34-4506-AA26-48ECB2F80334}</Project>
+      <Name>tidex-integration-library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-constants\trade-constants.csproj">
+      <Project>{fc3a52e6-9502-4ba2-8a50-634b732e22c4}</Project>
+      <Name>trade-constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-contracts\trade-contracts.csproj">
+      <Project>{6c74fc0d-3a1b-4069-9937-73e644de2e45}</Project>
+      <Name>trade-contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2d4897c7-3d49-4305-9d03-4af6d9bd52e6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{ddfdaf8d-9d44-4365-aa33-2415d9b36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042f92d-183c-426d-9753-ea5c07da342b}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yobit-lib\yobit-lib.csproj">
+      <Project>{4bf65821-2631-4de7-a98f-a355842b259b}</Project>
+      <Name>yobit-lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

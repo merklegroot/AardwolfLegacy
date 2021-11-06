@@ -1,0 +1,135 @@
+﻿<h1><exchange-logo exchange="exchangeId"></exchange-logo> {{integrationDisplayName}}</h1>
+
+<br />
+
+<div class="row">
+    <div class="col-md-6 col-xs-12" style="border-width:1px; border-color:#444444; border-style:solid; border-radius:3px; background-color:#EEEEEE;">
+        <div class="row">
+            <h2 style="background-color:aliceblue; height:40px; margin-top:5px; padding-left:5px; padding-right:5px;">
+                Commodities
+                <button class="pull-right btn btn-md btn-primary" ng-click="onRefreshDepositAddressesClicked()">Refresh</button>
+            </h2>
+        </div>
+        <div class="row" style="padding-left:5px; padding-right:5px;">
+            <h3 ng-show="model.deposit.isLoading">Loading...</h3>
+            <exchange-commodity-list ng-model="model.commodities.data" exchange="exchangeId"></exchange-commodity-list>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <h2 style="background-color:aliceblue; height:40px; margin-top:5px;">
+            Balances
+            <button class="pull-right btn btn-md btn-primary"
+                    ng-click="onRefreshHoldingsClicked()"
+                    ng-disabled="model.holdings.isLoading">
+                Refresh
+            </button>
+
+            <span class="pull-right" ng-show="model.totalValue" style="color:#00dd21;">
+                {{model.totalValue | currency}}
+                &nbsp;&nbsp;
+            </span>
+        </h2>
+        <h3 ng-show="model.holdings.isLoading">Loading...</h3>
+        <span ng-if="model.holdings.data" style="font-size:18px; font-style:italic">(As of {{model.holdings.data.timeStampUtc | ago}}...)</span>
+        <div ng-hide="model.holdings.isLoading">
+
+            <div>
+                <input type="checkbox" ng-model="showSmallAssets" />
+                Show small assets
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-size:20px; font-weight:bold;">
+                        <td colspan="2">Commodity</td>
+                        <td>Available</td>
+                        <td>In Orders</td>
+                        <td>Total</td>
+                        <td>Value</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in model.holdings.data.holdings" ng-if="shouldShowHolding(item)">
+
+                        <td class="clickable"
+                            style="width:50px; text-align:center;">
+                            <a class="clickable" ui-sref="commodity-detail({symbol: item.symbol.toUpperCase()})">
+                                <commodity-logo symbol="item.symbol"></commodity-logo>
+                                
+                            </a>
+                        </td>
+
+                        <td style="font-weight:bold;">
+                            <a class="clickable" ui-sref="commodity-detail({symbol: item.symbol.toUpperCase()})">
+                                {{item.symbol}}
+                            </a>
+                        </td>
+
+                        <td>{{item.available}}</td>
+                        <td>{{item.inOrders}}</td>
+                        <td>{{item.total}}</td>
+                        <td>{{item.value | currency}}</td>
+                        <td>
+                            <button class="btn btn-md btn-primary"
+                                    ng-click="onTransferClicked(item)">
+                                Transfer
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div ng-if="exchangeId === 'coss' || exchangeId === 'idex' || exchangeId === 'bit-z'" class="col-xs-12" style="border-width:1px; border-color:#444444; border-style:solid; border-radius:3px; background-color:#EEEEEE;">
+        <div class="row">
+            <h2 style="background-color:aliceblue; height:45px; padding-left:5px; padding-right:5px; margin-top:0px;">
+                <span style="padding-top:10px;">
+                    Open Orders
+                    <button class="btn btn-primary" style="vertical-align:middle" ng-click="onRefreshOpenOrdersClicked()">Refresh</button>
+                    <button class="btn" ng-click="showOpenOrdersDebug = !showOpenOrdersDebug">{{showOpenOrdersDebug ? 'Hide' : 'Show'}} Debug</button>
+                </span>
+            </h2>
+        </div>
+
+        <div ng-if="model.openOrders.isLoading" class="row" style="padding-left:5px; padding-right:5px;">
+            <h3 ng-show="model.openOrders.isLoading">Loading...</h3>
+        </div>
+        <div ng-if="!model.openOrders.isLoading" class="row">
+            <div ng-if="!model.openOrders.data" style="font-size:20px; font-weight:bold;">No open orders</div>
+            <div ng-if="model.openOrders.data">
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="font-size:20px; font-weight:bold;">
+                            <td>Trading Pair</td>
+                            <td>Type</td>
+                            <td>Quantity</td>
+                            <td>Price</td>
+                            <td>Competition</td>
+                            <td>Sum</td>
+                            <td ng-if="showOpenOrdersDebug">Raw</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="order in model.openOrders.data">
+                            <td style="width:200px;">
+                                <span><commodity-logo symbol="order.symbol"></commodity-logo></span>
+                                <span>&nbsp;{{order.symbol}} / </span>
+                                <span>{{order.baseSymbol}}&nbsp;</span>
+                                <span><commodity-logo symbol="order.baseSymbol"></commodity-logo></span>
+                            </td>
+                            <td ng-class="(order.orderTypeText.trim().toUpperCase() === 'Bid'.toUpperCase()) ? 'buy' : 'sell'">{{order.orderTypeText}}</td>
+                            <td>{{order.quantity.toFixed(10)}}</td>
+                            <td style="{{order.isWinning ? 'background-color: lightgreen;' : ''}}">{{order.price.toFixed(18)}}</td>
+                            <td>{{order.competingPrice.toFixed(18)}}</td>
+                            <td>{{(order.quantity*order.price).toFixed(10)}} {{order.baseSymbol}}</td>
+                            <td ng-if="showOpenOrdersDebug">
+                                {{order}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

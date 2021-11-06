@@ -1,0 +1,56 @@
+﻿[
+  {
+    "Symbol": "ARK",
+    "ArbExchange": "bitz",
+    "CompExchange": "binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "NANO",
+    "ArbExchange": "bitz",
+    "CompExchange": "binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "BNTY",
+    "ArbExchange": "bitz",
+    "CompExchange": "kucoin",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "ARN",
+    "ArbExchange": "bitz",
+    "CompExchange": "binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "GXS",
+    "ArbExchange": "bitz",
+    "CompExchange": "binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "MCO",
+    "ArbExchange": "bitz",
+    "CompExchange": "hitbtc",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "ATM",
+    "ArbExchange": "bitz",
+    "CompExchange": "hitbtc",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "OCN",
+    "ArbExchange": "bitz",
+    "CompExchange": "kucoin",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "TKY",
+    "ArbExchange": "bitz",
+    "CompExchange": "kucoin",
+    "AltBaseSymbol": null
+  }
+]

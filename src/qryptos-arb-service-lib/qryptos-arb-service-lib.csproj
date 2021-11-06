@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CD3FD57-3F87-4A17-A0A6-F514297053D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qryptos_arb_service_lib</RootNamespace>
+    <AssemblyName>qryptos-arb-service-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="res-util-lib, Version=1.1.6675.18561, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\res-util.1.1\lib\res-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\QryptosArbServiceApp.cs" />
+    <Compile Include="Handlers\QryptosArbHandler.cs" />
+    <Compile Include="Models\AutoSymbolDef.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="res\arb-defs.json" />
+    <Compile Include="res\QryptosArbServiceLibResDummy.cs" />
+    <Compile Include="Workers\QryptosArbWorker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\arb-workflow-lib\arb-workflow-lib.csproj">
+      <Project>{7a385131-56f1-4144-93c1-e92b61d955c5}</Project>
+      <Name>arb-workflow-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{e2c1423b-c42e-4aa2-8a00-90db2585bb5e}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1a8ceb0a-58db-49cd-bba5-2ae1560ceeef}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\service-lib\service-lib.csproj">
+      <Project>{3c0615f1-6ce1-449d-8e49-2b36c76b75fd}</Project>
+      <Name>service-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task-lib\task-lib.csproj">
+      <Project>{9a5a7bb2-87ed-4b86-af36-9998a691ff9d}</Project>
+      <Name>task-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-constants\trade-constants.csproj">
+      <Project>{fc3a52e6-9502-4ba2-8a50-634b732e22c4}</Project>
+      <Name>trade-constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042f92d-183c-426d-9753-ea5c07da342b}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

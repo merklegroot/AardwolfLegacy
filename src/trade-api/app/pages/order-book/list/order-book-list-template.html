@@ -1,0 +1,30 @@
+﻿<h3>Order Book List</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr style="font-size:18px; font-weight:bold;">
+            <td>Exchange</td>
+            <td>Symbol</td>
+            <td>Base Symbol</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            ng-repeat="orderBook in orderBooks"
+            class="clickable" 
+            ui-sref="order-book-detail({exchange: orderBook.exchange, baseSymbol: orderBook.baseSymbol, symbol: orderBook.symbol})">
+            <td>
+                <exchange-logo exchange="orderBook.exchangeDisplayName"></exchange-logo>
+                {{orderBook.exchangeDisplayName}}
+            </td>
+            <td>
+                <commodity-logo symbol="orderBook.symbol"></commodity-logo>
+                <a>{{orderBook.symbol}}</a>
+            </td>
+            <td>
+                <commodity-logo symbol="orderBook.baseSymbol"></commodity-logo>
+                <a>{{orderBook.baseSymbol}}</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

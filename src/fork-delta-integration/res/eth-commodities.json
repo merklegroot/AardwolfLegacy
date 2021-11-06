@@ -1,0 +1,157 @@
+﻿[
+  {
+    "symbol": "ETH",
+    "name": "Ethereum",
+    "contractId": null
+  },
+  {
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "contractId": null
+  },
+    {
+        "symbol": "EOS",
+        "name": null,
+        "contractId": "0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0"
+    },
+  {
+    "symbol": "BTH",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "XMR",
+    "name": "Monero",
+    "contractId": null
+  },
+  {
+    "symbol": "LTC",
+    "name": "Lite Coin",
+    "contractId": null
+  },
+  {
+    "symbol": "GAT",
+    "name": "GAT Coin",
+    "contractId": "0x687174f8C49ceb7729D925C3A961507ea4Ac7b28",
+    "website": "https://www.gatcoin.io/"
+  },
+  {
+    "symbol": "DAT",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "HGT",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "ARK",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "COSS",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "ICX",
+    "name": "Icon",
+    "contractId": null
+  },
+  {
+    "symbol": "VEN",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "LSK",
+    "name": "Lisk",
+    "contractId": null
+  },
+  {
+    "symbol": "ZEN",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "BNT",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "DASH",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "ENJ",
+    "name": "Enjin Coin",
+    "contractId": null
+  },
+  {
+    "symbol": "POE",
+    "name": "Po.et",
+    "contractId": null
+  },
+  {
+    "symbol": "SNM",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "SUB",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "BPL",
+    "name": "Blockpool",
+    "contractId": null,
+    "website": "https://blockpool.io/"
+  },
+  {
+    "symbol": "LINK",
+    "name": "ChainLink",
+    "contractId": null
+  },
+  {
+    "symbol": "USD",
+    "name": null,
+    "contractId": null
+  },
+  {
+    "symbol": "KNC",
+    "name": "KyberNetwork Token",
+    "contractId": null
+  },
+  {
+    "symbol": "OMG",
+    "name": "Omisego",
+    "contractId": null
+  },
+  {
+    "symbol": "REQ",
+    "name": "Request Network",
+    "contractId": null
+  },
+  {
+    "symbol": "WAVES",
+    "name": "Waves",
+    "contractId": null,
+    "website": "https://wavesplatform.com/"
+  },
+  {
+    "symbol": "WTC",
+    "name": "Waltonchain",
+    "contractId": "0xb7cb1c96db6b22b0d3d9536e0108d062bd488f74",
+    "website": "https://www.waltonchain.org/"
+  },
+  {
+    "symbol": "TIG",
+    "name": "Tigereum",
+    "contractId": "0xeee2d00eb7deb8dd6924187f5aa3496b7d06e62a"
+  }
+]
+

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+(function () {
+    var clientMachineName = 'test_run';
+	var socket = new WebSocket("wss://idex.market");
+
+	socket.onmessage = function (evt) {
+	  var frameContents = JSON.stringify(evt.data);
+	  
+	  var serviceModel = { 
+		frameContents: frameContents,
+		clientTimeStampLocal: new Date(),
+		clientMachineName: clientMachineName
+      };
+	  
+	  var xhr = new XMLHttpRequest();
+	  xhr.open('POST', 'http://localhost/trade-data-relay/api/collector');
+	  xhr.setRequestHeader('Content-Type', 'application/json');
+	  xhr.send(JSON.stringify(serviceModel));
+	};
+})();
+    </script>
+</head>
+<body>
+    This is an api
+</body>
+</html>

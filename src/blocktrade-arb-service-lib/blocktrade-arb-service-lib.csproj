@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24F05CB2-E7F4-4A8B-AA94-EE72F468B020}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>blocktrade_arb_service_lib</RootNamespace>
+    <AssemblyName>blocktrade-arb-service-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\BlocktradeArbServiceApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workers\BlocktradeArbWorker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\arb-service-lib\arb-service-lib.csproj">
+      <Project>{E7FF8DD0-EA00-4ACD-BF30-B7D513567BD1}</Project>
+      <Name>arb-service-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\arb-workflow-lib\arb-workflow-lib.csproj">
+      <Project>{7A385131-56F1-4144-93C1-E92B61D955C5}</Project>
+      <Name>arb-workflow-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{E2C1423B-C42E-4AA2-8A00-90DB2585BB5E}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1A8CEB0A-58DB-49CD-BBA5-2AE1560CEEEF}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\service-lib\service-lib.csproj">
+      <Project>{3C0615F1-6CE1-449D-8E49-2B36C76B75FD}</Project>
+      <Name>service-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-constants\trade-constants.csproj">
+      <Project>{FC3A52E6-9502-4BA2-8A50-634B732E22C4}</Project>
+      <Name>trade-constants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

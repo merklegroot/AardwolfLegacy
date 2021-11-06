@@ -1,0 +1,8426 @@
+﻿[
+  {
+    "Symbol": "007",
+    "FullName": "007Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 1850307.50,
+    "DiffPos": 1.51190420
+  },
+  {
+    "Symbol": "1337",
+    "FullName": "1337coin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.36940065
+  },
+  {
+    "Symbol": "2015",
+    "FullName": "2015",
+    "Algo": "X11",
+    "DiffPow": 9298977.32,
+    "DiffPos": 195.91242000
+  },
+  {
+    "Symbol": "256",
+    "FullName": "256Coin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 7342.34000000
+  },
+  {
+    "Symbol": "2BACCO",
+    "FullName": "2BACCO",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 43.09541800
+  },
+  {
+    "Symbol": "2GIVE",
+    "FullName": "2GiveCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 519628530.05,
+    "DiffPos": 0.00024668
+  },
+  {
+    "Symbol": "32BIT",
+    "FullName": "32BitCoin",
+    "Algo": "X11",
+    "DiffPow": 347958.61,
+    "DiffPos": 1.37672790
+  },
+  {
+    "Symbol": "365",
+    "FullName": "365Coin",
+    "Algo": "X11",
+    "DiffPow": 539472505.13,
+    "DiffPos": 6.01070730
+  },
+  {
+    "Symbol": "404",
+    "FullName": "404Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 389564981.06,
+    "DiffPos": 0.25409042
+  },
+  {
+    "Symbol": "420G",
+    "FullName": "GanjaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1838507.68,
+    "DiffPos": 0.34092505
+  },
+  {
+    "Symbol": "700",
+    "FullName": "700Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 43630532.61,
+    "DiffPos": 10.99533700
+  },
+  {
+    "Symbol": "888",
+    "FullName": "OctoCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 5.03455960
+  },
+  {
+    "Symbol": "8BIT",
+    "FullName": "8bit",
+    "Algo": "Scrypt",
+    "DiffPow": 101706.66,
+    "DiffPos": 18.68310400
+  },
+  {
+    "Symbol": "ABY",
+    "FullName": "ArtByte",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 648.02961000
+  },
+  {
+    "Symbol": "ACES",
+    "FullName": "AcesCoin",
+    "Algo": "X13",
+    "DiffPow": 100505730.06,
+    "DiffPos": 0.35339319
+  },
+  {
+    "Symbol": "ACID",
+    "FullName": "AcidCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 135677.32000000
+  },
+  {
+    "Symbol": "ACLR",
+    "FullName": "Accelerate",
+    "Algo": "X11",
+    "DiffPow": 560000043.23,
+    "DiffPos": 18.39984500
+  },
+  {
+    "Symbol": "ACOIN",
+    "FullName": "Acoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 19236.27200000
+  },
+  {
+    "Symbol": "ACP",
+    "FullName": "Anarhists Prime",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 153512.21000000
+  },
+  {
+    "Symbol": "ACPR",
+    "FullName": "AcesPro",
+    "Algo": "",
+    "DiffPow": 10305977.91,
+    "DiffPos": 0.00038616
+  },
+  {
+    "Symbol": "ACRN",
+    "FullName": "Acorn Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 4255062410.21,
+    "DiffPos": 0.00055469
+  },
+  {
+    "Symbol": "ADAM",
+    "FullName": "AdamCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9952896242.01,
+    "DiffPos": 0.00079423
+  },
+  {
+    "Symbol": "ADC",
+    "FullName": "AudioCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 885678180.55,
+    "DiffPos": 15.57500600
+  },
+  {
+    "Symbol": "ADCN",
+    "FullName": "AsiaDigiCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 1878.93180000
+  },
+  {
+    "Symbol": "ADT",
+    "FullName": "AdToken",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ADZ",
+    "FullName": "AdzCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 108113.12000000
+  },
+  {
+    "Symbol": "AE",
+    "FullName": "Aeternity",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "AECC",
+    "FullName": "aEchoCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 0.60400365
+  },
+  {
+    "Symbol": "AGRI",
+    "FullName": "AgriNovus Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 113232912.91,
+    "DiffPos": 80.08516000
+  },
+  {
+    "Symbol": "AGT",
+    "FullName": "Agro Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "AIB",
+    "FullName": "AIBcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.02654102
+  },
+  {
+    "Symbol": "AIR",
+    "FullName": "AirCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 255931699.03,
+    "DiffPos": 0.00233216
+  },
+  {
+    "Symbol": "AL",
+    "FullName": "Artificial Intelligence",
+    "Algo": "X11",
+    "DiffPow": 100566112.20,
+    "DiffPos": 127.35482000
+  },
+  {
+    "Symbol": "ALC",
+    "FullName": "ArabLcoin",
+    "Algo": "X13",
+    "DiffPow": 71415665.88,
+    "DiffPos": 4.20641550
+  },
+  {
+    "Symbol": "ALEX",
+    "FullName": "AlexandriteCoin",
+    "Algo": "SHA256",
+    "DiffPow": 283176.66,
+    "DiffPos": 4024151.80000000
+  },
+  {
+    "Symbol": "ALIEN",
+    "FullName": "Aliencoin",
+    "Algo": "Scrypt",
+    "DiffPow": 70348870617.66,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "ALIS",
+    "FullName": "Alis Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ALL",
+    "FullName": "Allion",
+    "Algo": "Scrypt",
+    "DiffPow": 7370830.16,
+    "DiffPos": 0.00355511
+  },
+  {
+    "Symbol": "ALTC",
+    "FullName": "AntiLiteCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 2.59350160
+  },
+  {
+    "Symbol": "ALTCOM",
+    "FullName": "AltCommunity Coin",
+    "Algo": "SkunkHash",
+    "DiffPow": 374103.87,
+    "DiffPos": 19.63492100
+  },
+  {
+    "Symbol": "AM",
+    "FullName": "AeroMeCoin",
+    "Algo": "X13",
+    "DiffPow": 12110261.91,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "AMBER",
+    "FullName": "AmberCoin",
+    "Algo": "X13",
+    "DiffPow": 43703011.87,
+    "DiffPos": 0.08086039
+  },
+  {
+    "Symbol": "AMM",
+    "FullName": "MicroMoney",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "AMS",
+    "FullName": "AmsterdamCoin",
+    "Algo": "Quark",
+    "DiffPow": 60964864.00,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "ANAL",
+    "FullName": "AnalCoin",
+    "Algo": "SHA256",
+    "DiffPow": 306084.18,
+    "DiffPos": 214758.34000000
+  },
+  {
+    "Symbol": "ANI",
+    "FullName": "ANICoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ANT",
+    "FullName": "Ants Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 567883984.11,
+    "DiffPos": 1.93564110
+  },
+  {
+    "Symbol": "ANTI",
+    "FullName": "Anti Bitcoin",
+    "Algo": "SHA256",
+    "DiffPow": 17465167.44,
+    "DiffPos": 97215.91200000
+  },
+  {
+    "Symbol": "APT",
+    "FullName": "AptCoin",
+    "Algo": "Scrypt-N",
+    "DiffPow": null,
+    "DiffPos": 0.08079609
+  },
+  {
+    "Symbol": "ARB",
+    "FullName": "ARBIT",
+    "Algo": "SHA256",
+    "DiffPow": 8831665.00,
+    "DiffPos": 4682208.20000000
+  },
+  {
+    "Symbol": "ARBIT",
+    "FullName": "ARBITRAGE",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ARCO",
+    "FullName": "AquariusCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1696907.40,
+    "DiffPos": 17.56063900
+  },
+  {
+    "Symbol": "ARCT",
+    "FullName": "ARCT Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ARCX",
+    "FullName": "ArcticCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 5183.41100000
+  },
+  {
+    "Symbol": "ARE",
+    "FullName": "AureusCoin",
+    "Algo": "X11",
+    "DiffPow": 250041006.87,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "ARGUS",
+    "FullName": "ArgusCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 302.63109000
+  },
+  {
+    "Symbol": "ARH",
+    "FullName": "ArhCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 24442970.41,
+    "DiffPos": 1.02959890
+  },
+  {
+    "Symbol": "ARM",
+    "FullName": "Armory",
+    "Algo": "Scrypt",
+    "DiffPow": 1543280653.43,
+    "DiffPos": 0.02114386
+  },
+  {
+    "Symbol": "ARNA",
+    "FullName": "Arna Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ARPA",
+    "FullName": "ArpaCoin",
+    "Algo": "SHA256",
+    "DiffPow": 2480610.00,
+    "DiffPos": 874934.23000000
+  },
+  {
+    "Symbol": "ARTA",
+    "FullName": "ARTA Digital",
+    "Algo": "X11",
+    "DiffPow": 240035736.00,
+    "DiffPos": 406.12346000
+  },
+  {
+    "Symbol": "ARTC",
+    "FullName": "ARTCurrency",
+    "Algo": "Scrypt",
+    "DiffPow": 3932293.95,
+    "DiffPos": 4.94190300
+  },
+  {
+    "Symbol": "ASAFE",
+    "FullName": "Allsafe",
+    "Algo": "X11",
+    "DiffPow": -73562887125.55,
+    "DiffPos": 0.01549036
+  },
+  {
+    "Symbol": "ASCS",
+    "FullName": "AS Coins",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ASN",
+    "FullName": "Ascension",
+    "Algo": "Qubit",
+    "DiffPow": 23446294.45,
+    "DiffPos": 963.51325000
+  },
+  {
+    "Symbol": "AST",
+    "FullName": "ASTRAL",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.05509314
+  },
+  {
+    "Symbol": "ASTR",
+    "FullName": "ASTRcoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ATB",
+    "FullName": "ATBCoin",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 5415643.90000000
+  },
+  {
+    "Symbol": "ATL",
+    "FullName": "Atlant Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ATM",
+    "FullName": "Autumncoin",
+    "Algo": "X11",
+    "DiffPow": 7470393.46,
+    "DiffPos": 5.94759350
+  },
+  {
+    "Symbol": "ATMCHA",
+    "FullName": "ATMChain",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ATOM",
+    "FullName": "Atomic Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 15538556.51,
+    "DiffPos": 43.17060400
+  },
+  {
+    "Symbol": "AUM",
+    "FullName": "Alexium Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 355.73,
+    "DiffPos": 0.00003677
+  },
+  {
+    "Symbol": "AUR",
+    "FullName": "AuroraCoin",
+    "Algo": "Multi",
+    "DiffPow": null,
+    "DiffPos": 9378.49770000
+  },
+  {
+    "Symbol": "AV",
+    "FullName": "Avatar Coin",
+    "Algo": "POS",
+    "DiffPow": 10851588.46,
+    "DiffPos": 0.04764325
+  },
+  {
+    "Symbol": "AXIOM",
+    "FullName": "Axiom",
+    "Algo": "AXH",
+    "DiffPow": 9033234.00,
+    "DiffPos": 0.00004594
+  },
+  {
+    "Symbol": "B2",
+    "FullName": "B2Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 359234730.42,
+    "DiffPos": 0.24747932
+  },
+  {
+    "Symbol": "B2B",
+    "FullName": "B2BX Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "B2X",
+    "FullName": "Bitcoin Segwit2x",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "B3",
+    "FullName": "B3Coin",
+    "Algo": "X11",
+    "DiffPow": 241457189490.97,
+    "DiffPos": 199.54043000
+  },
+  {
+    "Symbol": "BA",
+    "FullName": "BitAlpha",
+    "Algo": "Scrypt",
+    "DiffPow": 13496000.00,
+    "DiffPos": 7.54802950
+  },
+  {
+    "Symbol": "BAB",
+    "FullName": "Babel",
+    "Algo": "X11",
+    "DiffPow": 601196000.00,
+    "DiffPos": 0.18449701
+  },
+  {
+    "Symbol": "BAC",
+    "FullName": "BitAlphaCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 5719.09320000
+  },
+  {
+    "Symbol": "BAM",
+    "FullName": "Bamit",
+    "Algo": "X11",
+    "DiffPow": 604712.16,
+    "DiffPos": 3.25783610
+  },
+  {
+    "Symbol": "BAN",
+    "FullName": "BANcoin",
+    "Algo": "POS",
+    "DiffPow": 150049830.64,
+    "DiffPos": 0.00027922
+  },
+  {
+    "Symbol": "BASH",
+    "FullName": "LuckChain",
+    "Algo": "Scrypt",
+    "DiffPow": 722978286.00,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "BAT",
+    "FullName": "BAT Coin",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BATL",
+    "FullName": "Battlestars Coin",
+    "Algo": "POS",
+    "DiffPow": 633388141.00,
+    "DiffPos": 0.00027974
+  },
+  {
+    "Symbol": "BBCC",
+    "FullName": "BaseballCard",
+    "Algo": "Scrypt",
+    "DiffPow": 6015819.00,
+    "DiffPos": 705.56568000
+  },
+  {
+    "Symbol": "BBH",
+    "FullName": "BBH Coin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 678514010.00000000
+  },
+  {
+    "Symbol": "BBT",
+    "FullName": "BitBoost",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BCA",
+    "FullName": "Bitcoin Atom",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BCC",
+    "FullName": "Bitcoin Cash",
+    "Algo": "Sha256",
+    "DiffPow": null,
+    "DiffPos": 590704470000.00000000
+  },
+  {
+    "Symbol": "BCD",
+    "FullName": "Bitcoin Diamond",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BCL",
+    "FullName": "BitcoinClean",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BCM",
+    "FullName": "BitcoinMetal",
+    "Algo": "SHA256",
+    "DiffPow": 8917520.75,
+    "DiffPos": 0.00039396
+  },
+  {
+    "Symbol": "BCP",
+    "FullName": "Bitcoin Cash Plus",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BCS",
+    "FullName": "BitcoinStake",
+    "Algo": "Scrypt",
+    "DiffPow": 14967845.78,
+    "DiffPos": 49.09118000
+  },
+  {
+    "Symbol": "BDC",
+    "FullName": "BlackDiamondCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00506482
+  },
+  {
+    "Symbol": "BEEP",
+    "FullName": "BeepCoin",
+    "Algo": "X11",
+    "DiffPow": 315100299.51,
+    "DiffPos": 43.17249200
+  },
+  {
+    "Symbol": "BEEZ",
+    "FullName": "BeezerCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 23246835.53,
+    "DiffPos": 0.38665542
+  },
+  {
+    "Symbol": "BENJI",
+    "FullName": "BenjiRolls",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 811.52006000
+  },
+  {
+    "Symbol": "BERN",
+    "FullName": "BERNcash",
+    "Algo": "X14",
+    "DiffPow": 76616766.83,
+    "DiffPos": 58.89483700
+  },
+  {
+    "Symbol": "BEST",
+    "FullName": "BestChain",
+    "Algo": "Scrypt",
+    "DiffPow": 20293977.54,
+    "DiffPos": 0.02585740
+  },
+  {
+    "Symbol": "BGF",
+    "FullName": "BigGoldFishCoin",
+    "Algo": "",
+    "DiffPow": 7158241.85,
+    "DiffPos": 0.00167572
+  },
+  {
+    "Symbol": "BHC",
+    "FullName": "BlackholeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 11.79960400
+  },
+  {
+    "Symbol": "BIGUP",
+    "FullName": "BigUp",
+    "Algo": "ICO",
+    "DiffPow": 4000000000.00,
+    "DiffPos": 0.00026945
+  },
+  {
+    "Symbol": "BILL",
+    "FullName": "BillCoin",
+    "Algo": "X11",
+    "DiffPow": 33789330.86,
+    "DiffPos": 0.01589198
+  },
+  {
+    "Symbol": "BIO",
+    "FullName": "BioCoin",
+    "Algo": "",
+    "DiffPow": 820807200.68,
+    "DiffPos": 0.21701625
+  },
+  {
+    "Symbol": "BIOB",
+    "FullName": "BioBar",
+    "Algo": "SHA256",
+    "DiffPow": 1772479.01,
+    "DiffPos": 366362.12000000
+  },
+  {
+    "Symbol": "BIOS",
+    "FullName": "BiosCoin",
+    "Algo": "Quark",
+    "DiffPow": 22660924.13,
+    "DiffPos": 446.12455000
+  },
+  {
+    "Symbol": "BIT16",
+    "FullName": "16BIT COIN",
+    "Algo": "NIST5",
+    "DiffPow": 12600024.12,
+    "DiffPos": 19.93232700
+  },
+  {
+    "Symbol": "BITB",
+    "FullName": "BitBean",
+    "Algo": "SHA256",
+    "DiffPow": 2476385000.00,
+    "DiffPos": 24832750.00000000
+  },
+  {
+    "Symbol": "BITOK",
+    "FullName": "BitOKX",
+    "Algo": "Scrypt",
+    "DiffPow": 2300297929.48,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "BITON",
+    "FullName": "BitOn Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 31.98237000
+  },
+  {
+    "Symbol": "BITS",
+    "FullName": "Bitstar Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 24610525.24,
+    "DiffPos": 0.94240725
+  },
+  {
+    "Symbol": "BITZ",
+    "FullName": "Bitz",
+    "Algo": "X11",
+    "DiffPow": 1993794.88,
+    "DiffPos": 12.48211400
+  },
+  {
+    "Symbol": "BLAZR",
+    "FullName": "BlazerCoin",
+    "Algo": "DGW3",
+    "DiffPow": null,
+    "DiffPos": 520.22281000
+  },
+  {
+    "Symbol": "BLN",
+    "FullName": "Bulleon",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BLRY",
+    "FullName": "Billary",
+    "Algo": "Scrypt",
+    "DiffPow": 9.62,
+    "DiffPos": 15.07615800
+  },
+  {
+    "Symbol": "BLU",
+    "FullName": "BlueCoin",
+    "Algo": "X11",
+    "DiffPow": 577046147.45,
+    "DiffPos": 1.61448070
+  },
+  {
+    "Symbol": "BLUE",
+    "FullName": "BLUE",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BLUS",
+    "FullName": "BlueSteel",
+    "Algo": "X11",
+    "DiffPow": 13545891.58,
+    "DiffPos": 17.37958000
+  },
+  {
+    "Symbol": "BM",
+    "FullName": "Bitcomo",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BMT",
+    "FullName": "BMchain",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BNBX",
+    "FullName": "BnBX Coin",
+    "Algo": "X11",
+    "DiffPow": 698163.01,
+    "DiffPos": 0.06019189
+  },
+  {
+    "Symbol": "BNS",
+    "FullName": "BNS Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BNT",
+    "FullName": "Bancor",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BOD",
+    "FullName": "Bloodcoin",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 0.12941734
+  },
+  {
+    "Symbol": "BOLI",
+    "FullName": "BolivarCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 38711.29200000
+  },
+  {
+    "Symbol": "BOMB",
+    "FullName": "BombCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1282180019.43,
+    "DiffPos": 0.22435195
+  },
+  {
+    "Symbol": "BON",
+    "FullName": "BonesCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 442273320.04,
+    "DiffPos": 1.89528020
+  },
+  {
+    "Symbol": "BOOM",
+    "FullName": "BoomCoin",
+    "Algo": "X13",
+    "DiffPow": 12574533.44,
+    "DiffPos": 6.20738950
+  },
+  {
+    "Symbol": "BOSON",
+    "FullName": "BosonCoin",
+    "Algo": "X11",
+    "DiffPow": 597434206.88,
+    "DiffPos": 3616.99700000
+  },
+  {
+    "Symbol": "BOSS",
+    "FullName": "BitBoss",
+    "Algo": "SHA256",
+    "DiffPow": 69562.50,
+    "DiffPos": 275324.07000000
+  },
+  {
+    "Symbol": "BOT",
+    "FullName": "BOTcoin",
+    "Algo": "ICO",
+    "DiffPow": 44916.96,
+    "DiffPos": 0.71932694
+  },
+  {
+    "Symbol": "BOUTS",
+    "FullName": "BoutsPro",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BPC",
+    "FullName": "Bitcoin Premium",
+    "Algo": "POS",
+    "DiffPow": 29625480143.76,
+    "DiffPos": 2427.64620000
+  },
+  {
+    "Symbol": "BPOK",
+    "FullName": "BitPokemonGo",
+    "Algo": "X11",
+    "DiffPow": 24672828.42,
+    "DiffPos": 0.00003552
+  },
+  {
+    "Symbol": "BPTN",
+    "FullName": "BitPublicTN",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BRAIN",
+    "FullName": "BrainCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 1492.92130000
+  },
+  {
+    "Symbol": "BRAT",
+    "FullName": "Brat Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BRDD",
+    "FullName": "BeardDollars",
+    "Algo": "Scrypt",
+    "DiffPow": 4222977.04,
+    "DiffPos": 0.39485338
+  },
+  {
+    "Symbol": "BRE",
+    "FullName": "BreakCoin",
+    "Algo": "X11",
+    "DiffPow": 87.34,
+    "DiffPos": 0.03889805
+  },
+  {
+    "Symbol": "BRH",
+    "FullName": "Brahma Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BRONZ",
+    "FullName": "BitBronze",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 2620.81130000
+  },
+  {
+    "Symbol": "BS",
+    "FullName": "BlackShadow",
+    "Algo": "X11",
+    "DiffPow": 323530635.90,
+    "DiffPos": 32.85226100
+  },
+  {
+    "Symbol": "BSC",
+    "FullName": "Bowscoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 33325.84600000
+  },
+  {
+    "Symbol": "BSH",
+    "FullName": "BitRush",
+    "Algo": "X11",
+    "DiffPow": 955769.88,
+    "DiffPos": 0.00852979
+  },
+  {
+    "Symbol": "BST",
+    "FullName": "BitStone",
+    "Algo": "X11",
+    "DiffPow": 453927.27,
+    "DiffPos": 44.02003600
+  },
+  {
+    "Symbol": "BSTAR",
+    "FullName": "BlackStar",
+    "Algo": "",
+    "DiffPow": 3181666231.30,
+    "DiffPos": 0.00036694
+  },
+  {
+    "Symbol": "BSTK",
+    "FullName": "BattleStake",
+    "Algo": "POS",
+    "DiffPow": 6057.90,
+    "DiffPos": 0.00063570
+  },
+  {
+    "Symbol": "BSTY",
+    "FullName": "GlobalBoost-Y",
+    "Algo": "Yescrypt",
+    "DiffPow": null,
+    "DiffPos": 0.13913747
+  },
+  {
+    "Symbol": "BTA",
+    "FullName": "BATA",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 21.95865300
+  },
+  {
+    "Symbol": "BTC",
+    "FullName": "Bitcoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 999999999999.99999999
+  },
+  {
+    "Symbol": "BTCA",
+    "FullName": "BITAIR",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTCM",
+    "FullName": "BTCMoon",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTCO",
+    "FullName": "BTCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00567984
+  },
+  {
+    "Symbol": "BTCR",
+    "FullName": "Bitcurrency",
+    "Algo": "Scrypt",
+    "DiffPow": 201798145.23,
+    "DiffPos": 0.59347436
+  },
+  {
+    "Symbol": "BTCRED",
+    "FullName": "Bitcoin Red",
+    "Algo": "ETH",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTCRY",
+    "FullName": "BitCrystalY",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 0.57468694
+  },
+  {
+    "Symbol": "BTCS",
+    "FullName": "Bitcoin Silver",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTCU",
+    "FullName": "BitcoinUltra",
+    "Algo": "SHA256",
+    "DiffPow": 1083717.67,
+    "DiffPos": 1207200.00000000
+  },
+  {
+    "Symbol": "BTD",
+    "FullName": "Bit Cloud",
+    "Algo": "Scrypt",
+    "DiffPow": 11278779.49,
+    "DiffPos": 261.40073000
+  },
+  {
+    "Symbol": "BTDOLL",
+    "FullName": "Bitcoin Dollar",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTG",
+    "FullName": "Bitcoin Gold",
+    "Algo": "HARDFork BTC",
+    "DiffPow": null,
+    "DiffPos": 3530890.30000000
+  },
+  {
+    "Symbol": "BTH",
+    "FullName": "Bitcoin Hot",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTM",
+    "FullName": "Bytom",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTP",
+    "FullName": "BitPound",
+    "Algo": "SHA256",
+    "DiffPow": 5284981.00,
+    "DiffPos": 48555.20100000
+  },
+  {
+    "Symbol": "BTS",
+    "FullName": "Bitshares2",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTTF",
+    "FullName": "BackToTheFuture",
+    "Algo": "SHA256",
+    "DiffPow": 1210725.82,
+    "DiffPos": 0.00097393
+  },
+  {
+    "Symbol": "BTU",
+    "FullName": "Bitcoin Unlimited",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTV",
+    "FullName": "BitVote",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BTZ",
+    "FullName": "BTZ Coin",
+    "Algo": "X11",
+    "DiffPow": 34107755.00,
+    "DiffPos": 1.96247830
+  },
+  {
+    "Symbol": "BUB",
+    "FullName": "Bubble",
+    "Algo": "SHA256",
+    "DiffPow": 2449615.00,
+    "DiffPos": 0.00904139
+  },
+  {
+    "Symbol": "BUCKS",
+    "FullName": "SwagBucks",
+    "Algo": "Scrypt",
+    "DiffPow": 392756.99,
+    "DiffPos": 2744.24800000
+  },
+  {
+    "Symbol": "BUM",
+    "FullName": "Bitcoin Uranium",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BUY",
+    "FullName": "BuyCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "BUZZ",
+    "FullName": "BUZZCOIN",
+    "Algo": "SHA256",
+    "DiffPow": 18106443273.63,
+    "DiffPos": 227743.17000000
+  },
+  {
+    "Symbol": "BVC",
+    "FullName": "BeaverCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 6.04075550
+  },
+  {
+    "Symbol": "BXT",
+    "FullName": "Bit Tokens",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 23043979000.00000000
+  },
+  {
+    "Symbol": "C0C0",
+    "FullName": "c0fferCoin",
+    "Algo": "POS",
+    "DiffPow": 11611401.51,
+    "DiffPos": 0.00025177
+  },
+  {
+    "Symbol": "C2",
+    "FullName": "Coin2",
+    "Algo": "Scrypt",
+    "DiffPow": 133726822.37,
+    "DiffPos": 5.98346510
+  },
+  {
+    "Symbol": "CAB",
+    "FullName": "CabbageUnit",
+    "Algo": "POS",
+    "DiffPow": 10499995.91,
+    "DiffPos": 0.47927423
+  },
+  {
+    "Symbol": "CAG",
+    "FullName": "Change Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CAID",
+    "FullName": "CoinAid",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "CAM",
+    "FullName": "Camorracoin",
+    "Algo": "Scrypt",
+    "DiffPow": 3015483.77,
+    "DiffPos": 11.39416300
+  },
+  {
+    "Symbol": "CANN",
+    "FullName": "CannabisCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 306469.06000000
+  },
+  {
+    "Symbol": "CAPT",
+    "FullName": "CAPTcoin",
+    "Algo": "POS",
+    "DiffPow": 20591846.96,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "CARBON",
+    "FullName": "CarbonCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 0.01035918
+  },
+  {
+    "Symbol": "CAT",
+    "FullName": "Bitclave",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CB",
+    "FullName": "Cryptobyte",
+    "Algo": "POS",
+    "DiffPow": 50419599888.23,
+    "DiffPos": 0.00001526
+  },
+  {
+    "Symbol": "CBD",
+    "FullName": "CBD Crystals",
+    "Algo": "POS",
+    "DiffPow": 50002550.51,
+    "DiffPos": 0.04594791
+  },
+  {
+    "Symbol": "CBX",
+    "FullName": "CryptoBullion",
+    "Algo": "Scrypt",
+    "DiffPow": 1008763.95,
+    "DiffPos": 2712.17780000
+  },
+  {
+    "Symbol": "CC",
+    "FullName": "CyberCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 549940863.63,
+    "DiffPos": 367.46452000
+  },
+  {
+    "Symbol": "CCB",
+    "FullName": "Cryptoclub Coin",
+    "Algo": "X11",
+    "DiffPow": 8596507741.27,
+    "DiffPos": 18096.06400000
+  },
+  {
+    "Symbol": "CCC",
+    "FullName": "CharlieChaplin",
+    "Algo": "X11",
+    "DiffPow": 911043603.51,
+    "DiffPos": 11.74859600
+  },
+  {
+    "Symbol": "CCT",
+    "FullName": "Crystal Clear Token",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CCX",
+    "FullName": "CoolinDarkCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2477956.47,
+    "DiffPos": 0.43929563
+  },
+  {
+    "Symbol": "CD",
+    "FullName": "CandleCoin",
+    "Algo": "SHA256",
+    "DiffPow": 32353991.34,
+    "DiffPos": 0.00616368
+  },
+  {
+    "Symbol": "CDO",
+    "FullName": "CryptoDao Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 5581691.52,
+    "DiffPos": 17.06729200
+  },
+  {
+    "Symbol": "CF",
+    "FullName": "Californium",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 542931.20000000
+  },
+  {
+    "Symbol": "CFC",
+    "FullName": "CoffeeCoin",
+    "Algo": "POS",
+    "DiffPow": 147452188.22,
+    "DiffPos": 0.00220793
+  },
+  {
+    "Symbol": "CG",
+    "FullName": "CryptoGold",
+    "Algo": "Scrypt",
+    "DiffPow": 11175312.08,
+    "DiffPos": 162.62102000
+  },
+  {
+    "Symbol": "CHAT",
+    "FullName": "ChatCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 10820906.87,
+    "DiffPos": 6.63670510
+  },
+  {
+    "Symbol": "CHATX",
+    "FullName": "BeeChat",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CHEMX",
+    "FullName": "ChemCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1845000.00,
+    "DiffPos": 0.00027001
+  },
+  {
+    "Symbol": "CHESS",
+    "FullName": "Chess Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 66213198.74,
+    "DiffPos": 0.04171061
+  },
+  {
+    "Symbol": "CHILL",
+    "FullName": "Chill",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CHIP",
+    "FullName": "ChipCoin",
+    "Algo": "X11",
+    "DiffPow": 13457642.00,
+    "DiffPos": 1.67309160
+  },
+  {
+    "Symbol": "CHOOF",
+    "FullName": "ChoofCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 431724372.14,
+    "DiffPos": 2.23865740
+  },
+  {
+    "Symbol": "CHP",
+    "FullName": "Poker Chips",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CHRG",
+    "FullName": "Charged",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 161.05212000
+  },
+  {
+    "Symbol": "CHSB",
+    "FullName": "SwissBorg",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CIN",
+    "FullName": "Cinema Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 159607.92,
+    "DiffPos": 7.54277640
+  },
+  {
+    "Symbol": "CIRC",
+    "FullName": "CryptoCircuits",
+    "Algo": "ICO",
+    "DiffPow": 3410312.73,
+    "DiffPos": 0.17467709
+  },
+  {
+    "Symbol": "CJ",
+    "FullName": "CryptoJacks",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 128.90975000
+  },
+  {
+    "Symbol": "CJC",
+    "FullName": "CryptoJournal",
+    "Algo": "POS",
+    "DiffPow": 104933138.00,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "CKS",
+    "FullName": "Chicks",
+    "Algo": "Scrypt",
+    "DiffPow": 136200.77,
+    "DiffPos": 1.05937410
+  },
+  {
+    "Symbol": "CL",
+    "FullName": "Coinlancer",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CLAM",
+    "FullName": "ClamCoin",
+    "Algo": "SHA256",
+    "DiffPow": 16673519.13,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CLICK",
+    "FullName": "ClickCoin",
+    "Algo": "POS",
+    "DiffPow": 8056849.84,
+    "DiffPos": 0.03450209
+  },
+  {
+    "Symbol": "CLINT",
+    "FullName": "Clinton Coin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 15530.62700000
+  },
+  {
+    "Symbol": "CLO",
+    "FullName": "Callisto",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CLOAK",
+    "FullName": "CloakCoin",
+    "Algo": "X13",
+    "DiffPow": 5125266.13,
+    "DiffPos": 1266.21890000
+  },
+  {
+    "Symbol": "CLR",
+    "FullName": "ClearCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CLUB",
+    "FullName": "ClubCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 99262603.05,
+    "DiffPos": 0.00103134
+  },
+  {
+    "Symbol": "CLUD",
+    "FullName": "CludCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 5.80453980
+  },
+  {
+    "Symbol": "CMC",
+    "FullName": "Communist Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 4.90164550
+  },
+  {
+    "Symbol": "CME",
+    "FullName": "CashMe",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.01324880
+  },
+  {
+    "Symbol": "CMS",
+    "FullName": "COMSA",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CMT",
+    "FullName": "CometCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 553.68898000
+  },
+  {
+    "Symbol": "CNNC",
+    "FullName": "Cannation Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 54334741.41,
+    "DiffPos": 0.62443426
+  },
+  {
+    "Symbol": "CNT",
+    "FullName": "Centurion",
+    "Algo": "X11",
+    "DiffPow": 83024948.41,
+    "DiffPos": 23859.10700000
+  },
+  {
+    "Symbol": "CNX",
+    "FullName": "Cryptonex Coin",
+    "Algo": "",
+    "DiffPow": 106670063.94,
+    "DiffPos": 0.03233757
+  },
+  {
+    "Symbol": "COC",
+    "FullName": "CommunityCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 1804210.40000000
+  },
+  {
+    "Symbol": "COIN",
+    "FullName": "COIN",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 249.84304000
+  },
+  {
+    "Symbol": "COMP",
+    "FullName": "Compound Coin",
+    "Algo": "X11",
+    "DiffPow": 7046785688.94,
+    "DiffPos": 2330.87940000
+  },
+  {
+    "Symbol": "CON",
+    "FullName": "Paycon",
+    "Algo": "X13",
+    "DiffPow": 26189904.26,
+    "DiffPos": 8.51611960
+  },
+  {
+    "Symbol": "CONX",
+    "FullName": "ConCoin",
+    "Algo": "X11",
+    "DiffPow": 9659800.22,
+    "DiffPos": 5977.71110000
+  },
+  {
+    "Symbol": "CORAL",
+    "FullName": "CoralCoin",
+    "Algo": "X13",
+    "DiffPow": 21000255.84,
+    "DiffPos": 0.00024563
+  },
+  {
+    "Symbol": "CORG",
+    "FullName": "CorgiCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1018285515.21,
+    "DiffPos": 0.00064022
+  },
+  {
+    "Symbol": "COV",
+    "FullName": "Coven Coin",
+    "Algo": "SHA256",
+    "DiffPow": 33646.93,
+    "DiffPos": 28420.28400000
+  },
+  {
+    "Symbol": "COVX",
+    "FullName": "COVESTING",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "COX",
+    "FullName": "CobraCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 699055423.59,
+    "DiffPos": 2.07264490
+  },
+  {
+    "Symbol": "COXST",
+    "FullName": "CoExistCoin",
+    "Algo": "X11",
+    "DiffPow": 48912596.68,
+    "DiffPos": 49.24290700
+  },
+  {
+    "Symbol": "CPC",
+    "FullName": "Capricoin",
+    "Algo": "X11",
+    "DiffPow": 201090908.22,
+    "DiffPos": 0.00276923
+  },
+  {
+    "Symbol": "CRAB",
+    "FullName": "CRABcoin",
+    "Algo": "X15",
+    "DiffPow": 6692924.38,
+    "DiffPos": 5.33422870
+  },
+  {
+    "Symbol": "CRAFT",
+    "FullName": "CRAFTcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9241934.60,
+    "DiffPos": 5.13901440
+  },
+  {
+    "Symbol": "CRAVE",
+    "FullName": "Crave",
+    "Algo": "Scrypt",
+    "DiffPow": 812355.00,
+    "DiffPos": 115.31111000
+  },
+  {
+    "Symbol": "CRC",
+    "FullName": "CryCash",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CRED",
+    "FullName": "Verify",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "CREDIT",
+    "FullName": "Creditbit",
+    "Algo": "X11",
+    "DiffPow": 12672596.22,
+    "DiffPos": 11.91643600
+  },
+  {
+    "Symbol": "CREVA",
+    "FullName": "CrevaCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 12362.45300000
+  },
+  {
+    "Symbol": "CRIME",
+    "FullName": "CrimeCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.96664995
+  },
+  {
+    "Symbol": "CRM",
+    "FullName": "CreamCoin",
+    "Algo": "X11",
+    "DiffPow": 45104416.29,
+    "DiffPos": 6499.71590000
+  },
+  {
+    "Symbol": "CRNK",
+    "FullName": "CrankCoin",
+    "Algo": "X11",
+    "DiffPow": 3379.49,
+    "DiffPos": 0.06039396
+  },
+  {
+    "Symbol": "CROC",
+    "FullName": "CrocodileCash",
+    "Algo": "SHA256",
+    "DiffPow": 3067273.84,
+    "DiffPos": 717655.48000000
+  },
+  {
+    "Symbol": "CRPS",
+    "FullName": "CryptoPennies",
+    "Algo": "X11",
+    "DiffPow": 1734.30,
+    "DiffPos": 3.23246150
+  },
+  {
+    "Symbol": "CRW",
+    "FullName": "CrownCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 5173825.60000000
+  },
+  {
+    "Symbol": "CRX",
+    "FullName": "ChronosCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 69988039.16,
+    "DiffPos": 25.25676800
+  },
+  {
+    "Symbol": "CRY",
+    "FullName": "CryCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 40582.50,
+    "DiffPos": 7.03925240
+  },
+  {
+    "Symbol": "CS",
+    "FullName": "CryptoSpots",
+    "Algo": "POS",
+    "DiffPow": 5124530.00,
+    "DiffPos": 13.86484400
+  },
+  {
+    "Symbol": "CSMIC",
+    "FullName": "Cosmic",
+    "Algo": "SHA256",
+    "DiffPow": 3526651.07,
+    "DiffPos": 185501.16000000
+  },
+  {
+    "Symbol": "CST",
+    "FullName": "Capstone",
+    "Algo": "SHA256",
+    "DiffPow": 1991164.59,
+    "DiffPos": 113513820.00000000
+  },
+  {
+    "Symbol": "CTIC",
+    "FullName": "Coimatic",
+    "Algo": "X11",
+    "DiffPow": 30185400.00,
+    "DiffPos": 94.89767500
+  },
+  {
+    "Symbol": "CTIC2",
+    "FullName": "Coimatic 2.0",
+    "Algo": "NIST5",
+    "DiffPow": 47840250.00,
+    "DiffPos": 787.07925000
+  },
+  {
+    "Symbol": "CTK",
+    "FullName": "CashTakers",
+    "Algo": "SHA256",
+    "DiffPow": 25639731.00,
+    "DiffPos": 22106.99000000
+  },
+  {
+    "Symbol": "CTL",
+    "FullName": "CTLcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 1.16784870
+  },
+  {
+    "Symbol": "CUBE",
+    "FullName": "DigiCube",
+    "Algo": "Multi",
+    "DiffPow": 11918143.01,
+    "DiffPos": 105.69695000
+  },
+  {
+    "Symbol": "CURVES",
+    "FullName": "CURVES",
+    "Algo": "X11",
+    "DiffPow": 32864591.04,
+    "DiffPos": 0.65273904
+  },
+  {
+    "Symbol": "CV2",
+    "FullName": "ColossusCoin2",
+    "Algo": "X13",
+    "DiffPow": 23386823983.83,
+    "DiffPos": 1.48828180
+  },
+  {
+    "Symbol": "CWXT",
+    "FullName": "CryptoWorldX",
+    "Algo": "POS",
+    "DiffPow": 62835520.00,
+    "DiffPos": 0.00062090
+  },
+  {
+    "Symbol": "CXT",
+    "FullName": "Coinonat",
+    "Algo": "NIST5",
+    "DiffPow": 11610400.00,
+    "DiffPos": 15757.92700000
+  },
+  {
+    "Symbol": "CYC",
+    "FullName": "Cycling Coin",
+    "Algo": "X11",
+    "DiffPow": 30180678.06,
+    "DiffPos": 0.01255934
+  },
+  {
+    "Symbol": "CYG",
+    "FullName": "Cygnus Coin",
+    "Algo": "X11",
+    "DiffPow": 14121974.23,
+    "DiffPos": 27.99729700
+  },
+  {
+    "Symbol": "CYP",
+    "FullName": "CYP",
+    "Algo": "Qubit",
+    "DiffPow": 6858181.30,
+    "DiffPos": 509.64367000
+  },
+  {
+    "Symbol": "CYT",
+    "FullName": "Cryptoken",
+    "Algo": "POS",
+    "DiffPow": 77072.42,
+    "DiffPos": 0.00105945
+  },
+  {
+    "Symbol": "CZECO",
+    "FullName": "CzeCoin",
+    "Algo": "POS",
+    "DiffPow": 5316824.95,
+    "DiffPos": 3.53029630
+  },
+  {
+    "Symbol": "DAI",
+    "FullName": "Dai Stablecoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DALC",
+    "FullName": "DaleCoin",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DASH",
+    "FullName": "DASH",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 74020742.00000000
+  },
+  {
+    "Symbol": "DASHS",
+    "FullName": "DashScrypt",
+    "Algo": "Scrypt",
+    "DiffPow": 618653.51,
+    "DiffPos": 3.05019940
+  },
+  {
+    "Symbol": "DB",
+    "FullName": "DARKBIT",
+    "Algo": "Scrypt",
+    "DiffPow": 845157.79,
+    "DiffPos": 220.97627000
+  },
+  {
+    "Symbol": "DBET",
+    "FullName": "Decent Bet",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DBG",
+    "FullName": "DBG",
+    "Algo": "ICO",
+    "DiffPow": 15099261.76,
+    "DiffPos": 0.00027591
+  },
+  {
+    "Symbol": "DBIC",
+    "FullName": "DubaiCoin",
+    "Algo": "SHA256",
+    "DiffPow": 6156057.38,
+    "DiffPos": 3868504.90000000
+  },
+  {
+    "Symbol": "DBLK",
+    "FullName": "DigitalBlock",
+    "Algo": "Scrypt",
+    "DiffPow": 186679223.76,
+    "DiffPos": 52.07147300
+  },
+  {
+    "Symbol": "DBTC",
+    "FullName": "DebitCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00787360
+  },
+  {
+    "Symbol": "DC",
+    "FullName": "DemonCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 174.87841000
+  },
+  {
+    "Symbol": "DCC",
+    "FullName": "DarkCrave",
+    "Algo": "SHA256",
+    "DiffPow": 3113230.00,
+    "DiffPos": 6110613.20000000
+  },
+  {
+    "Symbol": "DCK",
+    "FullName": "DckCoin",
+    "Algo": "X11",
+    "DiffPow": 6986041.82,
+    "DiffPos": 0.37212749
+  },
+  {
+    "Symbol": "DCR",
+    "FullName": "Decred",
+    "Algo": "Blake256",
+    "DiffPow": null,
+    "DiffPos": 219274380.00000000
+  },
+  {
+    "Symbol": "DCRE",
+    "FullName": "DeltaCredits",
+    "Algo": "ICO",
+    "DiffPow": 101008.22,
+    "DiffPos": 0.01318532
+  },
+  {
+    "Symbol": "DCT",
+    "FullName": "Discount Coin",
+    "Algo": "SHA256",
+    "DiffPow": 50272285.74,
+    "DiffPos": 0.09390448
+  },
+  {
+    "Symbol": "DCYP",
+    "FullName": "Darkcypher",
+    "Algo": "ICO",
+    "DiffPow": 80117574.87,
+    "DiffPos": 0.00161971
+  },
+  {
+    "Symbol": "DEA",
+    "FullName": "Degas Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 21359063.90,
+    "DiffPos": 38.74282400
+  },
+  {
+    "Symbol": "DEC",
+    "FullName": "Deciphercoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DECR",
+    "FullName": "DecryptRcoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 20667.34600000
+  },
+  {
+    "Symbol": "DEM",
+    "FullName": "eMark",
+    "Algo": "SHA256",
+    "DiffPow": 45718244.14,
+    "DiffPos": 54718612.00000000
+  },
+  {
+    "Symbol": "DES",
+    "FullName": "Destiny",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DETH",
+    "FullName": "DarkEther",
+    "Algo": "X11",
+    "DiffPow": 8123554.58,
+    "DiffPos": 27.12164300
+  },
+  {
+    "Symbol": "DFT",
+    "FullName": "Draftcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 17783001.96,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "DGB",
+    "FullName": "DigiByte",
+    "Algo": "Qubit",
+    "DiffPow": null,
+    "DiffPos": 922915210.00000000
+  },
+  {
+    "Symbol": "DGCS",
+    "FullName": "Digital Credits",
+    "Algo": "POB",
+    "DiffPow": 201801730.17,
+    "DiffPos": 111.36456000
+  },
+  {
+    "Symbol": "DGD",
+    "FullName": "DarkGoldCoin",
+    "Algo": "X13",
+    "DiffPow": 1017791.02,
+    "DiffPos": 2.36357000
+  },
+  {
+    "Symbol": "DGMS",
+    "FullName": "DigiGems",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 6.60311360
+  },
+  {
+    "Symbol": "DGORE",
+    "FullName": "DogegoreCoin",
+    "Algo": "X11",
+    "DiffPow": 493255407.10,
+    "DiffPos": 7.16864230
+  },
+  {
+    "Symbol": "DIME",
+    "FullName": "Dime Coin",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 1276077.10000000
+  },
+  {
+    "Symbol": "DIRT",
+    "FullName": "DimeCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 492.78778000
+  },
+  {
+    "Symbol": "DISK",
+    "FullName": "DarkLisk",
+    "Algo": "X11",
+    "DiffPow": 17888425.64,
+    "DiffPos": 24.48058300
+  },
+  {
+    "Symbol": "DKC",
+    "FullName": "DarkKnightsCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 36835258.99,
+    "DiffPos": 5.05384620
+  },
+  {
+    "Symbol": "DLC",
+    "FullName": "DollarCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 20868824.00000000
+  },
+  {
+    "Symbol": "DLISK",
+    "FullName": "DLisk",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DLT",
+    "FullName": "Agrell",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DMT",
+    "FullName": "DMarket",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DOGE",
+    "FullName": "Dogecoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 3653607.90000000
+  },
+  {
+    "Symbol": "DOGETH",
+    "FullName": "EtherDoge",
+    "Algo": "X11",
+    "DiffPow": 12358199.72,
+    "DiffPos": 0.43750083
+  },
+  {
+    "Symbol": "DOTA",
+    "FullName": "DOTA Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 1073261.57,
+    "DiffPos": 0.21192963
+  },
+  {
+    "Symbol": "DOX",
+    "FullName": "DoxCoin",
+    "Algo": "X11",
+    "DiffPow": 526852.00,
+    "DiffPos": 556.74261000
+  },
+  {
+    "Symbol": "DPAY",
+    "FullName": "DPAY",
+    "Algo": "X13",
+    "DiffPow": 80507200.00,
+    "DiffPos": 0.90666980
+  },
+  {
+    "Symbol": "DRA",
+    "FullName": "Dracula",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DRACO",
+    "FullName": "Draco",
+    "Algo": "SHA256",
+    "DiffPow": 44175.09,
+    "DiffPos": 9083.66420000
+  },
+  {
+    "Symbol": "DRKT",
+    "FullName": "DarkTron",
+    "Algo": "SHA256",
+    "DiffPow": 1171681.10,
+    "DiffPos": 420782.93000000
+  },
+  {
+    "Symbol": "DRM",
+    "FullName": "DreamCoin",
+    "Algo": "X13",
+    "DiffPow": 2470611.80,
+    "DiffPos": 0.00517028
+  },
+  {
+    "Symbol": "DROP",
+    "FullName": "FaucetCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00025137
+  },
+  {
+    "Symbol": "DRT",
+    "FullName": "DomRaider Token",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DRZ",
+    "FullName": "DRZ",
+    "Algo": "Qubit",
+    "DiffPow": 5517845.73,
+    "DiffPos": 0.02972346
+  },
+  {
+    "Symbol": "DTCN",
+    "FullName": "Datocoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DTT",
+    "FullName": "DarkTronToken",
+    "Algo": "POS",
+    "DiffPow": 27315025.74,
+    "DiffPos": 0.00752996
+  },
+  {
+    "Symbol": "DUB",
+    "FullName": "DUBSTEP",
+    "Algo": "POS",
+    "DiffPow": 40012895.23,
+    "DiffPos": 0.00102129
+  },
+  {
+    "Symbol": "DUO",
+    "FullName": "ParallelCoin",
+    "Algo": "SHA256+Scrypt",
+    "DiffPow": null,
+    "DiffPos": 35590654.00000000
+  },
+  {
+    "Symbol": "DUR",
+    "FullName": "Durer Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 85442944.39,
+    "DiffPos": 13.18660400
+  },
+  {
+    "Symbol": "DUST",
+    "FullName": "DustCoin",
+    "Algo": "ICO",
+    "DiffPow": 1087549460.12,
+    "DiffPos": 0.01818400
+  },
+  {
+    "Symbol": "DUX",
+    "FullName": "DuxCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 879763826.32,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "DVD",
+    "FullName": "Dividend",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "DXC",
+    "FullName": "Devil Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 1307988186.13,
+    "DiffPos": 0.01252981
+  },
+  {
+    "Symbol": "DXO",
+    "FullName": "DxoCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9946173950.03,
+    "DiffPos": 0.00059362
+  },
+  {
+    "Symbol": "EA",
+    "FullName": "EAGLECOIN",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 23948397.00000000
+  },
+  {
+    "Symbol": "EAGS",
+    "FullName": "EagsCurrency",
+    "Algo": "SHA256",
+    "DiffPow": 8993163.42,
+    "DiffPos": 1065265.70000000
+  },
+  {
+    "Symbol": "EBONUS",
+    "FullName": "eBonus",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ECA",
+    "FullName": "Electra",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ECASH",
+    "FullName": "Ethereum Cash",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ECCHI",
+    "FullName": "ECCHI",
+    "Algo": "POS",
+    "DiffPow": 40019527.92,
+    "DiffPos": 0.00000029
+  },
+  {
+    "Symbol": "ECHT",
+    "FullName": "eChat Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ECLI",
+    "FullName": "eClipseCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.18434599
+  },
+  {
+    "Symbol": "ECN",
+    "FullName": "E-Coin",
+    "Algo": "POS",
+    "DiffPow": 211111505.31,
+    "DiffPos": 0.38745551
+  },
+  {
+    "Symbol": "ECO",
+    "FullName": "ECOcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1160504.65,
+    "DiffPos": 0.00060617
+  },
+  {
+    "Symbol": "ECOB",
+    "FullName": "EcoBit",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EDC",
+    "FullName": "EducoinV",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 1134.49820000
+  },
+  {
+    "Symbol": "EDIT",
+    "FullName": "EditCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9921650068.80,
+    "DiffPos": 0.00061439
+  },
+  {
+    "Symbol": "EDR2",
+    "FullName": "E-DinarCoin2",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EDRC",
+    "FullName": "EDRCoin",
+    "Algo": "SHA256",
+    "DiffPow": 3554568.83,
+    "DiffPos": 0.00723459
+  },
+  {
+    "Symbol": "EET",
+    "FullName": "Energy Eco",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EGAME",
+    "FullName": "eGame",
+    "Algo": "X11",
+    "DiffPow": -87919138576.88,
+    "DiffPos": 0.13405624
+  },
+  {
+    "Symbol": "EGC",
+    "FullName": "EverGreenCoin",
+    "Algo": "X15",
+    "DiffPow": 13510294.44,
+    "DiffPos": 9.61024480
+  },
+  {
+    "Symbol": "EGG",
+    "FullName": "EggCoin",
+    "Algo": "Qubit",
+    "DiffPow": 5278265.00,
+    "DiffPos": 80.06872500
+  },
+  {
+    "Symbol": "EGMA",
+    "FullName": "EnigmaCoin",
+    "Algo": "X13",
+    "DiffPow": 968784.51,
+    "DiffPos": 134.21246000
+  },
+  {
+    "Symbol": "EGO",
+    "FullName": "EGO Coin",
+    "Algo": "POS",
+    "DiffPow": 60016914.74,
+    "DiffPos": 0.00025712
+  },
+  {
+    "Symbol": "EKO",
+    "FullName": "EkoCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.07572274
+  },
+  {
+    "Symbol": "ELC",
+    "FullName": "Elacoin",
+    "Algo": "Scrypt-N",
+    "DiffPow": null,
+    "DiffPos": 0.19890071
+  },
+  {
+    "Symbol": "ELCO",
+    "FullName": "ElCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1981072.11,
+    "DiffPos": 0.00039601
+  },
+  {
+    "Symbol": "ELE",
+    "FullName": "Elementrem",
+    "Algo": "Dagger",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ELITE",
+    "FullName": "Ethereum Lite",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EMB",
+    "FullName": "EMBERcoin",
+    "Algo": "X13",
+    "DiffPow": -90796876780.60,
+    "DiffPos": 0.67134135
+  },
+  {
+    "Symbol": "EMC",
+    "FullName": "EmerCoin",
+    "Algo": "SHA256",
+    "DiffPow": 40341808.32,
+    "DiffPos": 420019790000.00000000
+  },
+  {
+    "Symbol": "EMP",
+    "FullName": "EMPTYCOIN",
+    "Algo": "Scrypt",
+    "DiffPow": 3567953.41,
+    "DiffPos": 0.09346894
+  },
+  {
+    "Symbol": "EMPC",
+    "FullName": "EmporiumCoin",
+    "Algo": "X11",
+    "DiffPow": 69742850.24,
+    "DiffPos": 2.19806680
+  },
+  {
+    "Symbol": "EMT",
+    "FullName": "easyMINE",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ENAU",
+    "FullName": "NAU Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ENE",
+    "FullName": "EneCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.29546356
+  },
+  {
+    "Symbol": "ENT",
+    "FullName": "EternityCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 4437.48710000
+  },
+  {
+    "Symbol": "ENTER",
+    "FullName": "EnterCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 269782278.83,
+    "DiffPos": 0.85070616
+  },
+  {
+    "Symbol": "EOC",
+    "FullName": "EinaiOraCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 58882908.26,
+    "DiffPos": 0.64341466
+  },
+  {
+    "Symbol": "EOS",
+    "FullName": "EOS Token",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EPC",
+    "FullName": "ExperienceCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 6.29460960
+  },
+  {
+    "Symbol": "EPY",
+    "FullName": "EPY",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 175.66578000
+  },
+  {
+    "Symbol": "EQM",
+    "FullName": "Equilibrium",
+    "Algo": "SHA256",
+    "DiffPow": 1183611.10,
+    "DiffPos": 6783906.40000000
+  },
+  {
+    "Symbol": "EQT",
+    "FullName": "EquiTrader Coin",
+    "Algo": "X11",
+    "DiffPow": 11637896.31,
+    "DiffPos": 35992.10400000
+  },
+  {
+    "Symbol": "EQUAL",
+    "FullName": "EqualCoin",
+    "Algo": "X13",
+    "DiffPow": 109423268.33,
+    "DiffPos": 9.03403890
+  },
+  {
+    "Symbol": "ERR",
+    "FullName": "ErrorCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 45.16297100
+  },
+  {
+    "Symbol": "ERT",
+    "FullName": "Eristica Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ESC",
+    "FullName": "EdwardSnowden",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 4.93761670
+  },
+  {
+    "Symbol": "ESP",
+    "FullName": "Espers",
+    "Algo": "HMQ1725",
+    "DiffPow": null,
+    "DiffPos": 0.06905981
+  },
+  {
+    "Symbol": "ETC",
+    "FullName": "EthereumClassic",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ETCO",
+    "FullName": "EtherCoin",
+    "Algo": "POS",
+    "DiffPow": 1000000.00,
+    "DiffPos": 0.00027546
+  },
+  {
+    "Symbol": "ETH",
+    "FullName": "Ethereum",
+    "Algo": "Dagger",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ETHS",
+    "FullName": "EthereumScrypt",
+    "Algo": "Scrypt",
+    "DiffPow": 1998224.96,
+    "DiffPos": 1.17962060
+  },
+  {
+    "Symbol": "ETL",
+    "FullName": "EtherLite",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ETRUST",
+    "FullName": "EntrustCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 219038.61,
+    "DiffPos": 36.76392500
+  },
+  {
+    "Symbol": "ETZ",
+    "FullName": "EtherZero",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EUC",
+    "FullName": "Euro Coin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 4851240.50000000
+  },
+  {
+    "Symbol": "EURC",
+    "FullName": "EuroCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 3154282.03,
+    "DiffPos": 8.30182550
+  },
+  {
+    "Symbol": "EUROPE",
+    "FullName": "Europe United",
+    "Algo": "SHA256",
+    "DiffPow": 26036472242.92,
+    "DiffPos": 137597.24000000
+  },
+  {
+    "Symbol": "EVA",
+    "FullName": "EvaCoin",
+    "Algo": "X11",
+    "DiffPow": 330573829.14,
+    "DiffPos": 131.31519000
+  },
+  {
+    "Symbol": "EVIL",
+    "FullName": "EvilCoin",
+    "Algo": "X11",
+    "DiffPow": 21092267.73,
+    "DiffPos": 9.43737330
+  },
+  {
+    "Symbol": "EVN",
+    "FullName": "Envion",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EVO",
+    "FullName": "Evotion",
+    "Algo": "SHA256",
+    "DiffPow": 3280965.87,
+    "DiffPos": 1725396.10000000
+  },
+  {
+    "Symbol": "EXB",
+    "FullName": "ExaByte",
+    "Algo": "MULTI",
+    "DiffPow": null,
+    "DiffPos": 0.00430644
+  },
+  {
+    "Symbol": "EXIT",
+    "FullName": "ExitCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1148205956.66,
+    "DiffPos": 0.11744792
+  },
+  {
+    "Symbol": "EXP",
+    "FullName": "Expanse",
+    "Algo": "Dagger",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "EXT",
+    "FullName": "Life Extension",
+    "Algo": "Qubit",
+    "DiffPow": 5000016.62,
+    "DiffPos": 0.00134880
+  },
+  {
+    "Symbol": "F16",
+    "FullName": "F16Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 716505310.48,
+    "DiffPos": 0.04806962
+  },
+  {
+    "Symbol": "FADE",
+    "FullName": "Fade",
+    "Algo": "SHA256",
+    "DiffPow": 917212.60,
+    "DiffPos": 1427813.40000000
+  },
+  {
+    "Symbol": "FAITH",
+    "FullName": "FaithCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "FAZZ",
+    "FullName": "FazzCoin",
+    "Algo": "POS",
+    "DiffPow": 1052539863.52,
+    "DiffPos": 0.18727282
+  },
+  {
+    "Symbol": "FCASH",
+    "FullName": "FutureCash",
+    "Algo": "Scrypt",
+    "DiffPow": 10055240.94,
+    "DiffPos": 19.72525400
+  },
+  {
+    "Symbol": "FFC",
+    "FullName": "FireFlyCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 1828572.20000000
+  },
+  {
+    "Symbol": "FGZ",
+    "FullName": "FreeGameZone",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 3.47274800
+  },
+  {
+    "Symbol": "FIDEL",
+    "FullName": "FidelCastro",
+    "Algo": "SHA256",
+    "DiffPow": 1096881826.00,
+    "DiffPos": 0.00390625
+  },
+  {
+    "Symbol": "FIDGT",
+    "FullName": "FidgetCoin",
+    "Algo": "X11",
+    "DiffPow": 2332102.59,
+    "DiffPos": 696.55998000
+  },
+  {
+    "Symbol": "FIND",
+    "FullName": "FindCoin",
+    "Algo": "X13",
+    "DiffPow": 20612391.74,
+    "DiffPos": 0.04222757
+  },
+  {
+    "Symbol": "FIRE",
+    "FullName": "Fire Coin",
+    "Algo": "X15",
+    "DiffPow": 98800.02,
+    "DiffPos": 20.92490400
+  },
+  {
+    "Symbol": "FIST",
+    "FullName": "FistBump",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 24.67181900
+  },
+  {
+    "Symbol": "FIT",
+    "FullName": "FitCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "FJC",
+    "FullName": "FujiCoin",
+    "Algo": "Scrypt-N-Fixed",
+    "DiffPow": null,
+    "DiffPos": 76.00016300
+  },
+  {
+    "Symbol": "FLAV",
+    "FullName": "OldFlavorCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "FLOT",
+    "FullName": "Fire Lotto",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "FLVR",
+    "FullName": "FlavorCoin",
+    "Algo": "SHA256",
+    "DiffPow": 21990101.16,
+    "DiffPos": 2824.02520000
+  },
+  {
+    "Symbol": "FLX",
+    "FullName": "Flash",
+    "Algo": "Scrypt",
+    "DiffPow": 914192.62,
+    "DiffPos": 3.17732220
+  },
+  {
+    "Symbol": "FLY",
+    "FullName": "FlyCoin",
+    "Algo": "X13",
+    "DiffPow": 249302.73,
+    "DiffPos": 17.13538100
+  },
+  {
+    "Symbol": "FNTB",
+    "FullName": "FinTab",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "FONZ",
+    "FullName": "FonzieCoin",
+    "Algo": "SHA256",
+    "DiffPow": 394458720.21,
+    "DiffPos": 117846.12000000
+  },
+  {
+    "Symbol": "FOREX",
+    "FullName": "ForexCoin",
+    "Algo": "X15",
+    "DiffPow": 749758467.47,
+    "DiffPos": 1.60514840
+  },
+  {
+    "Symbol": "FPC",
+    "FullName": "Fire Peacock Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 42524511.75,
+    "DiffPos": 5.66394820
+  },
+  {
+    "Symbol": "FRDC",
+    "FullName": "FreedomCoin",
+    "Algo": "X11",
+    "DiffPow": 400954.48,
+    "DiffPos": 0.01038362
+  },
+  {
+    "Symbol": "FRE",
+    "FullName": "FreeCoin",
+    "Algo": "POS",
+    "DiffPow": 56349638.06,
+    "DiffPos": 0.15214832
+  },
+  {
+    "Symbol": "FRK",
+    "FullName": "FRANKO",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 2.96661270
+  },
+  {
+    "Symbol": "FRN",
+    "FullName": "Francs",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 2053.83700000
+  },
+  {
+    "Symbol": "FRST",
+    "FullName": "FirstCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00029535
+  },
+  {
+    "Symbol": "FRWC",
+    "FullName": "FrankywillCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 5080077.09,
+    "DiffPos": 3.55851640
+  },
+  {
+    "Symbol": "FSN",
+    "FullName": "Fusion",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 262144.00000000
+  },
+  {
+    "Symbol": "FTO",
+    "FullName": "FuturoCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 2801881.80000000
+  },
+  {
+    "Symbol": "FUNK",
+    "FullName": "FunkCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9860772084.27,
+    "DiffPos": 0.00027305
+  },
+  {
+    "Symbol": "FURY",
+    "FullName": "FURY",
+    "Algo": "SHA256",
+    "DiffPow": 59218.85,
+    "DiffPos": 928048.16000000
+  },
+  {
+    "Symbol": "FUZZ",
+    "FullName": "FuzzBalls",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 14.48397300
+  },
+  {
+    "Symbol": "FX",
+    "FullName": "FCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 228275616.89,
+    "DiffPos": 16.12449800
+  },
+  {
+    "Symbol": "GAIN",
+    "FullName": "UGAIN",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 123847.34000000
+  },
+  {
+    "Symbol": "GAKH",
+    "FullName": "GAKHcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2069312.44,
+    "DiffPos": 0.14745854
+  },
+  {
+    "Symbol": "GAME",
+    "FullName": "GameCredits",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 105.60580000
+  },
+  {
+    "Symbol": "GB",
+    "FullName": "GoldBlocks",
+    "Algo": "X11",
+    "DiffPow": 15518090.68,
+    "DiffPos": 36.73494600
+  },
+  {
+    "Symbol": "GBIT",
+    "FullName": "GravityBits",
+    "Algo": "SHA256",
+    "DiffPow": 4612128.00,
+    "DiffPos": 382346.28000000
+  },
+  {
+    "Symbol": "GBT",
+    "FullName": "GameBet",
+    "Algo": "POS 3.0",
+    "DiffPow": 1747.20,
+    "DiffPos": 1.58140490
+  },
+  {
+    "Symbol": "GCC",
+    "FullName": "Guccione Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 31.70099700
+  },
+  {
+    "Symbol": "GCR",
+    "FullName": "GCR Coin",
+    "Algo": "POS",
+    "DiffPow": 104038773.45,
+    "DiffPos": 0.00028466
+  },
+  {
+    "Symbol": "GE",
+    "FullName": "GreedE",
+    "Algo": "SHA256",
+    "DiffPow": 1720106.00,
+    "DiffPos": 38211.55000000
+  },
+  {
+    "Symbol": "GELD",
+    "FullName": "SGelderGER",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GEN",
+    "FullName": "Genstake",
+    "Algo": "Scrypt",
+    "DiffPow": 12078442.16,
+    "DiffPos": 11.05930900
+  },
+  {
+    "Symbol": "GENE",
+    "FullName": "GENESISCOIN",
+    "Algo": "Scrypt",
+    "DiffPow": 1733167.42,
+    "DiffPos": 2053027.60000000
+  },
+  {
+    "Symbol": "GENIUS",
+    "FullName": "Genius Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 818084000.00,
+    "DiffPos": 2.05539570
+  },
+  {
+    "Symbol": "GEO",
+    "FullName": "GeoCoin",
+    "Algo": "Qubit",
+    "DiffPow": null,
+    "DiffPos": 861.69486000
+  },
+  {
+    "Symbol": "GER",
+    "FullName": "German",
+    "Algo": "Scrypt",
+    "DiffPow": 4957165345.22,
+    "DiffPos": 71.17476600
+  },
+  {
+    "Symbol": "GET",
+    "FullName": "Guaranteed EToken",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GFL",
+    "FullName": "Golden Fleece",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GHS",
+    "FullName": "GHScoin",
+    "Algo": "POS",
+    "DiffPow": 6010400.34,
+    "DiffPos": 0.05826462
+  },
+  {
+    "Symbol": "GIFT",
+    "FullName": "GiftCardCoin",
+    "Algo": "X13",
+    "DiffPow": 192965980.49,
+    "DiffPos": 0.24193280
+  },
+  {
+    "Symbol": "GIG",
+    "FullName": "Gigacoin",
+    "Algo": "FRESH",
+    "DiffPow": null,
+    "DiffPos": 61.85784100
+  },
+  {
+    "Symbol": "GIZ",
+    "FullName": "GIZMOcoin",
+    "Algo": "X11",
+    "DiffPow": 76486819.10,
+    "DiffPos": 30.88354400
+  },
+  {
+    "Symbol": "GLC",
+    "FullName": "Globalcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.02025188
+  },
+  {
+    "Symbol": "GLO",
+    "FullName": "GkobusCoin",
+    "Algo": "X11",
+    "DiffPow": 866272800.00,
+    "DiffPos": 21.09582400
+  },
+  {
+    "Symbol": "GLUCK",
+    "FullName": "GoodLuck",
+    "Algo": "SHA256",
+    "DiffPow": 13527433.28,
+    "DiffPos": 19662.51000000
+  },
+  {
+    "Symbol": "GMCX",
+    "FullName": "Gridmaster",
+    "Algo": "POS",
+    "DiffPow": 161574774.91,
+    "DiffPos": 0.00017502
+  },
+  {
+    "Symbol": "GML",
+    "FullName": "GameLeagueCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GNO",
+    "FullName": "Gnosis",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GNT",
+    "FullName": "Golem Token",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GO",
+    "FullName": "GoCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 10744409.68,
+    "DiffPos": 0.04490806
+  },
+  {
+    "Symbol": "GOAT",
+    "FullName": "Goat",
+    "Algo": "Scrypt",
+    "DiffPow": 14704700.00,
+    "DiffPos": 1571.92280000
+  },
+  {
+    "Symbol": "GOD",
+    "FullName": "Bitcoin God",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GOLD",
+    "FullName": "GoldMint GOLD",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GOON",
+    "FullName": "Goonies",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 6.47419120
+  },
+  {
+    "Symbol": "GOT",
+    "FullName": "Giotto Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 60813167.70,
+    "DiffPos": 53.05974300
+  },
+  {
+    "Symbol": "GOTX",
+    "FullName": "GothicCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 34.11636200
+  },
+  {
+    "Symbol": "GP",
+    "FullName": "GoldPieces",
+    "Algo": "X11",
+    "DiffPow": 3071726.42,
+    "DiffPos": 366.79770000
+  },
+  {
+    "Symbol": "GPU",
+    "FullName": "GPU Coin",
+    "Algo": "POS",
+    "DiffPow": 50681981.30,
+    "DiffPos": 30.71881900
+  },
+  {
+    "Symbol": "GRAM",
+    "FullName": "GramCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 4174.16810000
+  },
+  {
+    "Symbol": "GRAV",
+    "FullName": "Graviton",
+    "Algo": "SHA256",
+    "DiffPow": 3571287.00,
+    "DiffPos": 21636785.00000000
+  },
+  {
+    "Symbol": "GRE",
+    "FullName": "GreenCoin",
+    "Algo": "CPU",
+    "DiffPow": 1996784641.00,
+    "DiffPos": 0.00114389
+  },
+  {
+    "Symbol": "GREED",
+    "FullName": "GREED",
+    "Algo": "SHA256",
+    "DiffPow": 44990562.29,
+    "DiffPos": 18445.00800000
+  },
+  {
+    "Symbol": "GREENF",
+    "FullName": "Green Fingers",
+    "Algo": "Scrypt",
+    "DiffPow": 1252744.29,
+    "DiffPos": 0.39484386
+  },
+  {
+    "Symbol": "GREXIT",
+    "FullName": "GREXIT",
+    "Algo": "ICO",
+    "DiffPow": 12172095.15,
+    "DiffPos": 0.03568671
+  },
+  {
+    "Symbol": "GRF",
+    "FullName": "Graffiti Coin",
+    "Algo": "POS",
+    "DiffPow": 20034004.81,
+    "DiffPos": 0.00126819
+  },
+  {
+    "Symbol": "GROW",
+    "FullName": "GrowCoin",
+    "Algo": "ICO",
+    "DiffPow": 326447.33,
+    "DiffPos": 1710003.80000000
+  },
+  {
+    "Symbol": "GSM",
+    "FullName": "GSMCoin",
+    "Algo": "X11",
+    "DiffPow": 1859984.08,
+    "DiffPos": 240.74043000
+  },
+  {
+    "Symbol": "GSR",
+    "FullName": "GeyserCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 712145.29,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "GSX",
+    "FullName": "GlowShares",
+    "Algo": "POS",
+    "DiffPow": 341357.87,
+    "DiffPos": 0.00029394
+  },
+  {
+    "Symbol": "GSY",
+    "FullName": "GenesysCoin",
+    "Algo": "SHA256",
+    "DiffPow": 1730428.15,
+    "DiffPos": 2053027.60000000
+  },
+  {
+    "Symbol": "GT",
+    "FullName": "GTcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 261626833.49,
+    "DiffPos": 1.21633660
+  },
+  {
+    "Symbol": "GTFO",
+    "FullName": "GotFomo",
+    "Algo": "SHA256",
+    "DiffPow": 323174.50,
+    "DiffPos": 28265.97400000
+  },
+  {
+    "Symbol": "GUESS",
+    "FullName": "Peerguess",
+    "Algo": "",
+    "DiffPow": null,
+
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "GUM",
+    "FullName": "DUMDUM",
+    "Algo": "X11",
+    "DiffPow": 6239298.14,
+    "DiffPos": 57.70275300
+  },
+  {
+    "Symbol": "GUP",
+    "FullName": "Guppy Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HAC",
+    "FullName": "Hac Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HALLO",
+    "FullName": "HalloweenCoin",
+    "Algo": "X11",
+    "DiffPow": 264677690.01,
+    "DiffPos": 115311.76000000
+  },
+  {
+    "Symbol": "HAMS",
+    "FullName": "HamsterCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.20515847
+  },
+  {
+    "Symbol": "HAND",
+    "FullName": "ShowHand",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HAWK",
+    "FullName": "HawkCoin",
+    "Algo": "SHA256",
+    "DiffPow": 1374647.42,
+    "DiffPos": 464779.46000000
+  },
+  {
+    "Symbol": "HAZE",
+    "FullName": "HazeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.29727560
+  },
+  {
+    "Symbol": "HCC",
+    "FullName": "HCCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 9.04682170
+  },
+  {
+    "Symbol": "HDG",
+    "FullName": "Hedge Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HEAL",
+    "FullName": "Etheal",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HEDG",
+    "FullName": "HedgeCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.05909063
+  },
+  {
+    "Symbol": "HEEL",
+    "FullName": "HeelCoin",
+    "Algo": "POS",
+    "DiffPow": 5301375.34,
+    "DiffPos": 0.00025066
+  },
+  {
+    "Symbol": "HIFUN",
+    "FullName": "SatoshiFun",
+    "Algo": "Scrypt",
+    "DiffPow": 2642386239.48,
+    "DiffPos": 2.85937120
+  },
+  {
+    "Symbol": "HIRE",
+    "FullName": "BitHire",
+    "Algo": "POS",
+    "DiffPow": 1331.54,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "HKN",
+    "FullName": "HACKEN",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HMC",
+    "FullName": "Harmony",
+    "Algo": "",
+    "DiffPow": 33565898719.85,
+    "DiffPos": 42.14554200
+  },
+  {
+    "Symbol": "HMP",
+    "FullName": "HempCoin",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "HMQ",
+    "FullName": "Humaniq",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HODL",
+    "FullName": "HOdlcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00084571
+  },
+  {
+    "Symbol": "HON",
+    "FullName": "Holbein Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 60117789.36,
+    "DiffPos": 5.61966340
+  },
+  {
+    "Symbol": "HOPE",
+    "FullName": "HopeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 96709005.82,
+    "DiffPos": 4.71067350
+  },
+  {
+    "Symbol": "HPC",
+    "FullName": "HappyCoin",
+    "Algo": "X11",
+    "DiffPow": 14206349.23,
+    "DiffPos": 593705.05000000
+  },
+  {
+    "Symbol": "HPS",
+    "FullName": "HyperPlayShare",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HQX",
+    "FullName": "HOQU",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "HSP",
+    "FullName": "HorsePower",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "HTC",
+    "FullName": "HitCoin",
+    "Algo": "X11",
+    "DiffPow": 21004363611.88,
+    "DiffPos": 6.00873110
+  },
+  {
+    "Symbol": "HTML5",
+    "FullName": "HTML Coin",
+    "Algo": "X15",
+    "DiffPow": 48746805000.00,
+    "DiffPos": 23834.87700000
+  },
+  {
+    "Symbol": "HVCO",
+    "FullName": "HVCO",
+    "Algo": "SHA256",
+    "DiffPow": 2338968.20,
+    "DiffPos": 2207001.10000000
+  },
+  {
+    "Symbol": "HXX",
+    "FullName": "Hexx",
+    "Algo": "Scrypt",
+    "DiffPow": 954205.05,
+    "DiffPos": 0.05377019
+  },
+  {
+    "Symbol": "HYPERX",
+    "FullName": "Hyper Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 10303908.80,
+    "DiffPos": 5.70188550
+  },
+  {
+    "Symbol": "HZT",
+    "FullName": "HazMatCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 8909699.48,
+    "DiffPos": 164.62203000
+  },
+  {
+    "Symbol": "IBANK",
+    "FullName": "iBank",
+    "Algo": "Scrypt",
+    "DiffPow": 5313312.62,
+    "DiffPos": 0.00040658
+  },
+  {
+    "Symbol": "IBITS",
+    "FullName": "iBits",
+    "Algo": "Scrypt",
+    "DiffPow": 66513673.72,
+    "DiffPos": 0.00024713
+  },
+  {
+    "Symbol": "ICASH",
+    "FullName": "iCash",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 5177.64340000
+  },
+  {
+    "Symbol": "ICN",
+    "FullName": "iCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 56.15436900
+  },
+  {
+    "Symbol": "ICOB",
+    "FullName": "IcoBid",
+    "Algo": "Scrypt",
+    "DiffPow": 107737006.39,
+    "DiffPos": 0.77229928
+  },
+  {
+    "Symbol": "ICON",
+    "FullName": "Iconic",
+    "Algo": "POS",
+    "DiffPow": 816380.00,
+    "DiffPos": 0.07324368
+  },
+  {
+    "Symbol": "IEC",
+    "FullName": "IvugeoCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00709858
+  },
+  {
+    "Symbol": "IETH",
+    "FullName": "iEthereum",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "IFLT",
+    "FullName": "InflationCoin",
+    "Algo": "X11",
+    "DiffPow": 43862660608.83,
+    "DiffPos": 3.05032640
+  },
+  {
+    "Symbol": "IFT",
+    "FullName": "InvestFeed",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ILM",
+    "FullName": "ILLUMINATI",
+    "Algo": "X11",
+    "DiffPow": 43711960.00,
+    "DiffPos": 0.60915758
+  },
+  {
+    "Symbol": "ILT",
+    "FullName": "Intellect",
+    "Algo": "X11",
+    "DiffPow": 106481928.19,
+    "DiffPos": 366.92605000
+  },
+  {
+    "Symbol": "IMPS",
+    "FullName": "ImpulseCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 1.96536210
+  },
+  {
+    "Symbol": "IMS",
+    "FullName": "ImsCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 5664421.24,
+    "DiffPos": 2.02408670
+  },
+  {
+    "Symbol": "IN",
+    "FullName": "InCoin",
+    "Algo": "X11",
+    "DiffPow": 326259195.46,
+    "DiffPos": 76529.31600000
+  },
+  {
+    "Symbol": "INC",
+    "FullName": "Incrementum",
+    "Algo": "POS",
+    "DiffPow": 1300837.37,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "INCP",
+    "FullName": "Inception",
+    "Algo": "X11",
+    "DiffPow": 9326596.17,
+    "DiffPos": 0.61693936
+  },
+  {
+    "Symbol": "IND",
+    "FullName": "Indorse Token",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "INFX",
+    "FullName": "InfluxCoin",
+    "Algo": "X11",
+    "DiffPow": 2771820.17,
+    "DiffPos": 121455.28000000
+  },
+  {
+    "Symbol": "ING",
+    "FullName": "IUNGO Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "INGT",
+    "FullName": "Ingot Coin",
+    "Algo": "",
+    "DiffPow": 4410021832.79,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "INPAY",
+    "FullName": "InPay",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "INSANE",
+    "FullName": "InsaneCoin",
+    "Algo": "X11",
+    "DiffPow": 22194706.79,
+    "DiffPos": 737.76460000
+  },
+  {
+    "Symbol": "INV",
+    "FullName": "Invictus",
+    "Algo": "X11",
+    "DiffPow": 78917900.00,
+    "DiffPos": 4.88037850
+  },
+  {
+    "Symbol": "INXT",
+    "FullName": "Internxt",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "IOC",
+    "FullName": "IOCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 4385.27800000
+  },
+  {
+    "Symbol": "IONX",
+    "FullName": "IonomyX",
+    "Algo": "POS 3.0",
+    "DiffPow": 22085299.99,
+    "DiffPos": 723.77974000
+  },
+  {
+    "Symbol": "IOST",
+    "FullName": "IOSToken",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "IQN",
+    "FullName": "iQeon",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ISL",
+    "FullName": "IslaCoin",
+    "Algo": "X11",
+    "DiffPow": 1515274.25,
+    "DiffPos": 0.16448475
+  },
+  {
+    "Symbol": "ITI",
+    "FullName": "ITI Coin",
+    "Algo": "",
+    "DiffPow": 9999991.78,
+    "DiffPos": 0.00027925
+  },
+  {
+    "Symbol": "IVZ",
+    "FullName": "InvisibleCoin",
+    "Algo": "POS",
+    "DiffPow": 1156548.12,
+    "DiffPos": 15.23112300
+  },
+  {
+    "Symbol": "IW",
+    "FullName": "iWallet",
+    "Algo": "X11",
+    "DiffPow": 362025973.13,
+    "DiffPos": 1.02896840
+  },
+  {
+    "Symbol": "IXC",
+    "FullName": "IXcoin",
+    "Algo": "Merged",
+    "DiffPow": null,
+    "DiffPos": 78879653.00000000
+  },
+  {
+    "Symbol": "IXT",
+    "FullName": "iXledger",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "JACK",
+    "FullName": "BlackJack",
+    "Algo": "X13",
+    "DiffPow": -52816304492.55,
+    "DiffPos": 7.59040580
+  },
+  {
+    "Symbol": "JANE",
+    "FullName": "JaneCoin",
+    "Algo": "X11",
+    "DiffPow": 409287522.56,
+    "DiffPos": 441.38279000
+  },
+  {
+    "Symbol": "JIF",
+    "FullName": "JiffyCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 65760.77200000
+  },
+  {
+    "Symbol": "JNT",
+    "FullName": "JointCoin",
+    "Algo": "X11",
+    "DiffPow": 823845299.46,
+    "DiffPos": 0.50710339
+  },
+  {
+    "Symbol": "JOBS",
+    "FullName": "JobsCoin",
+    "Algo": "X11",
+    "DiffPow": 970155602.03,
+    "DiffPos": 0.00564228
+  },
+  {
+    "Symbol": "JOCKER",
+    "FullName": "JockerCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9885391959.29,
+    "DiffPos": 0.00035264
+  },
+  {
+    "Symbol": "JOK",
+    "FullName": "Joker Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 676316973.17,
+    "DiffPos": 0.00829185
+  },
+  {
+    "Symbol": "JPC",
+    "FullName": "JupiterCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 19.21977400
+  },
+  {
+    "Symbol": "JW",
+    "FullName": "JohnnieWalker",
+    "Algo": "Scrypt",
+    "DiffPow": 246742211.48,
+    "DiffPos": 0.30872980
+  },
+  {
+    "Symbol": "JWL",
+    "FullName": "Jewels",
+    "Algo": "POS",
+    "DiffPow": 20181644.86,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "KARMA",
+    "FullName": "KarmaCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 3669.70200000
+  },
+  {
+    "Symbol": "KARMC",
+    "FullName": "KARMA Classic",
+    "Algo": "",
+    "DiffPow": 1000816463.46,
+    "DiffPos": 9.31559090
+  },
+  {
+    "Symbol": "KASHH",
+    "FullName": "KashhCoin",
+    "Algo": "POS",
+    "DiffPow": 2732451106.83,
+    "DiffPos": 16060.57100000
+  },
+  {
+    "Symbol": "KAT",
+    "FullName": "KATZcoin",
+    "Algo": "SHA256",
+    "DiffPow": 562778961.91,
+    "DiffPos": 3778.01290000
+  },
+  {
+    "Symbol": "KBC",
+    "FullName": "KaratBank Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "KC",
+    "FullName": "Kernalcoin",
+    "Algo": "SHA256",
+    "DiffPow": 1513619.76,
+    "DiffPos": 902178.49000000
+  },
+  {
+    "Symbol": "KGB",
+    "FullName": "KangaroBits",
+    "Algo": "Qubit",
+    "DiffPow": 101382495.01,
+    "DiffPos": 3.97225740
+  },
+  {
+    "Symbol": "KGC",
+    "FullName": "KrugerCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 3.63750530
+  },
+  {
+    "Symbol": "KICK",
+    "FullName": "Kick Coin",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "KIDS",
+    "FullName": "KidsCoin",
+    "Algo": "SHA256",
+    "DiffPow": 712861500.00,
+    "DiffPos": 275.34810000
+  },
+  {
+    "Symbol": "KIN",
+    "FullName": "KIN",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "KISS",
+    "FullName": "Kisscoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.10962770
+  },
+  {
+    "Symbol": "KNC",
+    "FullName": "KingN",
+    "Algo": "Scrypt",
+    "DiffPow": 2510.44,
+    "DiffPos": 0.00045420
+  },
+  {
+    "Symbol": "KOBO",
+    "FullName": "KoboCoin",
+    "Algo": "X15",
+    "DiffPow": 24976309.81,
+    "DiffPos": 8.20960500
+  },
+  {
+    "Symbol": "KR",
+    "FullName": "Krypton",
+    "Algo": "Dagger",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "KRAK",
+    "FullName": "Kraken",
+    "Algo": "SHA256",
+    "DiffPow": 456192.26,
+    "DiffPos": 58092.59500000
+  },
+  {
+    "Symbol": "KTK",
+    "FullName": "KryptKoin",
+    "Algo": "Scrypt",
+    "DiffPow": 17461549.58,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "KUBO",
+    "FullName": "KubosCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 29701981082.22,
+    "DiffPos": 0.00027831
+  },
+  {
+    "Symbol": "KURT",
+    "FullName": "Kurrent",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 2133.82640000
+  },
+  {
+    "Symbol": "KUSH",
+    "FullName": "KushCoin",
+    "Algo": "X11",
+    "DiffPow": 5527217.11,
+    "DiffPos": 295.64488000
+  },
+  {
+    "Symbol": "L7S",
+    "FullName": "LuckySevens",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.15346194
+  },
+  {
+    "Symbol": "LANA",
+    "FullName": "LanaCoin",
+    "Algo": "SHA256",
+    "DiffPow": 894376330.69,
+    "DiffPos": 176473190.00000000
+  },
+  {
+    "Symbol": "LATX",
+    "FullName": "Latium",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LAZ",
+    "FullName": "Lazarus",
+    "Algo": "DPOS",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LBTC",
+    "FullName": "Lightning Bitcoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LBTCX",
+    "FullName": "Litebitcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 7886.05220000
+  },
+  {
+    "Symbol": "LC",
+    "FullName": "LutetiumCoin",
+    "Algo": "X11",
+    "DiffPow": 459610635.09,
+    "DiffPos": 0.00833576
+  },
+  {
+    "Symbol": "LCC",
+    "FullName": "Litecoin Cash",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 1426930900.00000000
+  },
+  {
+    "Symbol": "LCWP",
+    "FullName": "LiteCoinW Plus",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LDM",
+    "FullName": "Ludum",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LDOGE",
+    "FullName": "LiteDoge",
+    "Algo": "Scrypt",
+    "DiffPow": 14941470638.75,
+    "DiffPos": 153.05769000
+  },
+  {
+    "Symbol": "LEA",
+    "FullName": "LeaCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 5178894.60000000
+  },
+  {
+    "Symbol": "LEAF",
+    "FullName": "LeafCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 82.69889800
+  },
+  {
+    "Symbol": "LENIN",
+    "FullName": "LeninCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 1943006.40000000
+  },
+  {
+    "Symbol": "LEPEN",
+    "FullName": "LePen",
+    "Algo": "SHA256",
+    "DiffPow": 1021011947.40,
+    "DiffPos": 0.01426215
+  },
+  {
+    "Symbol": "LGBTQ",
+    "FullName": "LGBTQoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 3521.01740000
+  },
+  {
+    "Symbol": "LGR",
+    "FullName": "Logarithm",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LHC",
+    "FullName": "Pentaquark",
+    "Algo": "SHA256",
+    "DiffPow": 101.04,
+    "DiffPos": 61503.34700000
+  },
+  {
+    "Symbol": "LHCOIN",
+    "FullName": "LHCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LIF",
+    "FullName": "LIF",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LIMX",
+    "FullName": "LimecoinX",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 10.62590200
+  },
+  {
+    "Symbol": "LINDA",
+    "FullName": "Linda Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 8215056983.60,
+    "DiffPos": 17676.89300000
+  },
+  {
+    "Symbol": "LION",
+    "FullName": "Lion Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LIR",
+    "FullName": "LetItRide",
+    "Algo": "POS 3.0",
+    "DiffPow": 37071160.82,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "LITE",
+    "FullName": "BitcoinLite",
+    "Algo": "Scrypt",
+    "DiffPow": 17213231.64,
+    "DiffPos": 0.45330354
+  },
+  {
+    "Symbol": "LIV",
+    "FullName": "LiviaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 493349701.17,
+    "DiffPos": 0.00749140
+  },
+  {
+    "Symbol": "LIZA",
+    "FullName": "Bitcoin Liza",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LIZI",
+    "FullName": "LiziCoin",
+    "Algo": "X14",
+    "DiffPow": 100000000.00,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "LKC",
+    "FullName": "LinkedCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 4030.15300000
+  },
+  {
+    "Symbol": "LOC",
+    "FullName": "LocoCoin",
+    "Algo": "Quark",
+    "DiffPow": 7034124.29,
+    "DiffPos": 0.07218688
+  },
+  {
+    "Symbol": "LOCX",
+    "FullName": "LockChain",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LOOK",
+    "FullName": "LookCoin",
+    "Algo": "X11",
+    "DiffPow": 608992928.08,
+    "DiffPos": 4429.61060000
+  },
+  {
+    "Symbol": "LOOT",
+    "FullName": "Lootcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 7.39057500
+  },
+  {
+    "Symbol": "LRC",
+    "FullName": "LoopringCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LSD",
+    "FullName": "LSDcoin",
+    "Algo": "X11",
+    "DiffPow": 372360820.92,
+    "DiffPos": 8849.19100000
+  },
+  {
+    "Symbol": "LSK",
+    "FullName": "Lisk",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LTC",
+    "FullName": "Litecoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 8376784.50000000
+  },
+  {
+    "Symbol": "LTCP",
+    "FullName": "Litecoin Private",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LTCR",
+    "FullName": "LiteCred",
+    "Algo": "Qubit",
+    "DiffPow": 33625100.00,
+    "DiffPos": 0.95719043
+  },
+  {
+    "Symbol": "LTCU",
+    "FullName": "LitecoinUltra",
+    "Algo": "Scrypt",
+    "DiffPow": 8080800.00,
+    "DiffPos": 8408.54880000
+  },
+  {
+    "Symbol": "LTD",
+    "FullName": "LimitedCoin",
+    "Algo": "ICO",
+    "DiffPow": 63.99,
+    "DiffPos": 0.00328508
+  },
+  {
+    "Symbol": "LTH",
+    "FullName": "Lathaan",
+    "Algo": "POS",
+    "DiffPow": 33408745.64,
+    "DiffPos": 62.73472800
+  },
+  {
+    "Symbol": "LTS",
+    "FullName": "LiteStarCoin",
+    "Algo": "X11",
+    "DiffPow": 354641340.05,
+    "DiffPos": 0.59963218
+  },
+  {
+    "Symbol": "LUCKY",
+    "FullName": "LuckyBlocks",
+    "Algo": "POS",
+    "DiffPow": 25051900.00,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "LUMI",
+    "FullName": "LumiCoin",
+    "Algo": "X11",
+    "DiffPow": 705670400.00,
+    "DiffPos": 0.07681839
+  },
+  {
+    "Symbol": "LUN",
+    "FullName": "LunarCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 16.53257500
+  },
+  {
+    "Symbol": "LUNA",
+    "FullName": "LunaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1835783.05,
+    "DiffPos": 1615.43240000
+  },
+  {
+    "Symbol": "LUNYR",
+    "FullName": "Lunyr Token",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "LUX",
+    "FullName": "BitLux",
+    "Algo": "X11",
+    "DiffPow": 131953.33,
+    "DiffPos": 2.24960800
+  },
+  {
+    "Symbol": "LVG",
+    "FullName": "LeverageCoin",
+    "Algo": "ICO",
+    "DiffPow": 25900.74,
+    "DiffPos": 0.01117868
+  },
+  {
+    "Symbol": "M1",
+    "FullName": "M1",
+    "Algo": "X13",
+    "DiffPow": 62294.31,
+    "DiffPos": 0.00692836
+  },
+  {
+    "Symbol": "MAD",
+    "FullName": "SatoshiMadness",
+    "Algo": "ICO",
+    "DiffPow": 2001289120.37,
+    "DiffPos": 0.00169914
+  },
+  {
+    "Symbol": "MAO",
+    "FullName": "Mao Coin",
+    "Algo": "X11",
+    "DiffPow": 6255834.43,
+    "DiffPos": 5325.42470000
+  },
+  {
+    "Symbol": "MAPC",
+    "FullName": "MapCoin",
+    "Algo": "X11",
+    "DiffPow": 3005353.74,
+    "DiffPos": 0.01149838
+  },
+  {
+    "Symbol": "MART",
+    "FullName": "Martcoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MARV",
+    "FullName": "Marvelous",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "MARX",
+    "FullName": "MarxCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 23691.04300000
+  },
+  {
+    "Symbol": "MAT",
+    "FullName": "Manet Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 66236420.19,
+    "DiffPos": 8.03750240
+  },
+  {
+    "Symbol": "MAVRO",
+    "FullName": "Mavro Coin",
+    "Algo": "POS",
+    "DiffPow": 15005722.00,
+    "DiffPos": 30.86757700
+  },
+  {
+    "Symbol": "MAX",
+    "FullName": "MaxCoin",
+    "Algo": "SHA-3",
+    "DiffPow": null,
+    "DiffPos": 11661.07400000
+  },
+  {
+    "Symbol": "MAY",
+    "FullName": "TheresaMay",
+    "Algo": "SHA256",
+    "DiffPow": 40738000.00,
+    "DiffPos": 48447518.00000000
+  },
+  {
+    "Symbol": "MAZE",
+    "FullName": "MAZECoin",
+    "Algo": "X11",
+    "DiffPow": 9637165.87,
+    "DiffPos": 0.53605170
+  },
+  {
+    "Symbol": "MBIT",
+    "FullName": "Mbitbooks",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 1259.76800000
+  },
+  {
+    "Symbol": "MCAR",
+    "FullName": "MASTERMOLD",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 75.04555900
+  },
+  {
+    "Symbol": "MCO",
+    "FullName": "Monaco",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MCOIN",
+    "FullName": "MCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 438082041.74,
+    "DiffPos": 0.00443099
+  },
+  {
+    "Symbol": "MCRN",
+    "FullName": "MacronCoin",
+    "Algo": "POS",
+    "DiffPow": 401680041.36,
+    "DiffPos": 1.51267200
+  },
+  {
+    "Symbol": "MDT",
+    "FullName": "Midnight",
+    "Algo": "BMW256",
+    "DiffPow": 2583785.00,
+    "DiffPos": 0.00068771
+  },
+  {
+    "Symbol": "MDZ",
+    "FullName": "Minedozer",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MeLite",
+    "FullName": "MLITE",
+    "Algo": "SHA256",
+    "DiffPow": 404697553.35,
+    "DiffPos": 5998.65050000
+  },
+  {
+    "Symbol": "MENTAL",
+    "FullName": "Mental Health Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 5420745.30,
+    "DiffPos": 3.74672970
+  },
+  {
+    "Symbol": "MERGEC",
+    "FullName": "MergeCoin",
+    "Algo": "",
+    "DiffPow": 116625022.61,
+    "DiffPos": 844995.02000000
+  },
+  {
+    "Symbol": "METAL",
+    "FullName": "MetalCoin",
+    "Algo": "X11",
+    "DiffPow": 80339334.55,
+    "DiffPos": 12.61513800
+  },
+  {
+    "Symbol": "MGO",
+    "FullName": "MobileGO",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MILO",
+    "FullName": "MiloCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 13380141.36,
+    "DiffPos": 156.34981000
+  },
+  {
+    "Symbol": "MINH",
+    "FullName": "HoChiMinh",
+    "Algo": "X11",
+    "DiffPow": 6223061.32,
+    "DiffPos": 37961.95600000
+  },
+  {
+    "Symbol": "MIRO",
+    "FullName": "MIROCANA",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MIS",
+    "FullName": "MIScoin",
+    "Algo": "X11",
+    "DiffPow": 3780490.40,
+    "DiffPos": 2.45110270
+  },
+  {
+    "Symbol": "MLNC",
+    "FullName": "MelonClassic",
+    "Algo": "",
+    "DiffPow": 1001166217.91,
+    "DiffPos": 3267.41930000
+  },
+  {
+    "Symbol": "MM",
+    "FullName": "MasterMint",
+    "Algo": "ICO",
+    "DiffPow": 151748712.48,
+    "DiffPos": 0.00014712
+  },
+  {
+    "Symbol": "MMXIV",
+    "FullName": "MaieutiCoin",
+    "Algo": "SHA256",
+    "DiffPow": 18917333.93,
+    "DiffPos": 3.86673170
+  },
+  {
+    "Symbol": "MMXVI",
+    "FullName": "MMXVI",
+    "Algo": "Argon2",
+    "DiffPow": 4579088.02,
+    "DiffPos": 0.00001357
+  },
+  {
+    "Symbol": "MND",
+    "FullName": "MindCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 447.81550000
+  },
+  {
+    "Symbol": "MNM",
+    "FullName": "Mineum",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 90.85570400
+  },
+  {
+    "Symbol": "MNTP",
+    "FullName": "GoldMint",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MNZ",
+    "FullName": "Monetize Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MOIN",
+    "FullName": "MoinCoin",
+    "Algo": "SHA256",
+    "DiffPow": 834973.86,
+    "DiffPos": 318058.69000000
+  },
+  {
+    "Symbol": "MOJO",
+    "FullName": "MojoCoin",
+    "Algo": "POS",
+    "DiffPow": 100135564.61,
+    "DiffPos": 0.00040838
+  },
+  {
+    "Symbol": "MONETA",
+    "FullName": "MONETA",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.04047344
+  },
+  {
+    "Symbol": "MONEY",
+    "FullName": "MoneyCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 21029654.76,
+    "DiffPos": 3.71808200
+  },
+  {
+    "Symbol": "MOOND",
+    "FullName": "DarkMoon",
+    "Algo": "Scrypt",
+    "DiffPow": 50909325.39,
+    "DiffPos": 3.12578030
+  },
+  {
+    "Symbol": "MOTO",
+    "FullName": "MotoCoin",
+    "Algo": "POPlay",
+    "DiffPow": null,
+    "DiffPos": 1.00000000
+  },
+  {
+    "Symbol": "MPRO",
+    "FullName": "MediumProject",
+    "Algo": "POS",
+    "DiffPow": 250077.79,
+    "DiffPos": 0.00159615
+  },
+  {
+    "Symbol": "MRB",
+    "FullName": "Marbles",
+    "Algo": "SHA256",
+    "DiffPow": 1992190.00,
+    "DiffPos": 10302130.00000000
+  },
+  {
+    "Symbol": "MRP",
+    "FullName": "MorpheusCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.00034847
+  },
+  {
+    "Symbol": "MST",
+    "FullName": "Mustang Coin",
+    "Algo": "X11",
+    "DiffPow": 635750.44,
+    "DiffPos": 4.94449110
+  },
+  {
+    "Symbol": "MTH",
+    "FullName": "Monetha",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MTLMC3",
+    "FullName": "MetalMusic3",
+    "Algo": "Scrypt",
+    "DiffPow": 125155141.23,
+    "DiffPos": 52.89746500
+  },
+  {
+    "Symbol": "MUE",
+    "FullName": "MonetaryUnit",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 518.34035000
+  },
+  {
+    "Symbol": "MULTI",
+    "FullName": "MultiCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.36848053
+  },
+  {
+    "Symbol": "MUU",
+    "FullName": "MilkCoin",
+    "Algo": "SHA256",
+    "DiffPow": 887766400.00,
+    "DiffPos": 4225.78900000
+  },
+  {
+    "Symbol": "MVC",
+    "FullName": "Maverick Chain",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "MVR",
+    "FullName": "MVR Coin",
+    "Algo": "POS",
+    "DiffPow": 15012732.92,
+    "DiffPos": 0.00000055
+  },
+  {
+    "Symbol": "MXT",
+    "FullName": "MarteXcoin",
+    "Algo": "X13",
+    "DiffPow": 2840040.00,
+    "DiffPos": 0.05269146
+  },
+  {
+    "Symbol": "MYSTIC",
+    "FullName": "MystiCoin",
+    "Algo": "X11",
+    "DiffPow": 44139670.00,
+    "DiffPos": 0.00739382
+  },
+  {
+    "Symbol": "MZI",
+    "FullName": "MooziCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "N2O",
+    "FullName": "Nitrous",
+    "Algo": "X11",
+    "DiffPow": 6290486.55,
+    "DiffPos": 0.23947774
+  },
+  {
+    "Symbol": "N7",
+    "FullName": "Number7",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 12.90884900
+  },
+  {
+    "Symbol": "NANAS",
+    "FullName": "BananaBits",
+    "Algo": "Scrypt",
+    "DiffPow": 687265.50,
+    "DiffPos": 75.76026900
+  },
+  {
+    "Symbol": "NANOX",
+    "FullName": "Project-X",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00163044
+  },
+  {
+    "Symbol": "NAT",
+    "FullName": "NatureCoin",
+    "Algo": "X11",
+    "DiffPow": 1045734.49,
+    "DiffPos": 0.24224222
+  },
+  {
+    "Symbol": "NAV",
+    "FullName": "NavajoCoin",
+    "Algo": "X13",
+    "DiffPow": 58139113.77,
+    "DiffPos": 0.29403055
+  },
+  {
+    "Symbol": "NBC",
+    "FullName": "Niobium Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NBIT",
+    "FullName": "NetBit",
+    "Algo": "Scrypt",
+    "DiffPow": 1493237.98,
+    "DiffPos": 3.16308950
+  },
+  {
+    "Symbol": "NBTK",
+    "FullName": "Nebeus Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NDOGE",
+    "FullName": "Ninja Doge",
+    "Algo": "X11",
+    "DiffPow": 17361258.30,
+    "DiffPos": 4.69230990
+  },
+  {
+    "Symbol": "NEBU",
+    "FullName": "Nebuchadnezzar",
+    "Algo": "POS",
+    "DiffPow": 20002723.81,
+    "DiffPos": 0.00041602
+  },
+  {
+    "Symbol": "NEF",
+    "FullName": "NefariousCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1539918791.07,
+    "DiffPos": 0.02019099
+  },
+  {
+    "Symbol": "NET",
+    "FullName": "NimiqNetwork",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NETC",
+    "FullName": "NetworkCoin",
+    "Algo": "X13",
+    "DiffPow": 74524.03,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "NETKO",
+    "FullName": "NetkoCoin",
+    "Algo": "BLAKE2S",
+    "DiffPow": 5252790.00,
+    "DiffPos": 677.40056000
+  },
+  {
+    "Symbol": "NEU",
+    "FullName": "Neumark",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NEVA",
+    "FullName": "NevaCoin",
+    "Algo": "Blake2s",
+    "DiffPow": 2861065.00,
+    "DiffPos": 87952.60800000
+  },
+  {
+    "Symbol": "NIC",
+    "FullName": "NewInvestCoin",
+    "Algo": "POS",
+    "DiffPow": 642472.33,
+    "DiffPos": 2.30466420
+  },
+  {
+    "Symbol": "NICE",
+    "FullName": "NiceCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "NIXON",
+    "FullName": "NixonCoin",
+    "Algo": "X11",
+    "DiffPow": 681750208.64,
+    "DiffPos": 0.00795772
+  },
+  {
+    "Symbol": "NKA",
+    "FullName": "NKA",
+    "Algo": "SHA256",
+    "DiffPow": 4769566666.01,
+    "DiffPos": 72.08982400
+  },
+  {
+    "Symbol": "NKC",
+    "FullName": "NukeCoinz",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 5920908.00000000
+  },
+  {
+    "Symbol": "NKT",
+    "FullName": "NakamotoDark",
+    "Algo": "X11",
+    "DiffPow": 89214198.90,
+    "DiffPos": 286.11071000
+  },
+  {
+    "Symbol": "NLC",
+    "FullName": "NoLimitCoin",
+    "Algo": "SHA256",
+    "DiffPow": 1431210304.80,
+    "DiffPos": 91.54930800
+  },
+  {
+    "Symbol": "NLC2",
+    "FullName": "No Limit Coin 2",
+    "Algo": "SHA256",
+    "DiffPow": 207549501.26,
+    "DiffPos": 0.01606890
+  },
+  {
+    "Symbol": "NLG",
+    "FullName": "Gulden",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 42.93363000
+  },
+  {
+    "Symbol": "NMC",
+    "FullName": "Namecoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 999999999999.99999999
+  },
+  {
+    "Symbol": "NMR",
+    "FullName": "Numeraire",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NOC",
+    "FullName": "NOC",
+    "Algo": "Scrypt",
+    "DiffPow": 36820.14,
+    "DiffPos": 32.17743400
+  },
+  {
+    "Symbol": "NODC",
+    "FullName": "NodeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 6216492.19,
+    "DiffPos": 4.55115650
+  },
+  {
+    "Symbol": "NODES",
+    "FullName": "NODEScoin",
+    "Algo": "X11",
+    "DiffPow": 770.00,
+    "DiffPos": 0.00082664
+  },
+  {
+    "Symbol": "NODX",
+    "FullName": "NODEX",
+    "Algo": "SHA256",
+    "DiffPow": 1317142.00,
+    "DiffPos": 463164.98000000
+  },
+  {
+    "Symbol": "NOO",
+    "FullName": "NooCoin",
+    "Algo": "ICO",
+    "DiffPow": 25019557.93,
+    "DiffPos": 0.11833801
+  },
+  {
+    "Symbol": "NOTE",
+    "FullName": "DNotes",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 397.68080000
+  },
+  {
+    "Symbol": "NPC",
+    "FullName": "NPCcoin",
+    "Algo": "SHA256",
+    "DiffPow": 4813547967.10,
+    "DiffPos": 0.85988139
+  },
+  {
+    "Symbol": "NRC",
+    "FullName": "NeuroCoin",
+    "Algo": "POS",
+    "DiffPow": 48565593.15,
+    "DiffPos": 0.00000001
+  },
+  {
+    "Symbol": "NTK",
+    "FullName": "NeuroToken",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "NTM",
+    "FullName": "NetM Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 139.92460000
+  },
+  {
+    "Symbol": "NTRN",
+    "FullName": "Neutron",
+    "Algo": "SHA256",
+    "DiffPow": 29668643.60,
+    "DiffPos": 14887411.00000000
+  },
+  {
+    "Symbol": "NUBIS",
+    "FullName": "NubisCoin",
+    "Algo": "SHA256",
+    "DiffPow": 152654.34,
+    "DiffPos": 517184.70000000
+  },
+  {
+    "Symbol": "NUKE",
+    "FullName": "NUKE",
+    "Algo": "ICO",
+    "DiffPow": 6074588.05,
+    "DiffPos": 0.00094337
+  },
+  {
+    "Symbol": "NUM",
+    "FullName": "NumbersCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2621534465.60,
+    "DiffPos": 0.00688143
+  },
+  {
+    "Symbol": "NVC",
+    "FullName": "NovaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2162710.27,
+    "DiffPos": 38666.68300000
+  },
+  {
+    "Symbol": "NXE",
+    "FullName": "NXE Coin",
+    "Algo": "Fresh",
+    "DiffPow": 2492575.00,
+    "DiffPos": 2.38668790
+  },
+  {
+    "Symbol": "NYC",
+    "FullName": "NewYorkCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 1387.48280000
+  },
+  {
+    "Symbol": "NZC",
+    "FullName": "NewZealandCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 44.16186500
+  },
+  {
+    "Symbol": "OBS",
+    "FullName": "ObscureBay",
+    "Algo": "X11",
+    "DiffPow": 6535049.63,
+    "DiffPos": 4.03683570
+  },
+  {
+    "Symbol": "OCC",
+    "FullName": "Octoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 1255028.00000000
+  },
+  {
+    "Symbol": "OCEAN",
+    "FullName": "OceanCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 457.73655000
+  },
+  {
+    "Symbol": "OCOW",
+    "FullName": "OneCoinOneWorld",
+    "Algo": "Scrypt",
+    "DiffPow": 1921561.45,
+    "DiffPos": 0.67732934
+  },
+  {
+    "Symbol": "ODNT",
+    "FullName": "ODNT",
+    "Algo": "SHA256",
+    "DiffPow": 21329988.63,
+    "DiffPos": 0.36941314
+  },
+  {
+    "Symbol": "OK",
+    "FullName": "OKCash",
+    "Algo": "Scrypt",
+    "DiffPow": 73974722.56,
+    "DiffPos": 41.20078600
+  },
+  {
+    "Symbol": "OLIT",
+    "FullName": "OliTwistCoin",
+    "Algo": "X11",
+    "DiffPow": 3127543.43,
+    "DiffPos": 741.71095000
+  },
+  {
+    "Symbol": "OLYMP",
+    "FullName": "OlympCoin",
+    "Algo": "X11",
+    "DiffPow": 23434231.56,
+    "DiffPos": 0.00066995
+  },
+  {
+    "Symbol": "OMA",
+    "FullName": "Omega",
+    "Algo": "X15",
+    "DiffPow": 2008738.31,
+    "DiffPos": 1.67386090
+  },
+  {
+    "Symbol": "OMC",
+    "FullName": "Omicron",
+    "Algo": "TOKEN",
+    "DiffPow": 10140044.44,
+    "DiffPos": 0.01169086
+  },
+  {
+    "Symbol": "OMG",
+    "FullName": "OMGame",
+    "Algo": "",
+    "DiffPow": 40231635.71,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "ONEK",
+    "FullName": "Onek Coin",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ONX",
+    "FullName": "OnixCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 77146.53300000
+  },
+  {
+    "Symbol": "OP",
+    "FullName": "Operand",
+    "Algo": "POS",
+    "DiffPow": 36309810.15,
+    "DiffPos": 0.00031876
+  },
+  {
+    "Symbol": "OPAL",
+    "FullName": "Opalcoin",
+    "Algo": "X13",
+    "DiffPow": 15143524.35,
+    "DiffPos": 6.02670480
+  },
+  {
+    "Symbol": "OPES",
+    "FullName": "OpesCoin",
+    "Algo": "Argon2",
+    "DiffPow": null,
+    "DiffPos": 0.00377025
+  },
+  {
+    "Symbol": "OPTION",
+    "FullName": "OptionCoin",
+    "Algo": "X11",
+    "DiffPow": 21438506.95,
+    "DiffPos": 0.03903956
+  },
+  {
+    "Symbol": "ORLY",
+    "FullName": "OrlyCoin",
+    "Algo": "X15",
+    "DiffPow": 36660186.45,
+    "DiffPos": 8.54834690
+  },
+  {
+    "Symbol": "OS76",
+    "FullName": "OsmiumCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 22.35211400
+  },
+  {
+    "Symbol": "OTN",
+    "FullName": "OTN Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "OZC",
+    "FullName": "OzzieCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 10190.70200000
+  },
+  {
+    "Symbol": "P7C",
+    "FullName": "P7Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.03250622
+  },
+  {
+    "Symbol": "PAC",
+    "FullName": "PAC NEW",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 516471.91000000
+  },
+  {
+    "Symbol": "PAK",
+    "FullName": "PakCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 1742.34520000
+  },
+  {
+    "Symbol": "PAL",
+    "FullName": "PALcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 185986.04,
+    "DiffPos": 9.02612620
+  },
+  {
+    "Symbol": "PARA",
+    "FullName": "ParanoiaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.05202978
+  },
+  {
+    "Symbol": "PARTY",
+    "FullName": "PartyCoin",
+    "Algo": "SHA256",
+    "DiffPow": 1404531.90,
+    "DiffPos": 151451.56000000
+  },
+  {
+    "Symbol": "PAY",
+    "FullName": "Epay",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "PAYP",
+    "FullName": "PayPeer",
+    "Algo": "Scrypt",
+    "DiffPow": 5323854887.43,
+    "DiffPos": 5.95632070
+  },
+  {
+    "Symbol": "PCM",
+    "FullName": "PROCOM",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 14.53424000
+  },
+  {
+    "Symbol": "PEN",
+    "FullName": "PenCoin",
+    "Algo": "Scrypt‏",
+    "DiffPow": 571376.32,
+    "DiffPos": 101.37320000
+  },
+  {
+    "Symbol": "PEO",
+    "FullName": "PeopleCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.06815955
+  },
+  {
+    "Symbol": "PEX",
+    "FullName": "PoSeX Coin",
+    "Algo": "SHA256",
+    "DiffPow": 2804444.76,
+    "DiffPos": 69325.16200000
+  },
+  {
+    "Symbol": "PEXT",
+    "FullName": "PrimeEx",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PHR",
+    "FullName": "PHREAK",
+    "Algo": "POS",
+    "DiffPow": 30036233.49,
+    "DiffPos": 0.00092863
+  },
+  {
+    "Symbol": "PIE",
+    "FullName": "PieCoin",
+    "Algo": "POS",
+    "DiffPow": 433361969.87,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "PING",
+    "FullName": "CryptoPing",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PINKX",
+    "FullName": "PantherCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 467483153.57,
+    "DiffPos": 0.38294777
+  },
+  {
+    "Symbol": "PIO",
+    "FullName": "PioneerShares",
+    "Algo": "POS",
+    "DiffPow": 223307.84,
+    "DiffPos": 0.12133392
+  },
+  {
+    "Symbol": "PIPR",
+    "FullName": "PiperCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 944720497.69,
+    "DiffPos": 0.00027186
+  },
+  {
+    "Symbol": "PIVX",
+    "FullName": "Darknet",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 136094.44000000
+  },
+  {
+    "Symbol": "PKB",
+    "FullName": "ParkByte",
+    "Algo": "SHA256",
+    "DiffPow": 5911076.80,
+    "DiffPos": 695993.82000000
+  },
+  {
+    "Symbol": "PKT",
+    "FullName": "Playkey",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PLANET",
+    "FullName": "Planet Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 3085547.56,
+    "DiffPos": 9.61615530
+  },
+  {
+    "Symbol": "PLAY",
+    "FullName": "Play Coin",
+    "Algo": "",
+    "DiffPow": 1149782510.87,
+    "DiffPos": 0.01895545
+  },
+  {
+    "Symbol": "PLBT",
+    "FullName": "PolybiusCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PLC",
+    "FullName": "Platin Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00005097
+  },
+  {
+    "Symbol": "PLNC",
+    "FullName": "PLNCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 66.87324900
+  },
+  {
+    "Symbol": "PLU",
+    "FullName": "Pluton",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PNC",
+    "FullName": "PNC",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 905390.83000000
+  },
+  {
+    "Symbol": "PND",
+    "FullName": "PandaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 33490506223.17,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PNK",
+    "FullName": "Steampunk",
+    "Algo": "POS",
+    "DiffPow": 40059483.77,
+    "DiffPos": 0.00770956
+  },
+  {
+    "Symbol": "POKE",
+    "FullName": "PokeCoin",
+    "Algo": "X11",
+    "DiffPow": 1510522173.92,
+    "DiffPos": 0.03268160
+  },
+  {
+    "Symbol": "POLL",
+    "FullName": "ClearPoll",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "POLY",
+    "FullName": "Polybit",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 18.65242400
+  },
+  {
+    "Symbol": "POM",
+    "FullName": "Pompei Coin",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PONZ2",
+    "FullName": "Ponz2",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.00535187
+  },
+  {
+    "Symbol": "PONZI",
+    "FullName": "PonziCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "POPPY",
+    "FullName": "PapaverSomniferum",
+    "Algo": "",
+    "DiffPow": 4784459.68,
+    "DiffPos": 57.58352500
+  },
+  {
+    "Symbol": "POST",
+    "FullName": "PostCoin",
+    "Algo": "POS",
+    "DiffPow": 31369390.36,
+    "DiffPos": 0.00025579
+  },
+  {
+    "Symbol": "POSW",
+    "FullName": "PoSWallet",
+    "Algo": "POS",
+    "DiffPow": 240564648.21,
+    "DiffPos": 0.00034767
+  },
+  {
+    "Symbol": "POWER",
+    "FullName": "PowerStake",
+    "Algo": "X11",
+    "DiffPow": 300026340.27,
+    "DiffPos": 0.00032991
+  },
+  {
+    "Symbol": "PPC",
+    "FullName": "Peercoin",
+    "Algo": "SHA256",
+    "DiffPow": 24730017.80,
+    "DiffPos": 3750941900.00000000
+  },
+  {
+    "Symbol": "PPT",
+    "FullName": "Populous",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PRE",
+    "FullName": "Premium",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.20106955
+  },
+  {
+    "Symbol": "PREX",
+    "FullName": "Prex Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PRIMU",
+    "FullName": "Primulon Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 152855344.47,
+    "DiffPos": 24.70422400
+  },
+  {
+    "Symbol": "PRIX",
+    "FullName": "PRIVATIX",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PRM",
+    "FullName": "Prism",
+    "Algo": "ICO",
+    "DiffPow": 30252429.60,
+    "DiffPos": 0.27104547
+  },
+  {
+    "Symbol": "PROC",
+    "FullName": "ProCurrency",
+    "Algo": "ICO",
+    "DiffPow": 15005091360.00,
+    "DiffPos": 0.21230656
+  },
+  {
+    "Symbol": "PROFIT",
+    "FullName": "Bernie Madoff",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 35.48103700
+  },
+  {
+    "Symbol": "PRS",
+    "FullName": "PreSearch",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "PRX",
+    "FullName": "Printerium",
+    "Algo": "Scrypt",
+    "DiffPow": 16247797.56,
+    "DiffPos": 7.49195850
+  },
+  {
+    "Symbol": "PSB",
+    "FullName": "Pesobit",
+    "Algo": "ICO",
+    "DiffPow": 20587536.99,
+    "DiffPos": 0.00030258
+  },
+  {
+    "Symbol": "PSI",
+    "FullName": "PSIcoin",
+    "Algo": "X11",
+    "DiffPow": 700820.78,
+    "DiffPos": 0.00972058
+  },
+  {
+    "Symbol": "PSY",
+    "FullName": "Psilocybin",
+    "Algo": "SHA256",
+    "DiffPow": 4168230.16,
+    "DiffPos": 242599.01000000
+  },
+  {
+    "Symbol": "PTA",
+    "FullName": "Pentacoin",
+    "Algo": "SHA256",
+    "DiffPow": 1251678.95,
+    "DiffPos": 326974.19000000
+  },
+  {
+    "Symbol": "PTY",
+    "FullName": "PrototypeCoin",
+    "Algo": "X11",
+    "DiffPow": 1446.00,
+
+    "DiffPos": 275.63763000
+  },
+  {
+    "Symbol": "PULSE",
+    "FullName": "PulseCoin",
+    "Algo": "SHA256",
+    "DiffPow": 31284251.30,
+    "DiffPos": 15350499.00000000
+  },
+  {
+    "Symbol": "PUPA",
+    "FullName": "PupaCoin",
+    "Algo": "Blake2s",
+    "DiffPow": 402866800.29,
+    "DiffPos": 831.38727000
+  },
+  {
+    "Symbol": "PURE",
+    "FullName": "PurePOS",
+    "Algo": "X11",
+    "DiffPow": 100314513.80,
+    "DiffPos": 0.00025362
+  },
+  {
+    "Symbol": "PUTIN",
+    "FullName": "PutinCoin",
+    "Algo": "X11",
+    "DiffPow": 131494879.19,
+    "DiffPos": 420.06460000
+  },
+  {
+    "Symbol": "PWR",
+    "FullName": "PowerCoin",
+    "Algo": "NIST5",
+    "DiffPow": 57683223755.56,
+    "DiffPos": 3.69751740
+  },
+  {
+    "Symbol": "PX",
+    "FullName": "PXcoin",
+    "Algo": "SHA-256",
+    "DiffPow": 66313203.35,
+    "DiffPos": 1.04479870
+  },
+  {
+    "Symbol": "PXI",
+    "FullName": "PRIME-XI",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 5055.40090000
+  },
+  {
+    "Symbol": "PXL",
+    "FullName": "Phalanx",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 114561.26000000
+  },
+  {
+    "Symbol": "PYN",
+    "FullName": "PAYCENT",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "QBC",
+    "FullName": "QuebeCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 17205.62200000
+  },
+  {
+    "Symbol": "QTG",
+    "FullName": "Quantum Gold",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "QTM",
+    "FullName": "Quantum",
+    "Algo": "",
+    "DiffPow": 195737983.82,
+    "DiffPos": 0.24750923
+  },
+  {
+    "Symbol": "QTZ",
+    "FullName": "Quartz",
+    "Algo": "SHA256",
+    "DiffPow": 3667873.80,
+    "DiffPos": 3848626.50000000
+  },
+  {
+    "Symbol": "R",
+    "FullName": "Revain Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "RAC",
+    "FullName": "RAC Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "RAD",
+    "FullName": "Radon",
+    "Algo": "Scrypt",
+    "DiffPow": 2880488.00,
+    "DiffPos": 154.70906000
+  },
+  {
+    "Symbol": "RADI",
+    "FullName": "RadicalCoin",
+    "Algo": "X13",
+    "DiffPow": 100123365.22,
+    "DiffPos": 0.00037884
+  },
+  {
+    "Symbol": "RAI",
+    "FullName": "RaiderCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 981158212.71,
+    "DiffPos": 5.62676330
+  },
+  {
+    "Symbol": "RATIO",
+    "FullName": "RatioCoin",
+    "Algo": "ICO",
+    "DiffPow": 100000046.85,
+    "DiffPos": 0.00027753
+  },
+  {
+    "Symbol": "RBBT",
+    "FullName": "Rabbit coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 129.73916000
+  },
+  {
+    "Symbol": "RBIES",
+    "FullName": "Rubies Coin",
+    "Algo": "POS",
+    "DiffPow": 10541477.74,
+    "DiffPos": 0.00096296
+  },
+  {
+    "Symbol": "RBIT",
+    "FullName": "Returnbit",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "RBT",
+    "FullName": "Rimbit",
+    "Algo": "POS",
+    "DiffPow": 401816363.24,
+    "DiffPos": 0.00027121
+  },
+  {
+    "Symbol": "RBY",
+    "FullName": "RubyCoin",
+    "Algo": "POS",
+    "DiffPow": 25550750.39,
+    "DiffPos": 2.05702220
+  },
+  {
+    "Symbol": "RCN",
+    "FullName": "RCoin",
+    "Algo": "SHA256",
+    "DiffPow": 7430678416.07,
+    "DiffPos": 1.00000000
+  },
+  {
+    "Symbol": "RCX",
+    "FullName": "RedCrowCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 464584374.14,
+    "DiffPos": 4.35105760
+  },
+  {
+    "Symbol": "RDD",
+    "FullName": "Reddcoin",
+    "Algo": "PoSV",
+    "DiffPow": 28834886232.55,
+    "DiffPos": 170.16208000
+  },
+  {
+    "Symbol": "REA",
+    "FullName": "REALISTO",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "REC",
+    "FullName": "Regal Coin",
+    "Algo": "X11",
+    "DiffPow": 7246128.90,
+    "DiffPos": 0.00029150
+  },
+  {
+    "Symbol": "REE",
+    "FullName": "ReeCoin",
+    "Algo": "",
+    "DiffPow": 6662561033.36,
+    "DiffPos": 0.14449217
+  },
+  {
+    "Symbol": "REP",
+    "FullName": "RepubliCoin",
+    "Algo": "Quark",
+    "DiffPow": 281724.24,
+    "DiffPos": 2.92202680
+  },
+  {
+    "Symbol": "REQ",
+    "FullName": "Request Network",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "REV",
+    "FullName": "Revenu",
+    "Algo": "SHA256",
+    "DiffPow": 2674696.56,
+    "DiffPos": 123.06681000
+  },
+  {
+    "Symbol": "RH",
+    "FullName": "RhCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 9859445156.10,
+    "DiffPos": 0.00101602
+  },
+  {
+    "Symbol": "RICE",
+    "FullName": "RiceCoin",
+    "Algo": "X13",
+    "DiffPow": 3921280.45,
+    "DiffPos": 29.55933100
+  },
+  {
+    "Symbol": "RICHX",
+    "FullName": "RichCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 575919.51000000
+  },
+  {
+    "Symbol": "RID",
+    "FullName": "RiddlerCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 589347189.49,
+    "DiffPos": 0.06406973
+  },
+  {
+    "Symbol": "RIDE",
+    "FullName": "RideMyCar",
+    "Algo": "POS",
+    "DiffPow": 104659686.43,
+    "DiffPos": 0.00026170
+  },
+  {
+    "Symbol": "RING",
+    "FullName": "RingCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 637263898.41,
+    "DiffPos": 0.02955984
+  },
+  {
+    "Symbol": "RIO",
+    "FullName": "RioCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 677070980.02,
+    "DiffPos": 0.00185670
+  },
+  {
+    "Symbol": "RISE",
+    "FullName": "Rise",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "RMS",
+    "FullName": "Resumeo",
+    "Algo": "Nist5",
+    "DiffPow": 19999999.99,
+    "DiffPos": 0.01268511
+  },
+  {
+    "Symbol": "RNC",
+    "FullName": "ReturnCoin",
+    "Algo": "X11",
+    "DiffPow": 250097668.67,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "RNTB",
+    "FullName": "BitRent",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ROCKET",
+    "FullName": "Rocket Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "RONIN",
+    "FullName": "SamuraiCoin",
+    "Algo": "POS",
+    "DiffPow": 40181351.24,
+    "DiffPos": 0.00629138
+  },
+  {
+    "Symbol": "ROS",
+    "FullName": "ROScoin",
+    "Algo": "X11",
+    "DiffPow": 75955324.31,
+    "DiffPos": 82.05216500
+  },
+  {
+    "Symbol": "ROYAL",
+    "FullName": "RoyalCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 13.24963000
+  },
+  {
+    "Symbol": "RPC",
+    "FullName": "RonPaulCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 962.27370000
+  },
+  {
+    "Symbol": "RR",
+    "FullName": "Revizor Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "RSGP",
+    "FullName": "RSGPcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2158.71,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "RUBIT",
+    "FullName": "RubleBit",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 79.57011100
+  },
+  {
+    "Symbol": "RUC",
+    "FullName": "RUCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 506776551.92,
+    "DiffPos": 0.27513172
+  },
+  {
+    "Symbol": "RUP",
+    "FullName": "Rupee Coin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 5098.60510000
+  },
+  {
+    "Symbol": "RUPX",
+    "FullName": "Rupaya Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 51.46890900
+  },
+  {
+    "Symbol": "RUST",
+    "FullName": "RustCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 497859.00,
+    "DiffPos": 4.61705360
+  },
+  {
+    "Symbol": "SAK",
+    "FullName": "SharkCoin",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 67097.35600000
+  },
+  {
+    "Symbol": "SAN",
+    "FullName": "Santiment",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SANDG",
+    "FullName": "SandG Coin",
+    "Algo": "SHA256",
+    "DiffPow": 7554400.00,
+    "DiffPos": 72904.92000000
+  },
+  {
+    "Symbol": "SAT",
+    "FullName": "Social Activity",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SBIT",
+    "FullName": "Squarebit",
+    "Algo": "X11",
+    "DiffPow": 1074912.05,
+    "DiffPos": 226.21434000
+  },
+  {
+    "Symbol": "SBT",
+    "FullName": "Spandau Ballet Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 94947316.32,
+    "DiffPos": 0.57640550
+  },
+  {
+    "Symbol": "SBTC",
+    "FullName": "Super Bitcoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SCAN",
+    "FullName": "ScanCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.21233682
+  },
+  {
+    "Symbol": "SCASH",
+    "FullName": "SpaceCash",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 3.34035370
+  },
+  {
+    "Symbol": "SCITW",
+    "FullName": "SCITW Coin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.00215278
+  },
+  {
+    "Symbol": "SCL",
+    "FullName": "Social",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SCRPT",
+    "FullName": "ScryptCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 34.51012700
+  },
+  {
+    "Symbol": "SCRT",
+    "FullName": "Secret Coin",
+    "Algo": "X11",
+    "DiffPow": 4223988.05,
+    "DiffPos": 46.13871600
+  },
+  {
+    "Symbol": "SCS",
+    "FullName": "SCash",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 14.82714600
+  },
+  {
+    "Symbol": "SCT",
+    "FullName": "ScryptToken",
+    "Algo": "Scrypt",
+    "DiffPow": 4852752.19,
+    "DiffPos": 0.33930994
+  },
+  {
+    "Symbol": "SDAO",
+    "FullName": "Solar DAO",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SDC",
+    "FullName": "Shadowcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 6738374.39,
+    "DiffPos": 1041.87150000
+  },
+  {
+    "Symbol": "SDP",
+    "FullName": "SydPak Coin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 3.89793280
+  },
+  {
+    "Symbol": "SED",
+    "FullName": "Seedbit",
+    "Algo": "Quark",
+    "DiffPow": 1094449.65,
+    "DiffPos": 16.14869500
+  },
+  {
+    "Symbol": "SEEDS",
+    "FullName": "SeedShares",
+    "Algo": "SHA256",
+    "DiffPow": 7429923.40,
+    "DiffPos": 45388.17800000
+  },
+  {
+    "Symbol": "SEL",
+    "FullName": "SelenCoin",
+    "Algo": "POS",
+    "DiffPow": 2872624.94,
+    "DiffPos": 5.92444640
+  },
+  {
+    "Symbol": "SEN",
+    "FullName": "SENTARO",
+    "Algo": "Scrypt",
+    "DiffPow": 1.00,
+    "DiffPos": 2.81879350
+  },
+  {
+    "Symbol": "SENT",
+    "FullName": "Sentinel",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SEV",
+    "FullName": "Seven Coin",
+    "Algo": "X11",
+    "DiffPow": 124127.09,
+    "DiffPos": 4359.24420000
+  },
+  {
+    "Symbol": "SFE",
+    "FullName": "SafeCoin",
+    "Algo": "",
+    "DiffPow": 100002568960.30,
+    "DiffPos": 4.42215690
+  },
+  {
+    "Symbol": "SH",
+    "FullName": "Shilling",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 48.41178800
+  },
+  {
+    "Symbol": "SHDW",
+    "FullName": "ShadowToken",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SHELL",
+    "FullName": "ShellCoin",
+    "Algo": "X11",
+    "DiffPow": 23138700.00,
+    "DiffPos": 0.00001526
+  },
+  {
+    "Symbol": "SHORTY",
+    "FullName": "ShortyCoin",
+    "Algo": "ICO",
+    "DiffPow": 100006870.54,
+    "DiffPos": 0.01818241
+  },
+  {
+    "Symbol": "SHREK",
+    "FullName": "ShrekCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1804709415.83,
+    "DiffPos": 2.32528190
+  },
+  {
+    "Symbol": "SHRM",
+    "FullName": "SHROOMS",
+    "Algo": "SHA256",
+    "DiffPow": 730334.52,
+    "DiffPos": 992.69337000
+  },
+  {
+    "Symbol": "SHRP",
+    "FullName": "SharpCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1291131872.38,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "SIB",
+    "FullName": "SibCoin",
+    "Algo": "X11Gost",
+    "DiffPow": null,
+    "DiffPos": 5625.72270000
+  },
+  {
+    "Symbol": "SIC",
+    "FullName": "SifCoin",
+    "Algo": "Multi",
+    "DiffPow": null,
+    "DiffPos": 285.75497000
+  },
+  {
+    "Symbol": "SIGT",
+    "FullName": "Signatum Coin",
+    "Algo": "SkunkHash",
+    "DiffPow": 137268530.35,
+    "DiffPos": 252352.22000000
+  },
+  {
+    "Symbol": "SIGU",
+    "FullName": "Singular",
+    "Algo": "Scrypt",
+    "DiffPow": 731064.03,
+    "DiffPos": 216.40709000
+  },
+  {
+    "Symbol": "SIX",
+    "FullName": "SixAxis",
+    "Algo": "POS",
+    "DiffPow": 60000012.82,
+    "DiffPos": 0.00005333
+  },
+  {
+    "Symbol": "SJW",
+    "FullName": "SJWcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.86915293
+  },
+  {
+    "Symbol": "SKB",
+    "FullName": "SkullBuzz",
+    "Algo": "SHA256",
+    "DiffPow": 479269.00,
+    "DiffPos": 295353.21000000
+  },
+  {
+    "Symbol": "SKRP",
+    "FullName": "Skraps",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SKULL",
+    "FullName": "PirateBlocks",
+    "Algo": "X11",
+    "DiffPow": 79684571.90,
+    "DiffPos": 0.00017892
+  },
+  {
+    "Symbol": "SLCO",
+    "FullName": "Silco",
+    "Algo": "X15",
+    "DiffPow": -83836857090.48,
+    "DiffPos": 11.23426500
+  },
+  {
+    "Symbol": "SLEEP",
+    "FullName": "SleepCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 10699485767.91,
+    "DiffPos": 0.00079255
+  },
+  {
+    "Symbol": "SLFI",
+    "FullName": "SelfieCoin",
+    "Algo": "Scrypt",
+    "DiffPow": -70870595575.21,
+    "DiffPos": 12.05984700
+  },
+  {
+    "Symbol": "SLING",
+    "FullName": "SlingCoin",
+    "Algo": "POS",
+    "DiffPow": 1794528.10,
+    "DiffPos": 25190040.00000000
+  },
+  {
+    "Symbol": "SLS",
+    "FullName": "SaluS",
+    "Algo": "X15",
+    "DiffPow": 1010422.58,
+    "DiffPos": 0.00088926
+  },
+  {
+    "Symbol": "SMART",
+    "FullName": "Bitcoin Smart",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SMBR",
+    "FullName": "SembroToken",
+    "Algo": "Scrypt",
+    "DiffPow": 2500744.02,
+    "DiffPos": 0.00098474
+  },
+  {
+    "Symbol": "SMC",
+    "FullName": "SmartCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 15503.10200000
+  },
+  {
+    "Symbol": "SMF",
+    "FullName": "SmurfCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 912768057.62,
+    "DiffPos": 7.18437210
+  },
+  {
+    "Symbol": "SMSR",
+    "FullName": "Samsara",
+    "Algo": "Qubit",
+    "DiffPow": 40486000.00,
+    "DiffPos": 26.93955800
+  },
+  {
+    "Symbol": "SMT",
+    "FullName": "SmartMesh",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SNC",
+    "FullName": "SunContract",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SNM",
+    "FullName": "SONM",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SNPT",
+    "FullName": "SnapToken",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SNRG",
+    "FullName": "Synergy",
+    "Algo": "X11",
+    "DiffPow": 3606197.51,
+    "DiffPos": 34.49934000
+  },
+  {
+    "Symbol": "SNT",
+    "FullName": "StatusNetwork",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SOCC",
+    "FullName": "SocialCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 3311.25910000
+  },
+  {
+    "Symbol": "SOLAR",
+    "FullName": "Solarcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 2.18244460
+  },
+  {
+    "Symbol": "SOLO",
+    "FullName": "SoloCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 30.25961600
+  },
+  {
+    "Symbol": "SOMA",
+    "FullName": "Soma Coin",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SONG",
+    "FullName": "SongСoin",
+    "Algo": "KGW",
+    "DiffPow": null,
+    "DiffPos": 448.58182000
+  },
+  {
+    "Symbol": "SOUL",
+    "FullName": "SoulCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1049028425.45,
+    "DiffPos": 1.04318550
+  },
+  {
+    "Symbol": "SP",
+    "FullName": "SexPistols",
+    "Algo": "Scrypt",
+    "DiffPow": 318567795.31,
+    "DiffPos": 1.17566330
+  },
+  {
+    "Symbol": "SPACE",
+    "FullName": "SpaceCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 19335898.90,
+    "DiffPos": 11.23525900
+  },
+  {
+    "Symbol": "SPC",
+    "FullName": "SpikePrivateCoin",
+    "Algo": "SHA256",
+    "DiffPow": 69125.28,
+    "DiffPos": 4412700.20000000
+  },
+  {
+    "Symbol": "SPEC",
+    "FullName": "SPEC",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 32.27368700
+  },
+  {
+    "Symbol": "SPEX",
+    "FullName": "SproutsExtreme",
+    "Algo": "SHA256",
+    "DiffPow": -999999999999.99,
+    "DiffPos": 51002.27700000
+  },
+  {
+    "Symbol": "SPHTX",
+    "FullName": "SophiaTX",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SPKTR",
+    "FullName": "Ghost Coin",
+    "Algo": "SHA256",
+    "DiffPow": 1963923.76,
+    "DiffPos": 871611.22000000
+  },
+  {
+    "Symbol": "SPM",
+    "FullName": "Supreme",
+    "Algo": "Scrypt",
+    "DiffPow": 39539518.78,
+    "DiffPos": 2.07452480
+  },
+  {
+    "Symbol": "SPORT",
+    "FullName": "SportCoin",
+    "Algo": "X11",
+    "DiffPow": 19915766.67,
+    "DiffPos": 0.10962275
+  },
+  {
+    "Symbol": "SPR",
+    "FullName": "SpreadCoin",
+    "Algo": "X11",
+    "DiffPow": 999999999999.99,
+    "DiffPos": 143.39159000
+  },
+  {
+    "Symbol": "SPT",
+    "FullName": "Spots2",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 158.98564000
+  },
+  {
+    "Symbol": "SPX",
+    "FullName": "Specie",
+    "Algo": "POS",
+    "DiffPow": 225451.03,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "SQL",
+    "FullName": "Squall Coin",
+    "Algo": "X11",
+    "DiffPow": 333569.93,
+    "DiffPos": 532.51005000
+  },
+  {
+    "Symbol": "SRN",
+    "FullName": "SIRIN",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SRND",
+    "FullName": "SuperRandom",
+    "Algo": "POS",
+    "DiffPow": 100000000.05,
+    "DiffPos": 0.00127353
+  },
+  {
+    "Symbol": "SRNT",
+    "FullName": "Serenity",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SSC",
+    "FullName": "SecretsCoin",
+    "Algo": "X11",
+    "DiffPow": 10033597.39,
+    "DiffPos": 0.00027599
+  },
+  {
+    "Symbol": "SSH",
+    "FullName": "StreamShares",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SSTC",
+    "FullName": "SunShotCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "STA",
+    "FullName": "StakersCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00030819
+  },
+  {
+    "Symbol": "STALIN",
+    "FullName": "StalinCoin",
+    "Algo": "X11",
+    "DiffPow": 469764074.15,
+    "DiffPos": 231.31382000
+  },
+  {
+    "Symbol": "STAR",
+    "FullName": "StarCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 536581495.94,
+    "DiffPos": 0.47762902
+  },
+  {
+    "Symbol": "START",
+    "FullName": "StartCoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 8021.34670000
+  },
+  {
+    "Symbol": "STEPS",
+    "FullName": "StepsCoin",
+    "Algo": "POS",
+    "DiffPow": 24469516.41,
+    "DiffPos": 0.20840754
+  },
+  {
+    "Symbol": "STHR",
+    "FullName": "Stakerush",
+    "Algo": "POS",
+    "DiffPow": 102710.07,
+    "DiffPos": 0.00028414
+  },
+  {
+    "Symbol": "STK",
+    "FullName": "StakeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2334543.67,
+    "DiffPos": 81.34875300
+  },
+  {
+    "Symbol": "STO",
+    "FullName": "SaveTheOcean",
+    "Algo": "X11",
+    "DiffPow": 160936262.14,
+    "DiffPos": 1437.03190000
+  },
+  {
+    "Symbol": "STONK",
+    "FullName": "StonkaCoin",
+    "Algo": "SHA256",
+    "DiffPow": 6561400.46,
+    "DiffPos": 64995.48700000
+  },
+  {
+    "Symbol": "STORJ",
+    "FullName": "Storj",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "STORM",
+    "FullName": "STORM",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "STP",
+    "FullName": "Saint Patrick",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.10241508
+  },
+  {
+    "Symbol": "STRB",
+    "FullName": "SuperTurboStake",
+    "Algo": "SHA256",
+    "DiffPow": -999999999999.99,
+    "DiffPos": 3137290.60000000
+  },
+  {
+    "Symbol": "STRP",
+    "FullName": "StripeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.00487630
+  },
+  {
+    "Symbol": "STS",
+    "FullName": "StressCoin",
+    "Algo": "X13",
+    "DiffPow": 592139000.95,
+    "DiffPos": 0.01802276
+  },
+  {
+    "Symbol": "STU",
+    "FullName": "bitJob",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "STV",
+    "FullName": "Sativacoin",
+    "Algo": "X13",
+    "DiffPow": 7091896.68,
+    "DiffPos": 14.33858400
+  },
+  {
+    "Symbol": "STY",
+    "FullName": "Styras",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SUB",
+    "FullName": "Subscriptio",
+    "Algo": "POS",
+    "DiffPow": 10000867.47,
+    "DiffPos": 0.00208473
+  },
+  {
+    "Symbol": "SUPER",
+    "FullName": "SuperCoin",
+    "Algo": "X11",
+    "DiffPow": 38313664.38,
+    "DiffPos": 1577.41150000
+  },
+  {
+    "Symbol": "SW",
+    "FullName": "SkyWay Coin",
+    "Algo": "SHA256",
+    "DiffPow": 50489946566.36,
+    "DiffPos": 108715.18000000
+  },
+  {
+    "Symbol": "SWEET",
+    "FullName": "SweetStake",
+    "Algo": "ICO",
+    "DiffPow": 400117520.49,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "SWING",
+    "FullName": "SwingCoin",
+    "Algo": "SHA256",
+    "DiffPow": 2683251.16,
+    "DiffPos": 2410940.30000000
+  },
+  {
+    "Symbol": "SWT",
+    "FullName": "SwarmCity",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "SXC",
+    "FullName": "SexCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 6.68225610
+  },
+  {
+    "Symbol": "SYNX",
+    "FullName": "Syndicate",
+    "Algo": "X11",
+    "DiffPow": 8680900.00,
+    "DiffPos": 169789.79000000
+  },
+  {
+    "Symbol": "SYS",
+    "FullName": "Syscoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 38435050000.00000000
+  },
+  {
+    "Symbol": "TAB",
+    "FullName": "Molly Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 2055465.74,
+    "DiffPos": 18.23491400
+  },
+  {
+    "Symbol": "TAG",
+    "FullName": "Tagcoin",
+    "Algo": "Scrypt",
+    "DiffPow": 6919841.18,
+    "DiffPos": 5116.92560000
+  },
+  {
+    "Symbol": "TAGR",
+    "FullName": "TAGR",
+    "Algo": "X15",
+    "DiffPow": 38772595.57,
+    "DiffPos": 0.19706337
+  },
+  {
+    "Symbol": "TAJ",
+    "FullName": "TajCoin",
+    "Algo": "Blake2s",
+    "DiffPow": 9147074.82,
+    "DiffPos": 377611.91000000
+  },
+  {
+    "Symbol": "TAK",
+    "FullName": "TakCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 107.45300000
+  },
+  {
+    "Symbol": "TAKE",
+    "FullName": "TakenCoin",
+    "Algo": "SHA256",
+    "DiffPow": 571374000.00,
+    "DiffPos": 58160.24900000
+  },
+  {
+    "Symbol": "TALK",
+    "FullName": "BTCtalkcoin",
+    "Algo": "POS",
+    "DiffPow": 67657740.24,
+    "DiffPos": 6.69922110
+  },
+  {
+    "Symbol": "TAM",
+    "FullName": "Tamagucci",
+    "Algo": "Scrypt",
+    "DiffPow": 31268501.48,
+    "DiffPos": 1690.09380000
+  },
+  {
+    "Symbol": "TAO",
+    "FullName": "TaoCoin",
+    "Algo": "X11",
+    "DiffPow": 32886485.79,
+    "DiffPos": 12543722.00000000
+  },
+  {
+    "Symbol": "TAP",
+    "FullName": "TappingCoin",
+    "Algo": "X11",
+    "DiffPow": 902701817.46,
+    "DiffPos": 4.01991440
+  },
+  {
+    "Symbol": "TAXI",
+    "FullName": "TAXI",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TB",
+    "FullName": "TeleBET",
+    "Algo": "Scrypt",
+    "DiffPow": 636946.00,
+    "DiffPos": 35.56995400
+  },
+  {
+    "Symbol": "TBCX",
+    "FullName": "TrashBurn",
+    "Algo": "SHA256",
+    "DiffPow": 368278228.67,
+    "DiffPos": 0.16229288
+  },
+  {
+    "Symbol": "TBX",
+    "FullName": "TokenBox",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TCN",
+    "FullName": "TCoin",
+    "Algo": "",
+    "DiffPow": 115657051729.16,
+    "DiffPos": 30.73806700
+  },
+  {
+    "Symbol": "TCR",
+    "FullName": "TheCreed",
+    "Algo": "Qubit",
+    "DiffPow": 71551370.00,
+    "DiffPos": 0.25710688
+  },
+  {
+    "Symbol": "TCX",
+    "FullName": "TorrentCoin",
+    "Algo": "SHA256",
+    "DiffPow": 31153510406.49,
+    "DiffPos": 48.90600400
+  },
+  {
+    "Symbol": "TDFB",
+    "FullName": "TDFB",
+    "Algo": "SHA256",
+    "DiffPow": 731465.80,
+    "DiffPos": 1080347.80000000
+  },
+  {
+    "Symbol": "TDS",
+    "FullName": "TokenDesk",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TEAM",
+    "FullName": "TeamUP",
+    "Algo": "Full POS",
+    "DiffPow": 301004895.60,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "TEC",
+    "FullName": "TeCoin",
+    "Algo": "Heavy",
+    "DiffPow": null,
+    "DiffPos": 0.00096635
+  },
+  {
+    "Symbol": "TECH",
+    "FullName": "TechCoin",
+    "Algo": "X13",
+    "DiffPow": 192779.79,
+    "DiffPos": 84.32879100
+  },
+  {
+    "Symbol": "TEK",
+    "FullName": "TekCoin",
+    "Algo": "SHA256",
+    "DiffPow": 3901958242.06,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TELL",
+    "FullName": "TELLurion",
+    "Algo": "X11",
+    "DiffPow": 338929303.54,
+    "DiffPos": 0.19122861
+  },
+  {
+    "Symbol": "TENNET",
+    "FullName": "TENNET",
+    "Algo": "SHA256",
+    "DiffPow": 4880630.13,
+    "DiffPos": 2579556.90000000
+  },
+  {
+    "Symbol": "TES",
+    "FullName": "Tesla",
+    "Algo": "Scrypt",
+    "DiffPow": 61656185.11,
+    "DiffPos": 1.46811080
+  },
+  {
+    "Symbol": "TFL",
+    "FullName": "TrueFlip",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TGS",
+    "FullName": "TGS Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "THOM",
+    "FullName": "ThomasJefferson",
+    "Algo": "X11",
+    "DiffPow": 1152334913.64,
+    "DiffPos": 0.03443891
+  },
+  {
+    "Symbol": "THUG",
+    "FullName": "THUG LIFE",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TIA",
+    "FullName": "Tianhe",
+    "Algo": "LYRA2REv2",
+    "DiffPow": null,
+    "DiffPos": 0.00222987
+  },
+  {
+    "Symbol": "TIDE",
+    "FullName": "Tide Coin",
+    "Algo": "X11",
+    "DiffPow": 300187800.00,
+    "DiffPos": 21.76231500
+  },
+  {
+    "Symbol": "TIE",
+    "FullName": "Ties Network",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TIME",
+    "FullName": "ChronoBank",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TIT",
+    "FullName": "Titcoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 3822348.90000000
+  },
+  {
+    "Symbol": "TKN",
+    "FullName": "TrollTokens",
+    "Algo": "SHA256",
+    "DiffPow": 416943.41,
+    "DiffPos": 71835.51500000
+  },
+  {
+    "Symbol": "TKTX",
+    "FullName": "Crypto Tickets",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TLE",
+    "FullName": "TLE Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 605257195.16,
+    "DiffPos": 0.00393223
+  },
+  {
+    "Symbol": "TLEX",
+    "FullName": "TattooLE X",
+    "Algo": "Scrypt",
+    "DiffPow": 604804784.49,
+    "DiffPos": 0.00393223
+  },
+  {
+    "Symbol": "TLOSH",
+    "FullName": "Tokkelosh",
+    "Algo": "X11",
+    "DiffPow": 176038244.05,
+    "DiffPos": 7.42879490
+  },
+  {
+    "Symbol": "TLX",
+    "FullName": "TeleX",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TMRW",
+    "FullName": "TomorrowCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 47.41933300
+  },
+  {
+    "Symbol": "TNG",
+    "FullName": "TURING",
+    "Algo": "FRESH",
+    "DiffPow": 6939640.00,
+    "DiffPos": 0.52121111
+  },
+  {
+    "Symbol": "TNS",
+    "FullName": "Transcodium",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TNT",
+    "FullName": "Tierion Token",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TODAY",
+    "FullName": "TodayCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.11094276
+  },
+  {
+    "Symbol": "TOKC",
+    "FullName": "TOKYOCoin",
+    "Algo": "POS",
+    "DiffPow": 252157115.08,
+    "DiffPos": 0.00052683
+  },
+  {
+    "Symbol": "TOKEN",
+    "FullName": "SwapToken",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "TOOL",
+    "FullName": "ToolCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 665732444.32,
+    "DiffPos": 4.73868800
+  },
+  {
+    "Symbol": "TORQ",
+    "FullName": "TORQ Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TOT",
+    "FullName": "TotCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 571771578.13,
+    "DiffPos": 0.01069859
+  },
+  {
+    "Symbol": "TP1",
+    "FullName": "KolschCoin",
+    "Algo": "X11",
+    "DiffPow": 435795.61,
+    "DiffPos": 0.04951621
+  },
+  {
+    "Symbol": "TPG",
+    "FullName": "TrollPayment",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.00026097
+  },
+  {
+    "Symbol": "TRA",
+    "FullName": "TetraCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.39666495
+  },
+  {
+    "Symbol": "TRANSF",
+    "FullName": "Transformers",
+    "Algo": "Qubit",
+    "DiffPow": 188356500.00,
+    "DiffPos": 0.00192253
+  },
+  {
+    "Symbol": "TRAP",
+    "FullName": "TrapCoin",
+    "Algo": "X11",
+    "DiffPow": 5794770.00,
+    "DiffPos": 7.63260760
+  },
+  {
+    "Symbol": "TRICK",
+    "FullName": "TrickyCoin",
+    "Algo": "X11",
+    "DiffPow": 7739986.69,
+    "DiffPos": 7.00389420
+  },
+  {
+    "Symbol": "TRNC",
+    "FullName": "Tronic",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TRON",
+    "FullName": "Positron",
+    "Algo": "SHA256",
+    "DiffPow": 1649452.14,
+    "DiffPos": 50455054.00000000
+  },
+  {
+    "Symbol": "TRUMP",
+    "FullName": "TrumpCoin",
+    "Algo": "Blake-256",
+    "DiffPow": 6600558.30,
+    "DiffPos": 0.00004457
+  },
+  {
+    "Symbol": "TRX",
+    "FullName": "Tron Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "TSE",
+    "FullName": "TattooCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 604939537.10,
+    "DiffPos": 0.00393223
+  },
+  {
+    "Symbol": "TTC",
+    "FullName": "TittieCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 64.42319700
+  },
+  {
+    "Symbol": "TUR",
+    "FullName": "Turron",
+    "Algo": "POS",
+    "DiffPow": 100018.52,
+    "DiffPos": 0.00031614
+  },
+  {
+    "Symbol": "TWERK",
+    "FullName": "TWERK",
+    "Algo": "SHA256",
+    "DiffPow": 4760880900.00,
+    "DiffPos": 32493.31800000
+  },
+  {
+    "Symbol": "TWIST",
+    "FullName": "TwisterCoin",
+    "Algo": "X11",
+    "DiffPow": 317711.65,
+    "DiffPos": 17.20410300
+  },
+  {
+    "Symbol": "TWO",
+    "FullName": "TWO Coin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.02048472
+  },
+  {
+    "Symbol": "TX",
+    "FullName": "Transfer Coin",
+    "Algo": "X11",
+    "DiffPow": 6436811.00,
+    "DiffPos": 77640.22100000
+  },
+  {
+    "Symbol": "TYV",
+    "FullName": "Tyrtkov",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "U",
+    "FullName": "UCoin",
+    "Algo": "X11",
+    "DiffPow": 2696421.87,
+    "DiffPos": 1.83053550
+  },
+  {
+    "Symbol": "UAE",
+    "FullName": "UAECoin",
+    "Algo": "X11",
+    "DiffPow": 2383745.01,
+    "DiffPos": 9.56070900
+  },
+  {
+    "Symbol": "UBIQ",
+    "FullName": "Ubiquoin",
+    "Algo": "POS",
+    "DiffPow": 686597364.80,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "UBTC",
+    "FullName": "Bitcoin United",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UCASH",
+    "FullName": "U CASH",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UDOWN",
+    "FullName": "UDOWNcoin",
+    "Algo": "SHA0256",
+    "DiffPow": 4930448.97,
+    "DiffPos": 138220.03000000
+  },
+  {
+    "Symbol": "UFR",
+    "FullName": "Upfiring",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UIS",
+    "FullName": "Unitus",
+    "Algo": "Multi",
+    "DiffPow": null,
+    "DiffPos": 739.89461000
+  },
+  {
+    "Symbol": "UKG",
+    "FullName": "Unikoin Gold",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UMC",
+    "FullName": "Umbrella Coin",
+    "Algo": "ERC20",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UNF",
+    "FullName": "Unfed Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 223.18691000
+  },
+  {
+    "Symbol": "UNI",
+    "FullName": "Universe",
+    "Algo": "Scrypt",
+    "DiffPow": 32348892.68,
+    "DiffPos": 0.03945104
+  },
+  {
+    "Symbol": "UNIFY",
+    "FullName": "Unify Coin",
+    "Algo": "",
+    "DiffPow": 17909873.75,
+    "DiffPos": 0.47510131
+  },
+  {
+    "Symbol": "UNIT",
+    "FullName": "Universal Curren",
+    "Algo": "SHA256",
+    "DiffPow": 17750822.55,
+    "DiffPos": 63317931.00000000
+  },
+  {
+    "Symbol": "UNITS",
+    "FullName": "GameUnits",
+    "Algo": "POS",
+    "DiffPow": 4201479.94,
+    "DiffPos": 0.00362231
+  },
+  {
+    "Symbol": "URC",
+    "FullName": "UnrealCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.01762035
+  },
+  {
+    "Symbol": "URO",
+    "FullName": "Urocoin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.00112060
+  },
+  {
+    "Symbol": "USC",
+    "FullName": "Ultimate Secure Cash",
+    "Algo": "SHA256",
+    "DiffPow": 38735305.51,
+    "DiffPos": 0.00029751
+  },
+  {
+    "Symbol": "USDE",
+    "FullName": "USDE Coin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.01485704
+  },
+  {
+    "Symbol": "USDT",
+    "FullName": "Tether USD ERC20",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UST",
+    "FullName": "Uservice",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "UTLE",
+    "FullName": "UTLE",
+    "Algo": "X11",
+    "DiffPow": 354249.84,
+    "DiffPos": 141.07651000
+  },
+  {
+    "Symbol": "UXC",
+    "FullName": "UnixCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 21001362.81,
+    "DiffPos": 0.23593091
+  },
+  {
+    "Symbol": "VAL",
+    "FullName": "Valorbit",
+    "Algo": "Scrypt",
+    "DiffPow": 999999999999.99,
+    "DiffPos": 0.01000000
+  },
+  {
+    "Symbol": "VAPOR",
+    "FullName": "Vaporcoin",
+    "Algo": "SHA256",
+    "DiffPow": 2205650.00,
+    "DiffPos": 21408.14400000
+  },
+  {
+    "Symbol": "VCOIN",
+    "FullName": "Vcoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 4445.80570000
+  },
+  {
+    "Symbol": "VEC",
+    "FullName": "Vector",
+    "Algo": "Hashimoto",
+    "DiffPow": 13369385.00,
+    "DiffPos": 2.34687470
+  },
+  {
+    "Symbol": "VEC2",
+    "FullName": "VectorCoin2",
+    "Algo": "POS",
+    "DiffPow": 17198548.99,
+    "DiffPos": 0.00026431
+  },
+  {
+    "Symbol": "VEG",
+    "FullName": "BitVegan",
+    "Algo": "ICO",
+    "DiffPow": 600083863.94,
+    "DiffPos": 0.00790942
+  },
+  {
+    "Symbol": "VEGA",
+    "FullName": "Vega",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "VEN",
+    "FullName": "VeChain",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "VENE",
+    "FullName": "VeneficumCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 422635462.33,
+    "DiffPos": 0.00341848
+  },
+  {
+    "Symbol": "VERS",
+    "FullName": "VersionCoin",
+    "Algo": "SHA256",
+    "DiffPow": 493557709.98,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "VIA",
+    "FullName": "Viacoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 496317.37000000
+  },
+  {
+    "Symbol": "VIDZ",
+    "FullName": "PureVidz",
+    "Algo": "POS",
+    "DiffPow": 125609440.49,
+    "DiffPos": 0.00025773
+  },
+  {
+    "Symbol": "VIP",
+    "FullName": "VipCoin",
+    "Algo": "NIST5",
+    "DiffPow": 83884800.89,
+    "DiffPos": 4.53642230
+  },
+  {
+    "Symbol": "VISIO",
+    "FullName": "VisioCoin",
+    "Algo": "X13",
+    "DiffPow": 63032905.09,
+    "DiffPos": 31.52396600
+  },
+  {
+    "Symbol": "VK",
+    "FullName": "VKCoin",
+    "Algo": "CryptoNight",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "VLT",
+    "FullName": "Veltor",
+    "Algo": "Thor",
+    "DiffPow": null,
+    "DiffPos": 250.21193000
+  },
+  {
+    "Symbol": "VNTX",
+    "FullName": "Ventrix",
+    "Algo": "POS",
+    "DiffPow": 1000170181.23,
+    "DiffPos": 0.00037469
+  },
+  {
+    "Symbol": "VOL",
+    "FullName": "Volume Coin",
+    "Algo": "X11",
+    "DiffPow": null,
+    "DiffPos": 0.18224669
+  },
+  {
+    "Symbol": "VOLT",
+    "FullName": "VoltCoin",
+    "Algo": "AES-256",
+    "DiffPow": 61611383.71,
+    "DiffPos": 0.00037001
+  },
+  {
+    "Symbol": "VOYA",
+    "FullName": "VoyaCoin",
+    "Algo": "PLUCK128",
+    "DiffPow": null,
+    "DiffPos": 0.00004749
+  },
+  {
+    "Symbol": "VPN",
+    "FullName": "VPNCoin",
+    "Algo": "Lott",
+    "DiffPow": 412032486.79,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "VPRC",
+    "FullName": "VapersCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 18.84552000
+  },
+  {
+    "Symbol": "VRP",
+    "FullName": "VRP Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 345256052.31,
+    "DiffPos": 14.55360600
+  },
+  {
+    "Symbol": "vSlice",
+    "FullName": "VSLICE",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "VTC",
+    "FullName": "Vertcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 41434.18400000
+  },
+  {
+    "Symbol": "VTL",
+    "FullName": "VTL Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 3500072960.29,
+    "DiffPos": 0.58259548
+  },
+  {
+    "Symbol": "VTN",
+    "FullName": "Venturenic",
+    "Algo": "Qubit",
+    "DiffPow": 4476028.00,
+    "DiffPos": 34.64581800
+  },
+  {
+    "Symbol": "VTX",
+    "FullName": "VERTEX",
+    "Algo": "SHA256",
+    "DiffPow": 2698936467.11,
+    "DiffPos": 2974365.00000000
+  },
+  {
+    "Symbol": "VTY",
+    "FullName": "VictoriousCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 10376143236.90,
+    "DiffPos": 0.00025567
+  },
+  {
+    "Symbol": "VULC",
+    "FullName": "Vulcano Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 618984655.14,
+    "DiffPos": 523.56336000
+  },
+  {
+    "Symbol": "VVI",
+    "FullName": "VVcoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WAM",
+    "FullName": "WamCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 981339237.34,
+    "DiffPos": 61.38346400
+  },
+  {
+    "Symbol": "WARP",
+    "FullName": "WarpCoin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.09164427
+  },
+  {
+    "Symbol": "WASH",
+    "FullName": "WashingtonCoin",
+    "Algo": "X11",
+    "DiffPow": 50463720.41,
+    "DiffPos": 1.96506750
+  },
+  {
+    "Symbol": "WAVES",
+    "FullName": "Waves",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WAY",
+    "FullName": "WayCoin",
+    "Algo": "ICO",
+    "DiffPow": 107045917.66,
+    "DiffPos": 0.00134446
+  },
+  {
+    "Symbol": "WBB",
+    "FullName": "WildBeastBitcoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 109.92563000
+  },
+  {
+    "Symbol": "WCASH",
+    "FullName": "WCASH",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WEALTH",
+    "FullName": "Wealth Coin",
+    "Algo": "ROM",
+    "DiffPow": 935462.03,
+    "DiffPos": 1.36824850
+  },
+  {
+    "Symbol": "WEEK",
+    "FullName": "WeekendCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 4345458088.73,
+    "DiffPos": 0.00106445
+  },
+  {
+    "Symbol": "WGO",
+    "FullName": "WavesGo",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WGR",
+    "FullName": "Wagerr Coin",
+    "Algo": "POS",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WHO",
+    "FullName": "WhopperCoin",
+    "Algo": "Token",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WIC",
+    "FullName": "Wi Coin",
+    "Algo": "TOKEN",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WINE",
+    "FullName": "WineCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 238307909.82,
+    "DiffPos": 0.18549339
+  },
+  {
+    "Symbol": "WINK",
+    "FullName": "Wink Coin",
+    "Algo": "POS",
+    "DiffPow": 80045835.66,
+    "DiffPos": 0.00734039
+  },
+  {
+    "Symbol": "WISC",
+    "FullName": "WisdomCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 101303835.45,
+    "DiffPos": 0.00283611
+  },
+  {
+    "Symbol": "WISH",
+    "FullName": "My Wish",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WIT",
+    "FullName": "WITChain",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WITCH",
+    "FullName": "WitchCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 569240412.45,
+    "DiffPos": 0.00027057
+  },
+  {
+    "Symbol": "WMC",
+    "FullName": "WMcoin",
+    "Algo": "X11",
+    "DiffPow": 914841251.55,
+    "DiffPos": 0.00061908
+  },
+  {
+    "Symbol": "WOK",
+    "FullName": "Workercoin",
+    "Algo": "Scrypt",
+    "DiffPow": 205839.97,
+    "DiffPos": 2.31488240
+  },
+  {
+    "Symbol": "WOMEN",
+    "FullName": "WomenCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2701569917.21,
+    "DiffPos": 10.82480900
+  },
+  {
+    "Symbol": "WRC",
+    "FullName": "WORLDCORE",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WRT",
+    "FullName": "Weigrate Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 304.67557000
+  },
+  {
+    "Symbol": "WTL",
+    "FullName": "Welltrado Token",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "WTT",
+    "FullName": "Giga Watt",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "X2",
+    "FullName": "X2coin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 2.60216070
+  },
+  {
+    "Symbol": "XAU",
+    "FullName": "Xaucoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 652.21967000
+  },
+  {
+    "Symbol": "XAV",
+    "FullName": "XavierCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 604.41731000
+  },
+  {
+    "Symbol": "XBS",
+    "FullName": "Bitstake",
+    "Algo": "X11",
+    "DiffPow": 1306603.43,
+    "DiffPos": 294.21907000
+  },
+  {
+    "Symbol": "XBTC21",
+    "FullName": "Bitcoin21",
+    "Algo": "SHA256",
+    "DiffPow": 7093112.72,
+    "DiffPos": 14703650.00000000
+  },
+  {
+    "Symbol": "XBTS",
+    "FullName": "BeatsCoin",
+    "Algo": "X11",
+    "DiffPow": 2528522.16,
+    "DiffPos": 88.90528100
+  },
+  {
+    "Symbol": "XBU",
+    "FullName": "UberCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 123717983.32,
+    "DiffPos": 2.38596660
+  },
+  {
+    "Symbol": "XBY",
+    "FullName": "XtraBYtes",
+    "Algo": "ICO",
+    "DiffPow": 650000000.00,
+    "DiffPos": 999999999999.99999999
+  },
+  {
+    "Symbol": "XCE",
+    "FullName": "Cerium",
+    "Algo": "SHA256",
+    "DiffPow": 2340918.83,
+    "DiffPos": 5686963.90000000
+  },
+  {
+    "Symbol": "XCO",
+    "FullName": "X-Coin",
+    "Algo": "SHA256",
+    "DiffPow": 22544176.00,
+    "DiffPos": 5854667.50000000
+  },
+  {
+    "Symbol": "XCRE",
+    "FullName": "CREATIO",
+    "Algo": "POS",
+    "DiffPow": 21491924.00,
+    "DiffPos": 0.00032619
+  },
+  {
+    "Symbol": "XDB",
+    "FullName": "DragonSphere",
+    "Algo": "X11",
+    "DiffPow": 20728474.77,
+    "DiffPos": 4.80493800
+  },
+  {
+    "Symbol": "XDE",
+
+    "FullName": "XDEcoin",
+    "Algo": "SHA256",
+    "DiffPow": 105.72,
+    "DiffPos": 0.03311203
+  },
+  {
+    "Symbol": "XDE2",
+    "FullName": "Xde2 Coin",
+    "Algo": "SHA256",
+    "DiffPow": 33525.64,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "XEM",
+    "FullName": "NewEconomyMovement",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "XFCX",
+    "FullName": "ForeverCoin",
+    "Algo": "POS",
+    "DiffPow": 118109459.83,
+    "DiffPos": 0.00000024
+  },
+  {
+    "Symbol": "XGTC",
+    "FullName": "GirlsTokenCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 58763974.24,
+    "DiffPos": 17.18846900
+  },
+  {
+    "Symbol": "XHI",
+    "FullName": "HiCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 10757458283.08,
+    "DiffPos": 17.60846700
+  },
+  {
+    "Symbol": "XIN",
+    "FullName": "XINcoin",
+    "Algo": "Scrypt-N",
+    "DiffPow": 2506525797.98,
+    "DiffPos": 0.06671703
+  },
+  {
+    "Symbol": "XIOS",
+    "FullName": "Xios Coin",
+    "Algo": "Scrypt",
+    "DiffPow": 2637111.64,
+    "DiffPos": 64.33352100
+  },
+  {
+    "Symbol": "XJO",
+    "FullName": "JouleCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 1733964.70000000
+  },
+  {
+    "Symbol": "XLTCG",
+    "FullName": "LTCGearCoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.68666178
+  },
+  {
+    "Symbol": "XMG",
+    "FullName": "MAGI",
+    "Algo": "M7M",
+    "DiffPow": 7188300.37,
+    "DiffPos": 3.02261640
+  },
+  {
+    "Symbol": "XMINE",
+    "FullName": "MineCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 5.89719100
+  },
+  {
+    "Symbol": "XMS",
+    "FullName": "MegaStake",
+    "Algo": "X11",
+    "DiffPow": 704586.10,
+    "DiffPos": 1.22522810
+  },
+  {
+    "Symbol": "XMT",
+    "FullName": "SummitCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 60567853.50,
+    "DiffPos": 0.00008531
+  },
+  {
+    "Symbol": "XNG",
+    "FullName": "ENIGMA",
+    "Algo": "X11",
+    "DiffPow": 322783.15,
+    "DiffPos": 7.25183160
+  },
+  {
+    "Symbol": "XNM",
+    "FullName": "MinnieCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 1287449726.40,
+    "DiffPos": 0.00028919
+  },
+  {
+    "Symbol": "XNX",
+    "FullName": "Xanax",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.38632492
+  },
+  {
+    "Symbol": "XOC",
+    "FullName": "XoneCoin",
+    "Algo": "POS",
+    "DiffPow": 420077.19,
+    "DiffPos": 0.00003818
+  },
+  {
+    "Symbol": "XPC",
+    "FullName": "PorkCoin",
+    "Algo": "X11",
+    "DiffPow": 237992.14,
+    "DiffPos": 0.00038153
+  },
+  {
+    "Symbol": "XPD",
+    "FullName": "PetroDollar",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 906822.31000000
+  },
+  {
+    "Symbol": "XPO",
+    "FullName": "Opair",
+    "Algo": "POS",
+    "DiffPow": 74033834.33,
+    "DiffPos": 0.01235425
+  },
+  {
+    "Symbol": "XPRO",
+    "FullName": "ProCoin",
+    "Algo": "X15",
+    "DiffPow": 6032297.83,
+    "DiffPos": 0.38670105
+  },
+  {
+    "Symbol": "XPS",
+    "FullName": "PoisonIvy",
+    "Algo": "Scrypt",
+    "DiffPow": 920118516.45,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "XPTX",
+    "FullName": "PlatinumBar",
+    "Algo": "Quark",
+    "DiffPow": 770695.39,
+    "DiffPos": 229.68293000
+  },
+  {
+    "Symbol": "XPY",
+    "FullName": "Paycoin",
+    "Algo": "POS",
+    "DiffPow": 11885091.41,
+    "DiffPos": 20097.90300000
+  },
+  {
+    "Symbol": "XQN",
+    "FullName": "Quotient",
+    "Algo": "Scrypt",
+    "DiffPow": 40565536.47,
+    "DiffPos": 490.41099000
+  },
+  {
+    "Symbol": "XRA",
+    "FullName": "Ratecoin",
+    "Algo": "X11",
+    "DiffPow": 123908372.27,
+    "DiffPos": 21.21638200
+  },
+  {
+    "Symbol": "XRL",
+    "FullName": "RIALTO Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "XSP",
+    "FullName": "PoolStamp",
+    "Algo": "X13",
+    "DiffPow": 3840771.46,
+    "DiffPos": 25.85171200
+  },
+  {
+    "Symbol": "XSSX",
+    "FullName": "XSSXcoin",
+    "Algo": "X11",
+    "DiffPow": 10255457.17,
+    "DiffPos": 0.00029536
+  },
+  {
+    "Symbol": "XSY",
+    "FullName": "SYNAPSE",
+    "Algo": "ICO",
+    "DiffPow": 50001360.49,
+    "DiffPos": 0.00002855
+  },
+  {
+    "Symbol": "XT",
+    "FullName": "ExtremeCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 998725907.91,
+    "DiffPos": 0.00214539
+  },
+  {
+    "Symbol": "XTR",
+    "FullName": "NitroCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 879839865.08,
+    "DiffPos": 0.67784076
+  },
+  {
+    "Symbol": "XUP",
+    "FullName": "UPcoin",
+    "Algo": "X13",
+    "DiffPow": null,
+    "DiffPos": 0.00032400
+  },
+  {
+    "Symbol": "XVE",
+    "FullName": "TheVeganIni",
+    "Algo": "POS",
+    "DiffPow": 50015435.75,
+    "DiffPos": 0.00034315
+  },
+  {
+    "Symbol": "XVG",
+    "FullName": "DogeCoinDark",
+    "Algo": "Scrypt",
+    "DiffPow": 14915239551.96,
+    "DiffPos": 212702.36000000
+  },
+  {
+    "Symbol": "XVS",
+    "FullName": "Vsync",
+    "Algo": "Scrypt",
+    "DiffPow": 108115255.00,
+    "DiffPos": 2.23306330
+  },
+  {
+    "Symbol": "YAC",
+    "FullName": "YACoin",
+    "Algo": "Scrypt-N SHA-3",
+    "DiffPow": 121759004.33,
+    "DiffPos": 0.00024414
+  },
+  {
+    "Symbol": "YAY",
+    "FullName": "YAYCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 337044790.55,
+    "DiffPos": 0.69835468
+  },
+  {
+    "Symbol": "YBC",
+    "FullName": "YBC",
+    "Algo": "SHA256",
+    "DiffPow": 3005814.77,
+    "DiffPos": 0.00390625
+  },
+  {
+    "Symbol": "YES",
+    "FullName": "YEScoin",
+    "Algo": "Scrypt",
+    "DiffPow": -92233661308.16,
+    "DiffPos": 996.50964000
+  },
+  {
+    "Symbol": "YMC",
+    "FullName": "YamahaCoin",
+    "Algo": "Scrypt",
+    "DiffPow": null,
+    "DiffPos": 0.21576729
+  },
+  {
+    "Symbol": "YOB2X",
+    "FullName": "YoB2X",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "YOVI",
+    "FullName": "YobitCoin",
+    "Algo": "ROM",
+    "DiffPow": 23140996.08,
+    "DiffPos": 45.67309200
+  },
+  {
+    "Symbol": "YRX",
+    "FullName": "Yoritex",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ZEC",
+    "FullName": "Zcash",
+    "Algo": "Equihash",
+    "DiffPow": null,
+    "DiffPos": 8415928.70000000
+  },
+  {
+    "Symbol": "ZECD",
+    "FullName": "ZCashDarkCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 16137839366.95,
+    "DiffPos": 1.09851150
+  },
+  {
+    "Symbol": "ZEIT",
+    "FullName": "ZeitCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 35218940398.67,
+    "DiffPos": 0.00288034
+  },
+  {
+    "Symbol": "ZENI",
+    "FullName": "Zennies",
+    "Algo": "Script",
+    "DiffPow": 1002044678.34,
+    "DiffPos": 0.00036924
+  },
+  {
+    "Symbol": "ZET",
+    "FullName": "ZetaCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 367456.73000000
+  },
+  {
+    "Symbol": "ZET2",
+    "FullName": "Zeta2 Coin",
+    "Algo": "Quark",
+    "DiffPow": 1293947.51,
+    "DiffPos": 0.29521600
+  },
+  {
+    "Symbol": "ZIRK",
+    "FullName": "ZirkCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 634388.03,
+    "DiffPos": 169.50362000
+  },
+  {
+    "Symbol": "ZLQ",
+    "FullName": "Zlitequbit",
+    "Algo": "Qubit",
+    "DiffPow": 69356828.81,
+    "DiffPos": 0.07323214
+  },
+  {
+    "Symbol": "ZMC",
+    "FullName": "ZombieCoin",
+    "Algo": "SHA256",
+    "DiffPow": 6737620.81,
+    "DiffPos": 0.00321216
+  },
+  {
+    "Symbol": "ZNE",
+    "FullName": "ZoneCoin",
+    "Algo": "Scrypt",
+    "DiffPow": 2911515.78,
+    "DiffPos": 131.59019000
+  },
+  {
+    "Symbol": "ZONTO",
+    "FullName": "ZONTO Token",
+    "Algo": "ICO",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ZOOM",
+    "FullName": "ZoomCoin",
+    "Algo": "Lyra2REv2",
+    "DiffPow": null,
+    "DiffPos": 0.31857336
+  },
+  {
+    "Symbol": "ZRC",
+    "FullName": "ZrCoin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ZRX",
+    "FullName": "ZRX Coin",
+    "Algo": "",
+    "DiffPow": null,
+    "DiffPos": 0.00000000
+  },
+  {
+    "Symbol": "ZUR",
+    "FullName": "Zurcoin",
+    "Algo": "Quark",
+    "DiffPow": null,
+    "DiffPos": 65601.06600000
+  },
+  {
+    "Symbol": "ZYD",
+    "FullName": "ZayedCoin",
+    "Algo": "SHA256",
+    "DiffPow": null,
+    "DiffPos": 390752.42000000
+  }
+]

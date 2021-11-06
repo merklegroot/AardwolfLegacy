@@ -1,0 +1,88 @@
+﻿<div class="row">
+    <div ng-if="model.isLoading === false">
+        <div>
+            <div ng-if="model.data.asOf" style="font-size:18px;">{{model.data.asOf | ago}}</div>
+            <div ng-if="model.data.asOf" style="font-size:12px; font-style:italic;">{{model.data.asOf | localTime}}</div>
+        </div>
+    </div>
+    <div ng-if="model.isLoading === false" class="row">
+        <div ng-if="!layout || layout.toUpperCase() !== 'BIDS_ONLY'" ng-class="layout && layout.toUpperCase() === 'HORIZONTAL' ? 'col-xs-6' : 'col-xs-12'">
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-size:16px; font-weight:bold;">
+                        <td style="width:200px;" ng-if="valuations">
+                            <span style="white-space:nowrap;">
+                                {{askTerm}} Usd Price
+                            </span>
+                        </td>
+                        <td style="width:200px;">
+                            <span style="white-space:nowrap;">
+                                {{askTerm}} {{baseSymbol}} Price
+                            </span>
+                        </td>
+                        <td style="width:200px;">
+                            <span style="white-space:nowrap;">
+                                {{askTerm}} Quantity
+                            </span>                            
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="clickable" ng-click="onExpandAsksClicked()">
+                        <td ng-if="!areAsksExpanded" colspan="3" style="text-align:center;">/\</td>
+                        <td ng-if="areAsksExpanded" colspan="3" style="text-align:center;">\/</td>
+                    </tr>
+                    <tr ng-repeat="order in getSortedAsks() | limitTo: minAskRows">
+                        <td ng-if="valuations">
+                            <div ng-if="baseSymbol && getUsdValue(baseSymbol)"
+                                 style="font-size:20px; font-weight:bold; color:indianred;">
+                                {{order.price * getUsdValue(baseSymbol) | currency:undefined:5}}
+                            </div>
+                        </td>
+                        <td style="font-size:16px; font-weight:bold; color:red;">{{order.price}}</td>
+                        <td style="font-size:16px; font-weight:bold; color:red;">{{order.quantity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-if="!layout || layout.toUpperCase() !== 'ASKS_ONLY'" ng-class="layout && layout.toUpperCase() === 'HORIZONTAL' ? 'col-xs-6' : 'col-xs-12'">
+            <table class="table table-striped">
+                <thead ng-if="bidTerm">
+                    <tr style="font-size:16px; font-weight:bold;">
+                        <td style="width:200px;" ng-if="valuations">                            
+                            <span style="white-space:nowrap;">
+                                {{bidTerm}} Usd Price
+                            </span>
+                        </td>
+                        <td style="width:200px;">
+                            <span style="white-space:nowrap;">
+                                {{bidTerm}} {{baseSymbol}} Price
+                            </span>                            
+                        </td>
+                        <td style="width:200px;">                            
+                            <span style="white-space:nowrap;">
+                                {{bidTerm}} Quantity
+                            </span>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in getSortedBids() | limitTo: minBidRows">
+                        <td ng-if="valuations">
+                            <div ng-if="baseSymbol && getUsdValue(baseSymbol)"
+                                 style="font-size:20px; font-weight:bold; color:limegreen;">
+                                {{order.price * getUsdValue(baseSymbol) | currency:undefined:5}}
+                            </div>
+                        </td>
+                        <td style="font-size:16px; font-weight:bold; color:green;">{{order.price}}</td>
+                        <td style="font-size:16px; font-weight:bold; color:green;">{{order.quantity}}</td>
+                    </tr>
+                    <tr class="clickable" ng-click="onExpandBidsClicked()">
+                        <td ng-if="!areBidsExpanded" colspan="3" style="text-align:center;">\/</td>
+                        <td ng-if="areBidsExpanded" colspan="3" style="text-align:center;">/\</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

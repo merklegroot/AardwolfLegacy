@@ -1,0 +1,10 @@
+﻿<div>
+    <div>
+        <table class="table table-striped">
+            <tr ng-if="key !== '$$hashKey'" ng-repeat="key in getKeys()">
+                <td>{{key}}</td>
+                <td>{{data[key]}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

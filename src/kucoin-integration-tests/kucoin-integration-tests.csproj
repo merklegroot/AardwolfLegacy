@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E000BCF5-3C4C-4533-99EF-B8F9AF87ECF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kucoin_integration_tests</RootNamespace>
+    <AssemblyName>kucoin-integration-tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="dump-lib, Version=1.0.6698.25291, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dump-lib.1.3\lib\net471\dump-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.10.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.10.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="wait-for-it-lib, Version=1.0.1.23187, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\wait-for-it.1.0.1\lib\wait-for-it-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="web-util-lib, Version=1.7.6777.24908, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\web-util.1.7.0\lib\net471\web-util-lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\KucoinClientTests.cs" />
+    <Compile Include="KucoinIntegrationTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bit-z-lib\bit-z-lib.csproj">
+      <Project>{9eaa6ea9-23b2-4110-85ac-bf99cdbceb02}</Project>
+      <Name>bit-z-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bit-z-model\bit-z-model.csproj">
+      <Project>{09460fee-8b97-46f8-ac45-11ef14c368d8}</Project>
+      <Name>bit-z-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bitz-data-lib\bitz-data-lib.csproj">
+      <Project>{2ac9580a-e0b7-4f45-91f1-1c993aaaee4d}</Project>
+      <Name>bitz-data-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\client-lib\client-lib.csproj">
+      <Project>{A81D1F4A-C0BB-4DD7-86FB-3A7FC2394215}</Project>
+      <Name>client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{A8B37940-6CA8-4DFD-A77C-72BAA9E29CE3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-data-lib\coss-data-lib.csproj">
+      <Project>{ef2e1e9c-63e6-4eef-90e7-56a642298e03}</Project>
+      <Name>coss-data-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-data-model\coss-data-model.csproj">
+      <Project>{4cc73b2b-b182-41bc-bc74-5f7f52cab4cf}</Project>
+      <Name>coss-data-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-lib\coss-lib.csproj">
+      <Project>{38C088B7-C128-49F2-93A7-9863B37A96CA}</Project>
+      <Name>coss-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptocompare-lib\cryptocompare-lib.csproj">
+      <Project>{45d9393e-088a-4d8f-b04c-caad96e8429e}</Project>
+      <Name>cryptocompare-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\env-config-lib\env-config-lib.csproj">
+      <Project>{cf1815b4-c16a-41c7-bec7-2ebbbfcf6126}</Project>
+      <Name>env-config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\exchange-client-lib\exchange-client-lib.csproj">
+      <Project>{13406752-8c38-47df-bfcd-c668052a11c2}</Project>
+      <Name>exchange-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kucoin-lib\kucoin-lib.csproj">
+      <Project>{869C2C59-03B5-44D7-9ABC-4AAF9E49B120}</Project>
+      <Name>kucoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KucoinClientModelLib\KucoinClientModelLib.csproj">
+      <Project>{8203325C-ABD7-4CE6-9796-24E68CCFDDA9}</Project>
+      <Name>KucoinClientModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{E2C1423B-C42E-4AA2-8A00-90DB2585BB5E}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\qryptos-lib\qryptos-lib.csproj">
+      <Project>{67dd488e-23a8-47b8-89fe-38b0eac917c5}</Project>
+      <Name>qryptos-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1A8CEB0A-58DB-49CD-BBA5-2AE1560CEEEF}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\test-shared\test-shared.csproj">
+      <Project>{AE31F853-4A74-4B42-AB15-D8A2CB1DABC1}</Project>
+      <Name>test-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-constants\trade-constants.csproj">
+      <Project>{fc3a52e6-9502-4ba2-8a50-634b732e22c4}</Project>
+      <Name>trade-constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-email-lib\trade-email-lib.csproj">
+      <Project>{077914AC-27E0-49FE-9B36-6471348658D2}</Project>
+      <Name>trade-email-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2D4897C7-3D49-4305-9D03-4AF6D9BD52E6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{DDFDAF8D-9D44-4365-AA33-2415D9B36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-node-integration\trade-node-integration.csproj">
+      <Project>{9013AAD1-4FD3-41D2-80FF-73BA7FC347EB}</Project>
+      <Name>trade-node-integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042F92D-183C-426D-9753-EA5C07DA342B}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

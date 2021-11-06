@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D4897C7-3D49-4305-9D03-4AF6D9BD52E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>trade_lib</RootNamespace>
+    <AssemblyName>trade-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Binance.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Binance.Net.3.1.0\lib\netstandard2.0\Binance.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoExchange.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CryptoExchange.Net.0.0.17\lib\netstandard2.0\CryptoExchange.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="res-util-lib, Version=1.1.6675.18561, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\res-util.1.1\lib\res-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.10.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.ClientEngine.Core.0.10.0\lib\net45\SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="web-util-lib, Version=1.7.6777.24908, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\web-util.1.7.0\lib\net471\web-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net, Version=0.15.2.11, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.15.2\lib\net45\WebSocket4Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\CacheRefresher.cs" />
+    <Compile Include="Cache\InvalidResponseException.cs" />
+    <Compile Include="Cache\ISimpleWebCache.cs" />
+    <Compile Include="Cache\RefreshCacheResult.cs" />
+    <Compile Include="Cache\SimpleWebCacheEntity.cs" />
+    <Compile Include="CommodityMap.cs" />
+    <Compile Include="EventContainer.cs" />
+    <Compile Include="IBalanceIntegration.cs" />
+    <Compile Include="ICancelOrderIntegration.cs" />
+    <Compile Include="ICommodityIntegration.cs" />
+    <Compile Include="IDepositAddressValidator.cs" />
+    <Compile Include="IExchangeGetOpenOrdersForTradingPairV2.cs" />
+    <Compile Include="IExchangeGetOpenOrdersV2.cs" />
+    <Compile Include="IExchangeWithOpenOrders.cs" />
+    <Compile Include="IExchangeWithOpenOrdersForTradingPair.cs" />
+    <Compile Include="ILimitIntegrationWithResult.cs" />
+    <Compile Include="INamedIntegration.cs" />
+    <Compile Include="IRefreshable.cs" />
+    <Compile Include="IBuyAndSellIntegration.cs" />
+    <Compile Include="ITradeGetCachedOrderBooks.cs" />
+    <Compile Include="ITradeHistoryIntegration.cs" />
+    <Compile Include="ITradeIntegration.cs" />
+    <Compile Include="ITradeIntegrationExtensions.cs" />
+    <Compile Include="ITradeWithSettableDepositAddress.cs" />
+    <Compile Include="ITradingPairIntegration.cs" />
+    <Compile Include="IWithdrawableTradeIntegration.cs" />
+    <Compile Include="NativeTradingPair.cs" />
+    <Compile Include="OrderBookIntegration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cache\SimpleWebCache.cs" />
+    <Compile Include="DepositAddressValidator.cs" />
+    <Compile Include="Repo\OpenOrdersSnapshotRepo.cs" />
+    <Compile Include="TradeEventType.cs" />
+    <Compile Include="TradeIntegrationBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-lib\config-lib.csproj">
+      <Project>{DA63BA8B-A147-4497-B6D2-DD25ED401EDF}</Project>
+      <Name>config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{E2C1423B-C42E-4AA2-8A00-90DB2585BB5E}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{DDFDAF8D-9D44-4365-AA33-2415D9B36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042F92D-183C-426D-9753-EA5C07DA342B}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

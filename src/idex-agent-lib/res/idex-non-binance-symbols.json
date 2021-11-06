@@ -1,0 +1,23 @@
+﻿{
+  "AXP": [ "KuCoin", "HitBTC" ],
+  "CHSB": [ "KuCoin", "HitBTC" ],
+  "STX": [ "Coss", "HitBTC", "Qryptos" ],
+  "PAY": [ "Coss", "KuCoin", "HitBTC" ],
+  "AMM": [ "HitBTC", "Livecoin" ],
+  "BDG": [ "HitBTC", "Tidex" ],
+  "BEZ": [ "HitBTC", "Livecoin" ],
+  "ADH": [ "HitBTC", "Qryptos" ],
+  "WISH": [ "Coss", "Cryptopia", "Yobit" ],
+  "UTK": [ "KuCoin", "HitBTC" ],
+  "TRAC": [ "KuCoin", "HitBTC" ],
+  "FOTA": [ "KuCoin", "HitBTC" ],
+  "FYN": [ "HitBTC", "Coss" ],
+  "GAT": [ "KuCoin", "Coss", "Qryptos" ],
+  "GNO": [ "HitBTC", "Cryptopia", "Yobit" ],
+  // "HGT": [ "HitBTC", "Coss" ],
+  "IDH": [ "HitBTC", "Cryptopia", "Tidex", "Qryptos" ],
+  "IHT": [ "HitBTC", "KuCoin" ],
+  "IFT": [ "Cryptopia", "HitBTC", "Yobit" ],
+  "IND": [ "Qryptos", "HitBTC", "Yobit" ],
+  "MSP": [ "HitBTC", "Cryptopia" ]
+}

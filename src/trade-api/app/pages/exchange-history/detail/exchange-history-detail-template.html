@@ -1,0 +1,262 @@
+﻿
+<h1>
+    <span ng-if="model.exchangeId">
+        <exchange-logo exchange="model.exchangeId"></exchange-logo> {{model.exchangeDisplayName}}
+    </span>
+    <span>- Exchange History Detail</span>
+</h1>
+
+<div>
+    <button class="btn btn-primary" ng-click="onForceRefreshClicked()">Force Refresh</button>
+    <button class="btn btn-primary" ng-click="showDebug = !showDebug">Toggle Debug</button>
+</div>
+
+<div ng-if="showDebug">
+    {{model}}
+</div>
+
+<div class="row">&nbsp;</div>
+
+<div>
+    <button class="btn btn-primary" ng-click="hideTrades = !hideTrades">{{hideTrades ? 'Show' : 'Hide'}} Trades</button>
+    <button class="btn btn-primary" ng-click="onlyShow2017 = !onlyShow2017">Toggle Only Show 2017</button>
+    <button class="btn btn-primary" ng-click="showNativeId = !showNativeId">Toggle Show NativeId</button>
+    <button class="btn btn-primary" ng-click="hideDestination = !hideDestination">Toggle Show Destination</button>
+    <button class="btn btn-primary" ng-click="showDelta = !showDelta">Toggle Show Delta</button>
+    <button class="btn btn-primary" ng-click="hideIcons = !hideIcons">Toggle Show Icons</button>
+</div>
+
+
+<div class="row">
+    <span ng-repeat="exchange in model.exchanges.data">
+        <button class="btn btn-primary" ui-sref="exchange-history-detail({exchange: exchange.name.toLowerCase()})">
+            <exchange-logo exchange="exchange.name"></exchange-logo> {{exchange.name}}
+        </button>
+    </span>
+    <span>
+        <a class="btn btn-primary clickable"
+           ui-sref="exchange-history-detail({exchange: 'aggregate'})">
+            <exchange-logo exchange="'aggregate'"></exchange-logo> Aggregate
+        </a>
+    </span>
+</div>
+
+<div class="row">&nbsp;</div>
+<div>
+    <span>ETH / BTC:</span>
+    <span ng-if="model.valuations['ETH'].data.usdValue && model.valuations['BTC'].data.usdValue">
+        {{(model.valuations["ETH"].data.usdValue / model.valuations["BTC"].data.usdValue).toFixed(2)}}
+    </span>
+</div>
+
+<div>
+    <span>BTC / ETH:</span>
+    <span ng-if="model.valuations['ETH'].data.usdValue && model.valuations['BTC'].data.usdValue">
+        {{(model.valuations["BTC"].data.usdValue / model.valuations["ETH"].data.usdValue).toFixed(2)}}
+    </span>
+</div>
+
+<h3 ng-if="isForTaxes">Cryptocurrency values on December 31st, 2017</h3>
+
+<div class="row">
+    <div style="font-weight:bold; font-size:14px;"
+         class="col-xs-1"
+         ng-repeat="item in model.valuations">
+        <div style="border-color:#AAAACC; border-width:2px; border-style:solid; border-radius:5px; background-color:#DDDDDD;">
+            <div>
+                <span>{{item.symbol}}</span>
+                &nbsp;
+                <commodity-logo ng-if="!hideIcons" symbol="item.symbol"></commodity-logo>
+                <span style="color:green;">{{item.data.usdValue | currency:undefined:4}}</span>
+                
+                <span ng-if="!isForTaxes">
+                    <button class="btn btn-primary pull-right" ng-click="onRefreshValuationClicked(item.symbol)">Refresh</button>
+                </span>                   
+            </div>
+            <div>
+                <span ng-if="item.data.asOfUtc" ng-if="!isForTaxes">
+                    (as of {{item.data.asOfUtc | ago}})
+                </span>                    
+            </div>
+            <div>
+                <loading ng-if="item.isLoading"></loading>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">&nbsp;</div>
+
+<div ng-if="!model.history.data">
+    <loading></loading>
+</div>
+
+<!--
+<p style="font-size:24px;">
+    For trades, profit/loss is based on the change in the owned amount of currency vs. its 2017 year end value.<br />
+    Mining profits were neglegible ( < $10 USD )
+</p>
+-->
+
+<div style="font-size:32px;" ng-if="isForTaxes">
+    <span style="font-weight:bold;">2017 Net Crypto Profit:</span> <span style="color:green">$2252.45</span>
+</div>
+
+
+<div ng-if="model.history.data">
+    <!--
+    <div style="font-size:20px; font-style:italic;">As of {{model.history.data.asOfUtc | ago}}</div>
+    -->
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-size:24px; font-weight:bold;">
+                <td>Time <span style="font-size:14px;">(UTC-4)</span></td>
+                <td>Exchange</td>
+                <td ng-if="showNativeId">Native Id</td>
+                <td>Trading Pair</td>
+                <td>Type</td>
+                <td>Rate</td>
+                <td ng-if="hideIcons"></td>
+                <td>Quantity</td>
+                <td ng-if="hideIcons"></td>
+                <td>Fee</td>
+                <td ng-if="hideIcons"></td>
+                <td ng-if="!hideDestination">Destination</td>
+                <td ng-if="showHash">Hash</td>
+                <td ng-if="showDelta">&Delta; Commodity</td>
+                <td ng-if="hideIcons"></td>
+                <td ng-if="showDelta">&Delta; Base Commodity</td>
+                <td ng-if="hideIcons"></td>
+                <td ng-if="true || showDelta">
+                    &Delta; Net USD (apx.)
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <!--<tr ng-if="(historyItem.symbol === 'BTC' || historyItem.baseSymbol === 'BTC') && ((!hideTrades || (historyItem.tradeType.toUpperCase() !== 'BUY' && historyItem.tradeType.toUpperCase() !== 'SELL')) && (!onlyShow2017 || historyItem.year === 2017))" style="font-weight:bold;" ng-repeat="historyItem in model.history.data.historyItems | limitTo: 1000">-->
+            <tr style="font-weight:bold;" ng-repeat="historyItem in model.history.data.historyItems | limitTo: 1000">
+                <!-- Time  -->
+                <td>
+                    <!--
+            <div>{{historyItem.timeStampUtc | ago}}</div>
+                -->
+                    <div>{{historyItem.timeStampUtc | localTimeNoTimeZone}}</div>
+                </td>
+                <!-- Exchange  -->
+                <td>
+                    <exchange-logo ng-if="!hideIcons" exchange="historyItem.exchange"></exchange-logo>
+
+                    {{historyItem.exchangeDisplayName}}
+                </td>
+                <!-- Native Id -->
+                <td ng-if="showNativeId">{{historyItem.nativeId}}</td>
+                <!-- Trading Pair -->
+                <td style="width:200px;">
+                    <span ng-if="historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT'">
+                        <commodity-logo ng-if="!hideIcons" symbol="historyItem.symbol"></commodity-logo>
+                        <span style="font-size:18px;">{{historyItem.symbol}}</span>
+                    </span>
+                    <span ng-if="!(historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT')">
+                        <trading-pair ng-if="!hideIcons" ng-model="historyItem"></trading-pair>
+                        <span ng-if="hideIcons">
+                            {{historyItem.symbol}}-{{historyItem.baseSymbol}}
+                        </span>
+                    </span>
+                </td>
+                <!-- Trade Type -->
+                <td ng-style="(historyItem.tradeType.toUpperCase() === 'BUY' || historyItem.tradeType.toUpperCase() === 'DEPOSIT') ? { color: 'green'} : (historyItem.tradeType.toUpperCase() === 'SELL' || historyItem.tradeType.toUpperCase() === 'WITHDRAW' ? { color: 'red'} : {})">
+                    {{historyItem.tradeType}}
+                </td>
+                <!-- Rate -->
+                <td>
+                    <span ng-if="historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT'">
+                        &mdash;
+                    </span>
+                    <span ng-if="!(historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT')">
+                        {{historyItem.price.toFixed(6)}} <span ng-if="!hideIcons">{{historyItem.symbol}} / {{historyItem.baseSymbol}}</span>
+                    </span>
+                </td>
+                <td ng-if="hideIcons">
+                    <span ng-if="historyItem.symbol && historyItem.baseSymbol">
+                        {{historyItem.symbol}} / {{historyItem.baseSymbol}}
+                    </span>
+                </td>
+                <!-- Quantity-->
+                <td>
+                    {{historyItem.quantity.toFixed(6)}}
+                    <span ng-if="!hideIcons">
+                        {{historyItem.symbol}}
+                        <commodity-logo ng-if="!hideIcons" symbol="historyItem.symbol"></commodity-logo>
+                    </span>
+                </td>
+                <td ng-if="hideIcons">
+                    {{historyItem.symbol}}
+                </td>
+                <!-- Fee -->
+                <td>
+                    {{historyItem.feeQuantity}}
+                    <span ng-if="!hideIcons">
+                        {{historyItem.feeCommodity}}
+                        <commodity-logo ng-if="historyItem.feeCommodity" symbol="historyItem.feeCommodity"></commodity-logo>
+                    </span>
+                </td>
+                <td ng-if="hideIcons">
+                    {{historyItem.feeCommodity}}
+                </td>
+                <td ng-if="!hideDestination">
+                    <exchange-logo ng-if="historyItem.destinationExchange" exchange="historyItem.destinationExchange"></exchange-logo>
+                    {{historyItem.destinationExchange}}
+                </td>
+                <td ng-if="showHash">{{historyItem.hash}}</td>
+                <td ng-if="showDelta">
+                    <span ng-style="historyItem.tradeType && historyItem.tradeType.toUpperCase() === 'SELL' ? { color: 'red' } : { color: 'green' }">
+                        {{historyItem.tradeType && historyItem.tradeType.toUpperCase() === 'SELL' ? '-' : (historyItem.tradeType && historyItem.tradeType.toUpperCase() === 'BUY' ? (!hideIcons ? '+' : '') : '')}}
+                        {{historyItem.quantity}}
+                        <span ng-if="!hideIcons">
+                            {{historyItem.symbol}}
+                            <commodity-logo symbol="historyItem.symbol"></commodity-logo>
+                        </span>
+                    </span>
+                </td>
+                <td ng-if="hideIcons">
+                    {{historyItem.symbol}}
+                </td>
+                <td ng-if="showDelta">
+                    <span ng-if="historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT'">
+                        &mdash;
+                    </span>
+                    <span ng-style="historyItem.tradeType && historyItem.tradeType.toUpperCase() === 'SELL' ? { color: 'green' } : { color: 'red' }"
+                          ng-if="!(historyItem.tradeType.toUpperCase() == 'WITHDRAW' || historyItem.tradeType.toUpperCase() == 'DEPOSIT')">
+                        {{historyItem.tradeType && historyItem.tradeType.toUpperCase() == 'BUY' ? '-' : (!hideIcons ? '+' : '')}} {{(historyItem.quantity * historyItem.price).toFixed(6)}}
+                        <span ng-if="!hideIcons">
+                            {{historyItem.baseSymbol}}
+                            <commodity-logo ng-if="!hideIcons" symbol="historyItem.baseSymbol"></commodity-logo>
+                        </span>
+                    </span>
+                </td>
+                <td ng-if="hideIcons">
+                    {{historyItem.baseSymbol}}
+                </td>
+                <td ng-if="true || showDelta">
+                    <div ng-if="historyItem.netUsdChange !== undefined && historyItem.netUsdChange !== null" style="font-size:24px;">
+                        <span ng-style="historyItem.netUsdChange > 0 ? { color: 'green' } : (historyItem.netUsdChange ? { color: 'red' } : { color: 'black' })">
+                            <span ng-if="!hideIcons">
+                                {{historyItem.netUsdChange > 0 ? '+' : ''}}
+                                $ {{historyItem.netUsdChange.toFixed(4).toString().split('.')[0] + '.' + historyItem.netUsdChange.toFixed(4).toString().split('.')[1][0] + historyItem.netUsdChange.toFixed(4).toString().split('.')[1][1]}}
+                                <span style="font-size:12px; margin-left:-7px; opacity:0.4;">
+                                    {{historyItem.netUsdChange.toFixed(4).toString().split('.')[1][2] + historyItem.netUsdChange.toFixed(4).toString().split('.')[1][3]}}
+                                </span>
+                            </span>
+                            <span ng-if="hideIcons">
+                                {{historyItem.netUsdChange.toFixed(4)}}
+                            </span>
+                        </span>
+                    </div>
+                </td>
+                <td ng-if="showDebug">
+                    {{historyItem}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

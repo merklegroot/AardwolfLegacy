@@ -1,0 +1,33 @@
+﻿<h3>Order Book Detail</h3>
+
+<div style="font-size:18px;">
+    <div>
+        <span style="font-weight:bold;">Exchange:</span>
+        <span>
+            {{model.exchangeDisplayName}} <exchange-logo exchange="model.exchange"></exchange-logo>
+        </span>
+    </div>
+    <div>
+        <span style="font-weight:bold;">Symbol: </span>
+        <span>{{model.symbol}} <commodity-logo symbol="model.symbol"></commodity-logo></span>
+    </div>
+    <div>
+        <span style="font-weight:bold;">Base Symbol:</span>
+        <span>{{model.baseSymbol}} <commodity-logo symbol="model.baseSymbol"></commodity-logo></span>
+    </div>
+</div>
+
+<br /><br /><br />
+<div>Order Book:</div>
+<button class="btn btn-primary" ng-click="onRefreshClicked();">Refresh</button>
+<div>
+    <loading ng-if="model.orderBook.isLoading"></loading>
+    <div ng-if="model.orderBook.isLoading === false">
+        As Of: {{model.orderBook.data.asOf}}
+        <div>{{model.orderBook.data.asOf | ago}} ago</div>
+    </div>
+
+    <order-book ng-if="model.orderBook.isLoading === false" ng-model="model.orderBook" base-symbol="model.baseSymbol"></order-book>
+
+    {{model.orderBook}}
+</div>

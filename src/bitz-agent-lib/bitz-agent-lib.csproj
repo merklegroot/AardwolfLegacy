@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09CA3306-237A-47BE-870E-E484069E98C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bitz_agent_lib</RootNamespace>
+    <AssemblyName>bitz-agent-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wait-for-it-lib, Version=1.0.1.23187, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\wait-for-it.1.0.1\lib\wait-for-it-lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\BitzAgentApp.cs" />
+    <Compile Include="App\BitzAgentDriver.cs" />
+    <Compile Include="App\IApp.cs" />
+    <Compile Include="App\IBitzAgentApp.cs" />
+    <Compile Include="App\IBitzAgentDriver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\binance-lib\binance-lib.csproj">
+      <Project>{5fba1779-f8fc-4e63-818e-e8a28cc21845}</Project>
+      <Name>binance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bit-z-lib\bit-z-lib.csproj">
+      <Project>{9eaa6ea9-23b2-4110-85ac-bf99cdbceb02}</Project>
+      <Name>bit-z-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>	
+    <ProjectReference Include="..\client-lib\client-lib.csproj">
+      <Project>{A81D1F4A-C0BB-4DD7-86FB-3A7FC2394215}</Project>
+      <Name>client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{a8b37940-6ca8-4dfd-a77c-72baa9e29ce3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\console-lib\console-lib.csproj">
+      <Project>{76516372-f21c-410e-81ce-4693a734772d}</Project>
+      <Name>console-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{e2c1423b-c42e-4aa2-8a00-90db2585bb5e}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tfa-lib\tfa-lib.csproj">
+      <Project>{f12f3c61-7002-4908-8789-6722d2766ddf}</Project>
+      <Name>tfa-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-contracts\trade-contracts.csproj">
+      <Project>{6c74fc0d-3a1b-4069-9937-73e644de2e45}</Project>
+      <Name>trade-contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2d4897c7-3d49-4305-9d03-4af6d9bd52e6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{ddfdaf8d-9d44-4365-aa33-2415d9b36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-strategy-lib\trade-strategy-lib.csproj">
+      <Project>{0169bafc-eb05-49d2-8333-62e4f6b2a3b3}</Project>
+      <Name>trade-strategy-lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

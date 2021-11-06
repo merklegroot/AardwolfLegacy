@@ -1,0 +1,8 @@
+﻿ETH
+BTC
+AMB
+ARK
+AMM
+ATM
+BEZ
+ZRX

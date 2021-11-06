@@ -1,0 +1,46 @@
+[
+  {
+    "CanonicalId": "8688F7DA-7BB2-41F1-973D-A69AD0DEDC9C",
+    "NativeSymbol": "BCH"
+  },
+  {
+    "CanonicalId": "DDD65ACE-6B21-4391-A7F5-437F6ADF41A1",
+    "NativeSymbol": "EOS"
+  },
+  {
+    "CanonicalId": "2A6680D6-237B-4A02-B1E9-CE1ED69688DE",
+    "NativeSymbol": "XETH"
+  },
+  {
+    "CanonicalId": "C519A2C0-18D3-420B-82D2-A83841E4BBB5",
+    "NativeSymbol": "XICN"
+  },
+  {
+    "CanonicalId": "BBA73B76-3678-4505-B404-52F93C78CCAC",
+    "NativeSymbol": "XMLN"
+  },
+  {
+    "CanonicalId": "4B5DB3E9-CF51-48CB-915E-C1924900E855",
+    "NativeSymbol": "XXBT"
+  },
+  {
+    "CanonicalId": "4B5DB3E9-CF51-48CB-915E-C1924900E855",
+    "NativeSymbol": "XBT"
+  },
+  {
+    "CanonicalId": "CBB61AB1-DE9C-45AF-94C3-0673B755E02B",
+    "NativeSymbol": "XXMR"
+  },
+  {
+    "CanonicalId": "ED910304-052F-4A3D-BFF4-E9300DED9E11",
+    "NativeSymbol": "XXRP"
+  },
+  {
+    "CanonicalId": "6B12FFA0-4B5F-4CE3-A22C-26A4A1FCA25C",
+    "NativeSymbol": "ZUSD"
+  },
+  {
+    "CanonicalId": "A228A6C3-D0A8-4CDC-93AD-337E7FAE8BA5",
+    "NativeSymbol": "XZEC"
+  }
+]

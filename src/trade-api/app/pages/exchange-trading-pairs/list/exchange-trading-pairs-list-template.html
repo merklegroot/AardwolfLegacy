@@ -1,0 +1,21 @@
+﻿<h2>Exchange Trading Pairs</h2>
+<table class="table table-striped">
+    <thead>
+        <tr style="font-size:24px; font-weight:bold;">
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="exchange in model.exchanges.data">
+            <td>
+                <a class="clickable" ui-sref="exchange-trading-pairs-detail({id: exchange.name.toLowerCase()})">
+                    <exchange-logo exchange="exchange.name"></exchange-logo>
+                    &nbsp;
+                    <span style="font-size:24px;">
+                        {{exchange.name}}
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

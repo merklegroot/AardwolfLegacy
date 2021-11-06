@@ -1,0 +1,5 @@
+﻿/*.navbar { background-color: #D64848; } */
+
+.navbar .brand, .navbar .nav > li > a:hover {
+    background-color: silver;
+}

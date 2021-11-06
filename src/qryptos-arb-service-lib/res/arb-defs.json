@@ -1,0 +1,94 @@
+﻿[
+  {
+    "Symbol": "VET",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "MITX",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "HitBTC",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "FTX",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "HitBTC",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "ENJ",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": "QASH"
+  },
+
+  {
+    "Symbol": "NEO",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": "QASH"
+  },
+
+  {
+    "Symbol": "CAN",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "DENT",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "HAV",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "UKG",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "MTN",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "LALA",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "GAT",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "KuCoin",
+    "AltBaseSymbol": "QASH"
+  },
+  {
+    "Symbol": "OAX",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "XEM",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": null
+  },
+  {
+    "Symbol": "STORJ",
+    "ArbExchange": "Qryptos",
+    "CompExchange": "Binance",
+    "AltBaseSymbol": null
+  }
+]

@@ -1,0 +1,112 @@
+﻿<h2>
+    <span>
+        <exchange-logo exchange="model.exchange"></exchange-logo>
+        {{model.exchangeDisplayName}}
+    </span>
+    <span>Commodities</span>
+</h2>
+
+<div class="container-fluid">
+    <div class="row" style="font-size:18px;">
+
+        <div>
+            <span style="font-weight:bold;">Filter:</span>
+            <input ng-model="filterText" ng-change="onFilterTextChanged()" type="text" />
+        </div>
+
+        <br />
+
+        <span>
+            <button class="btn btn-primary" ng-click="onRefreshButtonClicked()">Refresh Commodities</button>
+        </span>
+
+        <br /><br />
+
+        <div>
+            <loading ng-if="model.commodities.isLoading === true"></loading>
+            <table ng-if="model.commodities.isLoading === false" class="table table-striped">
+                <tr ng-repeat="commodity in model.filteredCommodities">
+                    <td>
+                        <table style="border-collapse:separate; border-spacing:10px 3px;">
+                            <tr>
+                                <td style="font-weight:bold;">Commodity Detail</td>
+                                <td>
+                                    <a target="_blank" class="clickable" href="#" ui-sref="commodity-detail({symbol: commodity.symbol})">
+                                        <commodity-logo symbol="commodity.symbol"></commodity-logo> {{commodity.symbol}}
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Exchange Commodity Detail</td>
+                                <td>
+                                    <a target="_blank" class="clickable" href="#" ui-sref="exchange-commodity-detail({exchange: model.exchange, nativeSymbol: commodity.nativeSymbol})">
+                                        <exchange-logo exchange="model.exchange"></exchange-logo>
+                                        <commodity-logo symbol="commodity.symbol"></commodity-logo> {{commodity.symbol}}
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Canonical Id</td>
+                                <td>{{commodity.canonicalId}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Symbol</td>
+                                <td>{{commodity.symbol}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Native Symbol</td>
+                                <td>{{commodity.nativeSymbol}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Name</td>
+                                <td>{{commodity.name}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Native Name</td>
+                                <td>{{commodity.nativeName}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Contract Address</td>
+                                <td>{{commodity.contractAddress}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Can Deposit</td>
+                                <td>{{commodity.canDeposit}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Can Withdraw</td>
+                                <td>{{commodity.canWithdraw}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Withdrawal Fee</td>
+                                <td>{{commodity.withdrawalFee}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Is Eth</td>
+                                <td>{{commodity.isEth}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Is Eth Token</td>
+                                <td>{{commodity.isEthToken}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Lot Size</td>
+                                <td>{{commodity.lotSize}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Custom Values</td>
+                                <td>{{commodity.customValues}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <button class="btn btn-primary" ng-click="showDebug = !showDebug">Show Debug</button>
+        <div ng-if="showDebug">
+            {{model}}
+        </div>
+
+    </div>
+</div>

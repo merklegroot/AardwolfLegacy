@@ -1,0 +1,1526 @@
+﻿using coss_lib;
+using log_lib;
+using Newtonsoft.Json;
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using trade_browser_lib.Models;
+using trade_lib;
+using trade_model;
+using wait_for_it_lib;
+using web_util;
+using binance_lib;
+using config_lib;
+using sel_lib;
+using kucoin_lib;
+using System.Threading.Tasks;
+using tfa_lib;
+using cryptocompare_lib;
+using System.Text;
+using hitbtc_lib;
+using trade_browser_lib.Strategy;
+using trade_strategy_lib;
+using rabbit_lib;
+using trade_constants;
+using trade_contracts;
+using assembly_lib;
+using System.Reflection;
+using coss_data_model;
+using coss_data_lib;
+using cryptopia_lib;
+using res_util_lib;
+using coss_agent_lib;
+using integration_workflow_lib;
+using trade_email_lib;
+
+namespace trade_browser_lib
+{
+    public class CossAgent : ICossAgent
+    {        
+        private const string SessionCollectionName = "coss-session";
+
+        private bool _keepRunning = false;
+
+        private List<TradingPair> _pairsToMonitorInternalProp;
+        private List<TradingPair> _pairsToMonitor
+        {
+            get
+            {
+                lock (this)
+                {
+                    if (_pairsToMonitorInternalProp != null) { return _pairsToMonitorInternalProp; }
+                    return _pairsToMonitorInternalProp = _cossIntegration.GetTradingPairs(CachePolicy.AllowCache);
+                }
+            }
+        }
+
+        private IRemoteWebDriver _driver;
+
+        private readonly IWaitForIt _waitForIt;
+        private readonly IBinanceIntegration _binanceIntegration;
+        private readonly IKucoinIntegration _kucoinIntegration;
+        private readonly IHitBtcIntegration _hitBtcIntegration;
+        private readonly ICossIntegration _cossIntegration;
+        private readonly ICossHistoryRepo _cossHistoryRepo;
+        private readonly ICryptopiaIntegration _cryptopiaIntegration;
+        private readonly ICryptoCompareIntegration _cryptoCompareIntegration;
+        private readonly IWebUtil _webUtil;
+        private readonly ILogRepo _log;
+        private readonly IOrderManager _orderManager;
+        private readonly ICossOpenOrderRepo _openOrderRepo;
+        private readonly IConfigRepo _configRepo;
+        private readonly IDepositAddressValidator _depositAddressValidator;
+        private readonly ITfaUtil _tfaUtil;
+        private readonly ICossWebDriverFactory _cossWebDriverFactory;
+        private readonly IRabbitConnectionFactory _rabbitConnectionFactory;
+        private readonly ICossDriver _cossDriver;
+        private readonly IArbitrageWorkflow _arbitrageWorkflow;
+        private readonly ITradeEmailUtil _tradeEmailUtil;
+
+        private IRabbitConnection _rabbit;
+
+        public CossAgent(
+            IWaitForIt waitForIt,
+            ICossIntegration cossIntegration,
+            ICossHistoryRepo cossUserTradeHistoryRepo,
+            IBinanceIntegration binanceIntegration,
+            IKucoinIntegration kucoinIntegration,
+            IHitBtcIntegration hitBtcIntegration,
+            ICryptopiaIntegration cryptopiaIntegration,
+            IOrderManager orderManager,
+            ICossOpenOrderRepo openOrderRepo,
+            IConfigRepo configRepo,
+            IWebUtil webUtil,
+            IDepositAddressValidator depositAddressValidator,
+            ICryptoCompareIntegration cryptoCompareIntegration,
+            ITfaUtil tfaUtil,
+            ICossWebDriverFactory cossWebDriverFactory,
+            IRabbitConnectionFactory rabbitConnectionFactory,
+            ICossDriver cossDriver,
+            IArbitrageWorkflow arbitrageWorkflow,
+            ITradeEmailUtil tradeEmailUtil,
+            ILogRepo log)
+        {
+            _cossIntegration = cossIntegration;
+            _cossHistoryRepo = cossUserTradeHistoryRepo;
+            _binanceIntegration = binanceIntegration;
+            _kucoinIntegration = kucoinIntegration;
+            _hitBtcIntegration = hitBtcIntegration;
+            _cryptopiaIntegration = cryptopiaIntegration;
+            _cryptoCompareIntegration = cryptoCompareIntegration;
+
+            _log = log;
+            _orderManager = orderManager;
+            _openOrderRepo = openOrderRepo;
+            _configRepo = configRepo;
+            _waitForIt = waitForIt;
+            _webUtil = webUtil;
+            _depositAddressValidator = depositAddressValidator;
+            _tfaUtil = tfaUtil;
+
+            _cossDriver = cossDriver;
+            _cossWebDriverFactory = cossWebDriverFactory;
+            _rabbitConnectionFactory = rabbitConnectionFactory;
+            _arbitrageWorkflow = arbitrageWorkflow;
+            _tradeEmailUtil = tradeEmailUtil;
+        }
+
+        public void Start()
+        {
+            _driver = _cossWebDriverFactory.Create();
+            _cossDriver.Init(_driver);
+
+            _log.Info("Agent is starting.", TradeEventType.AgentStarted);
+
+            _rabbit = _rabbitConnectionFactory.Connect();
+            _rabbit.Listen(TradeRabbitConstants.Queues.CossAgentQueue, OnMessageReceived);
+
+            _keepRunning = true;
+            while (_keepRunning)
+            {
+                try
+                {
+                    if (!Processor()) { _keepRunning = false; return; }
+                    // TestWithdrawal(); _keepRunning = false;
+<<<<<<< HEAD
+                    // TestArbitrage(); _keepRunning = false;
+=======
+                    PerformArbitrage(); _keepRunning = false;
+                    // TestConfirmWithdrawl(); _keepRunning = false;
+>>>>>>> 5c299a9f1b054e8d4d8432d9d3f61853c34b624c
+                }
+                catch (Exception exception)
+                {
+                    _log.Error(exception);
+                    _cossDriver.Sleep(TimeSpan.FromMinutes(5));
+                }
+
+                _cossDriver.Sleep(TimeSpan.FromSeconds(20));
+            }
+        }
+
+        public void Stop()
+        {
+            _keepRunning = false;
+            _rabbit.Dispose();
+        }
+
+        private void OnMessageReceived(string message)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(message)) { return; }
+                var lines = message.Replace("\r\n", "\r").Replace("\n", "\r").Trim().Split('\r');
+                if (lines == null || !lines.Any()) { return; }
+
+                Info($"Received:{Environment.NewLine}{message}");
+
+                var messageTypeText = lines.First();
+                var messagePayload = string.Join(Environment.NewLine, lines.Skip(1));
+
+                if (string.Equals(messageTypeText, typeof(GetStatusRequestMessage).FullName, StringComparison.Ordinal))
+                {
+                    var contract = JsonConvert.DeserializeObject<GetStatusRequestMessage>(messagePayload);
+                    GetStatusRequestMessageHandler(contract);
+                    return;
+                }
+
+                Console.WriteLine("Didn't recognize the message type.");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("Failed to handle message.");
+                _log.Error(exception);
+            }
+        }
+
+        private void GetStatusRequestMessageHandler(GetStatusRequestMessage message)
+        {
+            Console.WriteLine("GetStatusRequestMessageHandler - Entry point");
+            if (!string.IsNullOrWhiteSpace(message.ResponseQueue))
+            {
+                Console.WriteLine($"GetStatusRequestMessageHandler - sending response to {message.ResponseQueue}");
+
+                _rabbit.PublishContract(message.ResponseQueue, new GetStatusResponseMessage
+                {
+                    StatusText = (_sessionState.IsLoggedIn ? "Logged in" : "Not logged in") + " as of " + _sessionState.AsOf,
+                    ProcessStartTime = Process.GetCurrentProcess().StartTime,
+                    BuildDate = AssemblyUtil.GetBuildDate(Assembly.GetExecutingAssembly()),
+                    CorrelationId = message.CorrelationId
+                });
+            }
+            else
+            {
+                Console.WriteLine("GetStatusRequestMessageHandler - Response queue not specified.");
+            }
+        }
+
+        private bool TestConfirmWithdrawl()
+        {
+            var symbol = "ZEN";
+            var quantity = 12.37490535m;
+            ConfirmEmailLinkWithdrawl(symbol, quantity);
+
+            return true;
+        }
+
+        private bool TestWithdrawal()
+        {
+            _cossDriver.LoginIfNecessary();
+
+            if (!_cossDriver.CheckWallet()) { return false; }
+            const string Symbol = "ZEN";
+
+            var holding = _cossIntegration.GetHolding(Symbol, CachePolicy.ForceRefresh);
+            if (holding == null || holding.Available <= 0) { return false; }
+
+            return Withdraw(Symbol, _binanceIntegration, holding.Available);
+        }
+
+        public bool PerformArbitrage()
+        {
+            _cossDriver.LoginIfNecessary();
+            var arbitrageSymbols = new List<string>
+            {
+                "SNM", "ZEN"
+            };
+
+            foreach (var symbol in arbitrageSymbols)
+            {
+                PerformArbitrageOnSymbol(symbol);
+            }
+            
+            return true;
+        }
+
+        private void PerformArbitrageOnSymbol(string symbol)
+        {
+            var arbitrageResult = _arbitrageWorkflow.Execute(_cossIntegration, _binanceIntegration, symbol, CachePolicy.ForceRefresh);
+            if (arbitrageResult == null || (arbitrageResult.BtcQuantity <= 0 && arbitrageResult.EthQuantity <= 0))
+            {
+                return;
+<<<<<<< HEAD
+            }            
+=======
+            }
+
+            if (!_cossDriver.CheckWallet()) { return; }
+            var holdings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+            if (holdings == null || holdings.Holdings == null) { return; }
+
+            var ethHolding = holdings.Holdings.SingleOrDefault(item => string.Equals(item.Asset, "ETH", StringComparison.InvariantCultureIgnoreCase));
+            var ethAvailable = ethHolding?.Available ?? 0;
+
+            var btcHolding = holdings.Holdings.SingleOrDefault(item => string.Equals(item.Asset, "BTC", StringComparison.InvariantCultureIgnoreCase));
+            var btcAvailable = btcHolding?.Available ?? 0;
+
+            if (arbitrageResult.EthQuantity > 0 && arbitrageResult.EthPrice.HasValue && arbitrageResult.EthPrice.Value > 0)
+            {
+                var totalEthCost = arbitrageResult.EthQuantity * arbitrageResult.EthPrice.Value;
+                if (totalEthCost > ethAvailable)
+                {
+                    Info($"Not enough ETH available to execute arbitrage on {symbol}.");
+                }
+            }
+
+            if (arbitrageResult.BtcQuantity > 0 && arbitrageResult.BtcPrice.HasValue && arbitrageResult.BtcPrice.Value > 0)
+            {
+                var totalBtcCost = arbitrageResult.BtcQuantity * arbitrageResult.BtcPrice.Value;
+                if (totalBtcCost > btcAvailable)
+                {
+                    Info($"Not enough BTC available to execute arbitrage on {symbol}.");
+                }
+            }
+
+            if (arbitrageResult.EthQuantity > 0 && arbitrageResult.EthPrice.HasValue && arbitrageResult.EthPrice.Value > 0)
+            {
+                var tradingPair = new TradingPair(symbol, "ETH");
+                PlaceOrder(tradingPair, OrderType.Bid, arbitrageResult.EthPrice.Value, arbitrageResult.EthQuantity, false);
+                CancelAllForTradingPair(tradingPair);
+            }
+
+            if (arbitrageResult.BtcQuantity > 0 && arbitrageResult.BtcPrice.HasValue && arbitrageResult.BtcPrice.Value > 0)
+            {
+                var tradingPair = new TradingPair(symbol, "BTC");
+                PlaceOrder(tradingPair, OrderType.Bid, arbitrageResult.BtcPrice.Value, arbitrageResult.BtcQuantity, false);
+                CancelAllForTradingPair(tradingPair);
+            }
+
+            _cossDriver.CheckWallet();
+            var updatedHoldings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+
+            var symbolHolding = updatedHoldings.Holdings.SingleOrDefault(item => string.Equals(item.Asset, symbol, StringComparison.InvariantCultureIgnoreCase));
+            
+            Withdraw(symbol, _binanceIntegration, symbolHolding.Available);
+>>>>>>> 5c299a9f1b054e8d4d8432d9d3f61853c34b624c
+        }
+
+        private bool Processor()
+        {
+            _cossDriver.LoginIfNecessary();
+
+            _cossDriver.CheckWallet();
+            var agentConfig = _configRepo.GetCossAgentConfig();
+            if (agentConfig.IsCossAutoTradingEnabled)
+            {
+                try { AutoSell(); } catch (Exception exception) { _log.Error(exception); }
+                
+                // disabling these until more testing can be done.
+
+                //try { AutoEthBtc(); } catch (Exception exception) { _log.Error(exception); }
+                //try { AutoBuy(); } catch (Exception exception) { _log.Error(exception); }
+                //try { AutoOpenBid(); } catch (Exception exception) { _log.Error(exception); }
+                //try { AutoOpenAsk(); } catch (Exception exception) { _log.Error(exception); }
+            }
+
+            // try { RefreshAllOpenOrders(); } catch (Exception exception) { _log.Error(exception); }
+
+            RefreshExchangeHistory();
+            RefreshDepositAndWithdrawalHistory();
+
+            _cossDriver.Sleep(TimeSpan.FromMinutes(2.5));
+
+            return true;
+        }
+
+        private void CancelOpenOrdersOnCurrentPage()
+        {
+            List<IWebElement> cancelButtons;
+            var iterations = 0;
+            do
+            {
+                cancelButtons = GetCancelOrderButtons();
+                if (cancelButtons.Any())
+                {
+                    cancelButtons.First().Click();
+                    _cossDriver.Sleep(TimeSpan.FromSeconds(5));
+                }
+
+                iterations++;
+            }
+            while (cancelButtons.Any() && iterations < 10);
+        }
+
+        private List<IWebElement> GetCancelOrderButtons()
+        {
+            var allButtons = _driver.FindElementsByTagName("button");
+            return allButtons.Where(button =>
+            {
+                var matIcons = button.FindElements(By.TagName("mat-icon"));
+                return matIcons.Any(matIcon =>
+                {
+                    if (string.IsNullOrWhiteSpace(matIcon.Text)) { return false; }
+                    return matIcon.Text.ToUpper().Contains("clear".ToUpper());
+                });
+            }).ToList();
+        }
+
+        private decimal GetEthBtcConversionRate()
+        {
+            return _cryptoCompareIntegration.GetEthToBtcRatio(CachePolicy.ForceRefresh);
+        }
+
+        private void AutoEthBtc()
+        {
+            _cossDriver.CheckWallet();
+            var cossHoldings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+
+            var tradingPair = new TradingPair("ETH", "BTC");
+            var cossOrderBookTask = Task.Run(() => _cossIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+            var binanceOrderBookTask = Task.Run(() => _binanceIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+
+            var cossOrderBook = cossOrderBookTask.Result;
+            var binanceOrderBook = binanceOrderBookTask.Result;
+
+            var bestCossBid = cossOrderBook.BestBid();
+            var bestBinanceAsk = binanceOrderBook.BestAsk();
+
+            var config = _configRepo.GetCossAgentConfig();
+            var strategyAction = new AutoEthBtc().Execute(cossOrderBook, binanceOrderBook, config.EthThreshold, StrategyConstants.CossMinimumTradeEth, StrategyConstants.CossMinimumTradeBtc);
+            if (strategyAction == null || strategyAction.ActionType == StrategyActionEnum.DoNothing || strategyAction.ActionType == StrategyActionEnum.Unknown)
+            {
+                _log.Info("AutoEthBtc - No orders to place.");
+                return;
+            }
+
+            CancelAllForTradingPair(tradingPair);
+
+            var ethHolding = cossHoldings.Holdings.SingleOrDefault(item => string.Equals(item.Asset, "ETH", StringComparison.InvariantCultureIgnoreCase));
+            var ethAvailable = ethHolding?.Available ?? 0;
+
+            var btcHolding = cossHoldings.Holdings.SingleOrDefault(item => string.Equals(item.Asset, "BTC", StringComparison.InvariantCultureIgnoreCase));
+            var btcAvailable = btcHolding?.Available ?? 0;
+
+            if (strategyAction.ActionType == StrategyActionEnum.PlaceBid)
+            {
+                var totalBtcNeeded = strategyAction.Price * strategyAction.Quantity;
+                if (totalBtcNeeded > btcAvailable)
+                {
+                    _log.Info("Not enough BTC available to buy the desired ETH.");
+                    return;
+                }
+            }
+            else if (strategyAction.ActionType == StrategyActionEnum.PlaceAsk)
+            {
+                var totalEthNeeded = strategyAction.Price * strategyAction.Quantity;
+
+                if (totalEthNeeded > ethAvailable)
+                {
+                    _log.Info("Not enough ETH available to buy the desired BTC.");
+                }
+            }
+
+            NavigateToExchange(tradingPair);
+
+            var orderType = strategyAction.ActionType == StrategyActionEnum.PlaceBid
+                ? OrderType.Bid
+                : OrderType.Ask;
+
+
+            var logBuilder = new StringBuilder()
+                .AppendLine("AutoEthBtc - About to place order")
+                .AppendLine("Order:")
+                .AppendLine(JsonConvert.SerializeObject(strategyAction))
+                .AppendLine("Coss Order Book:")
+                .AppendLine(JsonConvert.SerializeObject(cossOrderBook))
+                .AppendLine("Binance Order Book:")
+                .AppendLine(JsonConvert.SerializeObject(binanceOrderBook));
+
+            _log.Info(logBuilder.ToString(), TradeEventType.AboutToPlaceOrder);
+            PlaceOrder(tradingPair, orderType, strategyAction.Price, strategyAction.Quantity, true);
+
+            CancelAllForTradingPair(tradingPair);
+        }
+
+        private class SymbolWithBases
+        {
+            public string Symbol { get; set; }
+            public bool Eth { get; set; }
+            public bool Btc { get; set; }
+
+            public TradingPair ToEthTradingPair() => new TradingPair(Symbol, "ETH");
+            public TradingPair ToBtcTradingPair() => new TradingPair(Symbol, "BTC");
+
+            public static SymbolWithBases WithEth(string symbol)
+            {
+                return new SymbolWithBases { Symbol = symbol, Eth = true };
+            }
+
+            public static SymbolWithBases WithBtc(string symbol)
+            {
+                return new SymbolWithBases { Symbol = symbol, Btc = true };
+            }
+
+            public static SymbolWithBases WithBoth(string symbol)
+            {
+                return new SymbolWithBases { Symbol = symbol, Eth = true, Btc = true };
+            }
+
+            public override string ToString()
+            {
+                var builder = new StringBuilder();
+                builder.Append(!string.IsNullOrWhiteSpace(Symbol) ? Symbol.Trim() : "(not specified)");
+                if (Eth) { builder.Append("-ETH"); }
+                if (Btc) { builder.Append("-BTC"); }
+
+                return builder.ToString();
+            }
+        }
+
+        private void AutoSell()
+        {
+            var tradingPairsToCheck = new List<(SymbolWithBases, ITradeIntegration)>();
+
+            foreach (var symbol in SimpleBinanceSymbols)
+            {
+                tradingPairsToCheck.Add((SymbolWithBases.WithBoth(symbol), _binanceIntegration));
+            }
+
+            // if EOS withdrawals are disabled, we should still try to sell EOS on Coss.
+            if (!SimpleBinanceSymbols.Any(item => string.Equals(item, "EOS", StringComparison.InvariantCultureIgnoreCase)))
+            {
+                tradingPairsToCheck.Add((SymbolWithBases.WithBoth("EOS"), _binanceIntegration));
+            }
+
+            tradingPairsToCheck.Add((SymbolWithBases.WithBtc("DASH"), _binanceIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBtc("LTC"), _binanceIntegration));
+
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("PAY"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("CS"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("BCH"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("CAN"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("GAT"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("STX"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBtc("DAT"), _kucoinIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("LA"), _kucoinIntegration));
+
+            tradingPairsToCheck.Add((SymbolWithBases.WithEth("FYN"), _kucoinIntegration));
+
+            tradingPairsToCheck.Add((SymbolWithBases.WithBoth("LALA"), _kucoinIntegration));
+
+            tradingPairsToCheck.Add((SymbolWithBases.WithEth("FXT"), _hitBtcIntegration));
+            tradingPairsToCheck.Add((SymbolWithBases.WithBtc("UFR"), _cryptopiaIntegration));
+
+            _cossDriver.CheckWallet();
+            var cossHoldings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+
+            foreach (var tradingPairAndIntegration in tradingPairsToCheck)
+            {
+                var tradingPair = tradingPairAndIntegration.Item1;
+                var integration = tradingPairAndIntegration.Item2;
+                var cossHolding = cossHoldings.Holdings.Where(item => string.Equals(item.Asset, tradingPair.Symbol)).SingleOrDefault();
+
+                if (cossHolding == null || cossHolding.Total == 0) { continue; }
+
+                var cryptoComparePrice = _cryptoCompareIntegration.GetUsdValue(tradingPair.Symbol, CachePolicy.AllowCache);
+                if (cryptoComparePrice.HasValue)
+                {
+                    var estimatedUsd = cryptoComparePrice.Value * cossHolding.Total;
+                    // Don't try when the quantity is less than what we're permitted to sell.
+                    // This minimum value is an estimate, but is close enough for now.
+                    const decimal MinimumUsdValuetoSell = 0.10m;
+                    if (estimatedUsd < MinimumUsdValuetoSell)
+                    {
+                        continue;
+                    }
+                }
+
+                AutoSellSymbol(tradingPair, integration);
+            }
+        }
+
+        private List<string> SimpleBinanceSymbols
+        {
+            get
+            {
+                return new List<string>
+                {
+                    "ARK", "ENJ", "KNC", "SNM",
+                    "OMG", "VEN", "REQ", "LSK",
+                    "POE", "KNC", "BLZ",
+                    "ICX", "WTC", "SUB", "LINK",
+                    "ZEN", "CVC"
+                    // Don't buy any more EOS until the mainnet launch is complete and withdrawals are enabled.
+                    // "EOS",
+                }.Distinct().ToList();
+            }
+        }
+
+        private void AutoBuy()
+        {
+            var autoBuy = new AutoBuy(_log);
+
+            var tradingPairsToCheck = new List<TradingPair>();
+
+            foreach (var symbol in SimpleBinanceSymbols)
+            {
+                tradingPairsToCheck.Add(new TradingPair(symbol, "BTC"));
+                tradingPairsToCheck.Add(new TradingPair(symbol, "ETH"));
+            }
+
+            tradingPairsToCheck.Add(new TradingPair("DASH", "BTC"));
+            tradingPairsToCheck.Add(new TradingPair("LTC", "BTC"));
+
+            var config = _configRepo.GetCossAgentConfig();
+            var pairsDisplays = tradingPairsToCheck.Select(item => $"[{item}]");
+            _log.Info($"AutoBuy -- Starting Process with a threshold of {config.TokenThreshold}% with the following trading pairs:{Environment.NewLine}{string.Join(", ", pairsDisplays)}");
+
+            var totalPairsWithPurchases = 0;
+            foreach (var tradingPair in tradingPairsToCheck)
+            {
+                var cossOrderBookTask = Task.Run(() => _cossIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+                var binanceOrderBookTask = Task.Run(() => _binanceIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+
+                var cossOrderBook = cossOrderBookTask.Result;
+                var binanceOrderBook = binanceOrderBookTask.Result;
+
+                var minimumDictionary = new Dictionary<string, decimal>(StringComparer.InvariantCultureIgnoreCase)
+                {
+                    { "ETH", StrategyConstants.CossMinimumTradeEth },
+                    { "BTC", StrategyConstants.CossMinimumTradeEth }
+                };
+
+                if (!minimumDictionary.ContainsKey(tradingPair.BaseSymbol)) { throw new ArgumentException($"Unexpected base commodity \"{tradingPair.BaseSymbol}\"."); }
+
+                var minimumTrade = minimumDictionary[tradingPair.BaseSymbol];
+
+                var autoBuyResult = autoBuy.Execute(cossOrderBook.Asks, binanceOrderBook.BestBid().Price, minimumTrade, config.TokenThreshold);
+                if (autoBuyResult == null || autoBuyResult.Quantity <= 0) { continue; }
+
+                if (autoBuyResult.Price < 0) { throw new ApplicationException($"Auto-buy price should not be less than zero, but it was \"{autoBuyResult.Price}\""); }
+
+                var orderToPlace = new Order { Price = autoBuyResult.Price, Quantity = autoBuyResult.Quantity };
+
+                CancelAllForTradingPair(tradingPair);
+
+                NavigateToExchange(tradingPair);
+
+                var logBuilder = new StringBuilder()
+                    .AppendLine($"AutoBuy - About to place {tradingPair} order")
+                    .AppendLine("Order:")
+                    .AppendLine(JsonConvert.SerializeObject(orderToPlace))
+                    .AppendLine("Coss Order Book:")
+                    .AppendLine(JsonConvert.SerializeObject(cossOrderBook))
+                    .AppendLine("Binance Order Book:")
+                    .AppendLine(JsonConvert.SerializeObject(binanceOrderBook));
+
+                _log.Info(logBuilder.ToString(), TradeEventType.AboutToPlaceOrder);
+                totalPairsWithPurchases++;
+                PlaceOrder(tradingPair, OrderType.Bid, orderToPlace.Price, orderToPlace.Quantity, true);
+
+                CancelAllForTradingPair(tradingPair);
+            }
+
+            if (totalPairsWithPurchases == 0)
+            {
+                _log.Info("AutoBuy Complete. There were no purchases to make.");
+            }
+            else
+            {
+                _log.Info($"AutoBuy Complete. Made purchases from {totalPairsWithPurchases} trading pairs.");
+            }
+        }
+
+        private void AutoOpenBid()
+        {
+            var tradingPairs = new List<TradingPair>();
+            foreach (var symbol in SimpleBinanceSymbols)
+            {
+                tradingPairs.Add(new TradingPair(symbol, "ETH"));
+                tradingPairs.Add(new TradingPair(symbol, "BTC"));
+            }
+
+            foreach (var tradingPair in tradingPairs)
+            {
+                AutoOpenBidForTradingPair(tradingPair);
+            }
+        }
+
+        private void AutoOpenBidForTradingPair(TradingPair tradingPair)
+        {
+            var binanceOrderBookTask = Task.Run(() => _binanceIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+            var cossOrderBookTask = Task.Run(() => _cossIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+
+            var binanceOrderBook = binanceOrderBookTask.Result;
+            if (binanceOrderBook == null || binanceOrderBook.Bids == null || !binanceOrderBook.Bids.Any()
+                || binanceOrderBook.Asks == null || !binanceOrderBook.Asks.Any()) { return; }
+            var cossOrderBook = cossOrderBookTask.Result;
+            if (cossOrderBook == null || cossOrderBook.Bids == null || !cossOrderBook.Bids.Any()
+                || cossOrderBook.Asks == null || !cossOrderBook.Asks.Any()) { return; }
+
+            var binanceBestBid = binanceOrderBook.BestBid();
+            var binanceBestBidPrice = binanceBestBid.Price;
+            var binanceBestAsk = binanceOrderBook.BestAsk();
+            var binanceBestAskPrice = binanceBestAsk.Price;
+
+            var cossBestBid = cossOrderBook.BestBid();
+            var cossBestBidPrice = cossBestBid.Price;
+            var cossBestAsk = cossOrderBook.BestAsk();
+            var cossBestAskPrice = cossBestAsk.Price;
+
+            decimal targetPrice;
+            targetPrice = binanceBestBidPrice * 0.9m;
+            if (targetPrice < cossBestBidPrice) { targetPrice = binanceBestBidPrice * 0.91m; }
+            if (targetPrice < cossBestBidPrice) { targetPrice = binanceBestBidPrice * 0.92m; }
+
+            // Don't place a losing bid.
+            if (targetPrice < cossBestBidPrice) { return; }
+
+            // auto order should have already purchased this one.
+            // if this scenario occurs, something has gone wrong or someone placed an order quickly.
+            if (targetPrice > cossBestAskPrice) { return; }
+
+            decimal targetQuantity;
+            if (string.Equals(tradingPair.BaseSymbol, "ETH", StringComparison.InvariantCultureIgnoreCase))
+            {
+                targetQuantity = 0.25m / targetPrice;
+            }
+            else if (string.Equals(tradingPair.BaseSymbol, "BTC", StringComparison.InvariantCultureIgnoreCase))
+            {
+                targetQuantity = 0.01m / targetPrice;
+            }
+            else
+            {
+                throw new ApplicationException($"Unexpected base symbol \"{tradingPair.BaseSymbol}\".");
+            }
+
+            CancelAllForTradingPair(tradingPair);
+            PlaceOrder(tradingPair, OrderType.Bid, targetPrice, targetQuantity);
+            RefreshOpenOrders(tradingPair);
+        }
+
+        private void AutoOpenAsk()
+        {
+            // TODO: do the math against the symbol instead of against the pair.
+            var tradingPairs = new List<TradingPair>
+            {
+                new TradingPair("BCH", "BTC"),
+                new TradingPair("ZEN", "BTC"),
+                new TradingPair("WTC", "ETH"),
+                new TradingPair("EOS", "BTC"),
+                new TradingPair("VEN", "ETH"),
+                new TradingPair("ARK", "ETH"),
+                new TradingPair("KNC", "ETH"),
+                new TradingPair("LINK", "ETH"),
+                new TradingPair("POE", "ETH"),
+                new TradingPair("ENJ", "ETH"),
+                new TradingPair("LTC", "BTC"),
+                new TradingPair("BLZ", "ETH"),
+                new TradingPair("ICX", "ETH")
+            };
+
+            foreach (var tradingPair in tradingPairs)
+            {
+                AutoOpenAskForTradingPair(tradingPair);
+            }
+        }
+
+        private void AutoOpenAskForTradingPair(TradingPair tradingPair)
+        {
+            var getOwnedQuantity = new Func<string, Holding>(symbol =>
+            {
+                _cossDriver.CheckWallet();
+
+                var cossHoldings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+                var cossHolding = cossHoldings.Holdings.Where(item => string.Equals(item.Asset, symbol)).SingleOrDefault();
+                return cossHolding;
+            });
+
+            var ownedQuantity = getOwnedQuantity(tradingPair.Symbol);
+            if (ownedQuantity == null || ownedQuantity.Total <= 0) { return; }
+
+            // good enough to check to see if we have enough for this to be worth selling.
+            // this gets us out of the method early without affecting the rate limit as much.
+            var oldBinanceOrderBook = _binanceIntegration.GetOrderBook(tradingPair, CachePolicy.OnlyUseCacheUnlessEmpty);
+            if (oldBinanceOrderBook != null && oldBinanceOrderBook.Bids != null && oldBinanceOrderBook.Bids.Any())
+            { 
+                var potentialSale = oldBinanceOrderBook.BestBid().Price * ownedQuantity.Total;
+                var minSale = tradingPair.BaseSymbol == "ETH" ? StrategyConstants.CossMinimumTradeEth : StrategyConstants.CossMinimumTradeBtc;
+                if (potentialSale < minSale) { return; }
+            }
+
+            if (ownedQuantity.InOrders > 0)
+            {
+                CancelAllForTradingPair(tradingPair, OrderType.Ask);
+                ownedQuantity = getOwnedQuantity(tradingPair.Symbol);
+            }
+
+            var binanceOrderBookTask = Task.Run(() => _binanceIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+            var cossOrderBookTask = Task.Run(() => _cossIntegration.GetOrderBook(tradingPair, CachePolicy.ForceRefresh));
+
+            var binanceOrderBook = binanceOrderBookTask.Result;
+            var cossOrderBook = cossOrderBookTask.Result;
+            var priceToAsk = new AutoOpenAsk().ExecuteAgainstHighVolumeExchange(cossOrderBook, binanceOrderBook);
+            if (!priceToAsk.HasValue) { return; }
+
+            PlaceOrder(tradingPair, OrderType.Ask, priceToAsk.Value, ownedQuantity.Available);
+        }
+
+        private void AutoSellSymbol(SymbolWithBases symbolWithBases, ITradeIntegration comparableIntegration)
+        {
+            if (symbolWithBases == null) { throw new ArgumentNullException(nameof(symbolWithBases)); }
+            if (comparableIntegration == null) { throw new ArgumentNullException(nameof(comparableIntegration)); }
+            if (!symbolWithBases.Eth && !symbolWithBases.Btc) { return; }
+
+            var getOwnedQuantity = new Func<string, decimal>(symbol =>
+            {
+                _cossDriver.CheckWallet();
+
+                var cossHoldings = _cossIntegration.GetHoldings(CachePolicy.ForceRefresh);
+                var cossHolding = cossHoldings.Holdings.Where(item => string.Equals(item.Asset, symbol)).SingleOrDefault();
+                return cossHolding?.Available ?? 0;
+            });
+
+            var ownedQuantity = getOwnedQuantity(symbolWithBases.Symbol);
+            if (ownedQuantity <= 0) { return; }
+
+            OrderBook comparableEthOrderBook = null;
+            OrderBook comparableBtcOrderBook = null;
+            var compOrderBookTask = Task.Run(() =>
+            {
+                if (symbolWithBases.Eth)
+                {
+                    comparableEthOrderBook = comparableIntegration.GetOrderBook(symbolWithBases.ToEthTradingPair(), CachePolicy.ForceRefresh);
+                }
+
+                if (symbolWithBases.Btc)
+                {
+                    comparableBtcOrderBook = comparableIntegration.GetOrderBook(symbolWithBases.ToBtcTradingPair(), CachePolicy.ForceRefresh);
+                }
+            });
+
+            OrderBook cossEthOrderBook = null;
+            OrderBook cossBtcOrderBook = null;
+
+            var cossOrderBookTask = Task.Run(() =>
+            {
+                if (symbolWithBases.Eth)
+                {
+                    cossEthOrderBook = _cossIntegration.GetOrderBook(symbolWithBases.ToEthTradingPair(), CachePolicy.ForceRefresh);
+                }
+
+                if (symbolWithBases.Btc)
+                {
+                    cossBtcOrderBook = _cossIntegration.GetOrderBook(symbolWithBases.ToBtcTradingPair(), CachePolicy.ForceRefresh);
+                }
+            });
+
+            compOrderBookTask.Wait();
+            cossOrderBookTask.Wait();
+
+            var lotSize = string.Equals(symbolWithBases.Symbol, "GAT", StringComparison.InvariantCultureIgnoreCase)
+                ? 10
+                : (int?)null;
+
+            var autoSellResult = new AutoSell().ExecuteWithMultipleBaseSymbols(
+                ownedQuantity, 
+                cossEthOrderBook, 
+                comparableEthOrderBook, 
+                StrategyConstants.CossMinimumTradeEth, 
+                cossBtcOrderBook, 
+                comparableBtcOrderBook, 
+                StrategyConstants.CossMinimumTradeBtc,
+                lotSize);
+
+            if (autoSellResult != null)
+            {
+                if (autoSellResult.BtcQuantityAndPrice != null && autoSellResult.BtcQuantityAndPrice.Quantity > 0)
+                {
+                    _log.Info($"About to auto-sell {symbolWithBases}.");
+                    var result = PlaceOrder(
+                        symbolWithBases.ToBtcTradingPair(),
+                        OrderType.Ask,
+                        autoSellResult.BtcQuantityAndPrice.Price,
+                        autoSellResult.BtcQuantityAndPrice.Quantity);
+
+                    CancelAllForTradingPair(symbolWithBases.ToBtcTradingPair(), OrderType.Ask);
+                }
+
+                if (autoSellResult.EthQuantityAndPrice != null && autoSellResult.EthQuantityAndPrice.Quantity > 0)
+                {
+                    _log.Info($"About to auto-sell {symbolWithBases}.");
+                    var result = PlaceOrder(
+                        symbolWithBases.ToEthTradingPair(),
+                        OrderType.Ask,
+                        autoSellResult.EthQuantityAndPrice.Price,
+                        autoSellResult.EthQuantityAndPrice.Quantity);
+
+                    CancelAllForTradingPair(symbolWithBases.ToEthTradingPair(), OrderType.Ask);
+                }
+            }
+        }
+
+        private void ConfirmEmailWithdrawal(string symbol, string quantity)
+        {
+            var creds = _configRepo.GetCossEmailCredentials();
+        }
+
+        private bool PlaceOrder(
+            TradingPair tradingPair, 
+            OrderType orderType, 
+            decimal price, 
+            decimal quantity, 
+            bool alreadyOnPage = false)
+        {
+            if (orderType != OrderType.Bid && orderType != OrderType.Ask)
+            {
+                throw new ApplicationException($"Unexpected order type \"{orderType}\".");
+            }
+
+            if (!alreadyOnPage)
+            {
+                NavigateToExchange(tradingPair);
+            }
+
+            var toggleResult = orderType == OrderType.Bid
+                ? ClickBuyToggleButton(tradingPair.Symbol)
+                : orderType == OrderType.Ask ? ClickSellToggleButton() : throw new ApplicationException($"Unexpected order type \"{orderType}\".");
+
+            if (!toggleResult) { return false; }
+
+            if (!EnterTradePrice(price)) { return false; }
+            if (!EnterTradeQuantity(quantity)) { return false; }
+
+            var orderInfo = new { TradingPair = tradingPair, OrderType = orderType, Price = price, Quantity = quantity };
+            var orderInfoText = JsonConvert.SerializeObject(orderInfo, Formatting.Indented);
+
+            _log.Info(orderInfoText, orderType == OrderType.Bid ? TradeEventType.PlaceBid : TradeEventType.PlaceAsk);
+
+            var transactionClickResult = orderType == OrderType.Bid
+                ? ClickPerformBuyButton()
+                : orderType == OrderType.Ask ? ClickPerformSellButton() : throw new ApplicationException($"Unexpected order type \"{orderType}\".");
+
+            _cossDriver.Sleep(TimeSpan.FromSeconds(5));
+
+            return transactionClickResult;
+        }
+
+        private bool EnterTradePrice(decimal price)
+        {
+            var element = _driver.FindElementById("input-full-place-order");
+            if (element == null) { return false; }
+            return _cossDriver.SetInputNumberAndVerify(element, price);     
+        }
+
+        private bool EnterTradeQuantity(decimal quantity)
+        {
+            var element = GetQuantityInput();
+            if (element == null) { return false; }
+            return _cossDriver.SetInputNumberAndVerify(element, quantity);
+        }
+
+        private IWebElement GetQuantityInput()
+        {
+            var div = _driver.FindElementByClassName("input-field-full");
+            if (div == null) { return null; }
+            var inputs = div.FindElements(By.TagName("input"));
+            if (inputs != null && inputs.Count() == 2 && inputs[0].Enabled)
+            {
+                return inputs[0];
+            }
+
+            return null;
+        }
+
+
+        
+        private bool ClickPerformSellButton()
+        {
+            /*
+                <button _ngcontent-c19="" class="sell-btn mat-raised-button mat-warn" color="warn" mat-raised-button="">
+                    <span class="mat-button-wrapper">Sell</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button>
+            */
+
+            const string ExpectedClass = "sell-btn"; // mat-raised-button mat-warn";
+            var elements = _driver.FindElementsByClassName(ExpectedClass);
+            if (elements == null || elements.Count == 0) { return false; }
+            if (elements.Count > 1) { _log.Error($"Only expected to find one element with class {ExpectedClass}."); return false; }
+            var matchingButton = elements.Single();
+
+            if (matchingButton == null) { return false; }
+
+            matchingButton.Click();
+            return true;
+
+        }
+
+        private bool ClickPerformBuyButton()
+        {
+            // <span class="mat-button-wrapper">Buy</span>
+            var elements = _driver.FindElementsByClassName("mat-button-wrapper");
+            IWebElement matchingButton = null;
+            foreach(var element in elements)
+            {
+                try
+                {
+                    var text = element.Text;
+                    if (string.IsNullOrWhiteSpace(text)) { continue; }
+                    if (!string.Equals(text.Trim(), "BUY", StringComparison.Ordinal)) { continue; }
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                }
+
+                matchingButton = element;
+                break;
+            }
+
+            if (matchingButton == null) { return false; }
+
+            matchingButton.Click();
+            return true;
+        }
+
+        private bool ClickSellToggleButton()
+        {
+            var sellButton = _driver.FindElementsByClassName("mat-button-toggle-label-content")
+                .SingleOrDefault(element =>
+                {
+                    try
+                    {
+                        return
+                            element != null
+                            && !string.IsNullOrWhiteSpace(element.Text)
+                            && element.Text.Trim().ToUpper().Contains("SELL");
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                });
+
+            if (sellButton == null) { return false; }
+
+            try { sellButton.Click(); } catch { return false; }
+
+            return true;
+        }
+
+        private bool ClickBuyToggleButton(string symbol)
+        {
+            var button = GetBuyToggleButton(symbol);
+
+            if (button == null) { return false; }
+            button.Click();
+
+            return true;
+        }
+
+        private IWebElement GetBuyToggleButton(string symbol)
+        {
+            var allDivs = _driver.FindElementsByTagName("div");
+
+            var expectedText = $"BUY {symbol.ToUpper()}";
+            foreach (var div in allDivs)
+            {
+                var divText = (div.Text ?? string.Empty).Trim();
+                if (string.Equals(divText, expectedText, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return div;
+                }
+            }
+
+            return null;
+        }
+
+        private void CancelAllForTradingPair(TradingPair tradingPair, OrderType? orderType = null)
+        {
+            var myOpenOrders = RefreshOpenOrders(tradingPair);
+            for (var i = myOpenOrders.Count() - 1; i >= 0; i--)
+            {
+                var myOpenOrder = myOpenOrders[i];
+                if (orderType.HasValue && orderType.Value != myOpenOrder.OrderType) { continue; }
+                myOpenOrder.Cancel();
+            }
+        }
+        
+        private void Cancel_orders(string symbol, string baseSymbol)
+        {
+            NavigateToExchange(symbol, baseSymbol);
+            List<OpenOrderEx> openOrders;
+
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            while (!(openOrders = GetOpenOrders()).Any() && stopWatch.Elapsed < TimeSpan.FromSeconds(30))
+            {
+                _cossDriver.Sleep(100);
+            }
+
+            for(var index = 0; index < openOrders.Count(); index++)
+            {
+                var order = openOrders[index];
+                order.Cancel();
+                _cossDriver.Sleep(TimeSpan.FromSeconds(1));
+            }
+        }
+
+        private List<OpenOrderEx> GetOpenOrders()
+        {
+            var openOrdersCard = _driver.FindElementByClassName("my-open-orders-card");
+            if (openOrdersCard == null) { return new List<OpenOrderEx>(); }
+
+            var rows = openOrdersCard.FindElements(By.ClassName("datatable-row-wrapper"));
+            if (rows == null) { return new List<OpenOrderEx>(); }
+
+            var openOrders = new List<OpenOrderEx>();
+            foreach (var row in rows)
+            {
+                var cells = row.FindElements(By.ClassName("datatable-body-cell"));
+                if (cells == null || cells.Count != 5) { continue; }
+                var priceCell = cells[0];
+                var priceSpan = priceCell.FindElement(By.TagName("span"));
+                var priceSpanClass = priceSpan.GetAttribute("class");
+                OrderType orderType = OrderType.Unknown;
+                if (string.Equals(priceSpanClass, "sell", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    orderType = OrderType.Ask;
+                }
+                else if (string.Equals(priceSpanClass, "buy", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    orderType = OrderType.Bid;
+                }
+
+                var priceText = priceSpan.Text;
+                if (!decimal.TryParse(priceText, out decimal price)) { continue; }
+
+                var quantityCell = cells[1];
+                var quantityDiv = quantityCell.FindElement(By.TagName("div"));
+                var quantityText = string.Join(string.Empty, 
+                    (quantityDiv.Text ?? string.Empty)
+                    .Where(ch => char.IsDigit(ch) || ch == '.'));
+
+                if (!decimal.TryParse(quantityText, out decimal quantity)) { continue; }
+
+                var cancelCell = cells[4];
+                var cancelButton = cancelCell.FindElement(By.TagName("button"));
+                if (cancelButton == null) { continue; }
+
+                var orderRow = new OpenOrderEx(price, quantity, orderType, cancelButton);
+                openOrders.Add(orderRow);
+            }
+
+            return openOrders;
+        }
+
+        private void RefreshAllOpenOrders()
+        {
+            var cossTradingPairs = _cossIntegration.GetTradingPairs(CachePolicy.AllowCache);
+            foreach (var tradingPair in cossTradingPairs)
+            {
+                try { RefreshOpenOrders(tradingPair); }
+                catch(Exception exception) { _log.Error(exception); }
+
+                _cossDriver.Sleep(TimeSpan.FromSeconds(10));
+            }
+        }
+
+        private List<OpenOrderEx> RefreshOpenOrders(TradingPair tradingPair)
+        {
+            NavigateToExchange(tradingPair);
+            
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+
+            var openOrders = new List<OpenOrderEx>();
+            DateTime requestTime;
+            DateTime responseTime;
+            bool isFirstRun = true;
+            do
+            {
+                if (isFirstRun) { isFirstRun = false; }
+                else { _cossDriver.Sleep(100); }
+
+                requestTime = DateTime.UtcNow;
+                openOrders = GetOpenOrders();
+                responseTime = DateTime.UtcNow;
+            }
+            while (!openOrders.Any() && stopWatch.Elapsed < TimeSpan.FromSeconds(10));
+
+            var container = new CossOpenOrdersForTradingPairContainer
+            {
+                TimeStampUtc = DateTime.UtcNow,
+                Symbol = tradingPair.Symbol,
+                BaseSymbol = tradingPair.BaseSymbol,
+                OpenOrders = openOrders != null ? openOrders.Select(item => new CossOpenOrder
+                {
+                    Quantity = item.Quantity,
+                    Price = item.Price,
+                    OrderType = item.OrderType
+                }).ToList() : new List<CossOpenOrder>()
+            };
+
+            _openOrderRepo.Insert(container);
+
+            return openOrders;
+        }
+
+        private void NavigateToWallet()
+        {
+            const string Url = "https://profile.coss.io/wallet";
+            _cossDriver.Navigate_and_verify(Url, () =>
+            {
+                var spans = _driver.FindElementsByTagName("span");
+                if (spans == null) { return false; }
+
+                return spans.Any(span => span.Text != null
+                    && span.Text.ToUpper().Contains("Export Csv".ToUpper()));
+            });
+        }
+
+        
+
+        private class SessionState
+        {
+            public DateTime AsOf { get; set; } = DateTime.UtcNow;
+            public bool IsLoggedIn { get; set; }
+        }
+
+        private SessionState _sessionState = new SessionState();
+
+        private void RefreshExchangeHistory()
+        {
+            const int Limit = 100;
+            const int Offset = 0;
+            var url = $"https://profile.coss.io/api/user/history/exchange?limit={Limit}&offset={Offset}";
+            _driver.Navigate().GoToUrl(url);
+
+            var contents = _driver.FindElementByTagName("pre").Text;
+            var parsedContents = JsonConvert.DeserializeObject<CossExchangeHistoryResponse>(contents);
+
+            var container = new CossResponseContainer<CossExchangeHistoryResponse>
+            {
+                TimeStampUtc = DateTime.UtcNow,
+                Response = parsedContents,
+                Url = url
+            };
+
+            _cossHistoryRepo.Insert(container);
+        }
+
+        private void RefreshDepositAndWithdrawalHistory()
+        {
+            // https://profile.coss.io/api/user/history/actions?&limit=50&offset=0
+            const int Limit = 250;
+            const int Offset = 0;
+            var url = $"https://profile.coss.io/api/user/history/deposits-and-withdrawals?&limit={Limit}&offset={Offset}";
+
+            _driver.Navigate().GoToUrl(url);
+
+            var contents = _driver.FindElementByTagName("pre").Text;
+            var parsedContents = JsonConvert.DeserializeObject<CossDepositAndWithdrawalHistoryResponse>(contents);
+
+            var container = new CossResponseContainer<CossDepositAndWithdrawalHistoryResponse>
+            {
+                TimeStampUtc = DateTime.UtcNow,
+                Url = url,
+                Response = parsedContents
+            };
+
+            _cossHistoryRepo.Insert(container);
+        }
+
+        private IWebElement FindElementById(string id)
+        {
+            try { return _driver.FindElementById(id); } catch { return null; }
+        }
+
+        private bool Withdraw(string symbol, ITradeIntegration destinationIntegration, decimal quantity)
+        {
+            if (destinationIntegration is ICossIntegration) { throw new ArgumentException(nameof(destinationIntegration)); }
+            var destinationAddress = destinationIntegration.GetDepositAddress(symbol, CachePolicy.ForceRefresh);
+            if (destinationAddress == null || string.IsNullOrWhiteSpace(destinationAddress.Address))
+            {
+                throw new ApplicationException($"Unable to retrieve deposit address for {symbol} on {destinationIntegration.Name}.");
+            }
+
+            return Withdraw(symbol, destinationAddress, quantity);
+        }
+
+        private bool Withdraw(string symbol, DepositAddress destinationAddress, decimal quantity)
+        {
+            if (string.IsNullOrWhiteSpace(symbol)) { throw new ArgumentNullException(nameof(symbol)); }
+            if (destinationAddress == null || string.IsNullOrWhiteSpace(destinationAddress.Address)) { throw new ArgumentNullException(nameof(destinationAddress.Address)); }
+            if (quantity <= 0) { throw new ArgumentOutOfRangeException(nameof(quantity)); }
+
+            var effectiveSymbol = symbol.Trim().ToUpper();
+            var effectiveAddress = destinationAddress.Address.Trim();
+
+            if (!NavigateToWithdrawSymbol(symbol)) { return false; }
+
+            var quantityText = quantity.ToString();
+
+
+            var inputs = _driver.FindElementsByTagName("input");
+
+            var quantityInput = _cossDriver.WaitForElement(() => _driver.FindElementsByTagName("input").SingleOrDefault(item =>
+            {
+                var formControlName = item.GetAttribute("formcontrolname");
+                return formControlName != null && string.Equals(formControlName, "amount", StringComparison.InvariantCultureIgnoreCase);
+            }));
+            
+            var walletAddressInput = _cossDriver.WaitForElement(() => _driver.FindElementsByTagName("input").SingleOrDefault(item =>
+            {
+                var formControlName = item.GetAttribute("formcontrolname");
+                return formControlName != null && string.Equals(formControlName, "walletaddress", StringComparison.InvariantCultureIgnoreCase);
+            }));
+
+            if (quantityInput == null || walletAddressInput == null) { return false; }
+
+            quantityInput.Clear();
+            quantityInput.SendKeys(quantityText);
+
+            walletAddressInput.Clear();
+            walletAddressInput.SendKeys(effectiveAddress);
+
+            ExecuteScript("$(\"button[type='submit']\").click();");
+
+            var tfaInput = _cossDriver.WaitForElement(() => _driver.FindElementsByTagName("input").SingleOrDefault(item =>
+            {
+                var formControlName = item.GetAttribute("formcontrolname");
+                return formControlName != null && string.Equals(formControlName, "tfaToken", StringComparison.InvariantCultureIgnoreCase);
+            }));
+
+            if (tfaInput == null) { return false; }
+
+            var tfaValue = _tfaUtil.GetCossTfa();
+            if (string.IsNullOrWhiteSpace(tfaValue)) { return false; }
+
+            if (!_cossDriver.SetInputTextAndVerify(tfaInput, tfaValue)) { return false; }
+
+            var buttons = _driver.FindElementsByTagName("button");
+            var submitButton = _cossDriver.WaitForElement(() => _driver.FindElementsByTagName("button").SingleOrDefault(item =>
+            {
+                return item.Text != null && string.Equals(item.Text.Trim(), "Confirm Request", StringComparison.InvariantCultureIgnoreCase);
+            }));
+
+            if (submitButton == null) { return false; }
+
+            submitButton.Click();
+
+            // give it some time to send out the email before attempting to retrieve the email.
+            _cossDriver.Sleep(TimeSpan.FromSeconds(10));
+
+            if (!ConfirmEmailLinkWithdrawl(symbol, quantity)) { return false; }
+
+            return true;
+        }
+
+        private bool ConfirmEmailLinkWithdrawl(string symbol, decimal quantity)
+        {
+            string emailLink = null;
+            _waitForIt.Wait(() =>
+            {
+                emailLink = _tradeEmailUtil.GetCossWithdrawalLink(symbol, quantity);
+                return emailLink != null;
+            }, TimeSpan.FromMinutes(10), TimeSpan.FromSeconds(30));
+
+            if (string.IsNullOrWhiteSpace(emailLink)) { return false; }
+
+            _cossDriver.Navigate(emailLink);
+
+            IWebElement confirmButton = null;
+            _waitForIt.Wait(() =>
+            {
+                try
+                {
+                    confirmButton = _driver.FindElementsByTagName("button")
+                        .SingleOrDefault(item =>
+                        {
+                            return string.Equals(item.Text, "Confirm", StringComparison.InvariantCultureIgnoreCase);
+                        });
+                }
+                catch
+                {
+                }
+
+                return confirmButton != null;
+            });
+
+            if (confirmButton == null) { return false; }
+
+            confirmButton.Click();
+
+            return true;
+        }
+
+        private void SetFormControlValue(string formControlName, string value)
+        {
+            ExecuteScript($"$(\"[formcontrolname = '{formControlName}']\").val(\"{value}\");");
+        }
+
+        private bool NavigateToWithdrawSymbol(string symbol)
+        {
+            if (string.IsNullOrWhiteSpace(symbol)) { throw new ArgumentNullException(nameof(symbol)); }
+            var effectiveSymbol = symbol.Trim().ToUpper();
+
+            NavigateToWallet();
+
+            var script = ResUtil.Get("coss-withdraw.js", GetType().Assembly)
+                .Replace("[SYMBOL]", effectiveSymbol);
+
+            ExecuteScript(script);
+
+            return _waitForIt.Wait(() =>
+            {
+                try
+                {
+                    var matches = _driver.FindElementsByClassName("balance-width");
+                    return matches.Any(match => match != null && match.Text != null &&
+                        match.Text.Trim().ToUpper().StartsWith("Available Balance".ToUpper())
+                        && match.Text.Trim().ToUpper().EndsWith($" {effectiveSymbol}".ToUpper()));
+                }
+                catch
+                {
+                    return false;
+                }
+            });
+        }
+
+        private void NavigateToDepositsAndWithdrawalsHistory()
+        {
+            _cossDriver.Navigate_and_verify(CossPage.DepositsAndWithdrawalsHistory, () => FindElementWithText("h2", "Deposits & Withdrawals History"));
+        }
+
+        private void NavigateToExchangeHistory()
+        {
+            _cossDriver.Navigate_and_verify(CossPage.ExchangeHistory, () => FindElementWithText("h2", "EXCHANGE HISTORY"));
+        }
+
+        private void NavigateToExchange(TradingPair tradingPair)
+        {
+            NavigateToExchange(tradingPair.Symbol, tradingPair.BaseSymbol);
+        }
+
+        private void NavigateToExchange(string symbol, string baseSymbol)
+        {
+            if (string.IsNullOrWhiteSpace(symbol)) { throw new ArgumentNullException(nameof(symbol)); }
+            if (string.IsNullOrWhiteSpace(baseSymbol)) { throw new ArgumentNullException(nameof(baseSymbol)); }
+
+            var url = $"https://exchange.coss.io/exchange/{symbol.Trim().ToLower()}-{baseSymbol.Trim().ToLower()}";
+
+            var verifier = new Func<bool>(() =>
+            {
+                var expectedText = $"{symbol.Trim().ToUpper()}/{baseSymbol.Trim().ToUpper()}";
+                return FindElementWithText("span", expectedText);
+            });
+
+            _cossDriver.Navigate_and_verify(url, verifier);
+        }
+
+        private bool FindElementWithText(string elementType, string expectedText)
+        {
+            if (string.IsNullOrWhiteSpace(elementType)) { throw new ArgumentNullException(nameof(elementType)); }
+            if (string.IsNullOrWhiteSpace(expectedText)) { throw new ArgumentNullException(nameof(expectedText)); }
+
+            try
+            {
+                var elementsCollection = _driver.FindElementsByTagName(elementType);
+                if (elementsCollection == null) { return false; }
+                return elementsCollection.Any(item =>
+                {
+                    try
+                    {
+                        return
+                            item != null
+                            && item.Text != null
+                            && string.Equals(item.Text.Trim(), expectedText.Trim(), StringComparison.InvariantCultureIgnoreCase);
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                });
+            }
+            catch (Exception exception)
+            {
+                _log.Error(exception);
+                return false;
+            }
+        }
+
+        private bool ClickByClassName(string className)
+        {
+            return PerformDomAction(el => el.Click(), () => _driver.FindElementByClassName(className));
+        }
+
+        private bool ClickById(string id)
+        {
+            return PerformDomAction(el => el.Click(), () => _driver.FindElementById(id));
+        }
+
+        private bool PerformDomAction(Action<IWebElement> perform, Func<IWebElement> find)
+        {
+            IWebElement webElement = null;
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            do
+            {
+                try
+                {
+                    webElement = find();
+                    if (webElement == null) { _cossDriver.Sleep(TimeSpan.FromMilliseconds(250)); }
+                }
+                catch (Exception exception)
+                {
+                    _log.Error(exception);
+                }
+            } while (webElement == null && stopWatch.Elapsed < TimeSpan.FromSeconds(30));
+
+            if (webElement == null) { return false; }
+
+            try
+            {
+                perform(webElement);
+            }
+            catch (Exception exception)
+            {
+                _log.Error(exception);
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Dispose()
+        {
+            // if (_driver != null) { _driver.Dispose(); }
+        }
+
+        private void ExecuteScript(string script)
+        {
+            ((IJavaScriptExecutor)_driver).ExecuteScript(script);
+        }
+
+        private void Info(string message)
+        {
+            Console.WriteLine($"{DateTime.Now} (local) - {message}");
+            _log.Info(message);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿<h2>Exchange Order Books</h2>
+<table class="table table-striped">
+    <thead>
+        <tr style="font-size:24px; font-weight:bold;">
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="clickable"
+            ng-repeat="exchange in model.exchanges.data"
+            ui-sref="exchange-order-books-detail({exchange: exchange.name.toLowerCase()})">
+            <td>
+                <exchange-logo exchange="exchange.name"></exchange-logo>
+                &nbsp;
+                <span style="font-size:24px;">
+                    {{exchange.name}}
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

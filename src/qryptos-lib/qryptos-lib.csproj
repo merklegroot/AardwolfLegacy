@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67DD488E-23A8-47B8-89FE-38B0EAC917C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qryptos_lib</RootNamespace>
+    <AssemblyName>qryptos-lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="res-util-lib, Version=1.1.6675.18561, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\res-util.1.1\lib\res-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.2.4\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="web-util-lib, Version=1.7.6777.24908, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\web-util.1.7.0\lib\net471\web-util-lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\Models\QryptosAuthPayload.cs" />
+    <Compile Include="Client\QryptosClient.cs" />
+    <Compile Include="Client\Models\QryptosPlaceOrderRequest.cs" />
+    <Compile Include="Client\Models\QryptosPlaceOrderResponse.cs" />
+    <Compile Include="Models\QryptosGetOpenOrdersResponse.cs" />
+    <Compile Include="IQryptosIntegration.cs" />
+    <Compile Include="Models\QryptosBalanceItem.cs" />
+    <Compile Include="Models\QryptosCancelOrderResponse.cs" />
+    <Compile Include="Models\QryptosCryptoAccount.cs" />
+    <Compile Include="Models\QryptosFee.cs" />
+    <Compile Include="Models\QryptosIndividualAccount.cs" />
+    <Compile Include="Models\QryptosOpenOrdersForTradingPairResponseItem.cs" />
+    <Compile Include="Models\QryptosOrderBook.cs" />
+    <Compile Include="Models\QryptosOrderResponse.cs" />
+    <Compile Include="Models\QryptosProduct.cs" />
+    <Compile Include="Models\QryptosTradingAccount.cs" />
+    <Compile Include="Models\Snapshot\QryptosCommoditiesSnapshot.cs" />
+    <Compile Include="QryptosIntegration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Res\QryptosMap.cs" />
+    <Compile Include="Res\QryptosResDummy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\client-lib\client-lib.csproj">
+      <Project>{a81d1f4a-c0bb-4dd7-86fb-3a7fc2394215}</Project>
+      <Name>client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{A8B37940-6CA8-4DFD-A77C-72BAA9E29CE3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\crypt-lib\crypt-lib.csproj">
+      <Project>{6c514254-ca3e-4d37-97ba-72f22fc9bcd7}</Project>
+      <Name>crypt-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\date-time-lib\date-time-lib.csproj">
+      <Project>{b275fdcd-798d-4aa9-9a0e-5e7efd90bfb8}</Project>
+      <Name>date-time-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{E2C1423B-C42E-4AA2-8A00-90DB2585BB5E}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\parse-lib\parse-lib.csproj">
+      <Project>{c80372e6-c4da-43d4-b13f-7cdfafd264df}</Project>
+      <Name>parse-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2D4897C7-3D49-4305-9D03-4AF6D9BD52E6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{DDFDAF8D-9D44-4365-AA33-2415D9B36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-node-integration\trade-node-integration.csproj">
+      <Project>{9013AAD1-4FD3-41D2-80FF-73BA7FC347EB}</Project>
+      <Name>trade-node-integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042F92D-183C-426D-9753-EA5C07DA342B}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Res\qryptos-map.json" />
+    <EmbeddedResource Include="Res\qryptos-lot-size.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res\standard-commodities.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res\standard-commodities - Copy.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

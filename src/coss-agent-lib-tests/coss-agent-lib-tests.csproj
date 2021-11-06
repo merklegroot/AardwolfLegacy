@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{820437AE-4E32-461B-9435-8A6D4A0771FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>coss_agent_lib_tests</RootNamespace>
+    <AssemblyName>coss-agent-lib-tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.8.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.8.3\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="sel-lib, Version=1.2.6751.42612, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sel-lib.1.2\lib\net471\sel-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="wait-for-it-lib, Version=1.0.1.23187, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\wait-for-it.1.0.1\lib\wait-for-it-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="web-util-lib, Version=1.7.6777.24908, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\web-util.1.7.0\lib\net471\web-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.12.1\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CossAgentTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\binance-lib\binance-lib.csproj">
+      <Project>{5fba1779-f8fc-4e63-818e-e8a28cc21845}</Project>
+      <Name>binance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99AF3275-F4DD-4F7D-854E-E5F8F30532E6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>	
+    <ProjectReference Include="..\config-lib\config-lib.csproj">
+      <Project>{da63ba8b-a147-4497-b6d2-dd25ed401edf}</Project>
+      <Name>config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-agent-lib\coss-agent-lib.csproj">
+      <Project>{62fc6f89-bb36-4ebb-bbce-ff5fa860314f}</Project>
+      <Name>coss-agent-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-data-lib\coss-data-lib.csproj">
+      <Project>{ef2e1e9c-63e6-4eef-90e7-56a642298e03}</Project>
+      <Name>coss-data-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-data-model\coss-data-model.csproj">
+      <Project>{4cc73b2b-b182-41bc-bc74-5f7f52cab4cf}</Project>
+      <Name>coss-data-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-lib\coss-lib.csproj">
+      <Project>{38c088b7-c128-49f2-93a7-9863b37a96ca}</Project>
+      <Name>coss-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptocompare-lib\cryptocompare-lib.csproj">
+      <Project>{45d9393e-088a-4d8f-b04c-caad96e8429e}</Project>
+      <Name>cryptocompare-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptopia-lib\cryptopia-lib.csproj">
+      <Project>{00fd679b-47fa-45ed-a47e-41b0e0e02e0d}</Project>
+      <Name>cryptopia-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\exchange-client-lib\exchange-client-lib.csproj">
+      <Project>{13406752-8c38-47df-bfcd-c668052a11c2}</Project>
+      <Name>exchange-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\hitbtc-lib\hitbtc-lib.csproj">
+      <Project>{b1862aa2-1851-4da2-93a9-8763b0f8572c}</Project>
+      <Name>hitbtc-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\integration-workflow-lib\integration-workflow-lib.csproj">
+      <Project>{9decbd20-b536-4651-8735-04a41b5d2c94}</Project>
+      <Name>integration-workflow-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kucoin-lib\kucoin-lib.csproj">
+      <Project>{869c2c59-03b5-44d7-9abc-4aaf9e49b120}</Project>
+      <Name>kucoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{e2c1423b-c42e-4aa2-8a00-90db2585bb5e}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1a8ceb0a-58db-49cd-bba5-2ae1560ceeef}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tfa-lib\tfa-lib.csproj">
+      <Project>{f12f3c61-7002-4908-8789-6722d2766ddf}</Project>
+      <Name>tfa-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-email-lib\trade-email-lib.csproj">
+      <Project>{077914ac-27e0-49fe-9b36-6471348658d2}</Project>
+      <Name>trade-email-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2d4897c7-3d49-4305-9d03-4af6d9bd52e6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{ddfdaf8d-9d44-4365-aa33-2415d9b36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042f92d-183c-426d-9753-ea5c07da342b}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

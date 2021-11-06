@@ -1,0 +1,213 @@
+﻿<h1>Exchange Open Orders Detail</h1>
+<h2>
+    <exchange-logo exchange="model.exchangeId"></exchange-logo> {{model.exchange}}
+    <button class="btn btn-primary" ng-click="onRefreshTheOldStuffClicked()">Refresh Old Open Orders</button>
+    <button class="btn btn-primary" ng-click="showDebug = !showDebug">Toggle Debug</button>
+</h2>
+
+
+{{model.symbol}} - {{model.baseSymbol}}<br />
+
+<button class="btn btn-primary" ng-click="showAll = !showAll">{{!showAll ? 'Show all trading pairs' : 'Hide trading pairs without open orders'}}</button>
+
+<div ng-if="model.tradingPairs.isLoading">
+    <loading></loading>
+</div>
+<div ng-if="model.tradingPairs.data">
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-size:24px; font-weight:bold;">
+                <td>Open Orders</td>
+                <td>Notable Orders</td>
+                <td>Exchanges</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-if="(model.symbol && model.baseSymbol) || showAll || tradingPair.openOrderData.openOrders.length > 0"
+                ng-repeat="tradingPair in model.tradingPairs.data">
+                <td style="width:200px;">
+                    <div>
+                        <a class="clickable" href="#" 
+                           ui-sref="exchange-open-orders-detail-trading-pair({exchange:model.exchangeId, symbol:'ARK', baseSymbol:'ETH'})">
+                            <trading-pair ng-model="tradingPair"></trading-pair>
+                        </a>
+                    </div>
+                    <div style="font-size:18px; font-weight:bold;">
+                        As of {{tradingPair.openOrderData.asOfUtc | ago}}
+                        <button ng-disabled="!(tradingPair.openOrderData && !tradingPair.openOrderData.isLoading)" ng-click="onRefreshTradingPairClicked(tradingPair)" class="btn btn-primary">Refresh</button>
+                    </div>
+                    <div ng-if="tradingPair.openOrderData.openOrders && tradingPair.openOrderData.openOrders.length > 0">
+                        <table class="table">
+                            <thead>
+                                <tr style="font-size:18px; font-weight:bold;">
+                                    <td>Type</td>
+                                    <td>Price</td>
+                                    <td>Quantity</td>
+                                    <td ng-if="showDebug">Data</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="openOrder in tradingPair.openOrderData.openOrders">
+                                    <td ng-style="openOrder.orderType === 1 ? {color:'green'}: (openOrder.orderType === 2 ? {color:'red'} : {})">{{openOrder.orderTypeText}}</td>
+                                    <td>{{openOrder.price}}</td>
+                                    <td>{{openOrder.quantity}}</td>
+                                    <td ng-if="showDebug">{{openOrder}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div ng-if="!tradingPair.openOrderData.openOrders || tradingPair.openOrderData.openOrders.length === 0">
+                        <span style="font-size:18px; font-weight:bold;">None</span>
+                    </div>
+
+                    <div ng-repeat="status in tradingPair.statuses">
+                        <div style="font-size:18px; font-weight:bold;">
+                            <span ng-style="status.disposition === 'good' ? {color:'green'} : (status.disposition === 'bad' ? {color:'red'} : {color:'orange'})">
+                                <span ng-if="status.disposition === 'good'">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                                <span ng-if="status.disposition === 'neutral'">
+                                    <i class="fa fa-warning"></i>
+                                </span>
+                                <span ng-if="status.disposition === 'bad'">
+                                    <i class="fa fa-close"></i>
+                                </span>
+                            </span>
+                            <span>
+                                {{status.text}}
+                            </span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <table class="table">
+                        <thead>
+                            <tr style="font-size:18px; font-weight:bold;">
+                                <td>Exchange</td>
+                                <td>Type</td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="order in tradingPair.notableOrders">
+                                <td>
+                                    <span><exchange-logo exchange="order.party"></exchange-logo> {{order.party}}</span>
+                                </td>
+                                <td ng-style="order.orderType === 1 ? {color:'green'}: (order.orderType === 2 ? {color:'red'} : {})">
+                                    {{order.orderTypeText}}
+                                </td>
+                                <td ng-style="order.orderType === 1 ? {color:'green'}: (order.orderType === 2 ? {color:'red'} : {})">
+                                    {{order.price}}
+                                </td>
+                                <td>{{order.quantity}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+                <td>
+                    <div ng-repeat="exchange in model.exchanges">
+                        <div>
+                            <span style="font-size:22px;">
+                                <span style="font-weight:bold;">
+                                    <exchange-logo exchange="exchange.id"></exchange-logo>
+                                    {{exchange.name}}
+                                </span>
+                            </span>
+                        </div>
+                        <div ng-if="!tradingPair.orderBooks[exchange.id].data">
+                            <div>Not loaded...</div>
+                        </div>
+                        <div ng-if="tradingPair.orderBooks[exchange.id].data">
+                            <div>
+                                <span style="font-size:18px; font-weight:bold;">
+                                    As of {{tradingPair.orderBooks[exchange.id].data.asOf | ago}}
+                                    <button class="brn btn-primary" ng-click="onRefreshOrderBookClicked(exchange.id, tradingPair.symbol, tradingPair.baseSymbol)">Refresh</button>
+                                    <button class="btn btn-primary" ng-click="tradingPair.orderBooks[exchange.id].showOrderBook = !tradingPair.orderBooks[exchange.id].showOrderBook">
+                                        Toggle Order Book
+                                    </button>
+                                </span>
+                            </div>
+
+                            <div>
+                                <div ng-if="tradingPair.orderBooks[exchange.id].showOrderBook">
+                                    <order-book ng-model="tradingPair.orderBooks[exchange.id]"
+                                                min-rows="2">
+                                    </order-book>
+                                </div>
+                            </div>
+                        </div>
+                        <br /><br /><br />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--
+
+<div ng-if="model.openOrders.isLoading">
+    <loading></loading>
+</div>
+<div ng-if="model.openOrders.data">
+    <button class="btn btn-primary" ng-click="showDebug = !showDebug">Toggle Debug</button>
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-size:20px; font-weight:bold;">
+                <td>Trading Pair</td>
+                <td>Type</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Best {{model.exchange}} Bid Price</td>
+                <td>Best {{model.exchange}} Ask Price</td>
+                <td>Best Binance Bid Price</td>
+                <td>Best Binance Ask Price</td>
+                <td>Potential Profit %</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="openOrder in model.openOrders.data" style="font-weight:bold;">
+                <td style="width:200px;">
+                    <trading-pair ng-model="openOrder"></trading-pair>
+                </td>
+                <td ng-style="openOrder.orderType === 1 ? {color:'green'}: (openOrder.orderType === 2 ? {color:'red'} : {})">{{openOrder.orderTypeText}}</td>
+                <td>{{openOrder.price}} {{openOrder.baseSymbol}} <commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></td>
+                <td>{{openOrder.quantity}} {{openOrder.symbol}} <commodity-logo symbol="openOrder.symbol"></commodity-logo></td>
+                <td>{{openOrder.bestBidPrice}} {{openOrder.baseSymbol}} <commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></td>
+                <td>{{openOrder.bestAskPrice}} {{openOrder.baseSymbol}} <commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></td>
+                <td>{{openOrder.bestCompBidPrice}} {{openOrder.baseSymbol}} <commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></td>
+                <td>{{openOrder.bestCompAskPrice}} {{openOrder.baseSymbol}} <commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></td>
+                <td>
+                    <div ng-if="openOrder.bestCompAskPrice">
+                        {{(100 * ((openOrder.bestCompBidPrice - openOrder.price) / openOrder.price)).toFixed(2)}} %
+                    </div>
+                </td>
+                <td>
+                    <div ng-if="openOrder.price && openOrder.bestBidPrice">
+                        <div style="color:green;" ng-if="openOrder.price >= openOrder.bestBidPrice">
+                            Winning
+                        </div>
+                        <div style="color:red;" ng-if="openOrder.price < openOrder.bestBidPrice">
+                            Losing
+                            <div>
+                                {{(openOrder.bestBidPrice - openOrder.price).toFixed(8)}} {{openOrder.symbol}}
+                                <commodity-logo symbol="openOrder.symbol"></commodity-logo>
+                            </div>
+                            <div>
+                                {{(100*((openOrder.bestBidPrice - openOrder.price)/openOrder.price)).toFixed(4)}} %
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td ng-if="showDebug">{{openOrder}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+-->
+
+{{model}}

@@ -1,0 +1,42 @@
+[
+  {
+    "NativeId": 101,
+    "NativeSymbol": "BLZ",
+    "NativeName": "BlazeCoin",
+    "CanonicalId": "2b706e82-1774-44e9-99f7-66b618cfe00f",
+    "CanonicalSymbol": "BLZ",
+    "CanonicalName": "BlazeCoin"
+  },
+  {
+    "NativeId": 530,
+    "NativeSymbol": "ETH",
+    "NativeName": "Ethereum",
+    "CanonicalId": "2a6680d6-237b-4a02-b1e9-ce1ed69688de",
+    "CanonicalSymbol": "ETH",
+    "CanonicalName": "Ethereum"
+  },
+  {
+    "NativeId": 1,
+    "NativeSymbol": "BTC",
+    "NativeName": "Bitcoin",
+    "CanonicalId": "4b5db3e9-cf51-48cb-915e-c1924900e855",
+    "CanonicalSymbol": "BTC",
+    "CanonicalName": "Bitcoin"
+  },
+  {
+    "NativeId": 802,
+    "NativeSymbol": "ADA",
+    "NativeName": "Cardano",
+    "CanonicalId": "bb9f7b2a-8eea-4e70-9e43-325b6cf7cfd7",
+    "CanonicalSymbol": "ADA",
+    "CanonicalName": "Cardano"
+  },
+  {
+    "NativeId": 489,
+    "NativeSymbol": "ARK",
+    "NativeName": "Ark",
+    "CanonicalId": "aafb2e80-577e-4429-928c-fce75b68f2b3",
+    "CanonicalSymbol": "ARK",
+    "CanonicalName": "Ark"
+  }
+]

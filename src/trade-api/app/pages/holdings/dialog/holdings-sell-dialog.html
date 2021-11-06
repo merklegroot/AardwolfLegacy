@@ -1,0 +1,31 @@
+﻿<div class="modal-header" style="background-color:greenyellow;">
+    <h3 class="modal-title">Sell Funds</h3>
+</div>
+<div class="modal-body" style="font-size:24px;">
+
+    <table>
+        <tr>
+            <td style="font-weight:bold;">Asset:&nbsp;</td>
+            <td>{{data.symbol}}</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Quantity:&nbsp;</td>
+            <td>{{data.quantity}}</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Base Symbol:&nbsp;</td>
+            <td>{{data.baseSymbol}}</td>
+        </tr>
+    </table>
+
+    <br />
+    <div>
+        Are you sure you want to sell these funds?
+    </div>
+
+</div>
+<div class="modal-footer">
+
+    <button class="btn btn-lg btn-warning pull-left" type="button" ng-click="cancel()">No, I want to keep them!</button>
+    <button class="btn btn-lg btn-success" type="button" ng-click="ok()">Yes, sell them.</button>
+</div>

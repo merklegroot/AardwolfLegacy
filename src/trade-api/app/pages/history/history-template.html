@@ -1,0 +1,146 @@
+﻿<div>
+    <h2>
+        History
+        <button class="btn btn-md btn-primary" ng-click="onRefreshHistoryClicked('binance')">Refresh Binance History</button>
+        <button class="btn btn-md btn-primary" ng-click="onRefreshHistoryClicked('idex')">Refresh Idex History</button>
+        <button class="btn btn-md btn-primary" ng-click="onRefreshHistoryClicked('livecoin')">Refresh Livecoin History</button>
+        <button class="btn btn-md btn-primary" ng-click="onRefreshHistoryClicked('mew')">Refresh Mew History</button>
+        <button class="btn btn-md btn-primary" ng-click="showDebug = !showDebug">{{showDebug ? "Hide" : "Show"}} Debug</button>
+    </h2>
+
+    <h3 ng-show="history.isLoading">Loading...</h3>
+
+    <div ng-hide="history.isLoading">
+        <div class="row">
+            <div>
+                <span style="font-size:20px; font-weight:bold;">Exchanges&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <button ng-class="'btn ' + (hideCoss ? 'btn-default' : 'btn-info')" ng-click="onToggleCossClicked();"><exchange-logo exchange="'Coss'"></exchange-logo> Coss</button>
+                <button ng-class="'btn ' + (hideIdex ? 'btn-default' : 'btn-info')" ng-click="onToggleIdexClicked();"><exchange-logo exchange="'Idex'"></exchange-logo> Idex</button>
+                <button ng-class="'btn ' + (hideBinance ? 'btn-default' : 'btn-info')" ng-click="onToggleBinanceClicked();"><exchange-logo exchange="'Binance'"></exchange-logo>Binance</button>
+                <button ng-class="'btn ' + (hideLivecoin ? 'btn-default' : 'btn-info')" ng-click="onToggleLivecoinClicked();"><exchange-logo exchange="'Livecoin'"></exchange-logo>Livecoin</button>
+                <button ng-class="'btn ' + (hideMew ? 'btn-default' : 'btn-info')" ng-click="onToggleMewClicked();"><exchange-logo exchange="'Mew'"></exchange-logo>Mew</button>
+                <button ng-class="'btn ' + (hideBitz ? 'btn-default' : 'btn-info')" ng-click="onToggleBitzClicked();"><exchange-logo exchange="'Bit-Z'"></exchange-logo>Bit-Z</button>
+                <button ng-class="'btn ' + (hideKraken ? 'btn-default' : 'btn-info')" ng-click="onToggleKrakenClicked();"><exchange-logo exchange="'Kraken'"></exchange-logo>Kraken</button>
+                <button ng-class="'btn ' + (hideCoinbase ? 'btn-default' : 'btn-info')" ng-click="onToggleCoinbaseClicked();"><exchange-logo exchange="'Coinbase'"></exchange-logo>Coinbase</button>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div>
+                <span style="font-size:20px; font-weight:bold;">Operations&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <button ng-class="'btn ' + (hideBuy ? 'btn-default' : 'btn-info')" ng-click="onToggleBuyClicked();">Buy</button>
+                <button ng-class="'btn ' + (hideSell ? 'btn-default' : 'btn-info')" ng-click="onToggleSellClicked();">Sell</button>
+                <button ng-class="'btn ' + (hideDeposit ? 'btn-default' : 'btn-info')" ng-click="onToggleDepositClicked();">Deposit</button>
+                <button ng-class="'btn ' + (hideWithdraw ? 'btn-default' : 'btn-info')" ng-click="onToggleWithdrawClicked();">Withdraw</button>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <span style="font-size:20px; font-weight:bold;">Commodities&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <div>
+                <span ng-repeat="commodityFilter in commodityFilters">
+                    <button ng-click="onCommodityFilterTagClicked(commodityFilter);"
+                            class="btn btn-primary" type="button">
+                        <span class="badge">X</span> <commodity-logo symbol="commodityFilter.symbol"></commodity-logo> {{commodityFilter.symbol}}
+                    </button>
+                </span>
+            </div>
+            <div>&nbsp;</div>
+            <div>
+                <span>
+                    <input class="form-control" ng-model="commodityTypeAheadText" ng-keyup="onCommodityTypeAheadChanged();" />
+                    <table ng-if="!commodities.isLoading" class="table table-striped">
+                        <tr ng-repeat="commodity in effectiveCommodities | limitTo: 5"
+                            ng-click="onCommodityRowClicked(commodity)"
+                            class="clickable">
+                            <td>{{commodity.symbol}}</td>
+                            <td>{{commodity.name}}</td>
+                            <!--<td>{{commodity}}</td>-->
+                        </tr>
+                    </table>
+                </span>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <div ng-hide="history.isLoading">
+
+        <div style="font-size:20px;">
+            <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onFirstPageClicked()">First</button>
+            <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onPreviousPageClicked()">Previous</button>
+
+            Page {{pageIndex + 1}} of {{totalPages}}
+
+            <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onNextPageClicked()">Next</button>
+            <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onLastPageClicked()">Last</button>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr style="font-size:20px;">
+                    <td>Time Stamp Local</td>
+                    <td>Exchange</td>
+                    <td>Type</td>
+                    <td>Status</td>
+                    <td>Trading Pair</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Fee</td>
+                    <td>Wallet Address</td>
+                    <td>Transaction Hash</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in effectiveData | limitTo: pageSize: (pageIndex * pageSize)">
+                    <td>
+                        {{item.timeStampUtc | localTime}}
+                    </td>
+                    <td>
+                        <exchange-logo exchange="item.exchange"></exchange-logo>
+                        {{item.exchange}}
+                    </td>
+                    <td ng-class="(item.tradeType === 'Buy' || item.tradeType === 'Deposit') ? 'buy' : 'sell'" style="font-weight:bold;">{{item.tradeType}}</td>
+                    <td>{{item.tradeStatus}}</td>
+                    <td style="width:200px;">
+                        <!--
+                        <div ng-if="item.tradingPair">
+                            {{item.tradingPair || item.symbol}}
+                            {{item.symbol}}
+                            {{item.baseSymbol}}
+                        </div>-->
+
+                        <div ng-if="item.symbol && !item.baseSymbol">
+                            <commodity-logo symbol="item.symbol"></commodity-logo> {{item.symbol}}
+                        </div>
+
+                        <span ng-if="item.symbol && item.baseSymbol">
+                            <commodity-logo symbol="item.symbol"></commodity-logo> {{item.symbol}} - {{item.baseSymbol}} <commodity-logo symbol="item.baseSymbol"></commodity-logo>
+                        </span>
+
+                        <div ng-if="!item.symbol && item.baseSymbol">
+                                <commodity-logo symbol="item.baseSymbol"></commodity-logo> {{item.baseSymbol}}
+                        </div>
+                    </td>
+                    <td>{{item.quantity}} {{item.symbol}}</td>
+                    <td>{{item.price ? item.price : null}}</td>
+                    <td><span>{{item.feeQuantity > 0 ? item.feeQuantity : null}} {{item.feeCommodity}}</span></td>
+                    <td>{{item.walletAddress}}</td>
+                    <td>
+                        <a ng-if="getTransactionLink(item)" class="clickable" target="_blank" ng-href="{{getTransactionLink(item)}}">
+                            {{item.transactionHash}}
+                        </a>
+                        <div ng-if="!getTransactionLink(item)">
+                            {{item.transactionHash}}
+                        </div>
+                    </td>
+                    <td ng-show="showDebug">{{item}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--
+        {{history.data}}
+        -->
+    </div>
+    </div>

@@ -1,0 +1,22 @@
+[
+  {
+    "CanonicalId": "2a6680d6-237b-4a02-b1e9-ce1ed69688de",
+    "NativeSymbol": "ETH"
+  },
+  {
+    "CanonicalId": "4b5db3e9-cf51-48cb-915e-c1924900e855",
+    "NativeSymbol": "BTC"
+  },
+  {
+    "CanonicalId": "644e8673-e47b-4400-bdc6-61c98b3ec0c7",
+    "NativeSymbol": "LTC"
+  },
+  {
+    "CanonicalId": "8688f7da-7bb2-41f1-973d-a69ad0dedc9c",
+    "NativeSymbol": "BCH"
+  },
+  {
+    "CanonicalId": "6b12ffa0-4b5f-4ce3-a22c-26a4a1fca25c",
+    "NativeSymbol": "USD"
+  }
+]

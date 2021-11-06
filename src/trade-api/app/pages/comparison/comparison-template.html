@@ -1,0 +1,83 @@
+﻿<h2>Order Book Comparison</h2>
+
+<!--
+<div>
+    <button class="btn btn-primary" ng-click="showBookDictionary = !showBookDictionary">Show Book Dictionary</button>
+</div>
+
+
+    <div ng-if="showBookDictionary">
+    {{bookDictionary}}
+</div>
+
+<div>
+    <button class="btn btn-primary" ng-click="showKucoinCache = !showKucoinCache">Show KuCoin Cache</button>
+</div>
+<div ng-if="showKucoinCache">
+    {{kucoinCache}}
+</div>
+-->
+
+<div style="font-size:18px;">
+    <span style="font-weight:bold;">Exchanges:</span>
+    <span ng-repeat="exchange in compExchanges">
+        <exchange-logo exchange="exchange"></exchange-logo>
+        {{exchangeDictionary[exchange].displayName}}
+        &nbsp;&nbsp;&nbsp;
+    </span>
+</div>
+
+<div style="font-size:18px;">
+    <span style="font-weight:bold;">Intersections:</span>
+    <span ng-if="matches">
+        {{matches.length}}
+    </span>
+    <span ng-if="!matches">
+        <loading></loading>
+    </span>
+</div>
+
+<div style="font-size:18px;">
+    <span style="font-weight:bold;">Comps loaded:</span>
+    <span ng-if="matches">
+        {{comps.length}} of {{matches.length}}
+    </span>
+    <span ng-if="!matches">
+        <loading></loading>
+    </span>
+</div>
+
+<button class="btn btn-primary" ng-click="onRefreshTheOldStuffClicked()">Refresh the old stuff</button>
+{{refreshIndex}}
+
+<br /><br />
+
+<button class="btn btn-primary" ng-click="showIfUnprofitable = !showIfUnprofitable">Toggle Unprofitable Comps</button>
+<div class="container-fluid">
+    <div ng-repeat="comp in comps">
+        <div class="row">
+            <comparison ng-model="comp"
+                        show-if-unprofitable="showIfUnprofitable"
+                        left-refresh="onLeftRefreshClicked(comp)"
+                        right-refresh="onRightRefreshClicked(comp)">
+            </comparison>
+        </div>
+    </div>
+</div>
+
+<br /><br />
+
+<div>
+    <button class="btn btn-primary" ng-click="showMatches = !showMatches">Toggle Matches</button>
+    <div ng-if="showMatches">
+        {{matches}}
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-primary" ng-click="showDebug = !showDebug">Toggle Debug</button>
+    <div ng-if="showDebug">
+        {{debug}}
+    </div>
+
+</div>

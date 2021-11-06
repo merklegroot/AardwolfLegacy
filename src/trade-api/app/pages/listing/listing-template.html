@@ -1,0 +1,28 @@
+﻿<h1>Binance Commodity Listings</h1>
+<div ng-if="listings.isLoading" style="font-size:24px; font-weight:bold;">Loading...</div>
+<div ng-if="!listings.isLoading">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Time Stamp Local</td>
+                <td>Symbol</td>
+                <td>Name</td>
+                <td>Links</td>
+                <td>Tweet</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="listing in listings.data">
+                <td style="width:250px;">{{listing.timeStampUtc | localTime}}</td>
+                <td>{{listing.commoditySymbol}}</td>
+                <td>{{listing.commodityName}}</td>
+                <td>
+                    <div ng-repeat="link in listing.links">
+                        <a target="_blank" ng-href="{{link}}">{{link}}</a>
+                    </div>
+                </td>
+                <td>{{listing.tweetText}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

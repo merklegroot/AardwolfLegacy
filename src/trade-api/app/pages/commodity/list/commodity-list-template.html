@@ -1,0 +1,71 @@
+﻿<h1>Commodity List</h1>
+
+<div class="form-inline">
+    <label>Filter&nbsp;&nbsp;</label>
+    <input class="form-control" style="width:400px;" ng-model="filter" ng-keyup="onFilterChanged();" />
+    <label class="clickable" ng-show="filter.length > 0" ng-click="clearFilter()">X</label>
+</div>
+<br />
+
+<div style="font-size:20px;">
+    <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onFirstPageClicked()">First</button>
+    <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onPreviousPageClicked()">Previous</button>
+
+    Page {{pageIndex + 1}} of {{totalPages}}
+
+    <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onNextPageClicked()">Next</button>
+    <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onLastPageClicked()">Last</button>
+</div>
+
+<div ng-if="commodities.isLoading && !commodities.data">
+    <loading></loading>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr style="font-weight:bold;">
+            <td style="max-width:50px;">Canon</td>
+            <td>Symbol</td>
+            <td>Name</td>
+            <td>Contract</td>
+            <td>Decimals</td>
+            <td>Exchanges</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="commodity in effectiveData | limitTo: 10">
+            <td style="max-width:50px;">
+                <i ng-if="commodity.id" class="fa fa-check" style="color:green; font-size:24px;"></i>
+            </td>
+            <td>
+                <a target="_blank" href="#" class="clickable" ui-sref="commodity-detail({symbol: commodity.symbol.toUpperCase()})">
+                    <commodity-logo symbol="commodity.symbol"></commodity-logo>&nbsp;{{commodity.symbol}}
+                </a>
+            </td>
+            <td>                
+                <a target="_blank" href="#" class="clickable" ui-sref="commodity-detail({symbol: commodity.symbol.toUpperCase()})">
+                    {{commodity.name}}
+                </a>
+            </td>
+            <td>
+                <a ng-if="commodity.contract" target="_blank" ng-href="{{'https://etherscan.io/token/' + commodity.contract}}">
+                    {{commodity.contract}}
+                </a>
+            </td>
+            <td>{{commodity.decimals}}</td>
+            <td>
+                <span ng-repeat="exchange in commodity.exchanges">
+                    <a 
+                       target="_blank" 
+                       href="#" 
+                       class="clickable"
+                       ui-sref="exchange-commodity-detail({exchange: exchange, nativeSymbol: commodity.symbol.toUpperCase()})">
+                        <exchange-logo exchange="exchange"></exchange-logo>
+                        {{exchange}}
+                    </a>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br /><br /><br />

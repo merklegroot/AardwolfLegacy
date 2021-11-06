@@ -1,0 +1,86 @@
+[
+  {
+    "CanonicalId": "2a6680d6-237b-4a02-b1e9-ce1ed69688de",
+    "NativeSymbol": "ETH"
+  },
+  {
+    "CanonicalId": "4b5db3e9-cf51-48cb-915e-c1924900e855",
+    "NativeSymbol": "BTC"
+  },
+  {
+    "CanonicalId": "8f893ef5-dee0-475d-881c-bc6aef203b7f",
+    "NativeSymbol": "CAT"
+  },
+  {
+    "CanonicalId": "2b706e82-1774-44e9-99f7-66b618cfe00f",
+    "NativeSymbol": "BLZ"
+  },
+  {
+    "CanonicalId": "fd3aeb19-66a1-4fc2-b411-8091f9cc7503",
+    "NativeSymbol": "PLC"
+  },
+  {
+    "CanonicalId": "fec38c49-7c69-4863-830a-8aa36e816663",
+    "NativeSymbol": "PUT"
+  },
+  {
+    "CanonicalId": "a6f7c7a0-259d-42f6-b797-dfe0bf284d2a",
+    "NativeSymbol": "SCT"
+  },
+  {
+    "CanonicalId": "dcc8b804-ea71-46de-9266-5446555215a1",
+    "NativeSymbol": "HAV"
+  },
+  {
+    "CanonicalId": "952e719f-7589-41e8-8123-19175e6b2fe9",
+    "NativeSymbol": "CRC"
+  },
+  {
+    "CanonicalId": "65bc088b-6195-4ef1-b76c-56259eb6e9b5",
+    "NativeSymbol": "CMT"
+  },
+  {
+    "CanonicalId": "70273e9e-99f4-432c-8218-0f856fe1286a",
+    "NativeSymbol": "HST"
+  },
+  {
+    "CanonicalId": "5ed25bc4-640d-4b43-9c11-82d37a382ea5",
+    "NativeSymbol": "SRN"
+  },
+  {
+    "CanonicalId": "224ec002-af2a-4f71-a6a5-dd1908adc427",
+    "NativeSymbol": "LDC"
+  },
+  {
+    "CanonicalId": "6b2bd886-b7f9-45ef-95b6-6eefa312e240",
+    "NativeSymbol": "BTG"
+  },
+  {
+    "CanonicalId": "00248088-ae35-4636-ab1b-ab68e87255f4",
+    "NativeSymbol": "WISH"
+  },
+  {
+    "CanonicalId": "a6adce4d-d569-4ac2-8aad-fb7c94e665d9",
+    "NativeSymbol": "FCT"
+  },
+  {
+    "CanonicalId": "c010a915-3943-4ea0-a423-e2f93041ad12",
+    "NativeSymbol": "DASH"
+  },
+  {
+    "CanonicalId": "6a05c4bf-f3d6-4720-82eb-440449ef322c",
+    "NativeSymbol": "XEM"
+  },
+  {
+    "CanonicalId": "aafb2e80-577e-4429-928c-fce75b68f2b3",
+    "NativeSymbol": "ARK"
+  },
+  {
+    "CanonicalId": "65e833e0-503d-4a35-8be3-f673bdee91dc",
+    "NativeSymbol": "CAN"
+  },
+  {
+    "CanonicalId": "d58b4543-8bbe-4ec0-ba94-4648290f7586",
+    "NativeSymbol": "UNIT"
+  }
+]

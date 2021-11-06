@@ -1,0 +1,70 @@
+﻿<h2>
+    <span>
+        <exchange-logo exchange="model.exchange"></exchange-logo>
+        {{model.exchange}}
+    </span>
+    <span>Order Books</span>
+</h2>
+
+<div class="container-fluid">
+    <div class="row" style="font-size:18px;">
+
+        <div>
+            <span style="font-weight:bold;">Filter:</span>
+            <input ng-model="filterText" ng-change="onFilterTextChanged()" type="text" />
+        </div>
+
+        <br />
+
+        <div style="font-size:24px;">
+            <exchange-logo exchange="model.exchange"></exchange-logo> {{model.exchange}} has {{model.tradingPairs.data.length}} trading pairs.
+            <span>
+                <button class="btn btn-primary" ng-click="onRefreshTradingPairsClicked()">Refresh</button>
+            </span>
+        </div>
+
+        <br /><br />
+
+        <div>
+            <loading ng-if="model.tradingPairs.isLoading === true"></loading>
+            <table ng-if="model.tradingPairs.isLoading === false" class="table table-striped">
+                <tr ng-repeat="tradingPair in model.filteredTradingPairs">
+                    <td>
+                        <table style="border-collapse:separate; border-spacing:10px 3px;">
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td style="width:200px;">
+                                                <trading-pair ng-model="tradingPair"></trading-pair>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary" ng-click="onRefreshOrderBookClicked(tradingPair);">Refresh</button>
+                                            </td>
+                                        </tr>
+                                    </table>                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="clickable" ui-sref="order-book-detail({exchange: model.exchange, symbol: tradingPair.symbol, baseSymbol: tradingPair.baseSymbol})">
+                                        <order-book ng-model="tradingPair.orderBook"
+                                                    min-rows="1"
+                                                    layout="horizontal">
+                                        </order-book>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <button class="btn btn-primary" ng-click="showDebug = !showDebug">Show Debug</button>
+        <div ng-if="showDebug">
+            {{model}}
+        </div>
+
+    </div>
+</div>

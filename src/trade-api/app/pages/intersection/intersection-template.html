@@ -1,0 +1,28 @@
+﻿<div>
+    <h3>Intersections</h3>
+
+    <br />
+    <div ng-show="model.isLoading">Loading...</div>
+    <div ng-hide="model.isLoading">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Symbol</td>
+                    <td>Base Symbol</td>
+                    <td>Exchanges</td>
+                    <td>Binance</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in model.data">                    
+                    <td>{{item.tradingPair.symbol}}</td>
+                    <td>{{item.tradingPair.baseSymbol}}</td>
+                    <td>{{item.exchanges}}</td>
+                    <td>{{hasBinance(item)}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {{model}}
+</div>

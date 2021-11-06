@@ -1,0 +1,6 @@
+﻿<div ng-controller="assetListController">
+    <h3>Assets</h3>
+    <div ng-repeat="asset in assets">
+        <a ui-sref="asset-detail({id: asset.symbol})">{{asset.symbol}}</a>
+    </div>
+</div>

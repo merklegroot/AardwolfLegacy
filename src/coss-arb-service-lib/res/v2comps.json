@@ -1,0 +1,49 @@
+﻿{
+  // "CRED": "idex",
+
+  // "XDCE": "idex",
+
+  "MCO": "binance",
+  "DRGN": "kucoin",
+
+  "EOS": "binance",
+
+  "XRP": "binance",
+  "XLM": "binance",
+  "NPXS": "binance",
+  // "XNK": "qryptos",
+
+  // "UBC": "idex",
+  "TRX": "binance",
+  "OPQ": "kucoin",
+  "REQ": "binance",
+  "MRK": "hitbtc",
+  "FYN": "hitbtc",
+  "CAN": "kucoin",
+  "LA": "kucoin",
+  // "WISH": "cryptopia",
+
+  //"PAY": "hitbtc",
+  //"PIX": "hitbtc",
+  //"FXT": "hitbtc",
+  //"IND": "hitbtc",
+  //"STX": "hitbtc",
+  //"HGT": "hitbtc",
+
+  "CS": "kucoin",
+  "LALA": "kucoin",
+  "GAT": "kucoin",
+  "DAT": "kucoin",
+  // "UFR": "cryptopia",
+  "NOX": "livecoin",
+  "BNT": "binance",
+  "SNM": "binance",
+  "CVC": "binance",
+  "POE": "binance",
+  "KNC": "binance",
+  "SUB": "binance",
+  "ENJ": "binance",
+  "LINK": "binance",
+  "WTC": "binance",
+  "BLZ": "binance"
+}

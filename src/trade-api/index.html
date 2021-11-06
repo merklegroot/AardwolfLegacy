@@ -1,0 +1,145 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Coins</title>
+
+    <link href="node_modules/bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap3/dist/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="node_modules/angular-toastr/dist/angular-toastr.css" rel="stylesheet" />
+    <link href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css" rel="stylesheet" />
+
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/menu.css" rel="stylesheet" />
+    <!--<link href="styles/checkbox.css" rel="stylesheet" />-->
+    <link href="styles/dialog.css" rel="stylesheet" />
+
+    <script src="node_modules/moment/moment.js"></script>
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!--<script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>-->
+
+    <script src="node_modules/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+
+    <!-- modules -->
+    <script src="app/modules/main-module.js"></script>
+
+    <!-- constants -->
+    <script src="app/constants/main-constants.js"></script>
+
+    <!-- services -->
+    <script src="app/services/util-service.js"></script>
+    <script src="app/services/alert-service.js"></script>
+    <script src="app/services/data-service.js"></script>
+    <script src="app/services/order-book-service.js"></script>
+    <script src="app/services/balance-service.js"></script>
+    <script src="app/services/commodity-service.js"></script>
+    <script src="app/services/exchange-service.js"></script>
+    <script src="app/services/valuation-service.js"></script>
+    <script src="app/services/log-service.js"></script>
+    <script src="app/services/open-order-service.js"></script>
+    <script src="app/services/history-service.js"></script>
+
+    <!-- filters -->
+    <script src="app/filters/time-filter.js"></script>
+    <script src="app/filters/ago-filter.js"></script>
+
+    <!-- directives -->
+    <script src="app/directives/balance/balance-directive-controller.js"></script>
+    <script src="app/directives/balance/balance-directive.js"></script>
+    <script src="app/directives/loading-directive/loading-directive.js"></script>
+    <script src="app/directives/exchange-commodity-list/exchange-commodity-list-directive-controller.js"></script>
+    <script src="app/directives/exchange-commodity-list/exchange-commodity-list-directive.js"></script>
+    <script src="app/directives/exchange-logo/exchange-logo-directive.js"></script>
+
+    <script src="app/directives/commodity-logo/commodity-logo-directive-controller.js"></script>
+    <script src="app/directives/commodity-logo/commodity-logo-directive.js"></script>
+    <script src="app/directives/icon-directive/icon-directive.js"></script>
+    <script src="app/directives/check-button-directive/check-button-directive.js"></script>
+
+    <script src="app/directives/canonical-commodity/canonical-commodity-directive.js"></script>
+    <script src="app/directives/trading-pair/trading-pair-directive.js"></script>
+
+    <script src="app/directives/order-book/order-book-directive-controller.js"></script>
+    <script src="app/directives/order-book/order-book-directive.js"></script>
+
+    <script src="app/directives/comparison-directive/comparison-directive.js"></script>
+    <script src="app/directives/comparison-directive/comparison-directive-controller.js"></script>
+
+    <script src="app/directives/arb/arb-directive-controller.js"></script>
+    <script src="app/directives/arb/arb-directive.js"></script>
+
+    <!-- controllers -->
+    <script src="app/pages/menu/menu-controller.js"></script>
+    <script src="app/pages/home/home-controller.js"></script>
+    <script src="app/pages/arb/arb-controller.js"></script>
+    <script src="app/pages/status/status-controller.js"></script>
+    <script src="app/pages/asset/list/asset-list-controller.js"></script>
+    <script src="app/pages/asset/detail/asset-detail-controller.js"></script>
+    <script src="app/pages/exchange/list/exchange-list-controller.js"></script>
+    <script src="app/pages/exchange/detail/exchange-detail-controller.js"></script>
+    <script src="app/pages/exchange/dialog/transfer-funds-dialog-controller.js"></script>
+    <script src="app/pages/exchange-commodity/detail/exchange-commodity-detail-controller.js"></script>
+    <script src="app/pages/eth/eth-controller.js"></script>
+    <script src="app/pages/holdings/holdings-controller.js"></script>
+    <script src="app/pages/comparison/comparison-controller.js"></script>
+    <script src="app/pages/log/log-controller.js"></script>
+    <script src="app/pages/config/config-controller.js"></script>
+    <script src="app/pages/binance-arb-config/binance-arb-config-controller.js"></script>
+    <script src="app/pages/valuation/valuation-controller.js"></script>
+    <script src="app/pages/notes/notes-controller.js"></script>
+    <script src="app/pages/intersection/intersection-controller.js"></script>
+    <script src="app/pages/history/history-controller.js"></script>
+    <script src="app/pages/commodity/list/commodity-list-controller.js"></script>
+    <script src="app/pages/commodity/detail/commodity-detail-controller.js"></script>
+    <script src="app/pages/listing/listing-controller.js"></script>
+    <script src="app/pages/tfa/tfa-controller.js"></script>
+    <script src="app/pages/canon/list/canon-list-controller.js"></script>
+    <script src="app/pages/canon/detail/canon-detail-controller.js"></script>
+    <script src="app/pages/canon/dialog/canon-dialog-controller.js"></script>
+    <script src="app/pages/test/test-controller.js"></script>
+
+    <script src="app/pages/order-book/list/order-book-list-controller.js"></script>
+    <script src="app/pages/order-book/detail/order-book-detail-controller.js"></script>
+
+    <script src="app/pages/exchange-trading-pairs/list/exchange-trading-pairs-list-controller.js"></script>
+    <script src="app/pages/exchange-trading-pairs/detail/exchange-trading-pairs-detail-controller.js"></script>
+
+    <script src="app/pages/exchange-commodities/list/exchange-commodities-list-controller.js"></script>
+    <script src="app/pages/exchange-commodities/detail/exchange-commodities-detail-controller.js"></script>
+
+    <script src="app/pages/exchange-order-books/list/exchange-order-books-list-controller.js"></script>
+    <script src="app/pages/exchange-order-books/detail/exchange-order-books-detail-controller.js"></script>
+
+    <script src="app/pages/exchange-open-orders/list/exchange-open-orders-list-controller.js"></script>
+    <script src="app/pages/exchange-open-orders/detail/exchange-open-orders-detail-controller.js"></script>
+    
+    <script src="app/pages/exchange-history/list/exchange-history-list-controller.js"></script>
+    <script src="app/pages/exchange-history/detail/exchange-history-detail-controller.js"></script>
+    
+    <script src="app/pages/place-order/place-order-controller.js"></script>
+    
+    <!-- routes -->
+    <script src="app/routes/main-routes.js"></script>
+</head>
+
+<body ng-app="main">
+    <div class="container-fluid">
+        <div ui-view="menu"></div>
+        <div ui-view="main" class="container-fluid"></div>
+    </div>
+</body>
+</html>

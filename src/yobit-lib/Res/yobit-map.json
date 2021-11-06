@@ -1,0 +1,38 @@
+[
+  {
+    "CanonicalId": "ae4ff647-8edf-4db7-bc22-79ff3e5c4283",
+    "NativeSymbol": "LOC"
+  },
+  {
+    "CanonicalId": "eaac485d-fce9-42c4-9170-8fef7b50d441",
+    "NativeSymbol": "WAVES"
+  },
+  {
+    "CanonicalId": "36b2ed46-29b4-4a35-a368-422c277cc28b",
+    "NativeSymbol": "PAY"
+  },
+  {
+    "CanonicalId": "00248088-ae35-4636-ab1b-ab68e87255f4",
+    "NativeSymbol": "WISH"
+  },
+  {
+    "CanonicalId": "6a05c4bf-f3d6-4720-82eb-440449ef322c",
+    "NativeSymbol": "XEM"
+  },
+  {
+    "CanonicalId": "7a2f5b8d-d8ef-450a-9686-957bca0d730a",
+    "NativeSymbol": "KNC"
+  },
+  {
+    "CanonicalId": "637d9893-536a-470d-b5f1-4559889ba5be",
+    "NativeSymbol": "COV"
+  },
+  {
+    "CanonicalId": "70195ab1-77af-4f7a-8f84-188a46453a87",
+    "NativeSymbol": "USC"
+  },
+  {
+    "CanonicalId": "6252a4cd-86d7-4ffe-ad3d-9e8980f5b4ef",
+    "NativeSymbol": "OMG"
+  }
+]

@@ -1,0 +1,174 @@
+﻿<h1>Exchange Open Orders Detail</h1>
+<h2>
+    <exchange-logo exchange="model.exchangeId"></exchange-logo> {{model.exchangeName}}
+</h2>
+
+<div ng-if="model.tradingPairs.isLoading">
+    Loading trading pairs...
+</div>
+<div style="font-size:12px;" ng-if="model.tradingPairs.isLoading === false">
+    <span style="font-weight:bold;">Trading Pairs:</span>
+    <span>{{model.tradingPairs.data.length}}</span>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row container">
+            <span style="font-weight:bold; font-size:24px;">Open Orders</span>
+            <span>
+                <button class="btn btn-primary" ng-click="onRefreshAllClicked()">Refresh old open orders for all trading pairs</button>
+            </span>
+            <span>
+                <button class="btn btn-warning" ng-click="showDebug = !showDebug">Toggle Debug</button>
+            </span>
+        </div>
+
+        <div ng-if="model.openOrders.isLoading">
+            <loading></loading>
+        </div>
+
+        <div class="row" style="font-weight:bold; font-size:18px;">
+            <div class="col-xs-2">Pair</div>
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-xs-1">Type</div>
+                    <div class="col-xs-2">Price</div>
+                    <div class="col-xs-2">Quantity</div>
+                    <div class="col-xs-4">Status</div>
+                    <div ng-if="showSymbolUsdValueColumn" class="col-xs-2">Symbol Usd Value</div>
+                    <div ng-if="showBaseSymbolUsdValueColumn" class="col-xs-2">Base Symbol Usd Value</div>
+                </div>
+            </div>
+            <div class="col-xs-4"><exchange-logo exchange="model.exchangeId"></exchange-logo> {{model.exchangeName}} Order Book</div>
+        </div>
+
+        <div class="row"
+             ng-if="openOrder.openOrders.length > 0"
+             ng-repeat="openOrder in model.openOrdersContainer.data"
+             style="border-top-color:gray; border-top-width:1px; border-top-style:solid;">
+            <div class="col-xs-2">
+                <trading-pair ng-model="openOrder"></trading-pair>
+                <br />
+                {{openOrder.asOfUtc | ago}}
+                <button class="btn btn-success btn-sm" ng-click="onRefreshTradingPairClicked(openOrder.symbol, openOrder.baseSymbol)">Refresh</button>
+            </div>
+            <div class="col-xs-6">
+                <div class="row" ng-repeat="order in openOrder.openOrders">
+                    <div class="col-xs-1"
+                         ng-style="order.orderType === 1 ? { 'color': 'green' } : (order.orderType === 2 ? { 'color': 'red' } : {})">
+                        {{order.orderTypeText}}
+                    </div>
+
+                    <div class="col-xs-2">
+                        <span>{{order.price}}</span>
+                        <span>{{openOrder.baseSymbol}}</span>
+                        <span><commodity-logo symbol="openOrder.baseSymbol"></commodity-logo></span>
+                    </div>
+
+                    <div class="col-xs-2">
+                        {{order.quantity}} {{openOrder.symbol}} <commodity-logo symbol="openOrder.symbol"></commodity-logo>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div ng-repeat="status in order.statuses">
+                            <i ng-if="status.disposition === 'positive'" style="color:green;" class="fa fa-check"></i>
+                            <i ng-if="status.disposition === 'negative'" class="fa fa-times-circle" style="color:red;" ></i>
+                            {{status.desc}}
+                        </div>
+                    </div>
+
+                    <div ng-if="showSymbolUsdValueColumn" class="col-xs-2">
+                        <div ng-if="openOrder.symbolUsdValue">
+                            <span>
+                                ${{openOrder.symbolUsdValue | number:8}}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div ng-if="showBaseSymbolUsdValueColumn" class="col-xs-2">
+                        <div ng-if="openOrder.baseSymbolUsdValue">
+                            <span>
+                                ${{openOrder.baseSymbolUsdValue | number:8}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div ng-if="openOrder.orderBook">
+                    <span>
+                        <span>{{openOrder.orderBook.asOf | ago}}</span>
+                        <span>
+                            <button ng-click="onRefreshOrderBookClicked(openOrder.orderBook)" class="btn btn-sm btn-success">
+                                Refresh
+                            </button>
+                        </span>
+                    </span>
+
+                    <div style="font-weight:bold;">Asks</div>
+                    <table class="table table-condensed table-striped">
+                        <thead>
+                            <tr>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="order in openOrder.orderBook.asks">
+                                <td>{{order.price}}</td>
+                                <td>{{order.quantity}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="font-weight:bold;">Bids</div>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="order in openOrder.orderBook.bids">
+                                <td>{{order.price}}</td>
+                                <td>{{order.quantity}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="row">&nbsp;</div>
+        <div style="font-weight:bold; font-size:24px;">
+            Valutions
+        </div>
+
+        <table class="table table-striped">
+            <tr ng-repeat="valuation in model.valuations">
+                <td>
+                    {{valuation.symbol}}
+                    <commodity-logo symbol="valuation.symbol"></commodity-logo>
+                </td>
+                <td style="color:green">
+                    <span ng-if="valuation.data.usdValue">
+                        ${{valuation.data.usdValue | number:8}}
+                    </span>
+                </td>
+                <td>
+                    {{valuation.data.asOfUtc | ago}}
+                    <button class="btn btn-success btn-sm">Refresh</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div ng-if="showDebug">
+    {{model}}
+</div>

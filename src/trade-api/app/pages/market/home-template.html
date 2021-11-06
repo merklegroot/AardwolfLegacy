@@ -1,0 +1,122 @@
+﻿<div>
+    <h3>Home</h3>
+
+    <div ng-show="tradingPairs.loading">Loading...</div>
+    <div ng-hide="tradingPairs.loading">
+        <div class="row" ng-repeat="item in tradingPairs.data" ng-if="item.profitA > 0 || item.profitB > 0">
+            <div class="col-xs-5" style="border: 2px solid black; margin-bottom:10px;">
+                <div class="row" style="padding-left:20px; font-size:18px;font-weight:bold; background-color:lightgrey;">
+                    <div class="col-xs-6">
+                        {{item.symbol}}-{{item.baseSymbol}}
+                    </div>
+                    <div class="col-xs-6">
+                        {{item.exchangeA}} to {{item.exchangeB}}
+                    </div>
+                </div>
+                <div class="row" ng-class="{'profitableStyle': item.profitA > 0}" style="padding-left:20px; font-size:18px;">
+                    <span style="font-weight:bold;">Profit: </span><span>{{item.profitA}} %</span>
+                    <div class="row">
+                        <span>{{item.exchangeA}} withdrawal fee {{item.withdrawalFeeA}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+
+                        <div style="font-size:18px; font-weight:bold;">{{item.exchangeA}} Asks</div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td style="font-weight:bold;">Price</td>
+                                    <td style="font-weight:bold;">Quantity</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="order in item.orderBookA.asks|limitTo:3">
+                                    <td>{{order.price}}</td>
+                                    <td>{{order.quantity}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-6">
+                        
+                        <div style="font-size:18px; font-weight:bold;">{{item.exchangeB}} Bids</div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td style="font-weight:bold;">Price</td>
+                                    <td style="font-weight:bold;">Quantity</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="order in item.orderBookB.bids|limitTo:3">
+                                    <td>{{order.price}}</td>
+                                    <td>{{order.quantity}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-5" style="border: 2px solid black; margin-bottom:10px;">
+                <div class="row" style="padding-left:20px; font-size:18px;font-weight:bold; background-color:lightgrey;">
+                    <div class="col-xs-6">
+                        {{item.symbol}}-{{item.baseSymbol}}
+                    </div>
+                    <div class="col-xs-6">
+                        {{item.exchangeB}} to {{item.exchangeA}}
+                    </div>
+                </div>
+                <div class="row" ng-class="{'profitableStyle': item.profitB > 0}" style="padding-left:20px; font-size:18px;">
+                    <span style="font-weight:bold;">Profit: </span><span>{{item.profitB}} %</span>
+                    <div class="row">
+                        <span>{{item.exchangeB}} withdrawal fee {{item.withdrawalFeeB}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div style="font-size:18px; font-weight:bold;">{{item.exchangeB}} Asks</div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td style="font-weight:bold;">Price</td>
+                                    <td style="font-weight:bold;">Quantity</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="order in item.orderBookB.asks|limitTo:3">
+                                    <td>{{order.price}}</td>
+                                    <td>{{order.quantity}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-6">
+
+                        <div style="font-size:18px; font-weight:bold;">{{item.exchangeA}} Bids</div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td style="font-weight:bold;">Price</td>
+                                    <td style="font-weight:bold;">Quantity</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="order in item.orderBookA.bids|limitTo:3">
+                                    <td>{{order.price}}</td>
+                                    <td>{{order.quantity}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12" ng-hide="item.orderBookA">Loading...</div>
+            <div class="col-xs-12">&nbsp;</div>
+        </div>
+    </div>
+
+    {{tradingPairs}}
+
+</div>

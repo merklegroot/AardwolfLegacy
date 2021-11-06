@@ -1,0 +1,211 @@
+﻿<h2>
+    <commodity-logo symbol="model.symbol"></commodity-logo>
+    {{model.displayName}}
+    <span ng-if="!model.displayName">Commodity Detail</span>
+</h2>
+<div style="font-size:12px; font-style:italic;" ng-if="false">
+    <span style="font-weight:bold;">Canonical Id:</span>
+    <span>{{model.commodity.data.canonicalId}}</span>
+</div>
+
+<loading ng-if="model.commodity.isLoading"></loading>
+
+<br />
+<div ng-if="model.commodity.data" style="font-size:18px;">
+    <table class="table" style="width:800px;">
+        <tr>
+            <td style="font-weight:bold;">Symbol</td>
+            <td>
+                <span>
+                    {{model.symbol}}
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Name</td>
+            <td>
+                <span>
+                    {{model.commodity.data.canonicalName}}
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Official website</td>
+            <td>
+                <span>
+                    <a target="_blank" ng-if="model.commodity.data.website" ng-href="model.commodity.data.website">
+                        {{model.commodity.data.website}}
+                    </a>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Trading on</td>
+            <td>
+                <span ng-repeat="exchange in model.exchanges">
+                    <!-- todo: the native symbol for the indiviual exchange should be used here or the exchange-commodity-detail controller should be enhanced to accept the canonial symbol or id. -->
+                    <a target="_blank" ui-sref="exchange-commodity-detail({exchange: exchange.id, nativeSymbol: model.symbol})" ng-if="exchange.id.toUpperCase() !== 'MEW'">
+                        <exchange-logo exchange="exchange.id"></exchange-logo>
+                        {{exchange.displayName}}
+                    </a>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold;">Trading against</td>
+            <td>
+                <span ng-repeat="baseSymbol in model.baseSymbols">
+                    <commodity-logo symbol="baseSymbol"></commodity-logo>
+                    {{baseSymbol}}
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h3>Valuations</h3>
+    <table class="table">
+        <tr>
+            <td ng-repeat="valuation in model.valuations">
+                <span>
+                    <commodity-logo symbol="valuation.symbol"></commodity-logo>
+                    {{valuation.symbol}}
+                </span>
+                <span ng-if="valuation.data"
+                      style="color:green; font-weight:bold;">
+                    {{valuation.data | currency:undefined:5}}
+                </span>
+                <button ng-disabled="valuation.isLoading"
+                        class="btn btn-primary"
+                        ng-click="onRefreshValuationClicked(valuation)">
+                    Refresh
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <table class="table" style="width:600px;">
+        <tr style="font-size:18px;">
+            <td>Best Bid</td>
+            <td>
+                <div ng-if="model.bestBid">
+                    <div>
+                        <span style="font-weight:bold;">
+                            <exchange-logo exchange="model.bestBid.exchangeId"></exchange-logo>
+                            {{model.bestBid.exchangeDisplayName}}
+                        </span>
+                    </div>
+                    <div>
+                        <span style="font-weight:bold;">
+                            <commodity-logo symbol="'usd'"></commodity-logo>
+                            Usd Price:
+                        </span>
+                        <span class="buy">
+                            {{model.bestBid.usdPrice | currency:undefined:5}}
+                        </span>
+                    </div>
+                    <div>
+                        <span style="font-weight:bold;">
+                            <commodity-logo symbol="model.bestBid.baseSymbol"></commodity-logo>
+                            {{model.bestBid.baseSymbol}} Price:
+                        </span>
+                        <span>
+                            {{model.bestBid.symbolPrice}}
+                        </span>
+                    </div>
+
+                    <div>
+                        <span style="font-weight:bold;">
+                            Quantity:
+                        </span>
+                        <span>
+                            {{model.bestBid.quantity}}
+                        </span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr style="font-size:18px;">
+            <td>Best Ask</td>
+            <td>
+                <div ng-if="model.bestAsk">
+                    <div>
+                        <span style="font-weight:bold;">
+                            <exchange-logo exchange="model.bestAsk.exchangeId"></exchange-logo>
+                            {{model.bestAsk.exchangeDisplayName}}
+                        </span>
+                    </div>
+                    <div>
+                        <span style="font-weight:bold;">
+                            <commodity-logo symbol="'usd'"></commodity-logo>
+                            Usd Price:
+                        </span>
+                        <span class="sell">
+                            {{model.bestAsk.usdPrice | currency:undefined:5}}
+                        </span>
+                    </div>
+                    <div>
+                        <span style="font-weight:bold;">
+                            <commodity-logo symbol="model.bestAsk.baseSymbol"></commodity-logo>
+                            {{model.bestAsk.baseSymbol}} Price:
+                        </span>
+                        <span>
+                            {{model.bestAsk.symbolPrice}}
+                        </span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<button class="btn btn-sm btn-success" ng-click="showGbp = !showGbp">Toggle GBP</button>
+<button class="btn btn-sm btn-success" ng-click="showEur = !showEur">Toggle EUR</button>
+
+<div ng-if="model.commodity.data">
+    <h3>Order Books</h3>
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="exchange in model.exchanges" ng-if="exchange.id.toUpperCase() !== 'MEW'">
+                <td style="font-weight:bold; width:150px;">                    
+                    <div>
+                        <exchange-logo exchange="exchange.id"></exchange-logo>
+                        {{exchange.displayName}}
+                    </div>
+                    <div>
+                        Can Deposit:
+                        <i ng-if="exchange.canDeposit === true" class="fa fa-check" style="color:green;"></i>
+                        <i ng-if="exchange.canDeposit === false" class="fa fa-close" style="color:red;"></i>
+                        <i ng-if="exchange.canDeposit === undefined || exchange.canDeposit === null" class="fa fa-question" style="color:blue;"></i>
+                    </div>
+                    <div>
+                        Can Withdraw:
+                        <i ng-if="exchange.canWithdraw === true" class="fa fa-check" style="color:green;"></i>
+                        <i ng-if="exchange.canWithdraw === false" class="fa fa-close" style="color:red;"></i>
+                        <i ng-if="exchange.canWithdraw === undefined || exchange.canWithdraw === null" class="fa fa-question" style="color:blue;"></i>
+                    </div>
+                </td>
+                <td ng-repeat="orderBook in exchange.orderBooks">
+                    <div ng-if="orderBook.data && (orderBook.baseSymbol.toUpperCase() !== 'GBP' || showGbp) && (orderBook.baseSymbol.toUpperCase() !== 'EUR' || showEur)">
+                        <trading-pair ng-model="{ symbol: model.symbol, baseSymbol: orderBook.baseSymbol}"></trading-pair>
+                        <button class="btn btn-primary"
+                                ng-click="onRefreshOrderBookClicked(exchange, orderBook)"
+                                ng-disabled="orderBook.isLoading">
+                            Refresh
+                        </button>
+                        <order-book ng-model="orderBook"
+                                    min-rows="3"
+                                    base-symbol="orderBook.baseSymbol"
+                                    valuations="model.valuations"
+                                    hide-terms="true">
+                        </order-book>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

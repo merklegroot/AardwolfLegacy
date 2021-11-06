@@ -1,0 +1,96 @@
+﻿<div>
+    <h2>
+        Holdings
+        <span style="color:#00dd21;">{{getTotalValue() | currency}}</span>
+        <button class="btn btn-xs btn-primary" ng-click="showHoldingDebug = !showHoldingDebug">Show Debug</button>
+    </h2>
+
+    <loading ng-if="model.exchanges.isLoading"></loading>
+
+    <div ng-hide="model.exchanges.isLoading" class="row">
+        <div ng-repeat="exchange in model.exchanges.data" class="col-md-4 col-xs-12">
+            <h2 style="background-color:aliceblue; height:40px; margin-top:5px;">
+                <a target="_blank" ui-sref="exchange-detail({id: exchange.name.toLowerCase()})">
+                    {{exchange.name}}
+                </a>
+
+                <button class="pull-right btn btn-md btn-primary" ng-click="onRefreshExchangeClicked(exchange)">Refresh</button>
+
+                <div class="money pull-right" ng-show="exchange.holdings.totalValue">
+                    {{exchange.holdings.totalValue | currency}}
+                    &nbsp;&nbsp;
+                </div>
+
+            </h2>
+
+            <i>Id: {{exchange.id}}</i>
+
+            <div>
+                <div style="font-size:18px; font-style:italic;">As of <span>{{getAge(exchange.holdings.timeStampUtc)}} ago</span></div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="exchange.showSmallAssets">
+                    <label class="form-check-label" for="exampleCheck1">Show small assets</label>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Asset</td>
+                            <td>Total</td>
+                            <td>Available</td>
+                            <td>In Orders</td>
+                            <td>Value</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="holding in sort(exchange.holdings.data.holdings)"
+                            ng-if="shouldShowAsset(holding, exchange)">
+                            <td style="font-weight:bold;">
+                                <a target="_blank" ui-sref="commodity-detail({symbol: holding.asset.toUpperCase()})">
+                                    <commodity-logo symbol="holding.asset.toUpperCase()"></commodity-logo> {{holding.dispayName}}
+                                </a>
+                            </td>
+                            <td style="font-weight:bold;">{{holding.total}}</td>
+                            <td>{{holding.available}}</td>
+                            <td>{{holding.inOrders}}</td>
+                            <td>
+                                <div ng-if="holding.value">${{holding.value.toFixed(2)}}</div>
+                            </td>
+                            <td>
+                                <div ng-if="exchange.name.toUpperCase() === 'Binance'.toUpperCase() || exchange.name.toUpperCase() === 'KuCoin'.toUpperCase()">
+                                    <button ng-if="canTransferToCoss(holding.asset)"
+                                            class="btn btn-md btn-primary"
+                                            ng-click="onTransferClicked(exchange, holding, 'Coss');">
+                                        Transfer All to Coss
+                                    </button>
+
+                                    <button ng-if="canTransferToBitz(holding.asset)"
+                                            class="btn btn-md btn-primary"
+                                            ng-click="onTransferClicked(exchange, holding, 'bitz');">
+                                        Transfer All to Bit-Z
+                                    </button>
+
+                                    <button ng-if="exchange.name.toUpperCase() === 'Binance'.toUpperCase() && holding.asset !== 'BTC' && holding.asset !== 'ETH' && holding.asset !== 'BNB'"
+                                            ng-click="onSellAllMarketClicked(exchange, holding.asset, 'ETH', holding.available)"
+                                            class="btn btn-md btn-success">
+                                        Sell All Market - ETH
+                                    </button>
+
+                                    <button ng-if="exchange.name.toUpperCase() === 'Binance'.toUpperCase() && holding.asset !== 'BTC' && holding.asset !== 'ETH' && holding.asset !== 'BNB'"
+                                            ng-click="onSellAllMarketClicked(exchange, holding.asset, 'BTC', holding.available)"
+                                            class="btn btn-md btn-success">
+                                        Sell All Market - BTC
+                                    </button>
+                                </div>
+                            </td>
+                            <td ng-if="showHoldingDebug">
+                                {{holding}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

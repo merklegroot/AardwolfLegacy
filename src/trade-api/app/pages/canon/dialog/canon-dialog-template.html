@@ -1,0 +1,77 @@
+﻿<div class="modal-header" style="background-color:greenyellow;">
+    <h3 class="modal-title"><span ng-if="!data.id">New</span><span ng-if="data.id">Edit</span> Canon</h3>
+</div>
+<div class="modal-body" style="font-size:24px;">
+    <table>
+        <tr ng-if="data.id">
+            <td style="font-weight:bold;">Id:&nbsp;</td>
+            <td>
+                &nbsp;{{data.id}}
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Symbol:&nbsp;</td>
+            <td>
+                <input type="text" ng-model="data.symbol" />
+                <commodity-logo symbol="data.symbol"></commodity-logo>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Name:&nbsp;</td>
+            <td>
+                <input type="text" ng-model="data.name" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Is Eth:&nbsp;</td>
+            <td>
+                &nbsp;{{data.isEth}}
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Is Eth Token:&nbsp;</td>
+            <td>
+                &nbsp;{{data.isEthToken}}
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Contract Address:&nbsp;</td>
+            <td>
+                <input style="width:550px;" type="text" ng-model="data.contractId" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Decimals:&nbsp;</td>
+            <td>
+                <input type="number" ng-model="data.decimals" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Website:&nbsp;</td>
+            <td>
+                <input type="text" ng-model="data.website" />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-weight:bold;">Telegram:&nbsp;</td>
+            <td>
+                <input type="text" ng-model="data.telegram" />
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+<div class="modal-footer">
+
+    <button class="btn btn-lg btn-secondary pull-left" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-lg btn-success" type="button" ng-click="saveChanges()">Save changes</button>
+</div>

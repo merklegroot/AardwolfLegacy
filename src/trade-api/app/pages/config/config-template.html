@@ -1,0 +1,279 @@
+﻿<div>   
+    <h3>Configuration</h3>
+
+    <a ui-sref="binance-arb-config">Binance Arb Config</a>
+
+    <div>
+        <div ng-repeat="exchange in model.exchanges" class="panel panel-default">
+            <div class="panel-heading" style="font-size:24px; font-weight:bold;">{{exchange.name}} Api Configuration</div>
+
+            <div class="panel-body">
+                <div ng-show="exchange.isLoading">Loading...</div>
+                <div ng-hide="exchange.isLoading">
+                    <form>
+                        <div class="form-inline form-group">
+                            <label>Public Key</label>
+                            <input ng-model="exchange.apiKey.key" type="text" style="min-width:800px;" class="form-control" placeholder="Api Public Key..." />
+                        </div>
+                        <div class="form-inline form-group">
+                            <label>Private Key</label>
+                            <input ng-model="exchange.apiKey.secret" type="text" style="min-width:800px;" class="form-control" placeholder="Api Private Key..." />
+                        </div>
+                        <div class="form-inline form-group">
+                            <button class="btn btn-lg btn-primary" ng-click="onUpdateExchangeClicked(exchange)">Update</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <hr size="1" />
+
+        <div style="font-size:24px; font-weight:bold;">Ccxt Config</div>
+        <div ng-show="isLoadingCcxtConfig">Loading Ccxt Config...</div>
+        <div ng-hide="isLoadingCcxtConfig">
+            <form>
+                <div class="form-inline form-group">
+                    <label for="connectionString">Ccxt Url</label>
+                    <input ng-model="ccxtConfig.url" type="text" style="min-width:400px;" class="form-control" placeholder="http://localhost:3010" />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateCcxtUrlClick()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <hr size="1" />
+
+        <div ng-show="isLoadingConnectionString">Loading Connection String...</div>
+        <div ng-hide="isLoadingConnectionString">
+            <form>
+                <div class="form-inline form-group">
+                    <label for="connectionString">Mongo Config</label>
+                    <input ng-model="model.connectionString" type="text" style="min-width:400px;" class="form-control" id="connectionString" placeholder="localhost:27017" />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateMongoConnectionStringClick()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">MEW<i class="fa fa-cat"></i></div>
+        <div ng-show="isLoading">Loading...</div>
+        <div ng-hide="isLoading">
+            <form>
+                <div class="form-inline form-group">
+                    <label>MEW Deposit Address</label>
+                    <input ng-model="model.mew" type="text" style="min-width:400px;" class="form-control" placeholder="0x..." />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateMyEtherWalletAddressClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">MEW Password<i class="fa fa-cat"></i></div>
+        <div ng-show="isLoading">Loading...</div>
+        <div ng-hide="isLoading">
+            <form>
+                <div class="form-inline form-group">
+                    <label>MEW Password</label>
+                    <input ng-model="model.mewPassword" type="password" style="min-width:400px;" class="form-control" />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateMewPasswordClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">MEW File Name<i class="fa fa-cat"></i></div>
+        <div ng-show="isLoading">Loading...</div>
+        <div ng-hide="isLoading">
+            <form>
+                <div class="form-inline form-group">
+                    <label>MEW File Name</label>
+                    <input ng-model="model.mewWalletFileName" type="text" style="min-width:400px;" class="form-control" />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateMewWalletFileNameClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div style="font-size:24px; font-weight:bold;">Bit-Z Login Configuration</div>
+        <div ng-show="isLoadingBitzLoginCredentials">Bit-Z Login User</div>
+        <div ng-hide="isLoadingBitzLoginCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label>User Name</label>
+                    <input ng-model="model.bitzLoginCredentials.userName" type="text" style="min-width:800px;" class="form-control" placeholder="User Name..." />
+                </div>
+                <div class="form-inline form-group">
+                    <label>Password</label>
+                    <input ng-model="model.bitzLoginCredentials.password" type="password" style="min-width:800px;" class="form-control" placeholder="Password..." />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateBitzLoginCredentialsClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Bit-Z Trade Password<i class="fa fa-cat"></i></div>
+        <div ng-show="isLoading">Loading...</div>
+        <div ng-hide="isLoading">
+            <form>
+                <div class="form-inline form-group">
+                    <label for="myEtherWalletAddress">Bit-Z Trade Password</label>
+                    <input ng-model="model.bitzTradePassword" type="password" style="min-width:400px;" class="form-control" placeholder="" />
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateBitzTradePasswordClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Bit-Z Agent Configuration</div>
+        <div>
+            <form>
+                <div class="form-inline form-group">
+                    <div class="checkbox checkbox-info checkbox-circle">
+                        <input type="checkbox" ng-model="bitzAgentConfig.isAutoTradingEnabled" />
+                        <label>
+                            Auto Trading Enabled?
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-inline form-group">
+                        <label>Eth Threshold</label>
+                        <input ng-model="bitzAgentConfig.ethThreshold" type="text" style="width:75px;" class="form-control" />&nbsp;%
+                    </div>
+                </div>
+                <div>
+                    <div class="form-inline form-group">
+                        <label>Token Threshold</label>
+                        <input ng-model="bitzAgentConfig.tokenThreshold" type="text" style="width:75px;" class="form-control" />&nbsp;%
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateBitzAgentConfigClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Etherscan Api Configuration</div>
+        <div ng-show="isLoadingEtherscanApiKey">Etherscan Api Key...</div>
+        <div ng-hide="isLoadingEtherscanApiKey">
+            <form>
+                <div class="form-inline form-group">
+                    <label for="etherscanApiKey">Key</label>
+                    <input ng-model="model.etherscanApiKey" type="text" style="min-width:800px;" class="form-control" id="etherscanApiKey" placeholder="etherscan api key..." />
+                </div>
+                <div class="form-inline form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateEtherscanApiKeyClick()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Coss Configuration</div>
+        <div ng-show="isLoadingCossCredentials">Coss User</div>
+        <div ng-hide="isLoadingCossCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label>User Name</label>
+                    <input ng-model="model.cossCredentials.userName" type="text" style="min-width:800px;" class="form-control" id="cossUserName" placeholder="Coss User Name..." />
+                </div>
+                <div class="form-inline form-group">
+                    <label>Password</label>
+                    <input ng-model="model.cossCredentials.password" type="text" style="min-width:800px;" class="form-control" id="cossPassword" placeholder="Coss Password..." />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateCossCredentialsClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Coss Email Configuration</div>
+        <div ng-show="isLoadingCossEmailCredentials">Coss Email User</div>
+        <div ng-hide="isLoadingCossEmailCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label>User Name</label>
+                    <input ng-model="model.cossEmailCredentials.userName" type="text" style="min-width:800px;" class="form-control" placeholder="Coss Email User Name..." />
+                </div>
+                <div class="form-inline form-group">
+                    <label>Password</label>
+                    <input ng-model="model.cossEmailCredentials.password" type="password" style="min-width:800px;" class="form-control" placeholder="Coss Email Password..." />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateCossEmailCredentialsClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Coss Agent Configuration</div>
+        <div>
+            <form>
+                <div class="form-inline form-group">
+                    <div class="checkbox checkbox-info checkbox-circle">
+                        <input type="checkbox" ng-model="cossAgentConfig.isCossAutoTradingEnabled" />
+                        <label>
+                            Auto Trading Enabled?
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-inline form-group">
+                        <label>Eth Threshold</label>
+                        <input ng-model="cossAgentConfig.ethThreshold" type="text" style="width:75px;" class="form-control" />&nbsp;%
+                    </div>
+                </div>
+                <div>
+                    <div class="form-inline form-group">
+                        <label>Token Threshold</label>
+                        <input ng-model="cossAgentConfig.tokenThreshold" type="text" style="width:75px;" class="form-control" />&nbsp;%
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateCossAgentConfigClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Kucoin Email Configuration</div>
+        <div ng-show="isLoadingKucoinEmailCredentials">Kucoin Email User</div>
+        <div ng-hide="isLoadingKucoinEmailCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label>User Name</label>
+                    <input ng-model="model.kucoinEmailCredentials.userName" type="text" style="min-width:800px;" class="form-control" placeholder="Kucoin Email User Name..." />
+                </div>
+                <div class="form-inline form-group">
+                    <label for="etherscanApiKey">Password</label>
+                    <input ng-model="model.kucoinEmailCredentials.password" type="password" style="min-width:800px;" class="form-control" placeholder="Kucoin Email Password..." />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateKucoinEmailCredentialsClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="font-size:24px; font-weight:bold;">Kucoin Extended Configuration</div>
+        <div ng-show="isLoadingKucoinEmailCredentials">Kucoin Trade Password</div>
+        <div ng-hide="isLoadingKucoinEmailCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label for="etherscanApiKey">Trade Password</label>
+                    <input ng-model="model.kucoinTradePassword" type="password" style="min-width:800px;" class="form-control" placeholder="Kucoin Trade Password" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateKucoinTradePasswordClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <div ng-show="isLoadingKucoinEmailCredentials">Kucoin Api Passphrase</div>
+        <div ng-hide="isLoadingKucoinEmailCredentials">
+            <form>
+                <div class="form-inline form-group">
+                    <label>Api Passphrase</label>
+                    <input ng-model="model.kucoinApiPassphrase" type="text" style="min-width:800px;" class="form-control" placeholder="Kucoin Trade Password" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary" ng-click="onUpdateKucoinApiPassphraseClicked()">Update</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

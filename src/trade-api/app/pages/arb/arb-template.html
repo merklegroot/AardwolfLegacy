@@ -1,0 +1,22 @@
+﻿<div>
+    <h1>
+        <span>Arb</span>
+        <span>
+            <button class="btn btn-primary" ng-click="showDebug = !showDebug">{{showDebug ? "Hide" : "Show"}} Debug</button>
+        </span>
+    </h1>
+
+    <div class="row">&nbsp;</div>
+    <div class="row">&nbsp;</div>
+    
+    <div class="row">
+        <div class="col-xs-6" ng-repeat="groupIndex in ['profitableIndexes', 'unprofitableIndexes']">
+            <span style="font-size:20px; font-weight:bold;">
+                {{groupIndex == "profitableIndexes" ? "Profitable" : "Not Profitable"}}
+            </span>
+            <div ng-repeat="index in model[groupIndex]">
+                <arb ng-model="model.arbs[index]"></arb>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿<h2>
+    <span>
+        <exchange-logo exchange="model.exchange"></exchange-logo>
+        {{model.exchangeDisplayName}}
+    </span>
+    <span>Trading Pairs</span>
+
+    <span>
+        <button class="btn btn-primary" ng-click="onRefreshClicked()">Refresh</button>
+    </span>
+</h2>
+
+<div class="container-fluid">
+    <div class="row" style="font-size:18px;">
+        <br />
+
+        <div>
+            <span style="font-weight:bold;">Filter:</span>
+            <input ng-model="filterText" ng-change="onFilterTextChanged()" type="text" />
+        </div>
+
+        <br /><br />
+
+        <button class="btn btn-primary" ng-click="showDebug = !showDebug">Toggle Debug</button>
+        <br /><br />
+
+        <loading ng-if="model.tradingPairs.isLoading === true"></loading>
+
+        <div ng-if="model.tradingPairs.isLoading === false">
+            <div style="font-size:24px;">
+                <exchange-logo exchange="model.exchange"></exchange-logo> {{model.exchangeDisplayName}} has {{model.tradingPairs.data.length}} trading pairs.
+            </div>
+        </div>
+
+        <br />
+
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="tradingPair in model.filteredTradingPairs">
+                    <td>
+                        <table style="border-collapse:separate; border-spacing:10px 3px;">
+                            <tr>
+                                <td style="font-weight:bold;">Display Pair</td>
+                                <td>
+                                    <commodity-logo symbol="tradingPair.symbol"></commodity-logo>
+                                    {{tradingPair.symbol}} - {{tradingPair.baseSymbol}}
+                                    <commodity-logo symbol="tradingPair.baseSymbol"></commodity-logo>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Native Pair</td>
+                                <td>
+                                    {{tradingPair.nativeSymbol}} - {{tradingPair.nativeBaseSymbol}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Native Name</td>
+                                <td>{{tradingPair.nativeCommodityName}}</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Canonical Id</td>
+                                <td>
+                                    {{tradingPair.canonicalCommodityId}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold;">Lot Size</td>
+                                <td>
+                                    {{tradingPair.lotSize}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a target="_blank" ui-sref="order-book-detail({exchange: model.exchange, baseSymbol: tradingPair.baseSymbol, symbol: tradingPair.symbol})">
+                                        Go to order book
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr ng-if="showDebug">
+                                <td style="font-weight:bold;">Debug</td>
+                                <td>{{tradingPair}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

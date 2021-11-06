@@ -1,0 +1,134 @@
+[
+  {
+    "CanonicalId": "8688f7da-7bb2-41f1-973d-a69ad0dedc9c",
+    "NativeSymbol": "BCC"
+  },
+  {
+    "CanonicalId": "b8d94071-5a1c-42eb-bcb9-ead081d8d474",
+    "NativeSymbol": "ICX"
+  },
+  {
+    "CanonicalId": "bb9f7b2a-8eea-4e70-9e43-325b6cf7cfd7",
+    "NativeSymbol": "ADA"
+  },
+  {
+    "CanonicalId": "6566013b-e301-4cf6-907b-cc47f3b5c9e1",
+    "NativeSymbol": "BLZ"
+  },
+  {
+    "CanonicalId": "9d20aa5e-b4e7-4f62-b375-81f84b881b6d",
+    "NativeSymbol": "BNB"
+  },
+  {
+    "CanonicalId": "4b5db3e9-cf51-48cb-915e-c1924900e855",
+    "NativeSymbol": "BTC"
+  },
+  {
+    "CanonicalId": "adfe8dca-c0df-423c-890d-c99bd396a0fc",
+    "NativeSymbol": "BNT"
+  },
+  {
+    "CanonicalId": "dca3998f-b96c-4026-96c2-2c6b7ac1315b",
+    "NativeSymbol": "CVC"
+  },
+  {
+    "CanonicalId": "c010a915-3943-4ea0-a423-e2f93041ad12",
+    "NativeSymbol": "DASH"
+  },
+  {
+    "CanonicalId": "4a09ec04-f56d-4fef-b8b4-be5dcfc1748e",
+    "NativeSymbol": "DLT"
+  },
+  {
+    "CanonicalId": "1dde2d9b-cb30-4510-9688-fd359bb63437",
+    "NativeSymbol": "ENG"
+  },
+  {
+    "CanonicalId": "f2a44b47-b87d-406e-be49-31c3fdb7f678",
+    "NativeSymbol": "ENJ"
+  },
+  {
+    "CanonicalId": "a52e0ea2-361f-457d-a76c-276abbf6f54d",
+    "NativeSymbol": "USDT"
+  },
+  {
+    "CanonicalId": "aafb2e80-577e-4429-928c-fce75b68f2b3",
+    "NativeSymbol": "ARK"
+  },
+  {
+    "CanonicalId": "fc5db2d3-7997-4d66-9f5b-863abe42cbe1",
+    "NativeSymbol": "ARN"
+  },
+  {
+    "CanonicalId": "a44d6544-4ce7-4bef-86bc-778fd4cf41eb",
+    "NativeSymbol": "ETC"
+  },
+  {
+    "CanonicalId": "2a6680d6-237b-4a02-b1e9-ce1ed69688de",
+    "NativeSymbol": "ETH"
+  },
+  {
+    "CanonicalId": "9f29e4ac-86ee-439b-8395-95a41152f588",
+    "NativeSymbol": "CMT"
+  },
+  {
+    "CanonicalId": "42ddc087-af32-4f0b-b5e1-820bada38451",
+    "NativeSymbol": "BTG"
+  },
+  {
+    "CanonicalId": "93dbb2ad-a24b-429b-851c-9b4524cda0c3",
+    "NativeSymbol": "VET"
+  },
+  {
+    "CanonicalId": "d198f027-0321-48d1-881e-08c76b3b2f11",
+    "NativeSymbol": "VEN"
+  },
+  {
+    "CanonicalId": "cab1dd96-4deb-4fc6-a522-e808740ec34e",
+    "NativeSymbol": "DENT"
+  },
+  {
+    "CanonicalId": "21be94c9-690d-4a40-9bd8-ce2417ba1290",
+    "NativeSymbol": "POE"
+  },
+  {
+    "CanonicalId": "eaac485d-fce9-42c4-9170-8fef7b50d441",
+    "NativeSymbol": "WAVES"
+  },
+  {
+    "CanonicalId": "d7605d3b-aab0-4e75-b2ec-16ab4f984897",
+    "NativeSymbol": "SNM"
+  },
+  {
+    "CanonicalId": "7b293fb7-4dfc-41b5-beae-555f07387c70",
+    "NativeSymbol": "KNC"
+  },
+  {
+    "CanonicalId": "6a05c4bf-f3d6-4720-82eb-440449ef322c",
+    "NativeSymbol": "XEM"
+  },
+  {
+    "CanonicalId": "644e8673-e47b-4400-bdc6-61c98b3ec0c7",
+    "NativeSymbol": "LTC"
+  },
+  {
+    "CanonicalId": "056bcdae-3e19-4a46-b8ec-e46bbf2c87ce",
+    "NativeSymbol": "TUSD"
+  },
+  {
+    "CanonicalId": "1d28c6ae-b282-42c7-855d-90d5e63f15a1",
+    "NativeSymbol": "NEO"
+  },
+  {
+    "CanonicalId": "ed910304-052f-4a3d-bff4-e9300ded9e11",
+    "NativeSymbol": "XRP"
+  },
+  {
+    "CanonicalId": "775baca3-0e86-4f72-aa99-f94056b22286",
+    "NativeSymbol": "REQ"
+  },
+  {
+    "CanonicalId": "894bd954-fd6d-449d-b0f2-2445ab9c614d",
+    "NativeSymbol": "USDC"
+  }
+]

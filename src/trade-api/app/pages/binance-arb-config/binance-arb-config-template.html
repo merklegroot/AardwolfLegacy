@@ -1,0 +1,78 @@
+﻿<h3>Binance arb config</h3>
+<br /><br />
+
+<h4>Status: <span ng-style="model.binanceArbConfig.data.isEnabled ? { 'color': 'green' } : { 'color': 'red' }">{{model.binanceArbConfig.data.isEnabled ? "Enabled" : "Disabled"}}</span></h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.isEnabled = true" ng-disabled="model.binanceArbConfig.data.isEnabled">Turn On</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.isEnabled = false" ng-disabled="!model.binanceArbConfig.data.isEnabled">Turn Off</button>
+
+<br /><br />
+
+<h4>Ark Sale Target: {{model.binanceArbConfig.data.arkSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.arkSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.arkSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.arkSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.arkSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.arkSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.arkSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Tusd Sale Target: {{model.binanceArbConfig.data.tusdSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.tusdSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.tusdSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.tusdSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.tusdSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.tusdSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.tusdSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Eth Sale Target: {{model.binanceArbConfig.data.ethSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'TUSD'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'TUSD'">TUSD</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'USDC'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'USDC'">USDC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'BNB'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'BNB'">BNB</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'WAVES'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'WAVES'">WAVES</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.ethSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Btc Sale Target: {{model.binanceArbConfig.data.btcSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.btcSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.btcSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.btcSaleTarget = 'USDC'" ng-disabled="model.binanceArbConfig.data.btcSaleTarget.toUpperCase() === 'USDC'">USDC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.btcSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.btcSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Ltc Sale Target: {{model.binanceArbConfig.data.ltcSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ltcSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.ltcSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ltcSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.ltcSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ltcSaleTarget = 'USDT'" ng-disabled="model.binanceArbConfig.data.ltcSaleTarget.toUpperCase() === 'USDT'">USDT</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ltcSaleTarget = 'BNB'" ng-disabled="model.binanceArbConfig.data.ltcSaleTarget.toUpperCase() === 'BNB'">BNB</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ltcSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.ltcSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Waves Sale Target: {{model.binanceArbConfig.data.wavesSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.wavesSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.wavesSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.wavesSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.wavesSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.wavesSaleTarget = 'BNB'" ng-disabled="model.binanceArbConfig.data.wavesSaleTarget.toUpperCase() === 'BNB'">BNB</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.wavesSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.wavesSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<h4>Neo Sale Target: {{model.binanceArbConfig.data.neoSaleTarget}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.neoSaleTarget = 'ETH'" ng-disabled="model.binanceArbConfig.data.neoSaleTarget.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.neoSaleTarget = 'BTC'" ng-disabled="model.binanceArbConfig.data.neoSaleTarget.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.neoSaleTarget = 'USDT'" ng-disabled="model.binanceArbConfig.data.neoSaleTarget.toUpperCase() === 'USDT'">USDT</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.neoSaleTarget = 'BNB'" ng-disabled="model.binanceArbConfig.data.neoSaleTarget.toUpperCase() === 'BNB'">BNB</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.neoSaleTarget = 'None'" ng-disabled="model.binanceArbConfig.data.neoSaleTarget.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />
+
+<!--<h4>ETH-BTC Conversion: {{model.binanceArbConfig.data.ethBtcConversion}}</h4>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethBtcConversion = 'ETH'" ng-disabled="model.binanceArbConfig.data.ethBtcConversion.toUpperCase() === 'ETH'">ETH</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethBtcConversion = 'BTC'" ng-disabled="model.binanceArbConfig.data.ethBtcConversion.toUpperCase() === 'BTC'">BTC</button>
+<button class="btn btn-sm btn-primary" ng-click="model.binanceArbConfig.data.ethBtcConversion = 'None'" ng-disabled="model.binanceArbConfig.data.ethBtcConversion.toUpperCase() === 'NONE'">None</button>
+
+<br /><br />-->
+
+
+<button class="btn btn-md btn-success" ng-click="onSaveClicked()">Save</button>
+
+<h3>Debug</h3>
+{{model}}

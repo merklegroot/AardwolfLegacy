@@ -1,0 +1,274 @@
+[
+  {
+    "CanonicalId": "ec9d3dde-9aab-4940-ab76-1f12bc11bc20",
+    "NativeSymbol": "ADI"
+  },
+  {
+    "CanonicalId": "adfe8dca-c0df-423c-890d-c99bd396a0fc",
+    "NativeSymbol": "BNT"
+  },
+  {
+    "CanonicalId": "8688f7da-7bb2-41f1-973d-a69ad0dedc9c",
+    "NativeSymbol": "BCH"
+  },
+  {
+    "CanonicalId": "4b0252d6-782e-4b1f-8858-e72c89ec61b8",
+    "NativeSymbol": "XNK"
+  },
+  {
+    "CanonicalId": "57d9741e-6e6a-45b7-8a38-d693290cbbf1",
+    "NativeSymbol": "LINK"
+  },
+  {
+    "CanonicalId": "b5a7e31e-6313-419d-ba84-9ddd56ab3347",
+    "NativeSymbol": "VZT"
+  },
+  {
+    "CanonicalId": "b84fab1f-90d2-471a-86b0-e6d5f32f05ce",
+    "NativeSymbol": "LSK"
+  },
+  {
+    "CanonicalId": "9e82a6d6-14f2-4053-94b3-1d472872100d",
+    "NativeSymbol": "WTC"
+  },
+  {
+    "CanonicalId": "aafb2e80-577e-4429-928c-fce75b68f2b3",
+    "NativeSymbol": "ARK"
+  },
+  {
+    "CanonicalId": "d7605d3b-aab0-4e75-b2ec-16ab4f984897",
+    "NativeSymbol": "SNM"
+  },
+  {
+    "CanonicalId": "2a6680d6-237b-4a02-b1e9-ce1ed69688de",
+    "NativeSymbol": "ETH"
+  },
+  {
+    "CanonicalId": "530c63c7-64dc-424c-a9d0-399daea0fa0b",
+    "NativeSymbol": "SUB"
+  },
+  {
+    "CanonicalId": "4b5db3e9-cf51-48cb-915e-c1924900e855",
+    "NativeSymbol": "BTC"
+  },
+  {
+    "CanonicalId": "6566013b-e301-4cf6-907b-cc47f3b5c9e1",
+    "NativeSymbol": "BLZ"
+  },
+  {
+    "CanonicalId": "d1013515-e5e5-4dfd-b5c6-d7517e27a35a",
+    "NativeSymbol": "HGT"
+  },
+  {
+    "CanonicalId": "2af76547-4175-4536-b642-53d18c9573c3",
+    "NativeSymbol": "PRIX"
+  },
+  {
+    "CanonicalId": "4b3c927a-d4cc-4c42-af6e-38a883644686",
+    "NativeSymbol": "H2O"
+  },
+  {
+    "CanonicalId": "cf97e024-2e35-401f-b0d9-69faf384756c",
+    "NativeSymbol": "TEU"
+  },
+  {
+    "CanonicalId": "e7fe6031-1d67-45bb-8e4a-c02d560d92bd",
+    "NativeSymbol": "JET"
+  },
+  {
+    "CanonicalId": "9fe36d30-a9db-45e2-b6a4-5f36dbb6c44d",
+    "NativeSymbol": "SENC"
+  },
+  {
+    "CanonicalId": "522cd435-a2f2-468f-9c9e-5dfe7d55d981",
+    "NativeSymbol": "ITT"
+  },
+  {
+    "CanonicalId": "fd65648b-d426-475f-b649-1e8a3f31d5f2",
+    "NativeSymbol": "KIN"
+  },
+  {
+    "CanonicalId": "65e833e0-503d-4a35-8be3-f673bdee91dc",
+    "NativeSymbol": "CAN"
+  },
+  {
+    "CanonicalId": "00248088-ae35-4636-ab1b-ab68e87255f4",
+    "NativeSymbol": "WISH"
+  },
+  {
+    "CanonicalId": "0a8cd141-13ce-4769-8dad-85b176e77acb",
+    "NativeSymbol": "UFR"
+  },
+  {
+    "CanonicalId": "ede838a4-3e49-4aef-9a59-9b23954ef45a",
+    "NativeSymbol": "LALA"
+  },
+  {
+    "CanonicalId": "20ad6618-7faa-4021-9e3e-fecf94ad8dbc",
+    "NativeSymbol": "PIX"
+  },
+  {
+    "CanonicalId": "102b0ce2-5b84-4ad5-8130-16ed73bf8d2a",
+    "NativeSymbol": "FDX"
+  },
+  {
+    "CanonicalId": "7b293fb7-4dfc-41b5-beae-555f07387c70",
+    "NativeSymbol": "KNC"
+  },
+  {
+    "CanonicalId": "2bf8763f-d65e-4805-b791-c4e0cd953218",
+    "NativeSymbol": "GAT"
+  },
+  {
+    "CanonicalId": "ab771ee2-85ff-41a6-87f3-8a2e178fe982",
+    "NativeSymbol": "ZEN"
+  },
+  {
+    "CanonicalId": "ed54700c-597c-4abe-bcba-49ece564cd0b",
+    "NativeSymbol": "BPL"
+  },
+  {
+    "CanonicalId": "6d1ed8dd-5294-4fd9-a639-10a6fb5c07e8",
+    "NativeSymbol": "LA"
+  },
+  {
+    "CanonicalId": "6d75476a-166f-4f22-9877-7b2a9c7d8307",
+    "NativeSymbol": "NOX"
+  },
+  {
+    "CanonicalId": "21be94c9-690d-4a40-9bd8-ce2417ba1290",
+    "NativeSymbol": "POE"
+  },
+  {
+    "CanonicalId": "eaac485d-fce9-42c4-9170-8fef7b50d441",
+    "NativeSymbol": "WAVES"
+  },
+  {
+    "CanonicalId": "775baca3-0e86-4f72-aa99-f94056b22286",
+    "NativeSymbol": "REQ"
+  },
+  {
+    "CanonicalId": "7d1fa3c1-41ad-4ce3-99cb-3d7fa5954f69",
+    "NativeSymbol": "STX"
+  },
+  {
+    "CanonicalId": "dca3998f-b96c-4026-96c2-2c6b7ac1315b",
+    "NativeSymbol": "CVC"
+  },
+  {
+    "CanonicalId": "6a05c4bf-f3d6-4720-82eb-440449ef322c",
+    "NativeSymbol": "XEM"
+  },
+  {
+    "CanonicalId": "c010a915-3943-4ea0-a423-e2f93041ad12",
+    "NativeSymbol": "DASH"
+  },
+  {
+    "CanonicalId": "f2a44b47-b87d-406e-be49-31c3fdb7f678",
+    "NativeSymbol": "ENJ"
+  },
+  {
+    "CanonicalId": "ddd65ace-6b21-4391-a7f5-437f6adf41a1",
+    "NativeSymbol": "EOS"
+  },
+  {
+    "CanonicalId": "29898a7e-4259-41cb-831f-a2064084f22a",
+    "NativeSymbol": "FYN"
+  },
+  {
+    "CanonicalId": "506b0c6f-d11b-4c10-b83b-4630ccf84dbc",
+    "NativeSymbol": "COSS"
+  },
+  {
+    "CanonicalId": "dcbf8583-d253-4e0b-892a-1420cfd599df",
+    "NativeSymbol": "ICX"
+  },
+  {
+    "CanonicalId": "644e8673-e47b-4400-bdc6-61c98b3ec0c7",
+    "NativeSymbol": "LTC"
+  },
+  {
+    "CanonicalId": "7bacdd56-10b2-40f7-8035-b7ccfcc555e9",
+    "NativeSymbol": "OMG"
+  },
+  {
+    "CanonicalId": "b4a09744-b59a-4cac-95e3-38e3d5ab9a01",
+    "NativeSymbol": "PAY"
+  },
+  {
+    "CanonicalId": "022e8070-62f3-4fbf-b282-9490ef65f866",
+    "NativeSymbol": "CS"
+  },
+  {
+    "CanonicalId": "b581e83f-e08f-45b0-bb21-7bdb2e1b3fb7",
+    "NativeSymbol": "FXT"
+  },
+  {
+    "CanonicalId": "57d76a18-ad27-49b8-8f53-c8bafebe93e5",
+    "NativeSymbol": "PRL"
+  },
+  {
+    "CanonicalId": "fdc8ef72-7ca7-4559-8203-33116fa97cf8",
+    "NativeSymbol": "MRK"
+  },
+  {
+    "CanonicalId": "8a52f46a-8841-4b07-b461-3a7fd7731add",
+    "NativeSymbol": "ADH"
+  },
+  {
+    "CanonicalId": "a44d6544-4ce7-4bef-86bc-778fd4cf41eb",
+    "NativeSymbol": "ETC"
+  },
+  {
+    "CanonicalId": "121405c1-5475-41f2-a70d-42f432dd07be",
+    "NativeSymbol": "MCO"
+  },
+  {
+    "CanonicalId": "b31461b0-5df3-4f2f-b908-82be4dc74a34",
+    "NativeSymbol": "IDH"
+  },
+  {
+    "CanonicalId": "a228a6c3-d0a8-4cdc-93ad-337e7fae8ba5",
+    "NativeSymbol": "ZEC"
+  },
+  {
+    "CanonicalId": "1c455148-b6c3-4f45-8c2c-35faef74e4a3",
+    "NativeSymbol": "REP"
+  },
+  {
+    "CanonicalId": "3ffd8e4e-05cb-4e38-b80a-e4a99b782298",
+    "NativeSymbol": "PLC"
+  },
+  {
+    "CanonicalId": "71cab82b-15d8-447a-8b0d-8a6a50665f14",
+    "NativeSymbol": "HAV"
+  },
+  {
+    "CanonicalId": "8f86334b-b324-405a-8c90-d1447ca78a9d",
+    "NativeSymbol": "LDC"
+  },
+  {
+    "CanonicalId": "cab1dd96-4deb-4fc6-a522-e808740ec34e",
+    "NativeSymbol": "DENT"
+  },
+  {
+    "CanonicalId": "93dbb2ad-a24b-429b-851c-9b4524cda0c3",
+    "NativeSymbol": "VET"
+  },
+  {
+    "CanonicalId": "85d0eb2c-789e-49c9-bf91-17835dc9b07c",
+    "NativeSymbol": "FLP"
+  },
+  {
+    "CanonicalId": "c514bf8b-d34b-4f72-9cc1-b4d758ff4cc0",
+    "NativeSymbol": "GET"
+  },
+  {
+    "CanonicalId": "10a4bc5d-ce28-46fa-88f4-32b880a0d439",
+    "NativeSymbol": "ONG"
+  },
+  {
+    "CanonicalId": "8ab5a595-ce3c-444b-823d-87a785d60070",
+    "NativeSymbol": "QASH"
+  }
+]

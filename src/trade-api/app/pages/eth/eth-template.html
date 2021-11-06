@@ -1,0 +1,59 @@
+﻿<div>
+    <h2 style="font-weight:bold;">ETH</h2>
+    <br />
+    <h4>
+        <span style="font-weight:bold;">ETH</span>
+        <loading ng-if="model.eth.isLoading"></loading>
+        <span ng-if="model.eth.isLoading === false && model.eth.data > 0">
+            {{model.eth.data}}
+        </span>
+        <button class="btn btn-primary" ng-click="onRefreshEthClicked();">Refresh<i class="fa fa-refresh"></i></button>
+    </h4>
+    <h4>
+        <span style="font-weight:bold;">BTC</span>
+        <loading ng-if="model.btc.isLoading"></loading>
+        <span ng-if="model.btc.isLoading === false && model.btc.data > 0">
+            {{model.btc.data}}
+        </span>
+        <button class="btn btn-primary" ng-click="onRefreshBtcClicked();">Refresh<i class="fa fa-refresh"></i></button>
+    </h4>
+    <h4>
+        <span style="font-weight:bold;">BTC / ETH</span>
+        <loading ng-if="model.eth.isLoading || model.btc.isLoading"></loading>
+        <span ng-if="model.eth.isLoading === false && model.btc.isLoading === false && model.eth.data > 0 && model.btc.data > 0">
+            {{(model.btc.data / model.eth.data) | number:6}}
+        </span>
+    </h4>
+    <h4>
+        <span style="font-weight:bold;">ETH / BTC</span>
+        <loading ng-if="model.eth.isLoading || model.btc.isLoading"></loading>
+        <span ng-if="model.eth.isLoading === false && model.btc.isLoading === false && model.eth.data > 0 && model.btc.data > 0">
+            {{(model.eth.data / model.btc.data) | number:6}}
+        </span>
+    </h4>
+    <br />
+    <table>
+        <tr>
+            <td><img src="./res/img/exchanges/mew.png" alt="mew" /></td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <div style="font-size:24px; font-weight:bold;">MEW Address</div>
+                <div style="font-size:24px;" ng-if="model.ethWalletAddress.isLoading === false">
+                    {{model.ethWalletAddress.data}}
+                </div>
+                <button class="btn btn-primary"
+                        ngclipboard-success="onClipboardSuccess(e);"
+                        ngclipboard-error="onClipboardError(e);"
+                        ngclipboard data-clipboard-text="{{model.ethWalletAddress.data}}">
+                    Copy
+                </button>
+            </td>
+        </tr>
+    </table>
+
+
+    <a target="_blank" style="font-size:24px;" href="http://localhost/mew/">Local MEW</a>
+    <br />
+    <a target="_blank" style="font-size:24px;" ng-href="{{'https://etherscan.io/address/' + model.ethWalletAddress.data }}">Etherscan</a>
+
+</div>

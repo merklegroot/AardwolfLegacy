@@ -1,0 +1,31 @@
+﻿<h1>The test page</h1>
+
+<h3>Exchanges</h3>
+<table class="table table-striped">
+    <tbody>
+        <tr ng-repeat="exchange in model.exchanges.data">
+            <td>{{exchange.name}}</td>
+            <td>
+                <div ng-repeat="tradingPair in exchange.tradingPairs.data | limitTo: 3">
+                    <a class="clickable"
+                       ui-sref="order-book-detail({exchange: exchange.name, symbol: tradingPair.symbol, baseSymbol: tradingPair.baseSymbol})">
+                        {{tradingPair.symbol}} / {{tradingPair.baseSymbol}}
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!--
+<div ng-repeat="exchange in model.exchanges.data">
+    {{exchange}}
+</div>
+-->
+
+<h3>Order Book</h3>
+<button class="btn btn-primary" ng-click="showDebug = !showDebug">Show Debug</button>
+<div ng-if="showDebug">
+    {{model}}
+</div>
+
+

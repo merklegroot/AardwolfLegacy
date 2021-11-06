@@ -1,0 +1,358 @@
+﻿<div ng-if="showIfUnprofitable || hasSufficientProfits()" style="border-top-color:black; border-top-style:solid; border-top-width:1px; border-bottom-color:black; border-bottom-style:solid; border-bottom-width:1px;">
+    <div ng-if="!expand" style="background-color:aliceblue;">
+        <div class="row">
+            <div class="col-xs-12" style="font-size:16px;">
+                <table cellpadding="10" cellspacing="20">
+                    <tr><td style="font-size:5px;">&nbsp;</td></tr>
+                    <tr>
+                        <td style="width:50px;">
+                            &nbsp;
+                            <button class="btn btn-default" ng-click="onExpandClicked()">+</button>
+                        </td>
+                        <td style="width:200px;">
+                            <div style="font-weight:bold;">
+                                <a target="_blank" class="clickable" ui-sref="commodity-detail({symbol: model.symbol.toUpperCase()})">
+                                    <commodity-logo symbol="model.symbol"></commodity-logo>
+                                    {{model.symbol}}
+                                </a>
+                                -
+                                {{model.baseSymbol}}
+                                <commodity-logo symbol="model.baseSymbol"></commodity-logo>
+                            </div>
+                        </td>
+                        <td style="width:225px;" ng-class="(hasDirectionalProfits(0, 1) ? ' profitableStyle' : '')">
+                            <div style="font-weight:bold;">
+                                <span>
+                                    <exchange-logo exchange="model.exchanges[0]"></exchange-logo>
+                                    {{exchangeDictionary[model.exchanges[0]].displayName}}
+                                </span>
+                                <span ng-style="getStyle(0)">{{model.books[0].data.asOf | ago}}</span>
+                            </div>
+                        </td>
+                        <td style="width:100px;">
+                            <span>
+                                <button ng-disabled="model.books[0].isLoading === true" class="btn btn-primary" ng-click="onRefreshClicked(0)">Refresh</button>
+                            </span>
+                        </td>
+                        <td style="width:225px;" ng-class="(hasDirectionalProfits(1, 0) ? ' profitableStyle' : '')">
+                            <div style="font-weight:bold;">
+                                <span>
+                                    <exchange-logo exchange="model.exchanges[1]"></exchange-logo>
+                                    {{exchangeDictionary[model.exchanges[1]].displayName}}
+                                </span>
+                                <span ng-style="getStyle(1)">{{model.books[1].data.asOf | ago}}</span>
+                            </div>
+                        </td>
+                        <td style="width:100px;">
+                            <span>
+                                <button ng-disabled="model.books[1].isLoading === true" class="btn btn-primary" ng-click="onRefreshClicked(1)">Refresh</button>
+                            </span>
+                        </td>
+                        <td ng-class="(hasProfits() ? ' profitableStyle' : '')" style="font-weight:bold;">
+                            {{getProfitText()}}
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;
+                            <a class="clickable"
+                               target="_blank"
+                               ui-sref="comparison-detail({exchangeA: model.exchanges[0], exchangeB: model.exchanges[1], symbol: model.symbol, baseSymbol: model.baseSymbol})">
+                                <i class="fa fa-info-circle"></i>
+                            </a>
+                            <a class="clickable"
+                               target="_blank"
+                               ui-sref="arb-detail({exchangeA: model.exchanges[0], exchangeB: model.exchanges[1], symbol: model.symbol})">
+                                Arb
+                            </a>
+                        </td>
+                    </tr>
+                    <tr><td style="font-size:5px;">&nbsp;</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="expand">
+        <div class="row">
+            <div class="col-xs-12" style="background-color:aliceblue;">
+                &nbsp;
+                <button class="btn btn-default" ng-click="onCollapseClicked()">-</button>
+                <div style="font-weight:bold; font-size:18px;">
+                    <a target="_blank" class="clickable" ui-sref="commodity-detail({symbol: model.symbol.toUpperCase()})">
+                        <commodity-logo symbol="model.symbol"></commodity-logo>
+                        {{model.symbol}}
+                    </a>
+                    -
+                    {{model.baseSymbol}}
+                    <commodity-logo symbol="model.baseSymbol"></commodity-logo>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    <exchange-logo exchange="model.exchanges[a]"></exchange-logo>
+                    {{exchangeDictionary[model.exchanges[a]].displayName}} <button class="btn btn-primary" ng-click="onRefreshClicked(a)">Refresh</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    {{exchangeDictionary[model.exchanges[a]].displayName}} to {{exchangeDictionary[model.exchanges[b]].displayName}} Profit:
+                    <span ng-if="(model.books[a] && model.books[a].isLoading === false) || (model.books[b] && model.books[b].isLoading === false)">
+                        {{getProfitPercentage(a, b).toFixed(2)}} %
+                    </span>
+                    <span ng-if="(model.books[a] && model.books[a].isLoading === true) || (model.books[b] && model.books[b].isLoading === true)">
+                        <loading></loading>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    <span>
+                        Break Even Trade Quantity:
+                    </span>
+                    <span ng-if="model.exchangeCommodities && model.exchangeCommodities[a] && model.exchangeCommodities[a] && model.books && model.books[a] && model.books[a].data && model.books[a].data.asks&& model.books[a].data.asks.length > 0 && model.books[b] && model.books[b].data && model.books[b].data.bids && model.books[b].data.bids.length > 0 && ((model.books[b].data.bids[0].price - model.books[a].data.asks[0].price) != 0)">
+                        <span ng-if="(model.books[b].data.bids[0].price - model.books[a].data.asks[0].price > 0)">
+                            {{(model.books[a].data.asks[0].price*model.exchangeCommodities[a].withdrawalFee/(model.books[b].data.bids[0].price - model.books[a].data.asks[0].price)).toFixed(4)}}
+                        </span>
+                        <span ng-if="!(model.books[b].data.bids[0].price - model.books[a].data.asks[0].price > 0)">
+                            Never
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    {{exchangeDictionary[model.exchanges[a]].displayName}}
+                    Withdrawal Fee:
+                    <span ng-if="model.exchangeCommodities[a].isLoading === false">
+                        {{model.exchangeCommodities[a].withdrawalFee}}
+                        {{model.symbol}}
+                        <commodity-logo symbol="model.symbol"></commodity-logo>
+                    </span>
+                    <span ng-if="model.books[a].isLoading === true">
+                        <loading></loading>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    <span ng-if="model.exchangeCommodities[a].isLoading === false">
+                        <span>
+                            Can Deposit:
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canDeposit === true">
+                            <i style="color:green" class="fa fa-check"></i>
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canDeposit === false">
+                            <i style="color:red" class="fa fa-times-circle"></i>
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canDeposit !== true && model.exchangeCommodities[a].canDeposit !== false">
+                            <i style="color:yellow" class="fa fa-exclamation-triangle"></i>
+                            Unknown
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    <span ng-if="model.exchangeCommodities[a].isLoading === false">
+                        <span>
+                            Can Withdraw:
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canWithdraw === true">
+                            <i style="color:green" class="fa fa-check"></i>
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canWithdraw === false">
+                            <i style="color:red" class="fa fa-times-circle"></i>
+                        </span>
+                        <span ng-if="model.exchangeCommodities[a].canWithdraw !== true && model.exchangeCommodities[a].canWithdraw !== false">
+                            <i style="color:yellow" class="fa fa-exclamation-triangle"></i>
+                            Unknown
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" style="font-size:18px; font-weight:bold;">
+                    <div ng-if="model.exchangeCommodities[a].isLoading === false && model.exchangeCommodities[a].customValues">
+                        <span ng-repeat="custom in getCustomValues(a)">
+                            <span>{{custom.key}}:</span>
+                            <span>{{custom.value}}</span>
+                            <br />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-repeat="(a, b) in {'0':'1', '1':'0'}">
+                <div ng-class="'col-xs-6' + (hasDirectionalProfits(a, b) ? ' profitableStyle' : '')" ng-style="getStyle(a)">
+                    <div style="font-size:18px; font-weight:bold;">
+                        <div>
+                            {{model.books[a].data.asOf | localTime}}
+                        </div>
+                        <div>
+                            {{model.books[a].data.asOf | ago}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row" style="font-size:18px; font-weight:bold;">
+                    <div class="col-xs-6">
+                        {{model.exchanges[0].displayName}} Bid Price
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.exchanges[0].displayName}} Bid Quantity
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="row" style="font-size:18px; font-weight:bold;">
+                    <div class="col-xs-6">
+                        {{model.exchanges[1].displayName}} Ask Price
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.exchanges[1].displayName}} Ask Quantity
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row" ng-if="model.books[0].isLoading === true">
+                    <loading></loading>
+                </div>
+
+                <div class="row order-row"
+                     ng-if="model.books[0].isLoading === false"
+                     ng-repeat="index in model.books[0].data.reverseBidIndexes">
+                    <div class="col-xs-6">
+                        <span style="color:green;">
+                            {{model.books[0].data.bids[index].price}}
+                        </span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span style="color:green;">
+                            {{model.books[0].data.bids[index].quantity}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="row" ng-if="model.books[1].isLoading === true">
+                    <loading></loading>
+                </div>
+                <div class="row order-row"
+                     ng-if="model.books[1].isLoading === false"
+                     ng-repeat="index in model.books[1].data.reverseAskIndexes">
+                    <div class="col-xs-6">
+                        <span style="color:red;">
+                            {{model.books[1].data.asks[index].price}}
+                        </span>
+                    </div>
+                    <div class="col-xs-6">
+                        <span style="color:red;">
+                            {{model.books[1].data.asks[index].quantity}}
+                        </span>
+                        <span>
+                            {{model.symbol}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row" style="font-size:18px; font-weight:bold;">
+                    <div class="col-xs-6">
+                        {{model.exchanges[0].displayName}} Ask Price
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.exchanges[0].displayName}} Ask Quantity
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="row" style="font-size:18px; font-weight:bold;">
+                    <div class="col-xs-6">
+                        {{model.exchanges[1].displayName}} Bid Price
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.exchanges[1].displayName}} Bid Quantity
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row" ng-if="!model.books[0].data">
+                    <loading></loading>
+                </div>
+                <div class="row order-row"
+                     ng-if="model.books[0].isLoading === false"
+                     ng-repeat="index in model.books[0].data.askIndexes"
+                     style="color:red;">
+                    <div class="col-xs-6">
+                        {{model.books[0].data.asks[index].price}}
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.books[0].data.asks[index].quantity}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="row" ng-if="!model.books[1].data">
+                    <loading></loading>
+                </div>
+                <div class="row order-row"
+                     ng-if="model.books[1].isLoading === false"
+                     ng-repeat="index in model.books[1].data.bidIndexes"
+                     style="color:green;">
+                    <div class="col-xs-6">
+                        {{model.books[1].data.bids[index].price}}
+                    </div>
+                    <div class="col-xs-6">
+                        {{model.books[1].data.bids[index].quantity}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" ng-click="showDebug=!showDebug">Show Comp Debug</button>
+        </div>
+        <div ng-if="showDebug">
+            {{model}}
+        </div>
+
+    </div>
+</div>

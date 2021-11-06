@@ -1,0 +1,56 @@
+﻿<h1>Canon List</h1>
+
+<div class="form-inline">
+    <label>Filter&nbsp;&nbsp;</label>
+    <input class="form-control" style="width:400px;" ng-model="filter" ng-keyup="onFilterChanged();" />
+    <label class="clickable" ng-show="filter.length > 0" ng-click="clearFilter()">X</label>
+</div>
+<br />
+
+<div style="font-size:20px;">
+    <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onFirstPageClicked()">First</button>
+    <button ng-disabled="pageIndex === 0" style="width:90px;" class="btn btn-md btn-success" ng-click="onPreviousPageClicked()">Previous</button>
+
+    Page {{pageIndex + 1}} of {{totalPages}}
+
+    <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onNextPageClicked()">Next</button>
+    <button ng-disabled="pageIndex >= totalPages - 1" style="width:90px;" class="btn btn-md btn-success" ng-click="onLastPageClicked()">Last</button>
+</div>
+
+<br />
+<button class="btn btn-md btn-primary" ng-click="onNewClicked()">+ New</button>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr style="font-size:16px; font-weight:bold;">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Symbol</td>
+            <td>Logo</td>
+            <td>Is Eth</td>
+            <td>Is Eth Token</td>
+            <td>Contract Id</td>
+            <td>Decimals</td>
+            <td>Website</td>
+            <!--<td>Raw</td>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="clickable"
+            ng-click="onCommodityClicked(commodity)"
+            ng-repeat="commodity in effectiveData | limitTo: 10">
+            <td>{{commodity.id}}</td>
+            <td>{{commodity.name}}</td>
+            <td>{{commodity.symbol}}</td>
+            <td><commodity-logo symbol="commodity.symbol"></commodity-logo></td>
+            <td>{{commodity.isEth}}</td>
+            <td>{{commodity.isEthToken}}</td>
+            <td>{{commodity.contractId}}</td>
+            <td>{{commodity.decimals}}</td>
+            <td>{{commodity.website}}</td>
+            <!--<td>{{commodity}}</td>-->
+        </tr>
+    </tbody>
+</table>
+

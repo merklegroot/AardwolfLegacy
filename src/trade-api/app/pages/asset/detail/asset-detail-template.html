@@ -1,0 +1,77 @@
+﻿<div>
+    <h3>ETH -> BTC: {{asset.ethToBtc}}</h3>
+
+    <h3 ng-hide="asset">Asset Detail</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Symbol</td>
+                <td>Name</td>
+                <td ng-show="asset.contractId">Contract Id</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{asset.symbol}}</td>
+                <td>{{asset.name}}</td>
+                <td ng-show="asset.contractId">{{asset.contractId}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>CryptoCompare Prices</h4>
+    <div ng-show="asset.prices.btc">{{asset.symbol}}-BTC: {{asset.prices.btc}}</div>
+    <div ng-show="asset.prices.eth">{{asset.symbol}}-ETH: {{asset.prices.eth}}</div>
+
+    <br />
+
+    <div ng-repeat="exchangeOrderBook in asset.exchangeOrderBooks">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>{{exchangeOrderBook.name}}</h4></div>
+            <div class="panel-body">
+
+                <div ng-repeat="orderBookPairs in exchangeOrderBook">
+                    <div ng-repeat="orderBook in orderBookPairs">
+                        <div>{{orderBook.symbol}}-{{orderBook.baseSymbol}}</div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <b>Asks</b>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <td>Price</td>
+                                            <td>Quantity</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="order in orderBook.asks.slice(0, 3)">
+                                            <td>{{order.price}}</td>
+                                            <td>{{order.quantity}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-xs-6">
+                                <b>Bids</b>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <td>Price</td>
+                                            <td>Quantity</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="order in orderBook.bids.slice(0, 3)">
+                                            <td>{{order.price}}</td>
+                                            <td>{{order.quantity}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

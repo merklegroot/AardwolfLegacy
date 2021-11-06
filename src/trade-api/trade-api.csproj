@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B513F60-E1CD-44F8-80EF-014F33F983F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>trade_api</RootNamespace>
+    <AssemblyName>trade-api</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net46\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="mongo-lib, Version=1.4.6803.16982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongo-lib.1.4\lib\net471\mongo-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.5.0.1\lib\net451\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="res-util-lib, Version=1.1.6675.18561, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\res-util.1.1\lib\res-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.3.0.0.108\lib\net40\StructureMap.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="web-util-lib, Version=1.7.6777.24908, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\web-util.1.7.0\lib\net471\web-util-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebApi.StructureMap, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebApi.StructureMap.1.0.21\lib\net462\WebApi.StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ConnectionContainer.cs" />
+    <Compile Include="Controllers\ArbController.cs" />
+    <Compile Include="Controllers\BalanceController.cs" />
+    <Compile Include="Controllers\CancelOrderController.cs" />
+    <Compile Include="Controllers\CanonController.cs" />
+    <Compile Include="Controllers\CommodityController.cs" />
+    <Compile Include="Controllers\ListingController.cs" />
+    <Compile Include="Controllers\PlaceOrderController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\CoinController.cs" />
+    <Compile Include="Controllers\ConfigController.cs" />
+    <Compile Include="Controllers\TransferFundsController.cs" />
+    <Compile Include="Controllers\UsdValueController.cs" />
+    <Compile Include="Controllers\ValuationController.cs" />
+    <Compile Include="Controllers\EthController.cs" />
+    <Compile Include="Controllers\ExchangeController.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
+    <Compile Include="Controllers\HoldingController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\OrderBookController.cs" />
+    <Compile Include="Controllers\OpenOrderController.cs" />
+    <Compile Include="Controllers\TfaController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RabbitWorkflow.cs" />
+    <Compile Include="ServiceModels\ExchangeServiceModel.cs" />
+    <Compile Include="ServiceModels\GetCommodityDetailsServiceModel.cs" />
+    <Compile Include="Utils\CachePolicyParser.cs" />
+    <Compile Include="ViewModels\CoinExchangeViewModel.cs" />
+    <Compile Include="ViewModels\CoinViewModel.cs" />
+    <Compile Include="ViewModels\CoinViewModelsContainer.cs" />
+    <Compile Include="ViewModels\CommodityViewModel.cs" />
+    <Compile Include="ViewModels\ExchangeCommodityExViewModel.cs" />
+    <Compile Include="ViewModels\ExchangeCommodityViewModel.cs" />
+    <Compile Include="ViewModels\ExchangeViewModel.cs" />
+    <Compile Include="ViewModels\HistoricalTradeViewModel.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\constants\main-constants.js" />
+    <Content Include="app\directives\arb\arb-directive-controller.js" />
+    <Content Include="app\directives\arb\arb-directive-template.html" />
+    <Content Include="app\directives\arb\arb-directive.js" />
+    <Content Include="app\directives\balance\balance-directive-controller.js" />
+    <Content Include="app\directives\balance\balance-template.html" />
+    <Content Include="app\directives\balance\balance-directive.js" />
+    <Content Include="app\directives\canonical-commodity\canonical-commodity-directive.js" />
+    <Content Include="app\directives\canonical-commodity\canonical-commodity-template.html" />
+    <Content Include="app\directives\check-button-directive\check-button-template.html" />
+    <Content Include="app\directives\check-button-directive\check-button-directive.js" />
+    <Content Include="app\directives\commodity-logo\commodity-logo-directive-controller.js" />
+    <Content Include="app\directives\commodity-logo\commodity-logo-directive.js" />
+    <Content Include="app\directives\commodity-logo\commodity-logo-template.html" />
+    <Content Include="app\directives\comparison-directive\comparison-directive-controller.js" />
+    <Content Include="app\directives\comparison-directive\comparison-directive.js" />
+    <Content Include="app\directives\comparison-directive\comparison-directive-template.html" />
+    <Content Include="app\directives\exchange-commodity-list\exchange-commodity-list-directive-controller.js" />
+    <Content Include="app\directives\exchange-commodity-list\exchange-commodity-list-directive.js" />
+    <Content Include="app\directives\exchange-commodity-list\exchange-commodity-list-template.html" />
+    <Content Include="app\directives\exchange-logo\exchange-logo-template.html" />
+    <Content Include="app\directives\exchange-logo\exchange-logo-directive.js" />
+    <Content Include="app\directives\icon-directive\icon-template.html" />
+    <Content Include="app\directives\icon-directive\icon-directive.js" />
+    <Content Include="app\directives\loading-directive\loading-template.html" />
+    <Content Include="app\directives\loading-directive\loading-directive.js" />
+    <Content Include="app\directives\order-book\order-book-directive-controller.js" />
+    <Content Include="app\directives\order-book\order-book-directive.js" />
+    <Content Include="app\directives\order-book\order-book-directive-template.html" />
+    <Content Include="app\directives\trading-pair\trading-pair-template.html" />
+    <Content Include="app\directives\trading-pair\trading-pair-directive.js" />
+    <Content Include="app\filters\ago-filter.js" />
+    <Content Include="app\filters\time-filter.js" />
+    <Content Include="app\modules\main-module.js" />
+    <Content Include="app\pages\canon\detail\canon-detail-controller.js" />
+    <Content Include="app\pages\canon\detail\canon-detail-template.html" />
+    <Content Include="app\pages\canon\dialog\canon-dialog-controller.js" />
+    <Content Include="app\pages\canon\dialog\canon-dialog-template.html" />
+    <Content Include="app\pages\canon\list\canon-list-controller.js" />
+    <Content Include="app\pages\canon\list\canon-list-template.html" />
+    <Content Include="app\pages\commodity\detail\commodity-detail-controller.js" />
+    <Content Include="app\pages\commodity\detail\commodity-detail-template.html" />
+    <Content Include="app\pages\commodity\list\commodity-list-controller.js" />
+    <Content Include="app\pages\commodity\list\commodity-list-template.html" />
+    <Content Include="app\pages\binance-arb-config\binance-arb-config-controller.js" />
+    <Content Include="app\pages\binance-arb-config\binance-arb-config-template.html" />
+    <Content Include="app\pages\exchange-commodities\detail\exchange-commodities-detail-controller.js" />
+    <Content Include="app\pages\exchange-commodities\detail\exchange-commodities-detail-template.html" />
+    <Content Include="app\pages\exchange-commodities\list\exchange-commodities-list-controller.js" />
+    <Content Include="app\pages\exchange-commodities\list\exchange-commodities-list-template.html" />
+    <Content Include="app\pages\exchange-commodity\detail\exchange-commodity-detail-controller.js" />
+    <Content Include="app\pages\exchange-commodity\detail\exchange-commodity-detail-template.html" />
+    <Content Include="app\pages\exchange-commodity\dialog\confirm-mapping-dialog-controller.js" />
+    <Content Include="app\pages\exchange-commodity\dialog\confirm-mapping-dialog-template.html" />
+    <Content Include="app\pages\exchange-history\detail\exchange-history-detail-controller.js" />
+    <Content Include="app\pages\exchange-history\detail\exchange-history-detail-template.html" />
+    <Content Include="app\pages\exchange-history\list\exchange-history-list-controller.js" />
+    <Content Include="app\pages\exchange-history\list\exchange-history-list-template.html" />
+    <Content Include="app\pages\exchange-open-orders\detail - bak\exchange-open-orders-detail-controller.js" />
+    <Content Include="app\pages\exchange-open-orders\detail - bak\exchange-open-orders-detail-template.html" />
+    <Content Include="app\pages\exchange-order-books\detail\exchange-order-books-detail-controller.js" />
+    <Content Include="app\pages\exchange-order-books\detail\exchange-order-books-detail-template.html" />
+    <Content Include="app\pages\exchange-order-books\list\exchange-order-books-list-controller.js" />
+    <Content Include="app\pages\exchange-order-books\list\exchange-order-books-list-template.html" />
+    <Content Include="app\pages\exchange-trading-pairs\detail\exchange-trading-pairs-detail-controller.js" />
+    <Content Include="app\pages\exchange-trading-pairs\detail\exchange-trading-pairs-detail-template.html" />
+    <Content Include="app\pages\exchange-trading-pairs\list\exchange-trading-pairs-list-controller.js" />
+    <Content Include="app\pages\exchange-trading-pairs\list\exchange-trading-pairs-list-template.html" />
+    <Content Include="app\pages\exchange\dialog\transfer-funds-dialog-controller.js" />
+    <Content Include="app\pages\home\bak\home-controller.js" />
+    <Content Include="app\pages\home\bak\home-template.html" />
+    <Content Include="app\pages\listing\listing-controller.js" />
+    <Content Include="app\pages\listing\listing-template.html" />
+    <Content Include="app\pages\exchange-open-orders\detail\exchange-open-orders-detail-controller.js" />
+    <Content Include="app\pages\exchange-open-orders\detail\exchange-open-orders-detail-template.html" />
+    <Content Include="app\pages\exchange-open-orders\list\exchange-open-orders-list-controller.js" />
+    <Content Include="app\pages\exchange-open-orders\list\exchange-open-orders-list-template.html" />
+    <Content Include="app\pages\order-book\detail\order-book-detail-controller.js" />
+    <Content Include="app\pages\order-book\detail\order-book-detail-template.html" />
+    <Content Include="app\pages\order-book\list\order-book-list-controller.js" />
+    <Content Include="app\pages\order-book\list\order-book-list-template.html" />
+    <Content Include="app\pages\place-order\place-order-controller.js" />
+    <Content Include="app\pages\place-order\place-order-template.html" />
+    <Content Include="app\pages\status\status-controller.js" />
+    <Content Include="app\pages\status\status-template.html" />
+    <Content Include="app\pages\arb\arb-controller.js" />
+    <Content Include="app\pages\arb\arb-template.html" />
+    <Content Include="app\pages\asset\detail\asset-detail-controller.js" />
+    <Content Include="app\pages\asset\detail\asset-detail-template.html" />
+    <Content Include="app\pages\asset\list\asset-list-controller.js" />
+    <Content Include="app\pages\asset\list\asset-list-template.html" />
+    <Content Include="app\pages\comparison\comparison-controller.js" />
+    <Content Include="app\pages\comparison\comparison-template.html" />
+    <Content Include="app\pages\config\config-controller.js" />
+    <Content Include="app\pages\config\config-template.html" />
+    <Content Include="app\pages\exchange\dialog\transfer-funds-dialog.html" />
+    <Content Include="app\pages\test\test-controller.js" />
+    <Content Include="app\pages\test\test-template.html" />
+    <Content Include="app\pages\valuation\valuation-template.html" />
+    <Content Include="app\pages\valuation\valuation-controller.js" />
+    <Content Include="app\pages\eth\eth-controller.js" />
+    <Content Include="app\pages\eth\eth-template.html" />
+    <Content Include="app\pages\exchange\detail\exchange-detail-controller.js" />
+    <Content Include="app\pages\exchange\detail\exchange-detail-template.html" />
+    <Content Include="app\pages\exchange\list\exchange-list-controller.js" />
+    <Content Include="app\pages\exchange\list\exchange-list-template.html" />
+    <Content Include="app\pages\history\history-controller.js" />
+    <Content Include="app\pages\history\history-template.html" />
+    <Content Include="app\pages\holdings\dialog\holdings-sell-dialog.html" />
+    <Content Include="app\pages\holdings\holdings-controller.js" />
+    <Content Include="app\pages\holdings\holdings-template.html" />
+    <Content Include="app\pages\holdings\dialog\holdings-transfer-dialog.html" />
+    <Content Include="app\pages\home\home-controller.js" />
+    <Content Include="app\pages\home\home-template.html" />
+    <Content Include="app\pages\intersection\intersection-controller.js" />
+    <Content Include="app\pages\intersection\intersection-template.html" />
+    <Content Include="app\pages\log\log-controller.js" />
+    <Content Include="app\pages\log\log-template.html" />
+    <Content Include="app\pages\market\home-controller.js" />
+    <Content Include="app\pages\market\home-template.html" />
+    <Content Include="app\pages\menu\menu-controller.js" />
+    <Content Include="app\pages\menu\menu-template.html" />
+    <Content Include="app\pages\notes\notes-controller.js" />
+    <Content Include="app\pages\notes\notes-template.html" />
+    <Content Include="app\pages\tfa\tfa-controller.js" />
+    <Content Include="app\pages\tfa\tfa-template.html" />
+    <Content Include="app\routes\main-routes.js" />
+    <Content Include="app\services\history-service.js" />
+    <Content Include="app\services\log-service.js" />
+    <Content Include="app\services\balance-service.js" />
+    <Content Include="app\services\exchange-service.js" />
+    <Content Include="app\services\commodity-service.js" />
+    <Content Include="app\services\open-order-service.js" />
+    <Content Include="app\services\valuation-service.js" />
+    <Content Include="app\services\order-book-service.js" />
+    <Content Include="app\services\alert-service.js" />
+    <Content Include="app\services\data-service.js" />
+    <Content Include="app\services\util-service.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="res\img\commodities\1st-logo.png" />
+    <Content Include="res\img\commodities\acat-logo.png" />
+    <Content Include="res\img\commodities\ada-logo.png" />
+    <Content Include="res\img\commodities\adh-logo.png" />
+    <Content Include="res\img\commodities\adi-logo.png" />
+    <Content Include="res\img\commodities\adx-logo.png" />
+    <Content Include="res\img\commodities\ae-logo.png" />
+    <Content Include="res\img\commodities\agi-logo.png" />
+    <Content Include="res\img\commodities\aion-logo.png" />
+    <Content Include="res\img\commodities\amb-logo.png" />
+    <Content Include="res\img\commodities\amm-logo.png" />
+    <Content Include="res\img\commodities\ark-logo.png" />
+    <Content Include="res\img\commodities\arn-logo.png" />
+    <Content Include="res\img\commodities\atm-logo.png" />
+    <Content Include="res\img\commodities\axp-logo.png" />
+    <Content Include="res\img\commodities\bat-logo.png" />
+    <Content Include="res\img\commodities\bcd-logo.png" />
+    <Content Include="res\img\commodities\bch-logo.png" />
+    <Content Include="res\img\commodities\bchabc-logo.png" />
+    <Content Include="res\img\commodities\bdg-logo.png" />
+    <Content Include="res\img\commodities\bez-logo.png" />
+    <Content Include="res\img\commodities\btt-logo.png" />
+    <Content Include="res\img\commodities\blz-logo.png" />
+    <Content Include="res\img\commodities\bnb-logo.png" />
+    <Content Include="res\img\commodities\bnt-logo.png" />
+    <Content Include="res\img\commodities\bnty-logo.png" />
+    <Content Include="res\img\commodities\bpl-logo.png" />
+    <Content Include="res\img\commodities\btc-logo.png" />
+    <Content Include="res\img\commodities\can-logo.png" />
+    <Content Include="res\img\commodities\chsb-logo.png" />
+    <Content Include="res\img\commodities\chx-logo.png" />
+    <Content Include="res\img\commodities\coss-logo.png" />
+    <Content Include="res\img\commodities\cov-logo.png" />
+    <Content Include="res\img\commodities\cs-logo.png" />
+    <Content Include="res\img\commodities\cvc-logo.png" />
+    <Content Include="res\img\commodities\dash-logo.png" />
+    <Content Include="res\img\commodities\dat-logo.png" />
+    <Content Include="res\img\commodities\doge-logo.png" />
+    <Content Include="res\img\commodities\eng-logo.png" />
+    <Content Include="res\img\commodities\enj-logo.png" />
+    <Content Include="res\img\commodities\etc-logo.png" />
+    <Content Include="res\img\commodities\eth-logo.png" />
+    <Content Include="res\img\commodities\eur-logo.png" />
+    <Content Include="res\img\commodities\fxt-logo.png" />
+    <Content Include="res\img\commodities\fyn-logo.png" />
+    <Content Include="res\img\commodities\gat-logo.png" />
+    <Content Include="res\img\commodities\gbp-logo.png" />
+    <Content Include="res\img\commodities\grs-logo.png" />
+    <Content Include="res\img\commodities\gusd-logo.png" />
+    <Content Include="res\img\commodities\gxs-logo.png" />
+    <Content Include="res\img\commodities\hav-logo.png" />
+    <Content Include="res\img\commodities\hgt-logo.png" />
+    <Content Include="res\img\commodities\icn-logo.png" />
+    <Content Include="res\img\commodities\icx-logo.png" />
+    <Content Include="res\img\commodities\idh-logo.png" />
+    <Content Include="res\img\commodities\iht-logo.png" />
+    <Content Include="res\img\commodities\iost-logo.png" />
+    <Content Include="res\img\commodities\ixt-logo.png" />
+    <Content Include="res\img\commodities\jpy-logo.png" />
+    <Content Include="res\img\commodities\kaya-logo.png" />
+    <Content Include="res\img\commodities\kin-logo.png" />
+    <Content Include="res\img\commodities\knc-logo.png" />
+    <Content Include="res\img\commodities\la-logo.png" />
+    <Content Include="res\img\commodities\lala-logo.png" />
+    <Content Include="res\img\commodities\lend-logo.png" />
+    <Content Include="res\img\commodities\link-logo.png" />
+    <Content Include="res\img\commodities\lsk-logo.png" />
+    <Content Include="res\img\commodities\ltc-logo.png" />
+    <Content Include="res\img\commodities\mco-logo.png" />
+    <Content Include="res\img\commodities\minecraft-pickaxe.png" />
+    <Content Include="res\img\commodities\mitx-logo.png" />
+    <Content Include="res\img\commodities\mrk-logo.png" />
+    <Content Include="res\img\commodities\neo-logo.png" />
+    <Content Include="res\img\commodities\npxs-logo.png" />
+    <Content Include="res\img\commodities\ocn-logo.png" />
+    <Content Include="res\img\commodities\omg-logo.png" />
+    <Content Include="res\img\commodities\oxy-logo.png" />
+    <Content Include="res\img\commodities\pay-logo.png" />
+    <Content Include="res\img\commodities\pgt-logo.png" />
+    <Content Include="res\img\commodities\pix-logo.png" />
+    <Content Include="res\img\commodities\poe-logo.png" />
+    <Content Include="res\img\commodities\ppc-logo.png" />
+    <Content Include="res\img\commodities\ppt-logo.png" />
+    <Content Include="res\img\commodities\qash-logo.png" />
+    <Content Include="res\img\commodities\rep-logo.png" />
+    <Content Include="res\img\commodities\req-logo.png" />
+    <Content Include="res\img\commodities\ripple-logo.png" />
+    <Content Include="res\img\commodities\rub-logo.png" />
+    <Content Include="res\img\commodities\sgd-logo.png" />
+    <Content Include="res\img\commodities\snm-logo.png" />
+    <Content Include="res\img\commodities\stx-logo.png" />
+    <Content Include="res\img\commodities\sub-logo.png" />
+    <Content Include="res\img\commodities\time-logo.png" />
+    <Content Include="res\img\commodities\trx-logo.png" />
+    <Content Include="res\img\commodities\tusd-logo.png" />
+    <Content Include="res\img\commodities\usd-logo.png" />
+    <Content Include="res\img\commodities\usdc-logo.png" />
+    <Content Include="res\img\commodities\usdt-logo.png" />
+    <Content Include="res\img\commodities\ven-logo.png" />
+    <Content Include="res\img\commodities\vet-logo.png" />
+    <Content Include="res\img\commodities\voise-logo.png" />
+    <Content Include="res\img\commodities\vzt-logo.png" />
+    <Content Include="res\img\commodities\waves-logo.svg" />
+    <Content Include="res\img\commodities\wish-logo.png" />
+    <Content Include="res\img\commodities\wtc-logo.png" />
+    <Content Include="res\img\commodities\xdce-logo.png" />
+    <Content Include="res\img\commodities\xem-logo.svg" />
+    <Content Include="res\img\commodities\xlm-logo.png" />
+    <Content Include="res\img\commodities\zec-logo.png" />
+    <Content Include="res\img\commodities\zen-logo.png" />
+    <Content Include="res\img\commodities\zrx-logo.png" />
+    <Content Include="res\img\exchanges\binance-logo.svg" />
+    <Content Include="res\img\exchanges\bit-z-logo.png" />
+    <Content Include="res\img\exchanges\blocktrade-logo.png" />
+    <Content Include="res\img\exchanges\coinbase-logo.png" />
+    <Content Include="res\img\exchanges\coss-logo.png" />
+    <Content Include="res\img\commodities\eos-logo.png" />
+    <Content Include="res\img\exchanges\cryptopia-logo.png" />
+    <Content Include="res\img\exchanges\ether-delta-logo.png" />
+    <Content Include="res\img\exchanges\gemini-logo.png" />
+    <Content Include="res\img\exchanges\hitbtc-logo.png" />
+    <Content Include="res\img\exchanges\idex-logo.png" />
+    <Content Include="res\img\exchanges\invader.png" />
+    <Content Include="res\img\exchanges\kaya-logo.png" />
+    <Content Include="res\img\exchanges\kraken-logo.png" />
+    <Content Include="res\img\exchanges\kucoin-logo.png" />
+    <Content Include="res\img\exchanges\livecoin-logo.png" />
+    <Content Include="res\img\exchanges\mew.png" />
+    <Content Include="res\img\commodities\yoshi-coin.png" />
+    <Content Include="res\img\exchanges\minergate-logo.png" />
+    <Content Include="res\img\exchanges\oex-logo.png" />
+    <Content Include="res\img\exchanges\pgt-logo.png" />
+    <Content Include="res\img\exchanges\qryptos-logo.png" />
+    <Content Include="res\img\exchanges\aggregate-logo.png" />
+    <Content Include="res\img\exchanges\tidex-logo.png" />
+    <Content Include="res\img\exchanges\yobit-logo.png" />
+    <Content Include="res\img\icons\cannon.png" />
+    <Content Include="res\img\icons\coin-gecko.png" />
+    <Content Include="res\img\icons\coin-market-cap.png" />
+    <Content Include="res\img\icons\cryptocompare.png" />
+    <Content Include="res\img\icons\telegram.png" />
+    <Content Include="res\img\icons\usdc-logo.png" />
+    <Content Include="res\img\machines\argon.png" />
+    <Content Include="res\img\machines\guacamole.png" />
+    <Content Include="res\img\machines\iridium.png" />
+    <Content Include="res\img\machines\server.png" />
+    <Content Include="res\img\machines\titanium.png" />
+    <Content Include="res\img\misc\animated-ellipsis.gif" />
+    <Content Include="res\img\icons\clock-history.png" />
+    <Content Include="res\img\icons\exchange.png" />
+    <Content Include="res\img\icons\gear.png" />
+    <Content Include="res\img\icons\house.png" />
+    <Content Include="res\img\icons\log.png" />
+    <Content Include="res\img\icons\money-bag.png" />
+    <Content Include="res\img\icons\status.png" />
+    <Content Include="styles\checkbox.css" />
+    <Content Include="styles\dialog.css" />
+    <Content Include="styles\main.css" />
+    <Content Include="styles\menu.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="package-lock.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\assembly-lib\assembly-lib.csproj">
+      <Project>{41FFF481-943D-4534-8DA2-A5138CA870E8}</Project>
+      <Name>assembly-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\balance-lib\balance-lib.csproj">
+      <Project>{cf53658c-3ec5-49b7-bac7-e7b19c690520}</Project>
+      <Name>balance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\binance-lib\binance-lib.csproj">
+      <Project>{5FBA1779-F8FC-4E63-818E-E8A28CC21845}</Project>
+      <Name>binance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bit-z-lib\bit-z-lib.csproj">
+      <Project>{9eaa6ea9-23b2-4110-85ac-bf99cdbceb02}</Project>
+      <Name>bit-z-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bit-z-model\bit-z-model.csproj">
+      <Project>{09460fee-8b97-46f8-ac45-11ef14c368d8}</Project>
+      <Name>bit-z-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bitz-browser-lib\bitz-browser-lib.csproj">
+      <Project>{7A990F7A-E906-417C-ADAC-6076A76D3E34}</Project>
+      <Name>bitz-browser-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\browser-automation-client-lib\browser-automation-client-lib.csproj">
+      <Project>{6b012d8b-320b-4c7f-b938-8b90c83a910b}</Project>
+      <Name>browser-automation-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-lib\cache-lib.csproj">
+      <Project>{99af3275-f4dd-4f7d-854e-e5f8f30532e6}</Project>
+      <Name>cache-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cache-model\cache-model.csproj">
+      <Project>{7e529dd0-0f67-4ac5-86b8-ed53117d5be6}</Project>
+      <Name>cache-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\client-lib\client-lib.csproj">
+      <Project>{A81D1F4A-C0BB-4DD7-86FB-3A7FC2394215}</Project>
+      <Name>client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coin-lib\coin-lib.csproj">
+      <Project>{0f9734b4-f53d-46e6-9cfc-a506f8583e0c}</Project>
+      <Name>coin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coinbase-lib\coinbase-lib.csproj">
+      <Project>{6D351D32-7199-468D-9AE0-2324CBD81D43}</Project>
+      <Name>coinbase-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\commodity-address-lib\commodity-address-lib.csproj">
+      <Project>{d53c67d9-c97c-4701-a8ad-23b58fe6c1e0}</Project>
+      <Name>commodity-address-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\commodity-lib\commodity-lib.csproj">
+      <Project>{9cd75cbb-b07e-4d13-9aac-bafd4b3336de}</Project>
+      <Name>commodity-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-client-lib\config-client-lib.csproj">
+      <Project>{f49414a6-1ba8-47db-b9ef-0025d5d91797}</Project>
+      <Name>config-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-connection-string-lib\config-connection-string-lib.csproj">
+      <Project>{A8B37940-6CA8-4DFD-A77C-72BAA9E29CE3}</Project>
+      <Name>config-connection-string-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-lib\config-lib.csproj">
+      <Project>{DA63BA8B-A147-4497-B6D2-DD25ED401EDF}</Project>
+      <Name>config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\config-model\config-model.csproj">
+      <Project>{A05E3D92-68C2-480F-AC81-4B916449EECA}</Project>
+      <Name>config-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-browser-client-lib\coss-browser-client-lib.csproj">
+      <Project>{7f70b0df-61a3-4c8e-af95-7c2c5c929d2f}</Project>
+      <Name>coss-browser-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-cookie-lib\coss-cookie-lib.csproj">
+      <Project>{a79f7a21-84b5-475a-b17a-bc308df8e9d1}</Project>
+      <Name>coss-cookie-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\coss-lib\coss-lib.csproj">
+      <Project>{38c088b7-c128-49f2-93a7-9863b37a96ca}</Project>
+      <Name>coss-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\crypt-lib\crypt-lib.csproj">
+      <Project>{6c514254-ca3e-4d37-97ba-72f22fc9bcd7}</Project>
+      <Name>crypt-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptocompare-client-lib\cryptocompare-client-lib.csproj">
+      <Project>{99884ea2-5531-4a05-a661-02a31656b94a}</Project>
+      <Name>cryptocompare-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptocompare-lib\cryptocompare-lib.csproj">
+      <Project>{45D9393E-088A-4D8F-B04C-CAAD96E8429E}</Project>
+      <Name>cryptocompare-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cryptopia-lib\cryptopia-lib.csproj">
+      <Project>{00fd679b-47fa-45ed-a47e-41b0e0e02e0d}</Project>
+      <Name>cryptopia-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\date-time-lib\date-time-lib.csproj">
+      <Project>{b275fdcd-798d-4aa9-9a0e-5e7efd90bfb8}</Project>
+      <Name>date-time-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\env-config-lib\env-config-lib.csproj">
+      <Project>{cf1815b4-c16a-41c7-bec7-2ebbbfcf6126}</Project>
+      <Name>env-config-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\etherscan-lib\etherscan-lib.csproj">
+      <Project>{718f0e15-6f73-4b43-9372-e885c25a94b4}</Project>
+      <Name>etherscan-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\exchange-client-lib\exchange-client-lib.csproj">
+      <Project>{13406752-8c38-47df-bfcd-c668052a11c2}</Project>
+      <Name>exchange-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\hitbtc-lib\hitbtc-lib.csproj">
+      <Project>{B1862AA2-1851-4DA2-93A9-8763B0F8572C}</Project>
+      <Name>hitbtc-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\idex-integration-lib\idex-integration-lib.csproj">
+      <Project>{D12DDAB7-FE1F-4F1C-AEDC-B2947CFEA13F}</Project>
+      <Name>idex-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\integration-workflow-lib\integration-workflow-lib.csproj">
+      <Project>{9DECBD20-B536-4651-8735-04A41B5D2C94}</Project>
+      <Name>integration-workflow-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iridium-lib\iridium-lib.csproj">
+      <Project>{a2b56915-74ce-4979-b69c-9fc79d5119d9}</Project>
+      <Name>iridium-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kraken-integration-lib\kraken-integration-lib.csproj">
+      <Project>{2c69895f-c01a-4b3c-a990-b7e6ad5d0ef3}</Project>
+      <Name>kraken-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kucoin-lib\kucoin-lib.csproj">
+      <Project>{869c2c59-03b5-44d7-9abc-4aaf9e49b120}</Project>
+      <Name>kucoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\linq-lib\linq-lib.csproj">
+      <Project>{8C564E27-4245-4F71-9FFD-5472E867D2F1}</Project>
+      <Name>linq-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\livecoin-lib\livecoin-lib.csproj">
+      <Project>{6DC7F2C3-BD84-405E-9B6D-E802C04C2B03}</Project>
+      <Name>livecoin-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log-lib\log-lib.csproj">
+      <Project>{E2C1423B-C42E-4AA2-8A00-90DB2585BB5E}</Project>
+      <Name>log-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mew-integration-lib\mew-integration-lib.csproj">
+      <Project>{59AFE7C6-DCBF-4BF6-99F8-37B0650DEA3D}</Project>
+      <Name>mew-integration-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\parse-lib\parse-lib.csproj">
+      <Project>{c80372e6-c4da-43d4-b13f-7cdfafd264df}</Project>
+      <Name>parse-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\qryptos-lib\qryptos-lib.csproj">
+      <Project>{67dd488e-23a8-47b8-89fe-38b0eac917c5}</Project>
+      <Name>qryptos-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rabbit-lib\rabbit-lib.csproj">
+      <Project>{1A8CEB0A-58DB-49CD-BBA5-2AE1560CEEEF}</Project>
+      <Name>rabbit-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task-lib\task-lib.csproj">
+      <Project>{9a5a7bb2-87ed-4b86-af36-9998a691ff9d}</Project>
+      <Name>task-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tfa-lib\tfa-lib.csproj">
+      <Project>{F12F3C61-7002-4908-8789-6722D2766DDF}</Project>
+      <Name>tfa-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tidex-integration-library\tidex-integration-library.csproj">
+      <Project>{6480A045-3A34-4506-AA26-48ECB2F80334}</Project>
+      <Name>tidex-integration-library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\token-balance-lib\token-balance-lib.csproj">
+      <Project>{bc44fa59-3a18-4bde-a1c6-ef82ecc0aa4c}</Project>
+      <Name>token-balance-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-constants\trade-constants.csproj">
+      <Project>{FC3A52E6-9502-4BA2-8A50-634B732E22C4}</Project>
+      <Name>trade-constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-contracts\trade-contracts.csproj">
+      <Project>{6C74FC0D-3A1B-4069-9937-73E644DE2E45}</Project>
+      <Name>trade-contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-ioc\trade-ioc.csproj">
+      <Project>{4b925214-1574-4516-beec-ca21aeea017c}</Project>
+      <Name>trade-ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-lib\trade-lib.csproj">
+      <Project>{2d4897c7-3d49-4305-9d03-4af6d9bd52e6}</Project>
+      <Name>trade-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{ddfdaf8d-9d44-4365-aa33-2415d9b36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-node-integration\trade-node-integration.csproj">
+      <Project>{9013AAD1-4FD3-41D2-80FF-73BA7FC347EB}</Project>
+      <Name>trade-node-integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-res\trade-res.csproj">
+      <Project>{9042f92d-183c-426d-9753-ea5c07da342b}</Project>
+      <Name>trade-res</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-strategy-lib\trade-strategy-lib.csproj">
+      <Project>{0169bafc-eb05-49d2-8333-62e4f6b2a3b3}</Project>
+      <Name>trade-strategy-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\validation-lib\validation-lib.csproj">
+      <Project>{d4c57f94-60c7-483c-a430-af38aab5557d}</Project>
+      <Name>validation-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\workflow-client-lib\workflow-client-lib.csproj">
+      <Project>{d096c12c-9fde-4a16-9b07-7ba8edcfb495}</Project>
+      <Name>workflow-client-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yobit-lib\yobit-lib.csproj">
+      <Project>{4BF65821-2631-4DE7-A98F-A355842B259B}</Project>
+      <Name>yobit-lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53500</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/trade</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.38.0.1\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.38.0.1\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.38.0.1\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.38.0.1\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

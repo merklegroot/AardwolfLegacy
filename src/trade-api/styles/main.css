@@ -1,0 +1,110 @@
+﻿.profitableStyleOld {
+    background-color: #90EE90; /*lightgreen;*/
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profitableStyle {
+    background-color: #90EE90; /*lightgreen;*/
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profitableStyle:nth-child(odd) {
+    background-color: #BEE0BE; /*slightly darker and paler than lightgreen;*/
+}
+
+.notProfitableStyle {
+    background-color: gray;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.goodOrderStyle {
+    background-color: lightgreen;
+    font-size:14px;
+}
+
+.badOrderStyle {
+    background-color: mistyrose;
+    font-size: 14px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.gridLabel {
+    font-size:24px;
+    font-weight:bold;
+}
+
+.gridRow {
+    vertical-align:middle;
+    padding-top:5px;
+    padding-bottom:5px;
+
+    border-top-color: #BBBBBB;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.gridRow:nth-child(even) {
+    background: #DDDDDD
+}
+
+.buy {
+    /* color:darkseagreen; */
+    color: limegreen;
+}
+
+.sell {
+    color:red;
+}
+
+.money {
+    color: #00dd21;    
+}
+
+.border-gray {
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px
+}
+
+.order-row {
+    font-size: 16px;
+    font-weight: bold;
+    height:40px;
+    vertical-align: middle;
+    border-top-color:#DDDDDD;
+    border-top-style:solid;
+    border-top-width:1px;
+}
+
+.order-row:nth-child(even) {
+    background: #F4F4F4
+}
+
+.order-row:nth-child(odd) {
+    background: #FFFFFF
+}
+
+.arb-row {
+    vertical-align: middle;
+    border-top-color: #DDDDDD;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.arb-row:nth-child(even) {
+    background: #F4F4F4
+}
+
+.arb-row:nth-child(odd) {
+    background: #FFFFFF
+}

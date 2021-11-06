@@ -1,0 +1,7 @@
+﻿.canon-dialog {
+    @media (min-width: 800px) {
+        .modal-lg {
+            width: 800px;
+        }
+    }
+}

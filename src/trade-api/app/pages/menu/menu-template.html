@@ -1,0 +1,45 @@
+﻿
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="myNavbar"
+             class="collapse nav-collapse"
+             uib-collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+                <li style="vertical-align:middle; text-align:center;" ng-repeat="menuItem in topRow" class="active" ui-sref-active="active">
+                    <div ng-if="menuItem.divider"
+                         style="border-left-width:1px; margin-top:8px; border-left-style:solid; border-left-color:#E0E0E0; height:48px;">
+                        &nbsp;
+                    </div>
+
+                    <a ng-if="!menuItem.divider" ui-sref="{{menuItem.link}}">
+                        <exchange-logo ng-if="menuItem.exchange" exchange="menuItem.exchange"></exchange-logo>
+                        <commodity-logo ng-if="menuItem.commodity" symbol="menuItem.commodity"></commodity-logo>
+                        <icon ng-if="menuItem.icon" image="{{menuItem.icon}}"></icon>
+                        <span ng-if="!menuItem.exchange">{{menuItem.title}}</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li style="vertical-align:middle; text-align:center;" ng-repeat="menuItem in bottomRow" class="active" ui-sref-active="active">
+                    <div ng-if="menuItem.divider" class="vertical-divider"></div>
+                    <a ui-sref="{{menuItem.link}}">
+                        <exchange-logo ng-if="menuItem.exchange" exchange="menuItem.exchange"></exchange-logo>
+                        <commodity-logo ng-if="menuItem.commodity" symbol="menuItem.commodity"></commodity-logo>
+                        <icon ng-if="menuItem.icon" image="{{menuItem.icon}}"></icon>
+                        <span ng-if="!menuItem.exchange">{{menuItem.title}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <span class="visible-md"><br /></span>
+    <span class="visible-xs visible-sm"><br /><br /></span>

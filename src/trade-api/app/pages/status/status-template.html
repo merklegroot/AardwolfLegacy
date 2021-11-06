@@ -1,0 +1,108 @@
+﻿<div>
+    <h2>Application Service Monitor</h2>
+
+    <h3>Info</h3>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                Application Server Name
+            </td>
+            <td>
+                <img ng-src="{{'res/img/machines/' + model.serverName + '.png'}}" style="width:32px; height:32px;" />                
+                {{model.serverName}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Build Date
+            </td>
+            <td>
+                {{model.appServerBuildDate | date : "medium"}}
+            </td>
+        </tr>
+        <tr>
+            <td>Angular</td>
+            <td>{{angularVersion}}</td>
+        </tr>
+    </table>
+
+    <h3>Connections</h3>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                Database
+            </td>
+            <td ng-style="getStyle(model.database)">
+                <div ng-show="model.database.isLoading">Loading...</div>
+                <div ng-hide="model.database.isLoading">{{model.database.value.displayText}}</div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <h3>Services</h3>
+            <table class="table table-striped">
+                <tr ng-repeat="service in model.services.data">
+                    <td>
+                        <span style="font-size:24px; font-weight:bold;">{{service.name}}</span>
+                        <span><button class="btn btn-primary" ng-click="onPingButtonClicked(service)">Ping</button></span>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td style="font-weight:bold;">
+                                    Build
+                                </td>
+                                <td>
+                                    <div>{{service.status.buildDate | localTime}}</div>
+                                    <div>({{service.status.buildDate | ago}})</div>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="statusItem in service.statusKvps">
+                                <td style="font-weight:bold;">
+                                    {{statusItem.key}}
+                                </td>
+                                <td>
+                                    <span ng-if="statusItem.key.toUpperCase() === 'machineName'.toUpperCase()">
+                                        <img ng-src="{{'res/img/machines/' + statusItem.value + '.png'}}" style="width:32px; height:32px;" />
+                                    </span>
+                                    {{statusItem.value}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="col-xs-6">
+            <h3>Tests</h3>
+            <table>
+                <tr>
+                    <td>
+                        <div style="font-size:24px; font-weight:bold;">
+                            Coss Cookie Test
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" ng-click="onCossTestClicked()">Test</button>
+                        </div>
+                    </td>
+                    <td>
+                        <table ng-if="model.cossResponse" class="table table-striped">
+                            <tr>
+                                <td>Session</td>
+                                <td>{{model.cossResponse.sessionToken}}</td>
+                            </tr>
+                            <tr>
+                                <td>Xsrf</td>
+                                <td>{{model.cossResponse.xsrfToken}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

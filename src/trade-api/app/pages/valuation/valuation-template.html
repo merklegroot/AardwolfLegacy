@@ -1,0 +1,29 @@
+﻿<h1>Valuation</h1>
+
+<div>
+    <button class="btn btn-primary" ng-click="onRefreshClicked()">Refresh</button>
+
+    <div ng-if="model.valuation.isLoading">
+        <loading></loading>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-size:20px; font-weight:bold;">
+                <td>Symbol</td>
+                <td>Value</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in model.items">
+                <td
+                    class="clickable"
+                    ui-sref="commodity-detail({symbol: item.symbol.toUpperCase()})">
+                    {{item.symbol.toUpperCase()}}
+                </td>
+                <td>{{item.value}}</td>
+                <td><button class="btn btn-sm btn-primary" ng-click="onRefreshCommodityClicked(item)">Refresh</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

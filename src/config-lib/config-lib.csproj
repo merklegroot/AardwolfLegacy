@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA63BA8B-A147-4497-B6D2-DD25ED401EDF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>config_lib</RootNamespace>
+    <AssemblyName>config_lib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigRepo.cs" />
+    <Compile Include="EncryptionContainer.cs" />
+    <Compile Include="IBinanceApiKeyRepoDirect.cs" />
+    <Compile Include="IBitzAgentConfigRepo.cs" />
+    <Compile Include="ICcxtConfigRepoDirect.cs" />
+    <Compile Include="ICoinbaseApiKeyRepo.cs" />
+    <Compile Include="IConfigRepo.cs" />
+    <Compile Include="ICossAgentConfigRepo.cs" />
+    <Compile Include="ICossCredentialRepo.cs" />
+    <Compile Include="ICossApiKeyRepo.cs" />
+    <Compile Include="IEtherscanConfigRepo.cs" />
+    <Compile Include="IGetConnectionStringDirect.cs" />
+    <Compile Include="ICryptopiaApiKeyRepo.cs" />
+    <Compile Include="IHitBtcApiKeyRepo.cs" />
+    <Compile Include="IInfuraApiKeyRepo.cs" />
+    <Compile Include="IKrakenApiKeyRepo.cs" />
+    <Compile Include="IBitzApiKeyRepo.cs" />
+    <Compile Include="IKucoinApiKeyRepo.cs" />
+    <Compile Include="ILivecoinApiKeyRepo.cs" />
+    <Compile Include="IMewConfigRepo.cs" />
+    <Compile Include="IPriorityConfigRepo.cs" />
+    <Compile Include="IQryptosApiKeyRepo.cs" />
+    <Compile Include="ITwitterApiKeyRepo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\config-model\config-model.csproj">
+      <Project>{a05e3d92-68c2-480f-ac81-4b916449eeca}</Project>
+      <Name>config-model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\crypt-lib\crypt-lib.csproj">
+      <Project>{6c514254-ca3e-4d37-97ba-72f22fc9bcd7}</Project>
+      <Name>crypt-lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\trade-model\trade-model.csproj">
+      <Project>{DDFDAF8D-9D44-4365-AA33-2415D9B36916}</Project>
+      <Name>trade-model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

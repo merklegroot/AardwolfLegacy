@@ -1,0 +1,80 @@
+﻿<div>
+    <div class="form-inline">
+        <label>Filter&nbsp;&nbsp;</label>
+        <input class="form-control" style="width:400px;" ng-model="filter" ng-keyup="onFilterChanged();" />
+        <label class="clickable" ng-show="filter.length > 0" ng-click="clearFilter()">X</label>
+        <button class="btn btn-sucess pull-right" ng-click="showDebug = !showDebug">Show Debug</button>
+    </div>
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-weight:bold; font-size:16px;">
+                <td>Canon</td>
+                <td>Symbol</td>
+                <td>Native</td>
+                <td>Name</td>
+                <td>Deposit Address</td>
+                <td>Memo</td>
+                <td>Explorer</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in filtered | limitTo: getLimit()">
+                <td><i ng-if="item.canonicalId" style="color:green" class="fa fa-check"></i></td>
+                <td style="max-width:100px;"><commodity-logo symbol="item.symbol"></commodity-logo> {{item.symbol}}</td>
+                <td style="max-width:100px;">
+                    <a class="clickable" ui-sref="exchange-commodity-detail({exchange: exchange, nativeSymbol: item.nativeSymbol})">
+                        {{item.nativeSymbol}}
+                    </a>
+                </td>
+                <td style="max-width:100px;">{{item.name}}</td>
+                <td>
+                    <div style="word-break:break-all; max-width:200px; font-size:10px;">{{item.depositAddress}}</div>
+                    <button ng-if="item.depositAddress"
+                            class="btn btn-primary"
+                            ngclipboard-success="onClipboardSuccess(e);"
+                            ngclipboard-error="onClipboardError(e);"
+                            ngclipboard data-clipboard-text="{{item.depositAddress}}">
+                        Copy Address
+                    </button>
+                </td>
+                <td style="max-width:100px;">{{item.depositMemo}}</td>
+                <td>
+                    <div ng-if="item.isEth || item.isEthToken">
+                        <a target="_blank" ng-href="{{'https://etherscan.io/address/' + item.depositAddress + ( item.isEthToken ? '#tokentxns' : '')}}">
+                            <button class="btn btn-lg">Etherscan</button>
+                        </a>
+                    </div>
+                    <div ng-if="item.symbol === 'LSK'">
+                        <a target="_blank" ng-href="{{'https://explorer.lisk.io/address/' + item.depositAddress}}">
+                            <button class="btn btn-lg">Lisk Explorer</button>
+                        </a>
+                    </div>
+                    <div ng-if="item.symbol === 'BCH'">
+                        
+                        <a target="_blank" ng-href="{{'https://www.blockdozer.com/address/' + item.depositAddress}}">
+                            <button class="btn btn-lg">Blockdozer</button>
+                        </a>
+                    </div>
+                    <div ng-if="item.symbol === 'ARK'">
+                        <a target="_blank" ng-href="{{'https://explorer.ark.io/wallets/' + item.depositAddress}}">
+                            <button class="btn btn-lg">Ark Explorer</button>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-sm" ng-click="onGetBalanceClicked(item)">Get Balance</button>
+                </td>
+                <td ng-if="showDebug">{{item}}</td>
+            </tr>
+            <tr class="clickable" ng-click="toggleLimit()">
+                <td colspan="5">
+                    <div style="text-align:center;">
+                        \/
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
